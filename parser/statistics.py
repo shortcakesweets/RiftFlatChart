@@ -1,7 +1,5 @@
 import os, glob, json
-
-OUTPUT_PATH = "./res"
-EVENT_TYPE = ["Hit", "Miss", "Overpress", "Hold Segment", "Hold Complete", "Vibe Gained", "Vibe Activated", "Vibe Ended"]
+from constants import PATH_JSON, EVENT_TYPE
 
 def analyze(file):
     with open(file, 'r') as f:

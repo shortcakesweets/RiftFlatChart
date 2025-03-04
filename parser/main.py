@@ -1,8 +1,6 @@
 import os, glob, struct, json
 from typing import Optional
-
-INPUT_PATH = "./raw"
-OUTPUT_PATH = "./res"
+from constants import PATH_RAW, PATH_JSON
 
 def read_int(f) -> int:
     return struct.unpack('<i', f.read(4))[0]
@@ -77,11 +75,11 @@ def dump(data) -> None:
     name = data['name']
     difficulty = ["Easy", "Medium", "Hard", "Impossible"][data['difficulty']]
 
-    with open(os.path.join(OUTPUT_PATH, f"{name}_{difficulty}.json"), "w") as f:
+    with open(os.path.join(PATH_JSON, f"{name}_{difficulty}.json"), "w") as f:
         json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
-    bin_files = glob.glob(os.path.join(INPUT_PATH, "*.bin"))
+    bin_files = glob.glob(os.path.join(PATH_RAW, "*.bin"))
     print(bin_files)
     for file in bin_files:
         data = parse(file)
