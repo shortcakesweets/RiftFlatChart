@@ -1,0 +1,2 @@
+# RiftFlatChart
+Flattens rift charts
