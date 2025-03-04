@@ -57,7 +57,8 @@ def parse(file) -> Optional[dict]:
             event['time'] = read_double(f)
             event['beat'] = read_double(f)
             event['target_time'] = read_double(f)
-            event['target_beat'] = read_double(f)
+            # round up to 3 decimal points
+            event['target_beat'] = round(read_double(f), 3)
             event['enemy_type'] = read_int(f)
             event['column'] = read_int(f)
             event['total_score'] = read_int(f)
@@ -80,7 +81,6 @@ def dump(data) -> None:
 
 if __name__ == "__main__":
     bin_files = glob.glob(os.path.join(PATH_RAW, "*.bin"))
-    print(bin_files)
     for file in bin_files:
         data = parse(file)
         if data:

@@ -1,5 +1,51 @@
+from enum import Enum
+
 PATH_RAW = "./raw"
 PATH_JSON = "./json"
 PATH_FLAT = "./flat"
 
-EVENT_TYPE = ["Hit", "Miss", "Overpress", "Hold Segment", "Hold Complete", "Vibe Gained", "Vibe Activated", "Vibe Ended"]
+class EventType(Enum):
+    HIT = 0
+    MISS = 1
+    OVERPRESS = 2
+    HOLD_SEGMENT = 3
+    HOLD_COMPLETE = 4
+    VIBE_GAINED = 5
+    VIBE_ACTIVATED = 6
+    VIBE_ENDED = 7
+
+class EnemyType(Enum):
+    NONE = 0
+    GREEN_SLIME = 1
+    BLUE_SLIME = 2
+    YELLOW_SLIME = 3
+    BLUE_BAT = 4
+    YELLOW_BAT = 5
+    RED_BAT = 6
+    GREEN_ZOMBIE = 7
+    BLUE_ZOMBIE = 8
+    RED_ZOMBIE = 9
+    WHITE_SKELETON = 10
+    WHITE_SHIELD_SKELETON = 11
+    WHITE_DOUBLE_SHIELD_SKELETON = 12
+    YELLOW_SKELETON = 13
+    YELLOW_SHIELD_SKELETON = 14
+    BLACK_SKELETON = 15
+    BLACK_SHIELD_SKELETON = 16
+    BLUE_ARMADILLO = 17
+    RED_ARMADILLO = 18
+    YELLOW_ARMADILLO = 19
+    WYRM = 20
+    GREEN_HARPY = 21
+    BLUE_HARPY = 22
+    RED_HARPY = 23
+    BLADEMASTER = 24
+    BLUE_BLADEMASTER = 25
+    YELLOW_BLADEMASTER = 26
+    WHITE_SKULL = 27
+    BLUE_SKULL = 28
+    RED_SKULL = 29
+    APPLE = 30
+    CHEESE = 31
+    DRUMSTICK = 32
+    HAM = 33
