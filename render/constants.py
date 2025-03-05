@@ -3,6 +3,7 @@ from enum import Enum
 PATH_RAW = "./raw"
 PATH_JSON = "./json"
 PATH_FLAT = "./flat"
+PATH_HTML = "./html"
 
 class EventType(Enum):
     HIT = 0
