@@ -112,35 +112,40 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
     
     return img
 
-def flatten(file):
-    with open(file, 'r') as f:
-        data = json.load(f)
-    
-    name = data['name']
-    difficulty = data['difficulty']
-    short_notes, wyrm_notes = extract_notes(file)
-    
-    last_beat: float = 0.0
-    last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes))
-    last_beat = int(math.ceil(last_beat/16)*16)
-    
-    img_segments = []
-    for beat_start in range(0, last_beat+1, 16):
-        img_segments.append(create_segment(beat_start, short_notes, wyrm_notes))
-    
-    total_width = sum(img.width for img in img_segments)
-    max_height = max(img.height for img in img_segments)
-    
-    img = Image.new("RGB", (total_width, max_height))
-    
-    current_x = 0
-    for img_segment in img_segments:
-        img.paste(img_segment, (current_x, 0))
-        current_x += img_segment.width
-    
-    img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"))
+def flatten(file) -> bool:
+    try:
+        with open(file, 'r') as f:
+            data = json.load(f)
+        
+        name = data['name']
+        difficulty = data['difficulty']
+        short_notes, wyrm_notes = extract_notes(file)
+        
+        last_beat: float = 0.0
+        last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes))
+        last_beat = int(math.ceil(last_beat/16)*16)
+        
+        img_segments = []
+        for beat_start in range(0, last_beat+1, 16):
+            img_segments.append(create_segment(beat_start, short_notes, wyrm_notes))
+        
+        total_width = sum(img.width for img in img_segments)
+        max_height = max(img.height for img in img_segments)
+        
+        img = Image.new("RGB", (total_width, max_height))
+        
+        current_x = 0
+        for img_segment in img_segments:
+            img.paste(img_segment, (current_x, 0))
+            current_x += img_segment.width
+        
+        img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"))
+        return True
+    except:
+        return False
 
 if __name__ == "__main__":
+    # import argparse
     from constants import PATH_JSON
     
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
