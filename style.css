@@ -2,23 +2,39 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
-
-.top-bar {
-    height: 120px;
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-}
-
-.content {
-    text-align: center;
-    overflow-x: auto;
     background-color: black;
 }
 
-.content img {
-    height: 100vh;
-    width: auto;
+.title-div {
+    font-size: 5vh;
+    color: yellow;
+    text-align: center;
+}
+
+.song-list {
+    width: 50vh;
+    border-collapse: collapse;
+    border: 1px solid yellow;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+.song-list td {
+    height: 11vh;
+    padding: 10px;
+    text-align: center;
+}
+
+.song-list td:first-child {
+    width: 11vh;
+}
+
+.album-cover {
+    width: 10vh;
+    height: 10vh;
+}
+
+.song-name {
+    color: aliceblue;
+    font-size: 3vh;
 }

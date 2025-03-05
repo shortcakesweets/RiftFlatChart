@@ -1,18 +1,35 @@
 import os, glob, json
 from constants import PATH_FLAT, PATH_HTML
 
-html_template = """
-<!DOCTYPE html>
+html_template = """<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{title}</title>
+        <title>{title} {difficulty}</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="top-bar">
-            <h1>Rendered PNG Information</h1>
-            <p>Display details and statistics about the rendered image here.</p>
+            <div class="album-info">
+                <img src="./jacket/{title}.png" alt="Album Cover" />
+                <table class="description-table">
+                    <tr>
+                        <td>Song Name</td>
+                        <td>{title}</td>
+                    </tr>
+                        <td>Difficulty</td>
+                        <td>{difficulty}</td>
+                    <tr>
+                        <td>Max Combo</td>
+                        <td>{max_combo}</td>
+                    </tr>
+                    <tr>
+                        <td>Max Score</td>
+                        <td>{max_score}</td>
+                    </tr>
+                </table>
+            </div>
+            <a href="../../index.html" class="nav-button">Main Page</a>
         </div>
 
         <div class="content">
@@ -35,8 +52,11 @@ def render(file):
 
         title = f"{name} {difficulty_str}"
         img_path = os.path.relpath(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"), PATH_HTML)
+        
+        max_combo = 0
+        max_score = 0
 
-        html_content = html_template.format(title=title, img_src=img_path, img_alt=title)
+        html_content = html_template.format(title=name, difficulty=f"{difficulty_str}({difficulty})", max_combo=max_combo, max_score=max_score, img_src=img_path, img_alt=title)
 
         with open(os.path.join(PATH_HTML, f"{title}.html"), "w", encoding="utf-8") as f:
             f.write(html_content)

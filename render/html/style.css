@@ -5,12 +5,50 @@ body {
 }
 
 .top-bar {
-    height: 120px;
+    height: 15vh;
+    font-size: 2vh;
     background-color: #333;
     color: #fff;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
+
+.album-info {
+    display: flex;
+    align-items: center;
+}
+
+.album-info img {
+    width: 13vh;
+    height: 13vh;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.description-table, tr, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: aliceblue;
+}
+
+.description-table tr {
+    height: 30px;
+}
+
+.description-table td {
+    padding-inline: 10px;
+}
+
+.nav-button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px;
+  }
 
 .content {
     text-align: center;
