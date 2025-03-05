@@ -112,7 +112,7 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
     
     return img
 
-def flatten(file) -> bool:
+def flatten(file, verbose: bool = False) -> bool:
     try:
         with open(file, 'r') as f:
             data = json.load(f)
@@ -122,7 +122,7 @@ def flatten(file) -> bool:
         short_notes, wyrm_notes = extract_notes(file)
         
         last_beat: float = 0.0
-        last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes))
+        last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
         last_beat = int(math.ceil(last_beat/16)*16)
         
         img_segments = []
@@ -140,14 +140,34 @@ def flatten(file) -> bool:
             current_x += img_segment.width
         
         img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"))
+        if verbose:
+            print(f"Flattening success on {name} ({difficulty}).")
+        
         return True
-    except:
+    except Exception as e:
+        if verbose:
+            print(f"Error while flattening {name} ({difficulty}): {e}")
         return False
 
 if __name__ == "__main__":
-    # import argparse
+    import argparse
     from constants import PATH_JSON
     
-    json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
-    for file in json_files:
-        flatten(file)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", required=False, help="Path to target JSON file.")
+    args = parser.parse_args()
+    
+    if args.input:
+        try:
+            with open(args.input, "r") as json_file:
+                data = json.load(json_file)
+                print("Valid JSON file")
+            flatten(args.input, True)
+        except json.JSONDecodeError as e:
+            print(f"Error: The file '{args.input}' is not a valid JSON file: {e}")
+        except Exception as e:
+            print(f"Error loading JSON file: {e}")
+    else: # run all files
+        json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
+        for file in json_files:
+            flatten(file, True)
