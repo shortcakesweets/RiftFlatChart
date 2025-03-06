@@ -1,7 +1,5 @@
 import os, glob, json
-
-PATH_HTML = "./render/html"
-PATH_JSON = "./render/json"
+from constants import PATH_HTML, PATH_JSON
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
@@ -54,5 +52,5 @@ if __name__ == "__main__":
     
     html_content = html_template.format(row_segments=row_segments)
     
-    with open("index.html", "w", encoding="utf-8") as f:
+    with open("../index.html", "w", encoding="utf-8") as f:
         f.write(html_content)

@@ -110,6 +110,8 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
     
     # function for determining if combo X is in optimal vibe state
     def is_optimal_vibe(combo: int, vibe_data):
+        if vibe_data == None:
+            return False
         for vibe_chunk in vibe_data:
             if vibe_chunk['combo'] < combo <= vibe_chunk['combo'] + vibe_chunk['enemies']:
                 return True
@@ -152,7 +154,7 @@ def flatten(file, verbose: bool = False) -> bool:
         name = data['name']
         difficulty = data['difficulty']
         short_notes, wyrm_notes = extract_notes(file)
-        vibe_data = data['vibe']
+        vibe_data = data.get('vibe', None)
         
         last_beat: float = 0.0
         last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
