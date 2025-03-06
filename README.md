@@ -20,10 +20,10 @@ git clone https://github.com/shortcakesweets/RiftFlatChart.git
 cd render
 ```
 
--   To render, you will need Pillow and argparse.
+-  Flattner has Pillow dependency.
 
 ```bash
-pip install Pillow argparse
+pip install Pillow
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ You will need raw data using [RiftEventCapture](https://github.com/DominicAglial
 3. from `/render` folder, run:
 
 ```
-python parse.py --no-vibe
+python parse.py
 python flatten.py
 ```
 
