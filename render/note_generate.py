@@ -3,11 +3,12 @@ from constants import EnemyType, EventType
 
 class Note():
     def __init__(self):
-        self.beat_start:  float = 0.0
-        self.beat_finish: float = 0.0
+        self.beat_start:    float = 0.0
+        self.beat_finish:   float = 0.0
         self.is_wyrm:       bool  = False
         self.column:        int   = 0
         self.overlap:       int   = 1
+        self.combo:         int   = 0
 
 def filter_short_note(event) -> bool:
     return event['enemy_type'] != EnemyType.WYRM.value and event['event_type'] == EventType.HIT.value
@@ -74,6 +75,29 @@ def extract_notes(file):
         else:
             print("WYRM ERROR")
     
+    # assign combo values for each notes
+    short_note_index = 0
+    wyrm_note_index = 0
+    combo = 0
+    while short_note_index < len(short_notes) or wyrm_note_index < len(wyrm_notes):
+        target_beat = 1e9
+        if short_note_index < len(short_notes):
+            target_beat = min(target_beat, short_notes[short_note_index].beat_start)
+        if wyrm_note_index < len(wyrm_notes):
+            target_beat = min(target_beat, wyrm_notes[wyrm_note_index].beat_start)
+
+        target_notes = []
+        while short_note_index < len(short_notes) and short_notes[short_note_index].beat_start == target_beat:
+            target_notes.append(short_notes[short_note_index])
+            short_note_index += 1
+        while wyrm_note_index < len(wyrm_notes) and wyrm_notes[wyrm_note_index].beat_start == target_beat:
+            target_notes.append(wyrm_notes[wyrm_note_index])
+            wyrm_note_index += 1
+        
+        combo += len(target_notes)
+        for note in target_notes:
+            note.combo = combo
+
     return short_notes, wyrm_notes
 
 if __name__ == "__main__":

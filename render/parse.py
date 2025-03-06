@@ -1,6 +1,15 @@
-import os, glob, struct, json
+import os, glob, struct, json, csv
 from typing import Optional
 from constants import PATH_RAW, PATH_JSON
+
+# Used to track which vibe row is correct
+# - only used when "csv row head != data['name']"
+# - this value should be updated manually.
+NAME_TO_ROW_HEAD = {
+    'Glass Cages (feat. Sarah Hubbard)': "Glass Cages",
+    'Om and On': "Om And On",
+    'Under the Thunder': "Under The Thunder"
+}
 
 def read_int(f) -> int:
     return struct.unpack('<i', f.read(4))[0]
@@ -69,6 +78,32 @@ def parse(file) -> Optional[dict]:
             event['is_vibe'] = read_bool(f)
 
             data['events'].append(event)
+        
+        # add vibe data
+        row_head = NAME_TO_ROW_HEAD[data['name']] if data['name'] in NAME_TO_ROW_HEAD else data['name']
+        with open('vibe_path.csv', 'r', newline='') as csvfile:
+            reader = csv.reader(csvfile)
+        
+            target_rows = []
+            for row in reader:
+                if row[0] == row_head:
+                    target_rows.append(row)
+            target_row = target_rows[data['difficulty']]
+
+            data['max_score'] = int(target_row[2])
+            data['vibe'] = []
+            for i in range(3, len(target_row), 4):
+                if target_row[i] == '':
+                    continue
+
+                vibe_chunk = {
+                    'bar': target_row[i],
+                    'beat': float(target_row[i+1][1:]),
+                    'combo': int(target_row[i+2]),
+                    'enemies': int(target_row[i+3])
+                }
+                
+                data['vibe'].append(vibe_chunk)
 
     return data
 

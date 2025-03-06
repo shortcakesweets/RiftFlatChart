@@ -14383,5 +14383,44 @@
             "bonus_score": 2,
             "is_vibe": false
         }
+    ],
+    "max_score": 2539364,
+    "vibe": [
+        {
+            "bar": "Single",
+            "beat": 75.33,
+            "combo": 149,
+            "enemies": 32
+        },
+        {
+            "bar": "Single",
+            "beat": 124.0,
+            "combo": 271,
+            "enemies": 41
+        },
+        {
+            "bar": "Single",
+            "beat": 175.33,
+            "combo": 428,
+            "enemies": 34
+        },
+        {
+            "bar": "Single",
+            "beat": 246.33,
+            "combo": 602,
+            "enemies": 32
+        },
+        {
+            "bar": "Single",
+            "beat": 274.33,
+            "combo": 682,
+            "enemies": 36
+        },
+        {
+            "bar": "Single",
+            "beat": 361.0,
+            "combo": 921,
+            "enemies": 31
+        }
     ]
 }

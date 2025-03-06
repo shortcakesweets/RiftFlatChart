@@ -11,8 +11,9 @@ LANE_MARGIN     = 24
 LANE_HEIGHT     = 1200
 LANE_PADDING    = 8             # slightly longer lanes for previewing next notes
 NOTE_SIZE       = 12
-NOTE_THICK      = 1
+NOTE_THICK      = 2
 FONT_SIZE       = 12
+WYRM_HEAD_SIZE  = 6
 
 # color constants
 BG_COLOR        = (0,0,0)       # black
@@ -22,15 +23,15 @@ SUB_DIV_COLOR   = (75,75,75)    # dark grey
 GAP_COLOR       = (75,75,75)    # dark grey
 FONT_COLOR      = (0,255,0)     # green
 WYRM_BODY_COLOR = (0,159,100)   # actual pallete from in-game
-WYRM_HEAD_COLOR = (0,159,100)   # darker than body.
-# WYRM_HEAD_COLOR = (21,255,165)
+# WYRM_HEAD_COLOR = (0,159,100)   
+WYRM_HEAD_COLOR = (21,255,165)  # darker than body.
+VIBE_WYRM_HEAD_COLOR = (255,255,0) # yellow
 NOTE_COLOR      = (255,255,255) # white
 OVERLAP_COLOR   = (255,0,0)     # red
-# VIBE_NOTE_COLOR = (255,0,0)     # WIP, not implemented
-# VIBE_OVERLAP_COLOR = (255,0,0)  # WIP, not implemented
+VIBE_NOTE_COLOR = (255,255,0)   # yellow
+VIBE_OVERLAP_COLOR = (255,140,0)# dark orange
 
-
-def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[Note]):
+def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[Note], vibe_data):
     width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
     height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
     height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
@@ -84,10 +85,35 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         
         return x, y
     
+    # function for rendering wyrm body
+    def render_wyrm_body(column: int, rel_beat_start: float, rel_beat_finish: float, color: tuple = WYRM_BODY_COLOR):
+        x_start, y_start  = get_note_xy(column, rel_beat_start)
+        _      , y_finish = get_note_xy(column, rel_beat_finish)
+        
+        draw.rectangle([x_start, y_finish, x_start + NOTE_SIZE, y_start], fill=WYRM_BODY_COLOR)
+    
+    # function for rendering wyrm head
+    def render_wyrm_head(column: int, rel_beat: float, color: tuple):
+        x_start, y_start = get_note_xy(column, rel_beat)
+        vertices = [
+            (x_start, y_start),
+            (x_start + NOTE_SIZE, y_start),
+            (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
+        ]
+
+        draw.polygon(vertices, fill=WYRM_HEAD_COLOR)
+
     # function for rendering short notes
     def render_short_note(column: int, rel_beat: float, color: tuple):
         x_start, y_start = get_note_xy(column, rel_beat)
         draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
+    
+    # function for determining if combo X is in optimal vibe state
+    def is_optimal_vibe(combo: int, vibe_data):
+        for vibe_chunk in vibe_data:
+            if vibe_chunk['combo'] < combo <= vibe_chunk['combo'] + vibe_chunk['enemies']:
+                return True
+        return False
     
     # render wyrm notes
     for note in filtered_wyrm_notes:
@@ -96,19 +122,25 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         relative_beat_start = max(note.beat_start - beat_index, -beat_padding)
         relative_beat_finish = min(note.beat_finish - beat_index, 16+beat_padding)
         
-        x_start, y_start  = get_note_xy(note.column, relative_beat_start)
-        _      , y_finish = get_note_xy(note.column, relative_beat_finish)
-        
-        draw.rectangle([x_start, y_finish, x_start + NOTE_SIZE, y_start], fill=WYRM_BODY_COLOR)
+        render_wyrm_body(note.column, relative_beat_start, relative_beat_finish)
         
         relative_beat_start = note.beat_start - beat_index
         if relative_beat_start >= -beat_padding:
-            render_short_note(note.column, relative_beat_start, WYRM_HEAD_COLOR)
+            pass # currently wyrm is buggy; do not give wyrm start indicators
+            # render_short_note(note.column, relative_beat_start, WYRM_HEAD_COLOR)
+            # render_wyrm_head(note.column, relative_beat_start, color=VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR)
     
     # render short notes
     for note in filtered_short_notes:
         relative_beat = note.beat_start - beat_index
-        render_short_note(note.column, relative_beat, NOTE_COLOR if note.overlap == 1 else OVERLAP_COLOR)
+
+        color = (0,0,0)
+        if note.overlap == 1:
+            color = VIBE_NOTE_COLOR if is_optimal_vibe(note.combo, vibe_data) else NOTE_COLOR
+        else:
+            color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
+
+        render_short_note(note.column, relative_beat, color)
     
     return img
 
@@ -120,6 +152,7 @@ def flatten(file, verbose: bool = False) -> bool:
         name = data['name']
         difficulty = data['difficulty']
         short_notes, wyrm_notes = extract_notes(file)
+        vibe_data = data['vibe']
         
         last_beat: float = 0.0
         last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
@@ -127,7 +160,7 @@ def flatten(file, verbose: bool = False) -> bool:
         
         img_segments = []
         for beat_start in range(0, last_beat+1, 16):
-            img_segments.append(create_segment(beat_start, short_notes, wyrm_notes))
+            img_segments.append(create_segment(beat_start, short_notes, wyrm_notes, vibe_data))
         
         total_width = sum(img.width for img in img_segments)
         max_height = max(img.height for img in img_segments)
