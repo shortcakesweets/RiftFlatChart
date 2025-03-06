@@ -24,7 +24,7 @@ GAP_COLOR       = (75,75,75)    # dark grey
 FONT_COLOR      = (0,255,0)     # green
 WYRM_BODY_COLOR = (0,159,100)   # actual pallete from in-game
 # WYRM_HEAD_COLOR = (0,159,100)   
-WYRM_HEAD_COLOR = (21,255,165)  # darker than body.
+WYRM_HEAD_COLOR = (0,100,50)  # darker than body.
 VIBE_WYRM_HEAD_COLOR = (255,255,0) # yellow
 NOTE_COLOR      = (255,255,255) # white
 OVERLAP_COLOR   = (255,0,0)     # red
@@ -101,7 +101,7 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
             (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
         ]
 
-        draw.polygon(vertices, fill=WYRM_HEAD_COLOR)
+        draw.polygon(vertices, fill=color)
 
     # function for rendering short notes
     def render_short_note(column: int, rel_beat: float, color: tuple):
@@ -128,9 +128,8 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         
         relative_beat_start = note.beat_start - beat_index
         if relative_beat_start >= -beat_padding:
-            pass # currently wyrm is buggy; do not give wyrm start indicators
-            # render_short_note(note.column, relative_beat_start, WYRM_HEAD_COLOR)
-            # render_wyrm_head(note.column, relative_beat_start, color=VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR)
+            color = VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR
+            render_wyrm_head(note.column, relative_beat_start, color=color)
     
     # render short notes
     for note in filtered_short_notes:
@@ -146,7 +145,7 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
     
     return img
 
-def flatten(file, verbose: bool = False) -> bool:
+def flatten(file):
     try:
         with open(file, 'r') as f:
             data = json.load(f)
@@ -175,34 +174,13 @@ def flatten(file, verbose: bool = False) -> bool:
             current_x += img_segment.width
         
         img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"))
-        if verbose:
-            print(f"Flattening success on {name} ({difficulty}).")
-        
-        return True
+        print(f"Flatten success on {name} ({difficulty}).")
     except Exception as e:
-        if verbose:
-            print(f"Error while flattening {name} ({difficulty}): {e}")
-        return False
+        print(f"Flatten failed on {name} ({difficulty}): {e}")
 
 if __name__ == "__main__":
-    import argparse
     from constants import PATH_JSON
-    
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input", required=False, help="Path to target JSON file.")
-    args = parser.parse_args()
-    
-    if args.input:
-        try:
-            with open(args.input, "r") as json_file:
-                data = json.load(json_file)
-                print("Valid JSON file")
-            flatten(args.input, True)
-        except json.JSONDecodeError as e:
-            print(f"Error: The file '{args.input}' is not a valid JSON file: {e}")
-        except Exception as e:
-            print(f"Error loading JSON file: {e}")
-    else: # run all files
-        json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
-        for file in json_files:
-            flatten(file, True)
+
+    json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
+    for file in json_files:
+        flatten(file)

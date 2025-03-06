@@ -24,7 +24,7 @@ def read_string(f) -> str:
     length = struct.unpack('<b', f.read(1))[0]
     return f.read(length).decode('utf-8')
 
-def parse(file, no_vibe: bool = False) -> Optional[dict]:
+def parse(file) -> Optional[dict]:
     data = {}
     with open(file, "rb") as f:
         data['header'] = read_string(f)
@@ -80,7 +80,7 @@ def parse(file, no_vibe: bool = False) -> Optional[dict]:
             data['events'].append(event)
         
         # add vibe data
-        if not no_vibe:
+        try:
             row_head = NAME_TO_ROW_HEAD[data['name']] if data['name'] in NAME_TO_ROW_HEAD else data['name']
             with open('vibe_path.csv', 'r', newline='') as csvfile:
                 reader = csv.reader(csvfile)
@@ -90,40 +90,39 @@ def parse(file, no_vibe: bool = False) -> Optional[dict]:
                     if row[0] == row_head:
                         target_rows.append(row)
                 target_row = target_rows[data['difficulty']]
+            
+            data['max_score'] = int(target_row[2])
+            data['vibe'] = []
+            for i in range(3, len(target_row), 4):
+                if target_row[i] == '':
+                    continue
 
-                data['max_score'] = int(target_row[2])
-                data['vibe'] = []
-                for i in range(3, len(target_row), 4):
-                    if target_row[i] == '':
-                        continue
-
-                    vibe_chunk = {
-                        'bar': target_row[i],
-                        'beat': float(target_row[i+1][1:]),
-                        'combo': int(target_row[i+2]),
-                        'enemies': int(target_row[i+3])
-                    }
-                    
-                    data['vibe'].append(vibe_chunk)
+                vibe_chunk = {
+                    'bar': target_row[i],
+                    'beat': float(target_row[i+1][1:]),
+                    'combo': int(target_row[i+2]),
+                    'enemies': int(target_row[i+3])
+                }
+                
+                data['vibe'].append(vibe_chunk)
+        except Exception as e:
+            name = data['name']
+            difficulty = data['difficulty']
+            print(f"WARNING: failed to retrieve vibe data on {name} ({difficulty})")
+            print(f" Renderer will normally output chart without vibe")
 
     return data
 
-def dump(data) -> None:
-    name = data['name']
-    difficulty = ["Easy", "Medium", "Hard", "Impossible"][data['difficulty']]
-
-    with open(os.path.join(PATH_JSON, f"{name}_{difficulty}.json"), "w") as f:
-        json.dump(data, f, indent=4)
-
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-nv", "--no-vibe", action='store_true')
-    args = parser.parse_args()
-
     bin_files = glob.glob(os.path.join(PATH_RAW, "*.bin"))
     for file in bin_files:
-        data = parse(file, args.no_vibe)
+        data = parse(file)
         if data:
-            dump(data)
+            name = data['name']
+            difficulty = data['difficulty']
+            difficulty_str = ["Easy", "Medium", "Hard", "Impossible"][difficulty]
+            with open(os.path.join(PATH_JSON, f"{name}_{difficulty_str}.json"), "w") as f:
+                json.dump(data, f, indent=4)
+            print(f"Parse success on {name} ({difficulty}).")
+        else:
+            print(f"Failed Parse on {file}.")

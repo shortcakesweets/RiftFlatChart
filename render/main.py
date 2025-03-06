@@ -2,7 +2,7 @@ import os, glob, struct, json
 from parse import parse, dump
 from flatten import flatten
 from html_render import render
-from constants import PATH_RAW, PATH_JSON, PATH_HTML
+from constants import PATH_RAW, PATH_JSON
 
 if __name__ == "__main__":
     # raw to json
@@ -27,12 +27,6 @@ if __name__ == "__main__":
             data = json.load(f)
         name = data['name']
         difficulty = ["Easy", "Medium", "Hard", "Impossible"][data['difficulty']]
-
-        if flatten(file):
-            print(f"- {name} ({difficulty}) : FLATTEN OK")
-            if render(file):
-                print(f"- {name} ({difficulty}) : HTML OK")
-            else:
-                print(f"- {name} ({difficulty}) : HTML FAILED")
-        else:
-            print(f"- {name} ({difficulty}) : FLATTEN FAILED")
+        
+        flatten(file)
+        render(file)
