@@ -9,13 +9,20 @@ body {
     font-size: 5vh;
     color: yellow;
     text-align: center;
+    line-height: 1.2vh;
+}
+
+.changelog-link {
+    font-size: 2vh;
+    color: yellow;
+    text-align: center;
 }
 
 .song-list {
     width: 50vh;
     border-collapse: collapse;
     border: 1px solid yellow;
-    margin: 0 auto;
+    margin: 2vh auto;
     background-color: grey;
 }
 
@@ -37,4 +44,25 @@ body {
 .song-name {
     color: aliceblue;
     font-size: 3vh;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.changelog-div {
+    width: 60vh;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin: 40px;
+    box-sizing: border-box;
+}
+
+.changelog-div h1 {
+    color: yellow;
 }

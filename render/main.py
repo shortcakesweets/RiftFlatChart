@@ -3,6 +3,7 @@ from parse import parse
 from flatten import flatten
 from render_chart_html import render_chart_html
 from render_hompage_html import render_homepage_html
+from render_changelog_html import render_changelog_html
 from constants import PATH_RAW, PATH_JSON
 
 if __name__ == "__main__":
@@ -32,3 +33,4 @@ if __name__ == "__main__":
     
     # 4. Render homepage
     render_homepage_html()
+    render_changelog_html()

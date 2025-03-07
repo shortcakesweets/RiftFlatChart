@@ -13,6 +13,11 @@ html_template = """<!DOCTYPE html>
         <div class="title-div">
             <p>Rift of The Necrodancer</p>
             <p>Chart Archive</p>
+            <a
+                href="https://riftchart.shortcake.kr/changelog.html"
+                class="changelog-link"
+                >Changelog {timestamp}</a
+            >
         </div>
         <table class="song-list">
             {row_segments}
@@ -54,7 +59,8 @@ def render_homepage_html():
     for file in json_files:
         row_segments += create_row_html(file)
     
-    html_content = html_template.format(row_segments=row_segments)
+    html_content = html_template.format(timestamp=timestamp,
+                                        row_segments=row_segments)
     
     with open("../index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
