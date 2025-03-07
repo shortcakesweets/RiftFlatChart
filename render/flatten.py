@@ -3,6 +3,9 @@ from PIL import Image, ImageDraw, ImageFont
 from note_generate import Note, extract_notes
 from constants import PATH_FLAT
 
+# DEBUG option
+DEBUG_COMBO     = False
+
 # size constants
 # margin - gap - lane - gap - lane - gap - lane - gap - margin
 LANE_WIDTH      = 16
@@ -117,6 +120,13 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
                 return True
         return False
     
+    # DEBUG function, that renders combo count text on every note
+    def render_combo_text(column: int, rel_beat: float, combo: int):
+        x_start, y_start = get_note_xy(column, rel_beat)
+        font = ImageFont.truetype("arial.ttf", FONT_SIZE/2)
+        COLOR_WHITE = (255,255,255)
+        draw.text((x_start, y_start - FONT_SIZE/2), f"{combo}", fill=COLOR_WHITE, font=font)
+    
     # render wyrm notes
     for note in filtered_wyrm_notes:
         beat_padding = LANE_PADDING / (LANE_HEIGHT / 16)
@@ -130,6 +140,9 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         if relative_beat_start >= -beat_padding:
             color = VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR
             render_wyrm_head(note.column, relative_beat_start, color=color)
+
+            if DEBUG_COMBO:
+                render_combo_text(note.column, relative_beat_start, note.combo)
     
     # render short notes
     for note in filtered_short_notes:
@@ -142,10 +155,16 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
             color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
 
         render_short_note(note.column, relative_beat, color)
+
+        if DEBUG_COMBO:
+            render_combo_text(note.column, relative_beat, note.combo)
     
     return img
 
 def flatten(file):
+    if DEBUG_COMBO:
+        print("WARNING: COMBO_DEBUG option is True")
+
     try:
         with open(file, 'r') as f:
             data = json.load(f)
