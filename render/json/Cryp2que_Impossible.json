@@ -7604,21 +7604,6 @@
             "is_vibe": true
         },
         {
-            "event_type": 5,
-            "time": 101.1864406779661,
-            "beat": 200.0,
-            "target_time": 101.1864406779661,
-            "target_beat": 200.0,
-            "enemy_type": 10,
-            "column": 0,
-            "total_score": 0,
-            "base_score": 0,
-            "base_score_multiplier": 1,
-            "vibe_score_multiplier": 1,
-            "bonus_score": 0,
-            "is_vibe": true
-        },
-        {
             "event_type": 0,
             "time": 101.1864406779661,
             "beat": 200.0,
@@ -7631,6 +7616,21 @@
             "base_score_multiplier": 4,
             "vibe_score_multiplier": 1,
             "bonus_score": 2,
+            "is_vibe": true
+        },
+        {
+            "event_type": 5,
+            "time": 101.1864406779661,
+            "beat": 200.0,
+            "target_time": 101.1864406779661,
+            "target_beat": 200.0,
+            "enemy_type": 10,
+            "column": 0,
+            "total_score": 0,
+            "base_score": 0,
+            "base_score_multiplier": 1,
+            "vibe_score_multiplier": 1,
+            "bonus_score": 0,
             "is_vibe": true
         },
         {

@@ -1,5 +1,7 @@
 from enum import Enum
 
+URL = "riftchart.shortcake.kr"
+
 PATH_RAW = "./raw"
 PATH_JSON = "./json"
 PATH_FLAT = "./flat"

@@ -6,9 +6,12 @@ from constants import PATH_RAW, PATH_JSON
 # - only used when "csv row head != data['name']"
 # - this value should be updated manually.
 NAME_TO_ROW_HEAD = {
+    'Brave the Harvester': "Brave The Harvester",
     'Glass Cages (feat. Sarah Hubbard)': "Glass Cages",
     'Om and On': "Om And On",
-    'Under the Thunder': "Under The Thunder"
+    'Under the Thunder': "Under The Thunder",
+    'RAVEVENGE (feat. Aram Zero)': "RAVEVENGE",
+    "What's in the Box": "What's In The Box?"
 }
 
 def read_int(f) -> int:

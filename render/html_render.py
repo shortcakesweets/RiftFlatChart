@@ -1,5 +1,5 @@
 import os, glob, json
-from constants import PATH_FLAT, PATH_HTML
+from constants import PATH_FLAT, PATH_HTML, URL
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
@@ -39,8 +39,8 @@ html_template = """<!DOCTYPE html>
 
         <div class="content">
             <img
-                src="{img_src}"
-                alt="{img_alt}" />
+                src="{chart_src}"
+                alt="{chart_alt}" />
         </div>
     </body>
 </html>
@@ -56,7 +56,7 @@ def render(file):
         difficulty_str = ["Easy", "Medium", "Hard", "Impossible"][difficulty]
 
         title = f"{name} {difficulty_str}"
-        img_path = os.path.relpath(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"), PATH_HTML)
+        chart_path = os.path.relpath(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"), PATH_HTML)
         
         bpm = data['bpm']
         max_combo = 0
@@ -67,8 +67,8 @@ def render(file):
                                             bpm=str(bpm),
                                             max_combo=max_combo,
                                             max_score=max_score,
-                                            img_src=img_path,
-                                            img_alt=title)
+                                            chart_src=chart_path,
+                                            chart_alt=title)
 
         with open(os.path.join(PATH_HTML, f"{title}.html"), "w", encoding="utf-8") as f:
             f.write(html_content)
