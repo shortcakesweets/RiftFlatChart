@@ -1,10 +1,11 @@
-import os, glob, json
+import os, glob, json, datetime
 from constants import PATH_HTML, PATH_JSON
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
         <title>RoTN Chart archive</title>
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -43,8 +44,11 @@ def create_row_html(file) -> str:
     
     return row_html_segment
 
-if __name__ == "__main__":
+def render_homepage_html():
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
+
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M (UTC+09:00)")
+    print(timestamp)
     
     row_segments = """"""
     for file in json_files:
@@ -54,3 +58,6 @@ if __name__ == "__main__":
     
     with open("../index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
+
+if __name__ == "__main__":
+    render_homepage_html()

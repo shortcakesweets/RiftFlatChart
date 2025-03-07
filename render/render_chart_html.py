@@ -46,7 +46,7 @@ html_template = """<!DOCTYPE html>
 </html>
 """
 
-def render(file):
+def render_chart_html(file):
     try:
         with open(file) as f:
             data = json.load(f)
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
     for file in json_files:
-        render(file)
+        render_chart_html(file)
