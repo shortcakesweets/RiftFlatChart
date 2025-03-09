@@ -123,9 +123,9 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
     # DEBUG function, that renders combo count text on every note
     def render_combo_text(column: int, rel_beat: float, combo: int):
         x_start, y_start = get_note_xy(column, rel_beat)
-        font = ImageFont.truetype("arial.ttf", FONT_SIZE/2)
+        font = ImageFont.truetype("arial.ttf", FONT_SIZE)
         COLOR_WHITE = (255,255,255)
-        draw.text((x_start, y_start - FONT_SIZE/2), f"{combo}", fill=COLOR_WHITE, font=font)
+        draw.text((x_start, y_start - FONT_SIZE), f"{combo}", fill=COLOR_WHITE, font=font)
     
     # render wyrm notes
     for note in filtered_wyrm_notes:
