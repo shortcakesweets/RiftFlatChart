@@ -1,4 +1,4 @@
-import json
+import json, bisect
 from constants import EnemyType, EventType
 
 class Note():
@@ -9,6 +9,7 @@ class Note():
         self.column:        int   = 0
         self.overlap:       int   = 1
         self.combo:         int   = 0
+        self.is_vibe:       bool  = False
 
 def filter_short_note(event) -> bool:
     return event['enemy_type'] != EnemyType.WYRM.value and event['event_type'] == EventType.HIT.value
@@ -97,6 +98,24 @@ def extract_notes(file):
         combo += len(target_notes)
         for note in target_notes:
             note.combo = combo
+    
+    # with that combo values, determine each note is vibing or not
+    all_notes = short_notes + wyrm_notes
+    all_notes.sort(key=lambda note: note.beat_start)
+    
+    # function implementation of binary search
+    def binary_search(target_beat: float):
+        beat_start_list = [note.beat_start for note in all_notes]
+        index = bisect.bisect_left(beat_start_list, target_beat)
+        if index < len(all_notes):
+            return index
+        return None
+
+    vibe_data = data['vibe']
+    for vibe_chunk in vibe_data:
+        target_index = binary_search(vibe_chunk['beat'] - 0.1) # for float tolerance
+        for i in range(target_index, min(target_index + vibe_chunk['enemies'], len(all_notes))):
+            all_notes[i].is_vibe = True
 
     return short_notes, wyrm_notes
 

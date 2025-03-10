@@ -111,7 +111,10 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         x_start, y_start = get_note_xy(column, rel_beat)
         draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
     
-    # function for determining if combo X is in optimal vibe state
+    # function for determining if a note is in vibe state
+    ## BUG : currently CSV files contain wrong combo values.
+    ##  Do not use this function until it is fixed. use Note::is_vibe created from note_generate.
+    """
     def is_optimal_vibe(combo: int, vibe_data):
         if vibe_data == None:
             return False
@@ -119,6 +122,7 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
             if vibe_chunk['combo'] < combo <= vibe_chunk['combo'] + vibe_chunk['enemies']:
                 return True
         return False
+    """
     
     # DEBUG function, that renders combo count text on every note
     def render_combo_text(column: int, rel_beat: float, combo: int):
@@ -138,7 +142,8 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         
         relative_beat_start = note.beat_start - beat_index
         if relative_beat_start >= -beat_padding:
-            color = VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR
+            # color = VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR
+            color = VIBE_WYRM_HEAD_COLOR if note.is_vibe else WYRM_HEAD_COLOR
             render_wyrm_head(note.column, relative_beat_start, color=color)
 
             if DEBUG_COMBO:
@@ -150,9 +155,11 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
 
         color = (0,0,0)
         if note.overlap == 1:
-            color = VIBE_NOTE_COLOR if is_optimal_vibe(note.combo, vibe_data) else NOTE_COLOR
+            # color = VIBE_NOTE_COLOR if is_optimal_vibe(note.combo, vibe_data) else NOTE_COLOR
+            color = VIBE_NOTE_COLOR if note.is_vibe else NOTE_COLOR
         else:
-            color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
+            # color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
+            color = VIBE_OVERLAP_COLOR if note.is_vibe else OVERLAP_COLOR
 
         render_short_note(note.column, relative_beat, color)
 

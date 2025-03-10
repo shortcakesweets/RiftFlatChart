@@ -108,6 +108,7 @@ def parse(file) -> Optional[dict]:
                 }
                 
                 data['vibe'].append(vibe_chunk)
+                
         except Exception as e:
             name = data['name']
             difficulty = data['difficulty']
