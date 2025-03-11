@@ -10,6 +10,11 @@ Optimal vibe point rendering has some minor bugs, but starting point will be cor
 
 # Changelog
 
+## 2025-03-11
+
+Some more fix on vibe data. This patch fixes vibe ending's incorrect render.
+Still, this may be incorrect, but the starting point will be correct.
+
 ## 2025-03-10
 
 Temporary fix on vibe data. This patch will follow vibe data from CSV using beat values.

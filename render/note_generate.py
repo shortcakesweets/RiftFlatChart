@@ -113,8 +113,14 @@ def extract_notes(file):
 
     vibe_data = data['vibe']
     for vibe_chunk in vibe_data:
-        target_index = binary_search(vibe_chunk['beat'] - 0.1) # for float tolerance
-        for i in range(target_index, min(target_index + vibe_chunk['enemies'], len(all_notes))):
+        index_from = binary_search(vibe_chunk['beat'] - 0.1)                        # for float tolerance
+        index_to = min(index_from + vibe_chunk['enemies'], len(all_notes)) - 1      # inclusive
+
+        # if at least one enemy is vibe, enemies at the same beat should be all vibing
+        while index_to + 1 < len(all_notes) and all_notes[index_to].beat_start == all_notes[index_to + 1].beat_start:
+            index_to += 1
+
+        for i in range(index_from, index_to + 1):
             all_notes[i].is_vibe = True
 
     return short_notes, wyrm_notes
