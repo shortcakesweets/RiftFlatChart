@@ -1,8 +1,7 @@
 import os, glob, json, math
 import traceback
 from PIL import Image, ImageDraw, ImageFont
-from note_generate import Note, extract_notes
-from constants import PATH_FLAT
+from rift_essentials import *
 
 # DEBUG option
 DEBUG_COMBO     = False
@@ -36,11 +35,14 @@ OVERLAP_COLOR   = (255,0,0)     # red
 VIBE_NOTE_COLOR = (255,255,0)   # yellow
 VIBE_OVERLAP_COLOR = (255,140,0)# dark orange
 
-def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[Note], data):
+def create_segment(beat_index: int, chart: Chart):
     width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
     height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
     height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
     height_lane_end     = LANE_PADDING + LANE_MARGIN                        # height of lane end,   excluding padding
+
+    short_notes = chart.short_notes
+    wyrm_notes = chart.wyrm_notes
     
     # function that calcs x,y coordinate
     def get_note_xy(column: int, rel_beat: float):
@@ -100,6 +102,8 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
         draw.rectangle([x_start, height_lane_end - LANE_PADDING, x_start + LANE_GAP, height_lane_start + LANE_PADDING], fill=GAP_COLOR)
         x_start += LANE_GAP + LANE_WIDTH
     
+    # Now extracts bpm from extracted charts, WIP
+    """
     # function that gets best matching bpm
     #  - assumes bpm is integer multiplier or division of base bpm
     def get_bpm(measure_time: float, base_bpm: int) -> float:
@@ -142,6 +146,7 @@ def create_segment(beat_index: int, short_notes: list[Note], wyrm_notes: list[No
                         f"{curr_bpm}",
                         FONT_BPM_COLOR)
             print(f" detected bpm change: {prev_bpm} → {curr_bpm}")
+    """
     
     # filter only in-range notes
     beat_from = beat_index
@@ -238,9 +243,11 @@ def flatten(file):
         with open(file, 'r') as f:
             data = json.load(f)
         
-        name = data['name']
-        difficulty = data['difficulty']
-        short_notes, wyrm_notes = extract_notes(file)
+        chart = load_chart(data)
+        
+        name = chart.name
+        difficulty = chart.difficulty
+        short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
         
         last_beat: float = 0.0
         last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
@@ -248,7 +255,7 @@ def flatten(file):
         
         img_segments = []
         for beat_start in range(0, last_beat+1, 16):
-            img_segments.append(create_segment(beat_start, short_notes, wyrm_notes, data))
+            img_segments.append(create_segment(beat_start, chart))
         
         total_width = sum(img.width for img in img_segments)
         max_height = max(img.height for img in img_segments)
@@ -267,8 +274,6 @@ def flatten(file):
         traceback.print_exc()
 
 if __name__ == "__main__":
-    from constants import PATH_JSON
-
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
     for file in json_files:
         flatten(file)

@@ -1,0 +1,6404 @@
+{
+    "id": "Glass Cages (feat. Sarah Hubbard)_3",
+    "name": "Glass Cages (feat. Sarah Hubbard)",
+    "difficulty": "IMPOSSIBLE",
+    "max_combo": 799,
+    "divisions": 6,
+    "base_bpm": 210,
+    "short_notes": [
+        {
+            "beat_start": 9.0,
+            "beat_finish": 9.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 1,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 10.0,
+            "beat_finish": 10.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 2,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 11.0,
+            "beat_finish": 11.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 3,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 12.0,
+            "beat_finish": 12.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 4,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 14.0,
+            "beat_finish": 14.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 5,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 16.0,
+            "beat_finish": 16.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 6,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 17.0,
+            "beat_finish": 17.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 7,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 17.667,
+            "beat_finish": 17.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 8,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 18.0,
+            "beat_finish": 18.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 9,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 23.0,
+            "beat_finish": 23.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 10,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 24.0,
+            "beat_finish": 24.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 12,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 24.0,
+            "beat_finish": 24.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 12,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 25.0,
+            "beat_finish": 25.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 13,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 26.0,
+            "beat_finish": 26.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 14,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 27.0,
+            "beat_finish": 27.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 15,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 28.0,
+            "beat_finish": 28.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 17,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 28.0,
+            "beat_finish": 28.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 17,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 30.0,
+            "beat_finish": 30.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 19,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 30.0,
+            "beat_finish": 30.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 19,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 32.0,
+            "beat_finish": 32.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 20,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 33.0,
+            "beat_finish": 33.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 22,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 33.0,
+            "beat_finish": 33.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 22,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 35.0,
+            "beat_finish": 35.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 24,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 35.0,
+            "beat_finish": 35.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 24,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 36.0,
+            "beat_finish": 36.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 25,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 37.0,
+            "beat_finish": 37.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 27,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 37.0,
+            "beat_finish": 37.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 27,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 39.0,
+            "beat_finish": 39.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 29,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 39.0,
+            "beat_finish": 39.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 29,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 40.0,
+            "beat_finish": 40.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 30,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 41.0,
+            "beat_finish": 41.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 31,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 42.0,
+            "beat_finish": 42.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 32,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 43.0,
+            "beat_finish": 43.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 33,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 44.0,
+            "beat_finish": 44.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 35,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 44.0,
+            "beat_finish": 44.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 35,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 46.0,
+            "beat_finish": 46.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 36,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 48.0,
+            "beat_finish": 48.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 37,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 49.0,
+            "beat_finish": 49.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 38,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 49.667,
+            "beat_finish": 49.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 39,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 50.0,
+            "beat_finish": 50.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 40,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 53.0,
+            "beat_finish": 53.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 41,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 55.0,
+            "beat_finish": 55.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 43,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 55.0,
+            "beat_finish": 55.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 43,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 56.0,
+            "beat_finish": 56.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 44,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 57.0,
+            "beat_finish": 57.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 46,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 57.0,
+            "beat_finish": 57.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 46,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 58.0,
+            "beat_finish": 58.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 47,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 59.0,
+            "beat_finish": 59.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 48,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 60.0,
+            "beat_finish": 60.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 50,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 60.0,
+            "beat_finish": 60.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 50,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 62.0,
+            "beat_finish": 62.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 51,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 64.0,
+            "beat_finish": 64.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 52,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 65.0,
+            "beat_finish": 65.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 54,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 65.0,
+            "beat_finish": 65.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 54,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 67.0,
+            "beat_finish": 67.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 56,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 67.0,
+            "beat_finish": 67.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 56,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 68.0,
+            "beat_finish": 68.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 57,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 69.0,
+            "beat_finish": 69.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 59,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 69.0,
+            "beat_finish": 69.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 59,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 70.0,
+            "beat_finish": 70.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 60,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 71.0,
+            "beat_finish": 71.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 62,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 71.0,
+            "beat_finish": 71.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 62,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 72.0,
+            "beat_finish": 72.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 63,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 73.0,
+            "beat_finish": 73.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 66,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 73.0,
+            "beat_finish": 73.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 66,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 73.0,
+            "beat_finish": 73.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 66,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 75.0,
+            "beat_finish": 75.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 67,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 76.0,
+            "beat_finish": 76.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 69,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 76.0,
+            "beat_finish": 76.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 69,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 76.667,
+            "beat_finish": 76.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 71,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 76.667,
+            "beat_finish": 76.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 71,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 79.667,
+            "beat_finish": 79.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 73,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 79.667,
+            "beat_finish": 79.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 73,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 80.0,
+            "beat_finish": 80.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 75,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 80.0,
+            "beat_finish": 80.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 75,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 81.0,
+            "beat_finish": 81.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 76,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 83.0,
+            "beat_finish": 83.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 77,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 84.0,
+            "beat_finish": 84.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 79,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 84.0,
+            "beat_finish": 84.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 79,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 84.667,
+            "beat_finish": 84.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 81,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 84.667,
+            "beat_finish": 84.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 81,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 87.667,
+            "beat_finish": 87.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 83,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 87.667,
+            "beat_finish": 87.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 83,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 88.0,
+            "beat_finish": 88.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 85,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 88.0,
+            "beat_finish": 88.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 85,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 89.0,
+            "beat_finish": 89.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 86,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 91.0,
+            "beat_finish": 91.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 87,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 92.0,
+            "beat_finish": 92.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 89,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 92.0,
+            "beat_finish": 92.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 89,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 92.667,
+            "beat_finish": 92.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 91,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 92.667,
+            "beat_finish": 92.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 91,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 95.667,
+            "beat_finish": 95.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 93,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 95.667,
+            "beat_finish": 95.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 93,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 96.0,
+            "beat_finish": 96.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 95,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 96.0,
+            "beat_finish": 96.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 95,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 97.0,
+            "beat_finish": 97.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 96,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 99.0,
+            "beat_finish": 99.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 97,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 100.0,
+            "beat_finish": 100.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 99,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 100.0,
+            "beat_finish": 100.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 99,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 100.667,
+            "beat_finish": 100.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 101,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 100.667,
+            "beat_finish": 100.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 101,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 101.667,
+            "beat_finish": 101.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 103,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 101.667,
+            "beat_finish": 101.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 103,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 102.0,
+            "beat_finish": 102.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 105,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 102.0,
+            "beat_finish": 102.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 105,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 102.667,
+            "beat_finish": 102.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 106,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 103.667,
+            "beat_finish": 103.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 107,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 104.0,
+            "beat_finish": 104.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 109,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 104.0,
+            "beat_finish": 104.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 109,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 104.667,
+            "beat_finish": 104.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 110,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 105.0,
+            "beat_finish": 105.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 111,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 106.0,
+            "beat_finish": 106.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 112,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 107.0,
+            "beat_finish": 107.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 113,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 108.0,
+            "beat_finish": 108.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 114,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 110.0,
+            "beat_finish": 110.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 115,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 111.0,
+            "beat_finish": 111.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 2,
+            "combo": 116,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 112.0,
+            "beat_finish": 112.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 117,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 113.0,
+            "beat_finish": 113.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 118,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 113.667,
+            "beat_finish": 113.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 119,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 114.0,
+            "beat_finish": 114.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 120,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 115.0,
+            "beat_finish": 115.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 121,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 119.0,
+            "beat_finish": 119.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 123,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 119.0,
+            "beat_finish": 119.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 123,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 120.0,
+            "beat_finish": 120.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 124,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 121.0,
+            "beat_finish": 121.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 125,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 123.0,
+            "beat_finish": 123.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 126,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 124.0,
+            "beat_finish": 124.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 127,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 126.0,
+            "beat_finish": 126.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 128,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 127.0,
+            "beat_finish": 127.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 129,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 129.0,
+            "beat_finish": 129.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 130,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 131.0,
+            "beat_finish": 131.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 131,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 132.667,
+            "beat_finish": 132.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 132,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 132.833,
+            "beat_finish": 132.833,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 133,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 133.0,
+            "beat_finish": 133.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 134,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 135.0,
+            "beat_finish": 135.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 135,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 135.667,
+            "beat_finish": 135.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 136,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 136.0,
+            "beat_finish": 136.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 137,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 137.0,
+            "beat_finish": 137.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 138,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 138.0,
+            "beat_finish": 138.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 139,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 139.0,
+            "beat_finish": 139.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 140,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 140.0,
+            "beat_finish": 140.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 141,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 143.0,
+            "beat_finish": 143.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 143,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 143.0,
+            "beat_finish": 143.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 143,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 144.0,
+            "beat_finish": 144.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 144,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 145.0,
+            "beat_finish": 145.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 145,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 147.0,
+            "beat_finish": 147.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 146,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 148.667,
+            "beat_finish": 148.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 147,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 148.833,
+            "beat_finish": 148.833,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 148,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 149.0,
+            "beat_finish": 149.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 149,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 151.0,
+            "beat_finish": 151.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 151,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 151.0,
+            "beat_finish": 151.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 151,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 153.0,
+            "beat_finish": 153.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 152,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 154.0,
+            "beat_finish": 154.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 153,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 155.0,
+            "beat_finish": 155.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 154,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 156.0,
+            "beat_finish": 156.0,
+            "enemy_type": "APPLE",
+            "column": 0,
+            "combo": 156,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 156.0,
+            "beat_finish": 156.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 156,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 158.0,
+            "beat_finish": 158.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 157,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 159.0,
+            "beat_finish": 159.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 158,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 160.0,
+            "beat_finish": 160.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 159,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 161.0,
+            "beat_finish": 161.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 161,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 161.0,
+            "beat_finish": 161.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 161,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 163.0,
+            "beat_finish": 163.0,
+            "enemy_type": "GREEN_ZOMBIE",
+            "column": 0,
+            "combo": 163,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 163.0,
+            "beat_finish": 163.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 163,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 164.0,
+            "beat_finish": 164.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 164,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 165.0,
+            "beat_finish": 165.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 165,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 166.0,
+            "beat_finish": 166.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 167,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 166.0,
+            "beat_finish": 166.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 167,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 167.0,
+            "beat_finish": 167.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 168,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 167.667,
+            "beat_finish": 167.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 169,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 168.0,
+            "beat_finish": 168.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 170,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 169.0,
+            "beat_finish": 169.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 172,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 169.0,
+            "beat_finish": 169.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 172,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 171.0,
+            "beat_finish": 171.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 174,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 171.0,
+            "beat_finish": 171.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 174,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 173.0,
+            "beat_finish": 173.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 176,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 173.0,
+            "beat_finish": 173.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 176,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 175.0,
+            "beat_finish": 175.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 178,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 175.0,
+            "beat_finish": 175.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 178,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 176.667,
+            "beat_finish": 176.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 181,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 176.667,
+            "beat_finish": 176.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 181,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 176.667,
+            "beat_finish": 176.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 181,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 178.0,
+            "beat_finish": 178.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 182,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 178.333,
+            "beat_finish": 178.333,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 183,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 178.667,
+            "beat_finish": 178.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 184,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 179.0,
+            "beat_finish": 179.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 185,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 179.667,
+            "beat_finish": 179.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 186,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 180.333,
+            "beat_finish": 180.333,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 187,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 183.0,
+            "beat_finish": 183.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 189,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 183.167,
+            "beat_finish": 183.167,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 190,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 183.333,
+            "beat_finish": 183.333,
+            "enemy_type": "BLUE_SLIME",
+            "column": 0,
+            "combo": 191,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 184.0,
+            "beat_finish": 184.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 192,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 184.167,
+            "beat_finish": 184.167,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 193,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 184.333,
+            "beat_finish": 184.333,
+            "enemy_type": "BLUE_SLIME",
+            "column": 0,
+            "combo": 194,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 185.0,
+            "beat_finish": 185.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 196,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 185.0,
+            "beat_finish": 185.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 196,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 187.0,
+            "beat_finish": 187.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 198,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 187.0,
+            "beat_finish": 187.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 198,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 189.0,
+            "beat_finish": 189.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 200,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 189.0,
+            "beat_finish": 189.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 200,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 191.0,
+            "beat_finish": 191.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 202,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 191.0,
+            "beat_finish": 191.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 202,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 192.667,
+            "beat_finish": 192.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 205,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 192.667,
+            "beat_finish": 192.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 205,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 192.667,
+            "beat_finish": 192.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 205,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 195.0,
+            "beat_finish": 195.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 206,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 195.167,
+            "beat_finish": 195.167,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 208,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 197.0,
+            "beat_finish": 197.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 209,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 197.167,
+            "beat_finish": 197.167,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 211,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 199.0,
+            "beat_finish": 199.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 212,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 199.167,
+            "beat_finish": 199.167,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 214,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 201.0,
+            "beat_finish": 201.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 216,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 201.0,
+            "beat_finish": 201.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 216,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 203.0,
+            "beat_finish": 203.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 218,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 203.0,
+            "beat_finish": 203.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 218,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 205.0,
+            "beat_finish": 205.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 220,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 205.0,
+            "beat_finish": 205.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 220,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 207.0,
+            "beat_finish": 207.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 222,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 207.0,
+            "beat_finish": 207.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 222,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 208.667,
+            "beat_finish": 208.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 224,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 208.667,
+            "beat_finish": 208.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 224,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 211.0,
+            "beat_finish": 211.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 226,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 211.0,
+            "beat_finish": 211.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 226,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 212.667,
+            "beat_finish": 212.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 229,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 212.667,
+            "beat_finish": 212.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 229,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 212.667,
+            "beat_finish": 212.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 229,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 215.0,
+            "beat_finish": 215.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 230,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 215.667,
+            "beat_finish": 215.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 231,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 216.0,
+            "beat_finish": 216.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 232,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 216.667,
+            "beat_finish": 216.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 233,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 217.0,
+            "beat_finish": 217.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 234,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 219.0,
+            "beat_finish": 219.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 235,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 219.667,
+            "beat_finish": 219.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 237,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 219.667,
+            "beat_finish": 219.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 237,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 221.0,
+            "beat_finish": 221.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 238,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 221.667,
+            "beat_finish": 221.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 240,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 221.667,
+            "beat_finish": 221.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 240,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 223.0,
+            "beat_finish": 223.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 241,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 223.667,
+            "beat_finish": 223.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 243,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 223.667,
+            "beat_finish": 223.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 243,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 225.0,
+            "beat_finish": 225.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 244,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 225.667,
+            "beat_finish": 225.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 246,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 225.667,
+            "beat_finish": 225.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 246,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 227.0,
+            "beat_finish": 227.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 247,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 227.667,
+            "beat_finish": 227.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 249,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 227.667,
+            "beat_finish": 227.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 249,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 231.667,
+            "beat_finish": 231.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 251,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 232.0,
+            "beat_finish": 232.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 252,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 235.0,
+            "beat_finish": 235.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 254,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 235.667,
+            "beat_finish": 235.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 256,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 235.667,
+            "beat_finish": 235.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 256,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 237.0,
+            "beat_finish": 237.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 257,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 237.667,
+            "beat_finish": 237.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 259,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 237.667,
+            "beat_finish": 237.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 259,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 239.0,
+            "beat_finish": 239.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 260,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 239.667,
+            "beat_finish": 239.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 262,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 239.667,
+            "beat_finish": 239.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 262,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 241.0,
+            "beat_finish": 241.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 263,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 241.667,
+            "beat_finish": 241.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 265,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 241.667,
+            "beat_finish": 241.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 265,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 243.0,
+            "beat_finish": 243.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 266,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 243.667,
+            "beat_finish": 243.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 268,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 243.667,
+            "beat_finish": 243.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 268,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 252.333,
+            "beat_finish": 252.333,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 271,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 252.667,
+            "beat_finish": 252.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 272,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 255.0,
+            "beat_finish": 255.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 274,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 256.0,
+            "beat_finish": 256.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 275,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 257.0,
+            "beat_finish": 257.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 276,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 258.333,
+            "beat_finish": 258.333,
+            "enemy_type": "YELLOW_ARMADILLO",
+            "column": 1,
+            "combo": 277,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 258.667,
+            "beat_finish": 258.667,
+            "enemy_type": "YELLOW_ARMADILLO",
+            "column": 1,
+            "combo": 278,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 259.0,
+            "beat_finish": 259.0,
+            "enemy_type": "YELLOW_ARMADILLO",
+            "column": 1,
+            "combo": 279,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 259.667,
+            "beat_finish": 259.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 280,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 260.333,
+            "beat_finish": 260.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 281,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 261.0,
+            "beat_finish": 261.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 283,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 261.0,
+            "beat_finish": 261.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 283,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 262.0,
+            "beat_finish": 262.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 284,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 263.0,
+            "beat_finish": 263.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 286,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 263.0,
+            "beat_finish": 263.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 286,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 263.667,
+            "beat_finish": 263.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 287,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 264.667,
+            "beat_finish": 264.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 288,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 265.0,
+            "beat_finish": 265.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 289,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 266.667,
+            "beat_finish": 266.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 290,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 267.0,
+            "beat_finish": 267.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 292,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 267.0,
+            "beat_finish": 267.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 292,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 268.667,
+            "beat_finish": 268.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 293,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 269.0,
+            "beat_finish": 269.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 295,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 269.0,
+            "beat_finish": 269.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 295,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 270.0,
+            "beat_finish": 270.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 296,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 271.0,
+            "beat_finish": 271.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 297,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 271.5,
+            "beat_finish": 271.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 298,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 272.667,
+            "beat_finish": 272.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 299,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 273.0,
+            "beat_finish": 273.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 300,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 274.0,
+            "beat_finish": 274.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 301,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 275.0,
+            "beat_finish": 275.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 302,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 275.5,
+            "beat_finish": 275.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 303,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 275.667,
+            "beat_finish": 275.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 304,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 276.667,
+            "beat_finish": 276.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 305,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 277.0,
+            "beat_finish": 277.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 307,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 277.0,
+            "beat_finish": 277.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 2,
+            "combo": 307,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 278.0,
+            "beat_finish": 278.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 308,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 279.0,
+            "beat_finish": 279.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 309,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 279.667,
+            "beat_finish": 279.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 310,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 280.667,
+            "beat_finish": 280.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 311,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 281.0,
+            "beat_finish": 281.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 313,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 281.0,
+            "beat_finish": 281.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 313,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 282.667,
+            "beat_finish": 282.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 314,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 283.0,
+            "beat_finish": 283.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 315,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 284.667,
+            "beat_finish": 284.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 316,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 286.0,
+            "beat_finish": 286.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 317,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 287.0,
+            "beat_finish": 287.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 318,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 287.5,
+            "beat_finish": 287.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 319,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 289.0,
+            "beat_finish": 289.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 320,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 290.667,
+            "beat_finish": 290.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 321,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 291.0,
+            "beat_finish": 291.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 323,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 293.0,
+            "beat_finish": 293.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 325,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 293.0,
+            "beat_finish": 293.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 325,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 295.0,
+            "beat_finish": 295.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 327,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 295.0,
+            "beat_finish": 295.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 327,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 297.0,
+            "beat_finish": 297.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 329,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 297.0,
+            "beat_finish": 297.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 329,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 302.0,
+            "beat_finish": 302.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 330,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 303.5,
+            "beat_finish": 303.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 331,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 305.0,
+            "beat_finish": 305.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 332,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 307.0,
+            "beat_finish": 307.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 333,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 309.0,
+            "beat_finish": 309.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 335,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 309.0,
+            "beat_finish": 309.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 335,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 311.0,
+            "beat_finish": 311.0,
+            "enemy_type": "APPLE",
+            "column": 0,
+            "combo": 337,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 311.0,
+            "beat_finish": 311.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 337,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 313.0,
+            "beat_finish": 313.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 339,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 313.0,
+            "beat_finish": 313.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 339,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 318.0,
+            "beat_finish": 318.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 340,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 319.5,
+            "beat_finish": 319.5,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 341,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 321.0,
+            "beat_finish": 321.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 342,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 323.0,
+            "beat_finish": 323.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 343,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 325.0,
+            "beat_finish": 325.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 344,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 327.0,
+            "beat_finish": 327.0,
+            "enemy_type": "APPLE",
+            "column": 0,
+            "combo": 346,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 327.0,
+            "beat_finish": 327.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 346,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 329.0,
+            "beat_finish": 329.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 348,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 329.0,
+            "beat_finish": 329.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 348,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 333.0,
+            "beat_finish": 333.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 350,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 333.0,
+            "beat_finish": 333.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 350,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 337.592,
+            "beat_finish": 337.592,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 351,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 338.642,
+            "beat_finish": 338.642,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 352,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 339.575,
+            "beat_finish": 339.575,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 353,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 340.0,
+            "beat_finish": 340.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 354,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 340.667,
+            "beat_finish": 340.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 355,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 341.0,
+            "beat_finish": 341.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 356,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 341.667,
+            "beat_finish": 341.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 357,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 342.0,
+            "beat_finish": 342.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 358,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 342.667,
+            "beat_finish": 342.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 359,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 344.0,
+            "beat_finish": 344.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 360,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 345.0,
+            "beat_finish": 345.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 361,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 345.667,
+            "beat_finish": 345.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 362,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 347.0,
+            "beat_finish": 347.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 363,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 347.667,
+            "beat_finish": 347.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 364,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 349.0,
+            "beat_finish": 349.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 365,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 350.0,
+            "beat_finish": 350.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 366,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 351.0,
+            "beat_finish": 351.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 367,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 352.0,
+            "beat_finish": 352.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 368,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 353.0,
+            "beat_finish": 353.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 369,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 354.0,
+            "beat_finish": 354.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 370,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 354.667,
+            "beat_finish": 354.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 371,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 355.0,
+            "beat_finish": 355.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 372,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 355.667,
+            "beat_finish": 355.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 373,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 356.0,
+            "beat_finish": 356.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 374,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 359.5,
+            "beat_finish": 359.5,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 376,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 359.758,
+            "beat_finish": 359.758,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 377,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 360.0,
+            "beat_finish": 360.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 378,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 360.667,
+            "beat_finish": 360.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 379,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 361.0,
+            "beat_finish": 361.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 0,
+            "combo": 380,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 362.0,
+            "beat_finish": 362.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 381,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 363.0,
+            "beat_finish": 363.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 382,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 363.667,
+            "beat_finish": 363.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 383,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 364.667,
+            "beat_finish": 364.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 384,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 365.667,
+            "beat_finish": 365.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 386,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 366.667,
+            "beat_finish": 366.667,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 388,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 367.667,
+            "beat_finish": 367.667,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 389,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 368.0,
+            "beat_finish": 368.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 390,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 368.667,
+            "beat_finish": 368.667,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 391,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 369.0,
+            "beat_finish": 369.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 392,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 370.0,
+            "beat_finish": 370.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 393,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 371.0,
+            "beat_finish": 371.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 394,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 372.0,
+            "beat_finish": 372.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 395,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 372.667,
+            "beat_finish": 372.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 396,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 373.0,
+            "beat_finish": 373.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 397,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 374.0,
+            "beat_finish": 374.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 398,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 375.0,
+            "beat_finish": 375.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 399,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 379.667,
+            "beat_finish": 379.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 401,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 380.667,
+            "beat_finish": 380.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 402,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 381.0,
+            "beat_finish": 381.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 403,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 382.0,
+            "beat_finish": 382.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 404,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 382.333,
+            "beat_finish": 382.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 405,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 382.667,
+            "beat_finish": 382.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 406,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 383.0,
+            "beat_finish": 383.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 407,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 384.0,
+            "beat_finish": 384.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 408,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 384.333,
+            "beat_finish": 384.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 409,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 384.667,
+            "beat_finish": 384.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 410,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 385.0,
+            "beat_finish": 385.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 1,
+            "combo": 411,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 385.5,
+            "beat_finish": 385.5,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 413,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 385.5,
+            "beat_finish": 385.5,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 413,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 387.0,
+            "beat_finish": 387.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 414,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 387.667,
+            "beat_finish": 387.667,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 415,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 388.0,
+            "beat_finish": 388.0,
+            "enemy_type": "APPLE",
+            "column": 2,
+            "combo": 416,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 389.0,
+            "beat_finish": 389.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 417,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 390.667,
+            "beat_finish": 390.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 418,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 392.0,
+            "beat_finish": 392.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 419,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 392.667,
+            "beat_finish": 392.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 420,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 394.0,
+            "beat_finish": 394.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 421,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 395.0,
+            "beat_finish": 395.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 422,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 395.667,
+            "beat_finish": 395.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 423,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 398.667,
+            "beat_finish": 398.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 425,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 399.0,
+            "beat_finish": 399.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 426,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 399.667,
+            "beat_finish": 399.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 427,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 400.667,
+            "beat_finish": 400.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 428,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 402.0,
+            "beat_finish": 402.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 429,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 402.333,
+            "beat_finish": 402.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 430,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 402.667,
+            "beat_finish": 402.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 431,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 403.0,
+            "beat_finish": 403.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 432,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 403.333,
+            "beat_finish": 403.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 433,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 403.667,
+            "beat_finish": 403.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 434,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 404.0,
+            "beat_finish": 404.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 435,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 404.333,
+            "beat_finish": 404.333,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 436,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 404.667,
+            "beat_finish": 404.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 437,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 405.0,
+            "beat_finish": 405.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 439,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 405.0,
+            "beat_finish": 405.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 439,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 407.0,
+            "beat_finish": 407.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 441,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 407.0,
+            "beat_finish": 407.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 441,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 409.0,
+            "beat_finish": 409.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 443,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 409.0,
+            "beat_finish": 409.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 443,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 411.0,
+            "beat_finish": 411.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 445,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 411.0,
+            "beat_finish": 411.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 445,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 412.667,
+            "beat_finish": 412.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 448,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 412.667,
+            "beat_finish": 412.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 448,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 412.667,
+            "beat_finish": 412.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 448,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 413.667,
+            "beat_finish": 413.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 449,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 414.0,
+            "beat_finish": 414.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 450,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 414.667,
+            "beat_finish": 414.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 451,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 415.0,
+            "beat_finish": 415.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 452,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 416.0,
+            "beat_finish": 416.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 453,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 417.667,
+            "beat_finish": 417.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 454,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 418.667,
+            "beat_finish": 418.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 455,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 419.0,
+            "beat_finish": 419.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 456,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 419.667,
+            "beat_finish": 419.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 457,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 420.0,
+            "beat_finish": 420.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 458,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 420.667,
+            "beat_finish": 420.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 459,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 421.0,
+            "beat_finish": 421.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 461,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 421.0,
+            "beat_finish": 421.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 461,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 423.0,
+            "beat_finish": 423.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 463,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 423.0,
+            "beat_finish": 423.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 463,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 425.0,
+            "beat_finish": 425.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 465,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 425.0,
+            "beat_finish": 425.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 465,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 427.0,
+            "beat_finish": 427.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 1,
+            "combo": 467,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 427.0,
+            "beat_finish": 427.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 467,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 428.667,
+            "beat_finish": 428.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 469,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 428.667,
+            "beat_finish": 428.667,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 469,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 430.029,
+            "beat_finish": 430.029,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 470,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 430.604,
+            "beat_finish": 430.604,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 471,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 431.189,
+            "beat_finish": 431.189,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 472,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 431.875,
+            "beat_finish": 431.875,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 473,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 432.376,
+            "beat_finish": 432.376,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 474,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 433.0,
+            "beat_finish": 433.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 475,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 433.75,
+            "beat_finish": 433.75,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 476,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 434.376,
+            "beat_finish": 434.376,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 477,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 435.0,
+            "beat_finish": 435.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 478,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 436.0,
+            "beat_finish": 436.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 479,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 437.0,
+            "beat_finish": 437.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 481,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 437.0,
+            "beat_finish": 437.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 481,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 439.0,
+            "beat_finish": 439.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 483,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 439.0,
+            "beat_finish": 439.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 483,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 441.0,
+            "beat_finish": 441.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 485,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 441.0,
+            "beat_finish": 441.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 485,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 443.0,
+            "beat_finish": 443.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 487,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 443.0,
+            "beat_finish": 443.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 487,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 444.667,
+            "beat_finish": 444.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 489,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 444.667,
+            "beat_finish": 444.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 489,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 447.0,
+            "beat_finish": 447.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 492,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 447.0,
+            "beat_finish": 447.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 492,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 447.0,
+            "beat_finish": 447.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 492,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 448.667,
+            "beat_finish": 448.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 494,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 448.667,
+            "beat_finish": 448.667,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 494,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 451.0,
+            "beat_finish": 451.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 495,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 451.667,
+            "beat_finish": 451.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 496,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 452.0,
+            "beat_finish": 452.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 497,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 452.667,
+            "beat_finish": 452.667,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 498,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 453.0,
+            "beat_finish": 453.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 499,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 455.0,
+            "beat_finish": 455.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 501,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 456.667,
+            "beat_finish": 456.667,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 502,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 458.0,
+            "beat_finish": 458.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 0,
+            "combo": 504,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 459.0,
+            "beat_finish": 459.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 505,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 460.0,
+            "beat_finish": 460.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 506,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 460.667,
+            "beat_finish": 460.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 0,
+            "combo": 507,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 461.0,
+            "beat_finish": 461.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 509,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 461.667,
+            "beat_finish": 461.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 510,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 463.0,
+            "beat_finish": 463.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 511,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 464.0,
+            "beat_finish": 464.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 512,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 464.667,
+            "beat_finish": 464.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 513,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 465.667,
+            "beat_finish": 465.667,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 514,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 466.0,
+            "beat_finish": 466.0,
+            "enemy_type": "BLUE_ARMADILLO",
+            "column": 1,
+            "combo": 515,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 467.0,
+            "beat_finish": 467.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 516,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 467.667,
+            "beat_finish": 467.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 517,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 468.0,
+            "beat_finish": 468.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 518,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 469.0,
+            "beat_finish": 469.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 519,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 471.0,
+            "beat_finish": 471.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 520,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 472.5,
+            "beat_finish": 472.5,
+            "enemy_type": "BLADEMASTER",
+            "column": 0,
+            "combo": 521,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 472.75,
+            "beat_finish": 472.75,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 522,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 474.0,
+            "beat_finish": 474.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 524,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 475.0,
+            "beat_finish": 475.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 525,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 476.0,
+            "beat_finish": 476.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 526,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 477.0,
+            "beat_finish": 477.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 527,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 478.0,
+            "beat_finish": 478.0,
+            "enemy_type": "RED_BAT",
+            "column": 0,
+            "combo": 528,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 479.0,
+            "beat_finish": 479.0,
+            "enemy_type": "RED_BAT",
+            "column": 1,
+            "combo": 529,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 480.0,
+            "beat_finish": 480.0,
+            "enemy_type": "RED_BAT",
+            "column": 0,
+            "combo": 530,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 481.0,
+            "beat_finish": 481.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 531,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 482.0,
+            "beat_finish": 482.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 532,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 483.0,
+            "beat_finish": 483.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 533,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 484.0,
+            "beat_finish": 484.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 536,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 484.0,
+            "beat_finish": 484.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 536,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 484.0,
+            "beat_finish": 484.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 536,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 485.0,
+            "beat_finish": 485.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 537,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 486.0,
+            "beat_finish": 486.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 538,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 487.0,
+            "beat_finish": 487.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 539,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 488.0,
+            "beat_finish": 488.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 542,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 488.0,
+            "beat_finish": 488.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 542,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 488.0,
+            "beat_finish": 488.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 542,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 489.0,
+            "beat_finish": 489.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 543,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 490.0,
+            "beat_finish": 490.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 544,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 491.0,
+            "beat_finish": 491.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 545,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 492.0,
+            "beat_finish": 492.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 548,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 492.0,
+            "beat_finish": 492.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 548,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 492.0,
+            "beat_finish": 492.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 548,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 493.0,
+            "beat_finish": 493.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 549,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 494.0,
+            "beat_finish": 494.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 550,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 495.0,
+            "beat_finish": 495.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 551,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 496.0,
+            "beat_finish": 496.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 554,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 496.0,
+            "beat_finish": 496.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 554,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 496.0,
+            "beat_finish": 496.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 554,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 497.0,
+            "beat_finish": 497.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 556,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 497.0,
+            "beat_finish": 497.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 556,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 498.0,
+            "beat_finish": 498.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 558,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 498.0,
+            "beat_finish": 498.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 558,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 499.0,
+            "beat_finish": 499.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 560,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 499.0,
+            "beat_finish": 499.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 560,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 500.0,
+            "beat_finish": 500.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 563,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 500.0,
+            "beat_finish": 500.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 563,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 500.0,
+            "beat_finish": 500.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 563,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 501.0,
+            "beat_finish": 501.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 565,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 501.0,
+            "beat_finish": 501.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 565,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 502.0,
+            "beat_finish": 502.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 567,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 502.0,
+            "beat_finish": 502.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 567,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 503.0,
+            "beat_finish": 503.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 569,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 503.0,
+            "beat_finish": 503.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 569,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 504.0,
+            "beat_finish": 504.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 572,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 504.0,
+            "beat_finish": 504.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 572,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 504.0,
+            "beat_finish": 504.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 572,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 505.0,
+            "beat_finish": 505.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 574,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 505.0,
+            "beat_finish": 505.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 574,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 506.0,
+            "beat_finish": 506.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 577,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 506.0,
+            "beat_finish": 506.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 1,
+            "combo": 577,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 506.0,
+            "beat_finish": 506.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 577,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 507.0,
+            "beat_finish": 507.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 0,
+            "combo": 580,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 507.0,
+            "beat_finish": 507.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 580,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 507.0,
+            "beat_finish": 507.0,
+            "enemy_type": "YELLOW_BAT",
+            "column": 2,
+            "combo": 580,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 508.0,
+            "beat_finish": 508.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 583,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 508.0,
+            "beat_finish": 508.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 583,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 508.0,
+            "beat_finish": 508.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 583,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 509.0,
+            "beat_finish": 509.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 585,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 509.0,
+            "beat_finish": 509.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 585,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 510.0,
+            "beat_finish": 510.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 587,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 510.0,
+            "beat_finish": 510.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 587,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 511.0,
+            "beat_finish": 511.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 589,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 511.0,
+            "beat_finish": 511.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 589,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 512.0,
+            "beat_finish": 512.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 591,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 512.0,
+            "beat_finish": 512.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 591,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 513.0,
+            "beat_finish": 513.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 0,
+            "combo": 594,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 513.0,
+            "beat_finish": 513.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 1,
+            "combo": 594,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 513.0,
+            "beat_finish": 513.0,
+            "enemy_type": "RED_ZOMBIE",
+            "column": 2,
+            "combo": 594,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 514.0,
+            "beat_finish": 514.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 595,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 515.0,
+            "beat_finish": 515.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 597,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 515.0,
+            "beat_finish": 515.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 597,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 516.0,
+            "beat_finish": 516.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 599,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 516.0,
+            "beat_finish": 516.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 599,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 517.0,
+            "beat_finish": 517.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 600,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 518.0,
+            "beat_finish": 518.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 601,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 519.0,
+            "beat_finish": 519.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 602,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 520.0,
+            "beat_finish": 520.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 603,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 521.0,
+            "beat_finish": 521.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 605,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 521.0,
+            "beat_finish": 521.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 605,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 521.667,
+            "beat_finish": 521.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 606,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 522.0,
+            "beat_finish": 522.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 607,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 523.0,
+            "beat_finish": 523.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 608,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 524.0,
+            "beat_finish": 524.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 609,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 525.0,
+            "beat_finish": 525.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 610,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 526.0,
+            "beat_finish": 526.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 611,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 527.0,
+            "beat_finish": 527.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 613,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 527.0,
+            "beat_finish": 527.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 613,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 528.0,
+            "beat_finish": 528.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 614,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 529.0,
+            "beat_finish": 529.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 615,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 530.0,
+            "beat_finish": 530.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 616,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 531.0,
+            "beat_finish": 531.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 618,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 531.0,
+            "beat_finish": 531.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 618,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 532.0,
+            "beat_finish": 532.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 620,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 532.0,
+            "beat_finish": 532.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 620,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 533.0,
+            "beat_finish": 533.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 621,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 534.0,
+            "beat_finish": 534.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 622,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 535.0,
+            "beat_finish": 535.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 623,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 536.0,
+            "beat_finish": 536.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 624,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 537.0,
+            "beat_finish": 537.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 626,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 537.0,
+            "beat_finish": 537.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 626,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 539.0,
+            "beat_finish": 539.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 628,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 539.0,
+            "beat_finish": 539.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 628,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 540.0,
+            "beat_finish": 540.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 629,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 541.0,
+            "beat_finish": 541.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 631,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 541.0,
+            "beat_finish": 541.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 631,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 543.0,
+            "beat_finish": 543.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 633,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 543.0,
+            "beat_finish": 543.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 2,
+            "combo": 633,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 544.0,
+            "beat_finish": 544.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 2,
+            "combo": 634,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 545.0,
+            "beat_finish": 545.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 636,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 545.0,
+            "beat_finish": 545.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 2,
+            "combo": 636,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 546.0,
+            "beat_finish": 546.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 2,
+            "combo": 637,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 547.0,
+            "beat_finish": 547.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 639,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 547.0,
+            "beat_finish": 547.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 639,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 548.0,
+            "beat_finish": 548.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 1,
+            "combo": 641,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 548.0,
+            "beat_finish": 548.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 641,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 549.0,
+            "beat_finish": 549.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 642,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 550.0,
+            "beat_finish": 550.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 643,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 551.0,
+            "beat_finish": 551.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 644,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 552.0,
+            "beat_finish": 552.0,
+            "enemy_type": "GREEN_SLIME",
+            "column": 1,
+            "combo": 645,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 553.0,
+            "beat_finish": 553.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 647,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 553.0,
+            "beat_finish": 553.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 647,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 553.667,
+            "beat_finish": 553.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 648,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 554.0,
+            "beat_finish": 554.0,
+            "enemy_type": "APPLE",
+            "column": 1,
+            "combo": 649,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 555.0,
+            "beat_finish": 555.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 651,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 555.0,
+            "beat_finish": 555.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 651,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 556.0,
+            "beat_finish": 556.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 653,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 556.0,
+            "beat_finish": 556.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 653,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 557.0,
+            "beat_finish": 557.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 655,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 557.0,
+            "beat_finish": 557.0,
+            "enemy_type": "YELLOW_SLIME",
+            "column": 1,
+            "combo": 655,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 558.0,
+            "beat_finish": 558.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 1,
+            "combo": 656,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 559.0,
+            "beat_finish": 559.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 658,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 559.0,
+            "beat_finish": 559.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 658,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 560.0,
+            "beat_finish": 560.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 660,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 560.0,
+            "beat_finish": 560.0,
+            "enemy_type": "BLADEMASTER",
+            "column": 2,
+            "combo": 660,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 561.0,
+            "beat_finish": 561.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 661,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 562.0,
+            "beat_finish": 562.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 662,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 563.0,
+            "beat_finish": 563.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 664,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 563.0,
+            "beat_finish": 563.0,
+            "enemy_type": "BLUE_SLIME",
+            "column": 2,
+            "combo": 664,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 564.0,
+            "beat_finish": 564.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 665,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 565.0,
+            "beat_finish": 565.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 666,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 566.0,
+            "beat_finish": 566.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 668,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 566.0,
+            "beat_finish": 566.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 668,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 567.0,
+            "beat_finish": 567.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 669,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 568.0,
+            "beat_finish": 568.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 2,
+            "combo": 670,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 569.0,
+            "beat_finish": 569.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 672,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 570.0,
+            "beat_finish": 570.0,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 2,
+            "combo": 673,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 570.5,
+            "beat_finish": 570.5,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 2,
+            "combo": 674,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 571.5,
+            "beat_finish": 571.5,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 675,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 572.5,
+            "beat_finish": 572.5,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 0,
+            "combo": 676,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 573.0,
+            "beat_finish": 573.0,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 0,
+            "combo": 677,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 574.0,
+            "beat_finish": 574.0,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 2,
+            "combo": 678,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 574.5,
+            "beat_finish": 574.5,
+            "enemy_type": "WHITE_SHIELD_SKELETON",
+            "column": 2,
+            "combo": 679,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 574.775,
+            "beat_finish": 574.775,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 680,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 575.0,
+            "beat_finish": 575.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 681,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 575.5,
+            "beat_finish": 575.5,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 682,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 576.0,
+            "beat_finish": 576.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 683,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 576.5,
+            "beat_finish": 576.5,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 684,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 577.0,
+            "beat_finish": 577.0,
+            "enemy_type": "WHITE_SKULL",
+            "column": 1,
+            "combo": 685,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 578.0,
+            "beat_finish": 578.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 687,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 578.0,
+            "beat_finish": 578.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 687,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 579.0,
+            "beat_finish": 579.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 688,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 580.0,
+            "beat_finish": 580.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 690,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 580.0,
+            "beat_finish": 580.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 690,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 581.0,
+            "beat_finish": 581.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 692,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 581.0,
+            "beat_finish": 581.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 692,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 582.0,
+            "beat_finish": 582.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 694,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 582.0,
+            "beat_finish": 582.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 694,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 583.0,
+            "beat_finish": 583.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 695,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 584.0,
+            "beat_finish": 584.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 697,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 584.0,
+            "beat_finish": 584.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 697,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 585.0,
+            "beat_finish": 585.0,
+            "enemy_type": "RED_SKULL",
+            "column": 0,
+            "combo": 699,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 585.0,
+            "beat_finish": 585.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 699,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 586.0,
+            "beat_finish": 586.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 701,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 586.0,
+            "beat_finish": 586.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 701,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 587.0,
+            "beat_finish": 587.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 702,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 588.0,
+            "beat_finish": 588.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 704,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 588.0,
+            "beat_finish": 588.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 704,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 589.0,
+            "beat_finish": 589.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 706,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 589.0,
+            "beat_finish": 589.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 706,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 590.0,
+            "beat_finish": 590.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 708,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 590.0,
+            "beat_finish": 590.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 708,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 591.0,
+            "beat_finish": 591.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 709,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 592.0,
+            "beat_finish": 592.0,
+            "enemy_type": "RED_SKULL",
+            "column": 0,
+            "combo": 711,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 592.0,
+            "beat_finish": 592.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 711,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 593.0,
+            "beat_finish": 593.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 713,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 593.0,
+            "beat_finish": 593.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 713,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 594.0,
+            "beat_finish": 594.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 715,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 594.0,
+            "beat_finish": 594.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 715,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 595.0,
+            "beat_finish": 595.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 716,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 596.0,
+            "beat_finish": 596.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 718,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 596.0,
+            "beat_finish": 596.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 718,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 597.0,
+            "beat_finish": 597.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 720,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 597.0,
+            "beat_finish": 597.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 720,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 598.0,
+            "beat_finish": 598.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 722,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 598.0,
+            "beat_finish": 598.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 722,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 599.0,
+            "beat_finish": 599.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 723,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 600.0,
+            "beat_finish": 600.0,
+            "enemy_type": "RED_SKULL",
+            "column": 0,
+            "combo": 725,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 600.0,
+            "beat_finish": 600.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 725,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 601.0,
+            "beat_finish": 601.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 727,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 601.0,
+            "beat_finish": 601.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 727,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 602.0,
+            "beat_finish": 602.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 729,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 602.0,
+            "beat_finish": 602.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 729,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 603.0,
+            "beat_finish": 603.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 730,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 604.0,
+            "beat_finish": 604.0,
+            "enemy_type": "WHITE_SKULL",
+            "column": 1,
+            "combo": 732,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 604.0,
+            "beat_finish": 604.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 732,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 605.0,
+            "beat_finish": 605.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 735,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 605.0,
+            "beat_finish": 605.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 735,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 605.0,
+            "beat_finish": 605.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 735,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 606.0,
+            "beat_finish": 606.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 736,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 607.0,
+            "beat_finish": 607.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 737,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 608.0,
+            "beat_finish": 608.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 739,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 608.0,
+            "beat_finish": 608.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 739,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 609.0,
+            "beat_finish": 609.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 741,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 609.0,
+            "beat_finish": 609.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 741,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 610.0,
+            "beat_finish": 610.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 743,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 610.0,
+            "beat_finish": 610.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 743,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 611.0,
+            "beat_finish": 611.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 744,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 612.0,
+            "beat_finish": 612.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 746,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 612.0,
+            "beat_finish": 612.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 746,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 613.0,
+            "beat_finish": 613.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 748,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 613.0,
+            "beat_finish": 613.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 748,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 614.0,
+            "beat_finish": 614.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 750,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 614.0,
+            "beat_finish": 614.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 750,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 615.0,
+            "beat_finish": 615.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 751,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 616.0,
+            "beat_finish": 616.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 753,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 616.0,
+            "beat_finish": 616.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 753,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 617.0,
+            "beat_finish": 617.0,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 754,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 617.667,
+            "beat_finish": 617.667,
+            "enemy_type": "RED_ARMADILLO",
+            "column": 2,
+            "combo": 755,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 617.767,
+            "beat_finish": 617.767,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 756,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 618.0,
+            "beat_finish": 618.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 757,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 619.0,
+            "beat_finish": 619.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 758,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 620.0,
+            "beat_finish": 620.0,
+            "enemy_type": "WHITE_SKULL",
+            "column": 0,
+            "combo": 760,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 620.0,
+            "beat_finish": 620.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 760,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 621.0,
+            "beat_finish": 621.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 763,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 621.0,
+            "beat_finish": 621.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 763,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 621.0,
+            "beat_finish": 621.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 763,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 622.5,
+            "beat_finish": 622.5,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 764,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 623.0,
+            "beat_finish": 623.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 765,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 624.0,
+            "beat_finish": 624.0,
+            "enemy_type": "RED_SKULL",
+            "column": 1,
+            "combo": 767,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 624.0,
+            "beat_finish": 624.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 767,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 625.0,
+            "beat_finish": 625.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 769,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 625.0,
+            "beat_finish": 625.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 769,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 626.0,
+            "beat_finish": 626.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 771,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 626.0,
+            "beat_finish": 626.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 771,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 627.0,
+            "beat_finish": 627.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 772,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 628.0,
+            "beat_finish": 628.0,
+            "enemy_type": "RED_SKULL",
+            "column": 0,
+            "combo": 774,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 628.0,
+            "beat_finish": 628.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 1,
+            "combo": 774,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 629.0,
+            "beat_finish": 629.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 776,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 629.0,
+            "beat_finish": 629.0,
+            "enemy_type": "RED_SKULL",
+            "column": 2,
+            "combo": 776,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 630.0,
+            "beat_finish": 630.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 0,
+            "combo": 778,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 630.0,
+            "beat_finish": 630.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 778,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 631.0,
+            "beat_finish": 631.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 779,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 632.0,
+            "beat_finish": 632.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 2,
+            "combo": 780,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 633.0,
+            "beat_finish": 633.0,
+            "enemy_type": "BLUE_BAT",
+            "column": 0,
+            "combo": 782,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 633.0,
+            "beat_finish": 633.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 782,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 635.0,
+            "beat_finish": 635.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 785,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 635.0,
+            "beat_finish": 635.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 1,
+            "combo": 785,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 635.0,
+            "beat_finish": 635.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 785,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 637.0,
+            "beat_finish": 637.0,
+            "enemy_type": "BLUE_HARPY",
+            "column": 0,
+            "combo": 786,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 638.5,
+            "beat_finish": 638.5,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 787,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 638.75,
+            "beat_finish": 638.75,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 1,
+            "combo": 788,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 639.0,
+            "beat_finish": 639.0,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 789,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 640.0,
+            "beat_finish": 640.0,
+            "enemy_type": "WHITE_SKELETON",
+            "column": 2,
+            "combo": 790,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 655.354,
+            "beat_finish": 655.354,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 792,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 655.833,
+            "beat_finish": 655.833,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 793,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 658.5,
+            "beat_finish": 658.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 794,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 661.5,
+            "beat_finish": 661.5,
+            "enemy_type": "GREEN_HARPY",
+            "column": 2,
+            "combo": 795,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 665.192,
+            "beat_finish": 665.192,
+            "enemy_type": "GREEN_HARPY",
+            "column": 0,
+            "combo": 796,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 669.533,
+            "beat_finish": 669.533,
+            "enemy_type": "RED_HARPY",
+            "column": 0,
+            "combo": 799,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 669.533,
+            "beat_finish": 669.533,
+            "enemy_type": "RED_HARPY",
+            "column": 1,
+            "combo": 799,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 669.533,
+            "beat_finish": 669.533,
+            "enemy_type": "RED_HARPY",
+            "column": 2,
+            "combo": 799,
+            "is_vibe": false
+        }
+    ],
+    "wyrm_notes": [
+        {
+            "beat_start": 181.0,
+            "beat_finish": 182.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 188,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 195.167,
+            "beat_finish": 196.167,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 208,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 197.167,
+            "beat_finish": 198.167,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 211,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 199.167,
+            "beat_finish": 200.167,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 214,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 229.0,
+            "beat_finish": 231.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 250,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 233.0,
+            "beat_finish": 234.0,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 253,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 245.0,
+            "beat_finish": 246.0,
+            "enemy_type": "WYRM",
+            "column": 1,
+            "combo": 269,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 249.0,
+            "beat_finish": 251.0,
+            "enemy_type": "WYRM",
+            "column": 1,
+            "combo": 270,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 253.0,
+            "beat_finish": 254.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 273,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 291.0,
+            "beat_finish": 292.0,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 323,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 356.667,
+            "beat_finish": 358.667,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 375,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 365.0,
+            "beat_finish": 366.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 385,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 366.0,
+            "beat_finish": 367.0,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 387,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 376.0,
+            "beat_finish": 378.0,
+            "enemy_type": "WYRM",
+            "column": 1,
+            "combo": 400,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 396.667,
+            "beat_finish": 397.667,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 424,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 455.0,
+            "beat_finish": 456.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 501,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 457.0,
+            "beat_finish": 460.0,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 503,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 461.0,
+            "beat_finish": 466.0,
+            "enemy_type": "WYRM",
+            "column": 0,
+            "combo": 509,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 473.0,
+            "beat_finish": 479.0,
+            "enemy_type": "WYRM",
+            "column": 2,
+            "combo": 523,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 569.0,
+            "beat_finish": 573.0,
+            "enemy_type": "WYRM",
+            "column": 1,
+            "combo": 672,
+            "is_vibe": false
+        },
+        {
+            "beat_start": 641.0,
+            "beat_finish": 668.0,
+            "enemy_type": "WYRM",
+            "column": 1,
+            "combo": 791,
+            "is_vibe": false
+        }
+    ]
+}

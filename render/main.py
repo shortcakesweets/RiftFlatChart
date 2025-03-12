@@ -4,7 +4,7 @@ from flatten import flatten
 from render_chart_html import render_chart_html
 from render_hompage_html import render_homepage_html
 from render_changelog_html import render_changelog_html
-from constants import PATH_RAW, PATH_JSON
+from rift_essentials import PATH_RAW, PATH_JSON
 
 if __name__ == "__main__":
     # 1. Parses (and dump data as JSON)
