@@ -130,12 +130,12 @@ def create_row_html(file) -> str:
         </a>
     </td>
     <td>
-        <a href="./render/html/{file_name}.html" class="song-name">{song_name}</a>
+        <a href="./render/html/{file_name}.html" class="song-name">{short_name}</a>
     </td>
 </tr>
     """
     
-    row_html_segment = row_template.format(file_name=file_name, song_name=short_name)
+    row_html_segment = row_template.format(file_name=file_name, song_name=name, short_name=short_name)
     
     return row_html_segment
 
