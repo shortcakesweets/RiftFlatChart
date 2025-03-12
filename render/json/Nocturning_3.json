@@ -1,10 +1,33 @@
 {
     "id": "Nocturning_3",
     "name": "Nocturning",
+    "short_name": "Nocturning",
     "difficulty": "IMPOSSIBLE",
+    "intensity": 23,
     "max_combo": 823,
+    "max_score": 2073905,
     "divisions": 4,
     "base_bpm": 139,
+    "bpm_changes": [
+        {
+            "beat": 1,
+            "bpm": 139
+        }
+    ],
+    "optimal_vibes": [
+        {
+            "beat": 91.0,
+            "enemies": 27
+        },
+        {
+            "beat": 190.5,
+            "enemies": 27
+        },
+        {
+            "beat": 365.0,
+            "enemies": 59
+        }
+    ],
     "short_notes": [
         {
             "beat_start": 9.0,
@@ -1164,7 +1187,7 @@
             "enemy_type": "RED_BAT",
             "column": 1,
             "combo": 149,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 92.0,
@@ -1172,7 +1195,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 1,
             "combo": 151,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 92.0,
@@ -1180,7 +1203,7 @@
             "enemy_type": "RED_BAT",
             "column": 2,
             "combo": 151,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 93.5,
@@ -1188,7 +1211,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 0,
             "combo": 152,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 93.667,
@@ -1196,7 +1219,7 @@
             "enemy_type": "GREEN_SLIME",
             "column": 1,
             "combo": 153,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 93.833,
@@ -1204,7 +1227,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 154,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 94.0,
@@ -1212,7 +1235,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 2,
             "combo": 155,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 94.5,
@@ -1220,7 +1243,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 0,
             "combo": 156,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 95.0,
@@ -1228,7 +1251,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 2,
             "combo": 157,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 95.5,
@@ -1236,7 +1259,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 0,
             "combo": 158,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 95.667,
@@ -1244,7 +1267,7 @@
             "enemy_type": "GREEN_SLIME",
             "column": 1,
             "combo": 159,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 95.833,
@@ -1252,7 +1275,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 160,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 96.0,
@@ -1260,7 +1283,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 2,
             "combo": 161,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 96.5,
@@ -1268,7 +1291,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 0,
             "combo": 162,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 97.0,
@@ -1276,7 +1299,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 2,
             "combo": 163,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 97.5,
@@ -1284,7 +1307,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 1,
             "combo": 164,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 98.0,
@@ -1292,7 +1315,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 0,
             "combo": 165,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 98.5,
@@ -1300,7 +1323,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 2,
             "combo": 166,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 99.0,
@@ -1308,7 +1331,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 1,
             "combo": 167,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 99.5,
@@ -1316,7 +1339,7 @@
             "enemy_type": "BLUE_SLIME",
             "column": 0,
             "combo": 168,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 100.0,
@@ -1324,7 +1347,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 169,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 100.5,
@@ -1332,7 +1355,7 @@
             "enemy_type": "BLUE_SLIME",
             "column": 0,
             "combo": 170,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 101.0,
@@ -1340,7 +1363,7 @@
             "enemy_type": "APPLE",
             "column": 2,
             "combo": 172,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 103.0,
@@ -1348,7 +1371,7 @@
             "enemy_type": "RED_BAT",
             "column": 0,
             "combo": 174,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 103.0,
@@ -1356,7 +1379,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 2,
             "combo": 174,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 103.5,
@@ -1364,7 +1387,7 @@
             "enemy_type": "RED_HARPY",
             "column": 0,
             "combo": 175,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 104.0,
@@ -2404,7 +2427,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 0,
             "combo": 308,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 191.0,
@@ -2412,7 +2435,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 2,
             "combo": 309,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 191.5,
@@ -2420,7 +2443,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 0,
             "combo": 310,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 191.667,
@@ -2428,7 +2451,7 @@
             "enemy_type": "GREEN_SLIME",
             "column": 1,
             "combo": 311,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 191.833,
@@ -2436,7 +2459,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 312,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 192.0,
@@ -2444,7 +2467,7 @@
             "enemy_type": "YELLOW_SLIME",
             "column": 2,
             "combo": 313,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 192.5,
@@ -2452,7 +2475,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 0,
             "combo": 314,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 193.0,
@@ -2460,7 +2483,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 2,
             "combo": 315,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 193.5,
@@ -2468,7 +2491,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 1,
             "combo": 316,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 194.0,
@@ -2476,7 +2499,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 0,
             "combo": 317,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 194.5,
@@ -2484,7 +2507,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 2,
             "combo": 318,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 195.0,
@@ -2492,7 +2515,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 1,
             "combo": 319,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 195.5,
@@ -2500,7 +2523,7 @@
             "enemy_type": "BLUE_SLIME",
             "column": 0,
             "combo": 320,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 196.0,
@@ -2508,7 +2531,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 321,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 196.5,
@@ -2516,7 +2539,7 @@
             "enemy_type": "BLUE_SLIME",
             "column": 0,
             "combo": 322,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 198.0,
@@ -2524,7 +2547,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 0,
             "combo": 324,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 198.75,
@@ -2532,7 +2555,7 @@
             "enemy_type": "GREEN_SLIME",
             "column": 2,
             "combo": 325,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 199.5,
@@ -2540,7 +2563,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 2,
             "combo": 326,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 200.0,
@@ -2548,7 +2571,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 0,
             "combo": 328,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 200.0,
@@ -2556,7 +2579,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 2,
             "combo": 328,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 200.75,
@@ -2564,7 +2587,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 1,
             "combo": 329,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 202.0,
@@ -2572,7 +2595,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 2,
             "combo": 331,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 202.75,
@@ -2580,7 +2603,7 @@
             "enemy_type": "GREEN_SLIME",
             "column": 0,
             "combo": 332,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 203.5,
@@ -2588,7 +2611,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 0,
             "combo": 333,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 204.0,
@@ -2596,7 +2619,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 0,
             "combo": 335,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 204.0,
@@ -2604,7 +2627,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 2,
             "combo": 335,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 204.25,
@@ -4340,7 +4363,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 1,
             "combo": 579,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 365.0,
@@ -4348,7 +4371,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 2,
             "combo": 579,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 366.0,
@@ -4356,7 +4379,7 @@
             "enemy_type": "RED_BAT",
             "column": 0,
             "combo": 581,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 366.0,
@@ -4364,7 +4387,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 2,
             "combo": 581,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 367.0,
@@ -4372,7 +4395,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 1,
             "combo": 583,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 367.0,
@@ -4380,7 +4403,7 @@
             "enemy_type": "RED_BAT",
             "column": 2,
             "combo": 583,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 368.0,
@@ -4388,7 +4411,7 @@
             "enemy_type": "RED_BAT",
             "column": 0,
             "combo": 585,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 368.0,
@@ -4396,7 +4419,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 2,
             "combo": 585,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 369.0,
@@ -4404,7 +4427,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 587,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 370.0,
@@ -4412,7 +4435,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 2,
             "combo": 588,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 371.0,
@@ -4420,7 +4443,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 0,
             "combo": 589,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 372.0,
@@ -4428,7 +4451,7 @@
             "enemy_type": "YELLOW_BAT",
             "column": 1,
             "combo": 590,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 372.5,
@@ -4436,7 +4459,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 2,
             "combo": 591,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 372.75,
@@ -4444,7 +4467,7 @@
             "enemy_type": "WHITE_SKELETON",
             "column": 0,
             "combo": 592,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 373.0,
@@ -4452,7 +4475,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 593,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 373.5,
@@ -4460,7 +4483,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 595,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 373.5,
@@ -4468,7 +4491,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 595,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 374.0,
@@ -4476,7 +4499,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 596,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 374.5,
@@ -4484,7 +4507,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 598,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 374.5,
@@ -4492,7 +4515,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 598,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 375.0,
@@ -4500,7 +4523,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 599,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 375.5,
@@ -4508,7 +4531,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 601,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 375.5,
@@ -4516,7 +4539,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 601,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 376.0,
@@ -4524,7 +4547,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 602,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 376.5,
@@ -4532,7 +4555,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 604,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 376.5,
@@ -4540,7 +4563,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 604,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 377.0,
@@ -4548,7 +4571,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 605,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 377.5,
@@ -4556,7 +4579,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 607,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 377.5,
@@ -4564,7 +4587,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 607,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 378.0,
@@ -4572,7 +4595,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 608,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 378.5,
@@ -4580,7 +4603,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 610,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 378.5,
@@ -4588,7 +4611,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 610,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 379.0,
@@ -4596,7 +4619,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 611,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 379.5,
@@ -4604,7 +4627,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 613,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 379.5,
@@ -4612,7 +4635,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 613,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 380.0,
@@ -4620,7 +4643,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 614,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 380.5,
@@ -4628,7 +4651,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 616,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 380.5,
@@ -4636,7 +4659,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 616,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 381.0,
@@ -4644,7 +4667,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 617,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 381.5,
@@ -4652,7 +4675,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 619,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 381.5,
@@ -4660,7 +4683,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 619,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 382.0,
@@ -4668,7 +4691,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 620,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 382.5,
@@ -4676,7 +4699,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 622,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 382.5,
@@ -4684,7 +4707,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 622,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 383.0,
@@ -4692,7 +4715,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 623,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 383.5,
@@ -4700,7 +4723,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 625,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 383.5,
@@ -4708,7 +4731,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 2,
             "combo": 625,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 384.0,
@@ -4716,7 +4739,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 626,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 384.5,
@@ -4724,7 +4747,7 @@
             "enemy_type": "GREEN_HARPY",
             "column": 0,
             "combo": 628,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 384.5,
@@ -4732,7 +4755,7 @@
             "enemy_type": "WHITE_SHIELD_SKELETON",
             "column": 1,
             "combo": 628,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 385.0,
@@ -4740,7 +4763,7 @@
             "enemy_type": "YELLOW_SKELETON",
             "column": 1,
             "combo": 629,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 386.0,
@@ -4748,7 +4771,7 @@
             "enemy_type": "YELLOW_SKELETON",
             "column": 1,
             "combo": 631,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 386.0,
@@ -4756,7 +4779,7 @@
             "enemy_type": "DRUMSTICK",
             "column": 2,
             "combo": 631,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 387.0,
@@ -4764,7 +4787,7 @@
             "enemy_type": "YELLOW_SKELETON",
             "column": 1,
             "combo": 633,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 387.0,
@@ -4772,7 +4795,7 @@
             "enemy_type": "DRUMSTICK",
             "column": 2,
             "combo": 633,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 388.0,
@@ -4780,7 +4803,7 @@
             "enemy_type": "YELLOW_SKELETON",
             "column": 1,
             "combo": 635,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 388.0,
@@ -4788,7 +4811,7 @@
             "enemy_type": "DRUMSTICK",
             "column": 2,
             "combo": 635,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 389.0,
@@ -4796,7 +4819,7 @@
             "enemy_type": "BLUE_HARPY",
             "column": 0,
             "combo": 637,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 389.0,
@@ -4804,7 +4827,7 @@
             "enemy_type": "BLUE_BAT",
             "column": 1,
             "combo": 637,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 390.0,
@@ -6182,7 +6205,7 @@
             "enemy_type": "WYRM",
             "column": 1,
             "combo": 172,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 113.0,
@@ -6214,7 +6237,7 @@
             "enemy_type": "WYRM",
             "column": 2,
             "combo": 323,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 201.0,
@@ -6222,7 +6245,7 @@
             "enemy_type": "WYRM",
             "column": 0,
             "combo": 330,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 205.0,
@@ -6438,7 +6461,7 @@
             "enemy_type": "WYRM",
             "column": 1,
             "combo": 587,
-            "is_vibe": false
+            "is_vibe": true
         },
         {
             "beat_start": 393.0,

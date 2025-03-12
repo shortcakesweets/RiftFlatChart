@@ -1,7 +1,3 @@
-"""
-Converts raw file (.bin) to JSON format
-"""
-
 import json, struct, glob, os, traceback
 from rift_essentials import *
 
@@ -135,16 +131,21 @@ def parse(file) -> None:
         chart = load_chart(data)
     except Exception as e:
         chart = Chart()
-        print(f"- Failed to load data for {output_file}: {e}")
+        print(f"- Failed to load data for '{output_file}': {e}")
+        traceback.print_exc()
 
-    chart = Chart()
+    ## Do not uncomment!!
     chart.id = f"{name}_{difficulty.value}"
     chart.name = name
+    # chart.short_name = name
     chart.difficulty = difficulty
+    # chart.intensity = 0
     chart.max_combo = combo
+    # chart.max_score = 0
     chart.divisions = divisions
     chart.base_bpm = base_bpm
     # chart.bpm_changes = [BpmChange(1,base_bpm)]
+    # chart.optimal_vibes = [VibeData(-1, -1)]
     chart.short_notes = short_notes
     chart.wyrm_notes = wyrm_notes
     

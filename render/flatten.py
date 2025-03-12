@@ -10,12 +10,13 @@ DEBUG_COMBO     = False
 # margin - gap - lane - gap - lane - gap - lane - gap - margin
 LANE_WIDTH      = 16
 LANE_GAP        = 1
-LANE_MARGIN     = 24
+LANE_MARGIN     = 36
 LANE_HEIGHT     = 1200
 LANE_PADDING    = 8             # slightly longer lanes for previewing next notes
 NOTE_SIZE       = 12
 NOTE_THICK      = 2
 FONT_SIZE       = 12
+FONT_MARGIN     = 4
 WYRM_HEAD_SIZE  = 6
 
 # color constants
@@ -69,8 +70,11 @@ def create_segment(beat_index: int, chart: Chart):
         x_start += LANE_WIDTH + LANE_GAP
     
     # function that renders text
-    def render_text(x: float, y: float, text: str, color: tuple):
+    def render_text(x: float, y: float, text: str, color: tuple, align_right: bool = False):
         font = ImageFont.truetype("arialbd.ttf", FONT_SIZE)
+        if align_right:
+            _, _, text_width, _ = font.getbbox(text)
+            x -= text_width
         draw.text((x,y), text, fill=color, font=font)
     
     # draw beat divisions
@@ -82,9 +86,10 @@ def create_segment(beat_index: int, chart: Chart):
                         LANE_MARGIN + LANE_WIDTH * 3 + LANE_GAP * 4,
                         y_finish],
                         fill=MAIN_DIV_COLOR)
-        render_text(0, y_finish - LANE_GAP - FONT_SIZE,
+        render_text(LANE_MARGIN - FONT_MARGIN, y_finish - LANE_GAP - FONT_SIZE,
                     f"{(beat_index+rel_beat):03d}",
-                    FONT_MEASURE_COLOR)
+                    FONT_MEASURE_COLOR,
+                    align_right=True)
     
     # - sub division
     for rel_beat in range(17):
@@ -102,51 +107,19 @@ def create_segment(beat_index: int, chart: Chart):
         draw.rectangle([x_start, height_lane_end - LANE_PADDING, x_start + LANE_GAP, height_lane_start + LANE_PADDING], fill=GAP_COLOR)
         x_start += LANE_GAP + LANE_WIDTH
     
-    # Now extracts bpm from extracted charts, WIP
-    """
-    # function that gets best matching bpm
-    #  - assumes bpm is integer multiplier or division of base bpm
-    def get_bpm(measure_time: float, base_bpm: int) -> float:
-        ideal_bpm = 60.0 / measure_time
-        candidates = []
-        for k in range(1,21):
-            candidates.append(base_bpm * k)
-            candidates.append(base_bpm / k)
-        
-        best_candidate = min(candidates, key=lambda x: abs(x - ideal_bpm))
-        return round(best_candidate, 1)
-
-    # draw bpm changes
-    base_bpm = data['bpm']
-    beat_timing_data = data['beat_timings']
+    # draw bpm change texts
+    base_bpm = chart.base_bpm
+    bpm_changes = chart.bpm_changes
     BPM_TEXT_X_START = LANE_MARGIN + LANE_GAP * 4 + LANE_WIDTH * 3
-
-    if beat_index == 0: # always render bpm for first measure
-        _, y_finish = get_note_xy(0,0)
-        render_text(BPM_TEXT_X_START, y_finish - LANE_GAP - FONT_SIZE,
-                    f"{base_bpm}",
-                    FONT_BPM_COLOR)
-
-    for rel_beat in range(17):
-        def_beat = beat_index + rel_beat
-
-        # Out of bounds error exception handling on both sides
-        if def_beat - 1 < 0 or def_beat + 1 >= len(beat_timing_data):
+    for bpm_change in bpm_changes:
+        rel_beat = bpm_change.beat - beat_index
+        if rel_beat < 0 or rel_beat >= 16:
             continue
-
-        prev_measure_time = beat_timing_data[def_beat] - beat_timing_data[def_beat - 1]
-        curr_measure_time = beat_timing_data[def_beat + 1] - beat_timing_data[def_beat]
-
-        prev_bpm = get_bpm(prev_measure_time, base_bpm)
-        curr_bpm = get_bpm(curr_measure_time, base_bpm)
-
-        if curr_bpm != prev_bpm:
-            _, y_finish = get_note_xy(0, rel_beat)
-            render_text(BPM_TEXT_X_START, y_finish - LANE_GAP - FONT_SIZE,
-                        f"{curr_bpm}",
-                        FONT_BPM_COLOR)
-            print(f" detected bpm change: {prev_bpm} → {curr_bpm}")
-    """
+        
+        _, y_finish = get_note_xy(0, rel_beat)
+        render_text(BPM_TEXT_X_START + FONT_MARGIN, y_finish - LANE_GAP - FONT_SIZE,
+                    f"{bpm_change.bpm}",
+                    FONT_BPM_COLOR)
     
     # filter only in-range notes
     beat_from = beat_index
@@ -221,7 +194,13 @@ def create_segment(beat_index: int, chart: Chart):
         relative_beat = note.beat_start - beat_index
 
         color = (0,0,0)
-        if note.overlap == 1:
+        
+        overlap_count: int = 0
+        for other_note in filtered_short_notes:
+            if note.column == other_note.column and note.beat_start == other_note.beat_start:
+                overlap_count += 1
+        
+        if overlap_count == 1:
             # color = VIBE_NOTE_COLOR if is_optimal_vibe(note.combo, vibe_data) else NOTE_COLOR
             color = VIBE_NOTE_COLOR if note.is_vibe else NOTE_COLOR
         else:
@@ -254,7 +233,7 @@ def flatten(file):
         last_beat = int(math.ceil(last_beat/16)*16)
         
         img_segments = []
-        for beat_start in range(0, last_beat+1, 16):
+        for beat_start in range(1, last_beat+1, 16):
             img_segments.append(create_segment(beat_start, chart))
         
         total_width = sum(img.width for img in img_segments)
@@ -267,10 +246,10 @@ def flatten(file):
             img.paste(img_segment, (current_x, 0))
             current_x += img_segment.width
         
-        img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty}.png"))
-        print(f"Flatten success on {name} ({difficulty}).")
+        img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty.value}.png"))
+        print(f"Flatten success on {name} ({difficulty.value}).")
     except Exception as e:
-        print(f"Flatten failed on {name} ({difficulty}): {e}")
+        print(f"Flatten failed on {name} ({difficulty.value}): {e}")
         traceback.print_exc()
 
 if __name__ == "__main__":

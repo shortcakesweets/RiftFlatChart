@@ -105,6 +105,7 @@ def load_bpm_change(data: dict) -> BpmChange:
     bpm_change = BpmChange()
     bpm_change.beat = data.get("beat", 0)
     bpm_change.bpm = data.get("bpm", 0)
+    return bpm_change
 
 class VibeData():
     def __init__(self, beat: float = 0, enemies: int = 0):
@@ -115,6 +116,7 @@ def load_vibe_data(data: dict) -> VibeData:
     vibe_data = VibeData()
     vibe_data.beat = data.get("beat", 0)
     vibe_data.enemies = data.get("enemies", 0)
+    return vibe_data
 
 class Chart():
     id: str = ""

@@ -2,13 +2,18 @@
 
 ## Bugged Chart
 
-Rift Within (Impossible) chart is currently bugged in-game. There are no vibe-data for this chart.
+Rift Within (Impossible) chart is currently bugged in-game. Chart will have incorrect data (beat 45-49).
 
 ## Optimal vibe point rendering bug
 
 Optimal vibe point rendering has some minor bugs, but starting point will be correct.
 
 # Changelog
+
+## 2025-03-12
+
+Rendered BPM change
+Add full information like max combo, max score, bpm, intensity
 
 ## 2025-03-11
 

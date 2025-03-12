@@ -23,7 +23,7 @@ cd render
 -  Flattner has Pillow dependency.
 
 ```bash
-pip install Pillow
+pip install -r 
 ```
 
 ## Usage
@@ -32,12 +32,12 @@ You will need raw data using [RiftEventCapture](https://github.com/DominicAglial
 
 1. Configure RiftEventCapture and play with "Golden Lute" modifier on. This will give a `.bin` file.
 
-2. put the `{song_name}_{#}.bin` file into `render/raw`.
+2. Erase all bin files in `render/raw`, instead put the `{song_name}_{#}.bin` file into `render/raw`.
 
 3. from `/render` folder, run:
 
 ```
-python parse.py
+python parse.py -i {PATH_TO_BIN_FILE}
 python flatten.py
 ```
 

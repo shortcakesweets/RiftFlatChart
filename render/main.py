@@ -1,7 +1,7 @@
 import os, glob, json
 from parse import parse
 from flatten import flatten
-from render_chart_html import render_chart_html
+from render.render_html import render_chart_html
 from render_hompage_html import render_homepage_html
 from render_changelog_html import render_changelog_html
 from rift_essentials import PATH_RAW, PATH_JSON
