@@ -116,22 +116,24 @@ def create_row_html(file) -> str:
     
     chart = load_chart(data)
     
-    title = chart.name
+    name = chart.name
     difficulty = chart.difficulty
+    
+    title = f"{name} {difficulty.name}"
     
     row_template = """<tr>
     <td>
-        <a href="./render/html/{title} {difficulty_str}.html">
-            <img src="./render/html/jacket/{title}.png" class="album-cover">
+        <a href="./render/html/{title}.html">
+            <img src="./render/html/jacket/{song_name}.png" class="album-cover">
         </a>
     </td>
     <td>
-        <a href="./render/html/{title} {difficulty_str}.html" class="song-name">{title}</a>
+        <a href="./render/html/{title}.html" class="song-name">{song_name}</a>
     </td>
 </tr>
     """
     
-    row_html_segment = row_template.format(title=title, difficulty_str=difficulty.name)
+    row_html_segment = row_template.format(title=title, song_name=name)
     
     return row_html_segment
 
