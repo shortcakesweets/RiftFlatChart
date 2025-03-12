@@ -10,6 +10,10 @@ Optimal vibe point rendering has some minor bugs, but starting point will be cor
 
 # Changelog
 
+## 2025-03-13
+
+404 page not found hotfix
+
 ## 2025-03-12
 
 Rendered BPM change

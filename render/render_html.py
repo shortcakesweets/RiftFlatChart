@@ -118,6 +118,7 @@ def create_row_html(file) -> str:
     chart = load_chart(data)
     
     name = chart.name
+    short_name = chart.short_name
     difficulty = chart.difficulty
     
     file_name = f"{name}_{difficulty.value}"
@@ -134,7 +135,7 @@ def create_row_html(file) -> str:
 </tr>
     """
     
-    row_html_segment = row_template.format(file_name=file_name, song_name=name)
+    row_html_segment = row_template.format(file_name=file_name, song_name=short_name)
     
     return row_html_segment
 
