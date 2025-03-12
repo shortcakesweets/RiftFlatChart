@@ -6,17 +6,17 @@ html_template_chart = """<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{title} {difficulty}</title>
+        <title>{song_name} {difficulty}</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/{title}.png" alt="Album Cover" />
+                <img src="./jacket/{song_name}.png" alt="Album Cover" />
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
-                        <td>{title}</td>
+                        <td>{song_name}</td>
                     </tr>
                     <tr>
                         <td>Difficulty</td>
@@ -58,8 +58,9 @@ def render_chart_html(file):
         difficulty = chart.difficulty
         intensity = chart.intensity
 
-        title = f"{name} {difficulty.name}"
-        chart_path = os.path.relpath(os.path.join(PATH_FLAT, f"{name}_{difficulty.value}.png"), PATH_HTML)
+        file_name = f"{name}_{difficulty.value}"
+        
+        chart_path = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}.png"), PATH_HTML)
         
         base_bpm = chart.base_bpm
         max_bpm = max(bpm_change.bpm for bpm_change in chart.bpm_changes)
@@ -69,16 +70,16 @@ def render_chart_html(file):
         max_combo = chart.max_combo
         max_score = chart.max_score
 
-        html_content = html_template_chart.format(title=name,
-                                            difficulty=f"{difficulty.name}",
-                                            intensity=f"{intensity}",
-                                            bpm=bpm_str,
-                                            max_combo=max_combo,
-                                            max_score=max_score,
-                                            chart_src=chart_path,
-                                            chart_alt=title)
+        html_content = html_template_chart.format(song_name=name,
+                                                difficulty=f"{difficulty.name}",
+                                                intensity=f"{intensity}",
+                                                bpm=bpm_str,
+                                                max_combo=max_combo,
+                                                max_score=max_score,
+                                                chart_src=chart_path,
+                                                chart_alt=file_name)
 
-        with open(os.path.join(PATH_HTML, f"{title}.html"), "w", encoding="utf-8") as f:
+        with open(os.path.join(PATH_HTML, f"{file_name}.html"), "w", encoding="utf-8") as f:
             f.write(html_content)
         print(f"HTML render success on {name} ({difficulty.name}).")
     except Exception as e:
@@ -119,21 +120,21 @@ def create_row_html(file) -> str:
     name = chart.name
     difficulty = chart.difficulty
     
-    title = f"{name} {difficulty.name}"
+    file_name = f"{name}_{difficulty.value}"
     
     row_template = """<tr>
     <td>
-        <a href="./render/html/{title}.html">
+        <a href="./render/html/{file_name}.html">
             <img src="./render/html/jacket/{song_name}.png" class="album-cover">
         </a>
     </td>
     <td>
-        <a href="./render/html/{title}.html" class="song-name">{song_name}</a>
+        <a href="./render/html/{file_name}.html" class="song-name">{song_name}</a>
     </td>
 </tr>
     """
     
-    row_html_segment = row_template.format(title=title, song_name=name)
+    row_html_segment = row_template.format(file_name=file_name, song_name=name)
     
     return row_html_segment
 
