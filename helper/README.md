@@ -1,1 +1,1 @@
-Used this to get tract exact bpm transitions
+Python codes that are irrelavent from core project

@@ -7,6 +7,7 @@ PATH_RAW = "./raw"
 PATH_JSON = "./json"
 PATH_FLAT = "./flat"
 PATH_HTML = "./html"
+PATH_ENEMIES = "./enemies"
 
 class DifficultyType(Enum):
     EASY = 0

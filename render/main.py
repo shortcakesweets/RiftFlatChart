@@ -24,7 +24,8 @@ if __name__ == "__main__":
     # 2. Flatten
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
     for file in json_files:
-        flatten(file)
+        flatten(file, render_enemies=False)
+        flatten(file, render_enemies=True)
     
     # 3. Render chart HTML
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))

@@ -36,7 +36,7 @@ OVERLAP_COLOR   = (255,0,0)     # red
 VIBE_NOTE_COLOR = (255,255,0)   # yellow
 VIBE_OVERLAP_COLOR = (255,140,0)# dark orange
 
-def create_segment(beat_index: int, chart: Chart):
+def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
     height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
     height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
@@ -56,7 +56,7 @@ def create_segment(beat_index: int, chart: Chart):
         return x, y
 
     # prepare canvas
-    img = Image.new("RGB", (width, height), BG_COLOR)
+    img = Image.new("RGBA", (width, height), BG_COLOR)
     draw = ImageDraw.Draw(img)
     
     # draw lanes
@@ -128,7 +128,7 @@ def create_segment(beat_index: int, chart: Chart):
     filtered_wyrm_notes = list(filter(lambda note: (beat_from <= note.beat_start <= beat_to) or (beat_from <= note.beat_finish <= beat_to), wyrm_notes))
     
     # function for rendering wyrm body
-    def render_wyrm_body(column: int, rel_beat_start: float, rel_beat_finish: float, color: tuple = WYRM_BODY_COLOR):
+    def render_wyrm_body(column: int, rel_beat_start: float, rel_beat_finish: float):
         x_start, y_start  = get_note_xy(column, rel_beat_start)
         _      , y_finish = get_note_xy(column, rel_beat_finish)
         
@@ -136,19 +136,30 @@ def create_segment(beat_index: int, chart: Chart):
     
     # function for rendering wyrm head
     def render_wyrm_head(column: int, rel_beat: float, color: tuple):
-        x_start, y_start = get_note_xy(column, rel_beat)
-        vertices = [
-            (x_start, y_start),
-            (x_start + NOTE_SIZE, y_start),
-            (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
-        ]
+        if not render_enemies:
+            x_start, y_start = get_note_xy(column, rel_beat)
+            vertices = [
+                (x_start, y_start),
+                (x_start + NOTE_SIZE, y_start),
+                (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
+            ]
 
-        draw.polygon(vertices, fill=color)
+            draw.polygon(vertices, fill=color)
+        else:
+            render_short_note(column, rel_beat, color, EnemyType.WYRM)
 
     # function for rendering short notes
-    def render_short_note(column: int, rel_beat: float, color: tuple):
-        x_start, y_start = get_note_xy(column, rel_beat)
-        draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
+    def render_short_note(column: int, rel_beat: float, color: tuple, enemy_type: EnemyType = EnemyType.NONE):
+        if not render_enemies:
+            x_start, y_start = get_note_xy(column, rel_beat)
+            draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
+        else:
+            enemy_img_path = os.path.join(PATH_ENEMIES, f"{enemy_type.name.lower()}.png")
+            enemy_img = Image.open(enemy_img_path).convert("RGBA")
+            enemy_img = enemy_img.resize((NOTE_SIZE, NOTE_SIZE), Image.LANCZOS)
+
+            x_start, y_start = get_note_xy(column, rel_beat)
+            img.paste(enemy_img, (int(x_start), int(y_start) - NOTE_SIZE // 2), enemy_img)
     
     # function for determining if a note is in vibe state
     ## BUG : currently CSV files contain wrong combo values.
@@ -207,14 +218,14 @@ def create_segment(beat_index: int, chart: Chart):
             # color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
             color = VIBE_OVERLAP_COLOR if note.is_vibe else OVERLAP_COLOR
 
-        render_short_note(note.column, relative_beat, color)
+        render_short_note(note.column, relative_beat, color, note.enemy_type)
 
         if DEBUG_COMBO:
             render_combo_text(note.column, relative_beat, note.combo)
     
     return img
 
-def flatten(file):
+def flatten(file, render_enemies: bool):
     if DEBUG_COMBO:
         print("WARNING: COMBO_DEBUG option is True")
 
@@ -234,7 +245,7 @@ def flatten(file):
         
         img_segments = []
         for beat_start in range(1, last_beat+1, 16):
-            img_segments.append(create_segment(beat_start, chart))
+            img_segments.append(create_segment(beat_start, chart, render_enemies))
         
         total_width = sum(img.width for img in img_segments)
         max_height = max(img.height for img in img_segments)
@@ -246,13 +257,16 @@ def flatten(file):
             img.paste(img_segment, (current_x, 0))
             current_x += img_segment.width
         
-        img.save(os.path.join(PATH_FLAT, f"{name}_{difficulty.value}.png"))
-        print(f"Flatten success on {name} ({difficulty.value}).")
+        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
+        
+        img.save(os.path.join(PATH_FLAT, file_name))
+        print(f"Flatten success on {file_name}.")
     except Exception as e:
-        print(f"Flatten failed on {name} ({difficulty.value}): {e}")
+        print(f"Flatten failed on {file_name}: {e}")
         traceback.print_exc()
 
 if __name__ == "__main__":
     json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
     for file in json_files:
-        flatten(file)
+        flatten(file, render_enemies=False)
+        flatten(file, render_enemies=True)
