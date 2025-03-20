@@ -20,10 +20,10 @@ git clone https://github.com/shortcakesweets/RiftFlatChart.git
 cd render
 ```
 
--  Flattner has Pillow dependency.
+-   Flattner has Pillow dependency.
 
 ```bash
-pip install -r 
+pip install -r
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ You will need raw data using [RiftEventCapture](https://github.com/DominicAglial
 
 ```
 python parse.py -i {PATH_TO_BIN_FILE}
-python flatten.py
+python flatten.py -i {PATH_TO_JSON_FILE}
 ```
 
 `parse.py` will make JSON data from raw file, then `flatten.py` will create a rendered png file at `render/flat`.

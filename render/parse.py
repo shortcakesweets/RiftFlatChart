@@ -70,7 +70,7 @@ def parse(file) -> None:
     short_note_events = list(filter(lambda event: event.event_type == EventType.HIT and event.enemy_type != EnemyType.WYRM, events))
     wyrm_start_events = list(filter(lambda event: event.event_type == EventType.HIT and event.enemy_type == EnemyType.WYRM, events))
     wyrm_finish_events = list(filter(lambda event: event.event_type == EventType.HOLD_COMPLETE and event.enemy_type == EnemyType.WYRM, events))
-    
+
     def sort_event(event: Event):
         return (event.target_beat, event.column)
     
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-a", "--all", action="store_true")
-    parser.add_argument("-i", "--input")
+    group.add_argument("-i", "--input")
     args = parser.parse_args()
 
     if args.all:
