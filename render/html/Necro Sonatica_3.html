@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Necro Sonatica IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Necro Sonatica.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Necro Sonatica.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Necro Sonatica_3.png"
-                alt="Necro Sonatica_3" />
+                alt="Necro Sonatica" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Necro Sonatica_3_er.png"
+                alt="Necro Sonatica" />
         </div>
     </body>
 </html>

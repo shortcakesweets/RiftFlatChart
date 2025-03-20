@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>RAVEVENGE (feat. Aram Zero) IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/RAVEVENGE (feat. Aram Zero).png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/RAVEVENGE (feat. Aram Zero).webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\RAVEVENGE (feat. Aram Zero)_3.png"
-                alt="RAVEVENGE (feat. Aram Zero)_3" />
+                alt="RAVEVENGE (feat. Aram Zero)" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\RAVEVENGE (feat. Aram Zero)_3_er.png"
+                alt="RAVEVENGE (feat. Aram Zero)" />
         </div>
     </body>
 </html>

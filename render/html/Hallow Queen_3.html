@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Hallow Queen IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Hallow Queen.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Hallow Queen.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Hallow Queen_3.png"
-                alt="Hallow Queen_3" />
+                alt="Hallow Queen" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Hallow Queen_3_er.png"
+                alt="Hallow Queen" />
         </div>
     </body>
 </html>

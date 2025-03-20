@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Visualize Yourself IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Visualize Yourself.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Visualize Yourself.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Visualize Yourself_3.png"
-                alt="Visualize Yourself_3" />
+                alt="Visualize Yourself" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Visualize Yourself_3_er.png"
+                alt="Visualize Yourself" />
         </div>
     </body>
 </html>

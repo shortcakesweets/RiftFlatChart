@@ -1,4 +1,4 @@
-import os, glob, json, datetime, markdown
+import os, glob, json, datetime, markdown, traceback
 from rift_essentials import *
 
 # Charts
@@ -8,11 +8,20 @@ html_template_chart = """<!DOCTYPE html>
         <meta charset="UTF-8" />
         <title>{song_name} {difficulty}</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/{song_name}.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/{song_name}.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -40,8 +49,13 @@ html_template_chart = """<!DOCTYPE html>
 
         <div class="content">
             <img
-                src="{chart_src}"
-                alt="{chart_alt}" />
+                id="chart-img-normal"
+                src="{chart_normal_src}"
+                alt="{song_name}" />
+            <img
+                id="chart-img-enemy-render"
+                src="{chart_enemy_render_src}"
+                alt="{song_name}" />
         </div>
     </body>
 </html>
@@ -60,7 +74,8 @@ def render_chart_html(file):
 
         file_name = f"{name}_{difficulty.value}"
         
-        chart_path = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}.png"), PATH_HTML)
+        chart_path_normal = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}.png"), PATH_HTML)
+        chart_path_enemy_render = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}_er.png"), PATH_HTML)
         
         base_bpm = chart.base_bpm
         max_bpm = max(bpm_change.bpm for bpm_change in chart.bpm_changes)
@@ -70,20 +85,22 @@ def render_chart_html(file):
         max_combo = chart.max_combo
         max_score = chart.max_score
 
-        html_content = html_template_chart.format(song_name=name,
-                                                difficulty=f"{difficulty.name}",
-                                                intensity=f"{intensity}",
-                                                bpm=bpm_str,
-                                                max_combo=max_combo,
-                                                max_score=max_score,
-                                                chart_src=chart_path,
-                                                chart_alt=file_name)
+        html_content = html_template_chart.format(
+            song_name=name,
+            difficulty=f"{difficulty.name}",
+            intensity=f"{intensity}",
+            bpm=bpm_str,
+            max_combo=max_combo,
+            max_score=max_score,
+            chart_normal_src=chart_path_normal,
+            chart_enemy_render_src=chart_path_enemy_render)
 
         with open(os.path.join(PATH_HTML, f"{file_name}.html"), "w", encoding="utf-8") as f:
             f.write(html_content)
         print(f"HTML render success on {name} ({difficulty.name}).")
     except Exception as e:
         print(f"HTML render failed on {name} ({difficulty.name}): {e}")
+        traceback.print_exc()
 
 # Homepage
 html_template_homepage = """<!DOCTYPE html>

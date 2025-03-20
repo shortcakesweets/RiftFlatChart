@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Count Funkula IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Count Funkula.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Count Funkula.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Count Funkula_3.png"
-                alt="Count Funkula_3" />
+                alt="Count Funkula" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Count Funkula_3_er.png"
+                alt="Count Funkula" />
         </div>
     </body>
 </html>

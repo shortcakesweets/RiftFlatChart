@@ -10,6 +10,14 @@ Optimal vibe point rendering has some minor bugs, but starting point will be cor
 
 # Changelog
 
+## 2025-03-20
+
+Enemy render option available (except wyrms)
+Charts are now zoomable (Desktop environment)
+Compressed album covers
+
+(Each page now has 2~5MB data)
+
 ## 2025-03-13
 
 404 page not found hotfix

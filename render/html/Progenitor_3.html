@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Progenitor IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Progenitor.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Progenitor.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Progenitor_3.png"
-                alt="Progenitor_3" />
+                alt="Progenitor" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Progenitor_3_er.png"
+                alt="Progenitor" />
         </div>
     </body>
 </html>

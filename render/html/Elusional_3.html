@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>Elusional IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/Elusional.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/Elusional.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\Elusional_3.png"
-                alt="Elusional_3" />
+                alt="Elusional" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\Elusional_3_er.png"
+                alt="Elusional" />
         </div>
     </body>
 </html>

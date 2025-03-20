@@ -8,16 +8,17 @@ DEBUG_COMBO     = False
 
 # size constants
 # margin - gap - lane - gap - lane - gap - lane - gap - margin
-LANE_WIDTH      = 16
-LANE_GAP        = 1
-LANE_MARGIN     = 36
-LANE_HEIGHT     = 1200
-LANE_PADDING    = 8             # slightly longer lanes for previewing next notes
-NOTE_SIZE       = 12
-NOTE_THICK      = 2
-FONT_SIZE       = 12
-FONT_MARGIN     = 4
-WYRM_HEAD_SIZE  = 6
+LANE_WIDTH      = 16*4
+LANE_GAP        = 1*4
+LANE_MARGIN     = 42*4
+LANE_HEIGHT     = 1200*4
+LANE_PADDING    = 8*4           # slightly longer lanes for previewing next notes
+NOTE_SIZE       = 12*4
+NOTE_THICK      = 2*4
+FONT_SIZE       = 12*4
+FONT_MARGIN     = 4*4           # also applies to vibe indicators
+WYRM_HEAD_SIZE  = 6*4           # wyrm head (triangle) height
+VIBE_IND_SIZE   = 12*4          # vibe indicator (triagnle pointing right)'s width & height
 
 # color constants
 BG_COLOR        = (0,0,0)       # black
@@ -28,13 +29,10 @@ GAP_COLOR       = (75,75,75)    # dark grey
 FONT_MEASURE_COLOR = (211,211,211)  # light grey
 FONT_BPM_COLOR  = (0,255,0)     # green
 WYRM_BODY_COLOR = (0,159,100)   # actual pallete from in-game
-# WYRM_HEAD_COLOR = (0,159,100)   
 WYRM_HEAD_COLOR = (0,100,50)  # darker than body.
-VIBE_WYRM_HEAD_COLOR = (255,255,0) # yellow
 NOTE_COLOR      = (255,255,255) # white
 OVERLAP_COLOR   = (255,0,0)     # red
-VIBE_NOTE_COLOR = (255,255,0)   # yellow
-VIBE_OVERLAP_COLOR = (255,140,0)# dark orange
+VIBE_COLOR      = (255,255,0)   # yellow
 
 def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
@@ -79,6 +77,7 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     
     # draw beat divisions
     # - main division & beat count texts
+    optimal_vibe_beats: list[float] = [vibe.beat for vibe in chart.optimal_vibes]
     for rel_beat in range(0,17,4):
         _, y_finish = get_note_xy(0, rel_beat)
         draw.rectangle([LANE_MARGIN,
@@ -86,9 +85,30 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
                         LANE_MARGIN + LANE_WIDTH * 3 + LANE_GAP * 4,
                         y_finish],
                         fill=MAIN_DIV_COLOR)
-        render_text(LANE_MARGIN - FONT_MARGIN, y_finish - LANE_GAP - FONT_SIZE,
-                    f"{(beat_index+rel_beat):03d}",
-                    FONT_MEASURE_COLOR,
+        
+        act_beat = rel_beat + beat_index # actual beat
+        if not act_beat in optimal_vibe_beats: # only render beat texts if it's not in vibe
+            render_text(LANE_MARGIN - FONT_MARGIN, y_finish - LANE_GAP - FONT_SIZE,
+                        f"{(beat_index+rel_beat):03d}",
+                        FONT_MEASURE_COLOR,
+                        align_right=True)
+    
+    # draw vibe trigger indicaters and beats
+    for vibe_beat in optimal_vibe_beats:
+        rel_beat = vibe_beat - beat_index
+        if rel_beat < 0 or rel_beat >= 16:
+            continue
+
+        _, y_start = get_note_xy(0, rel_beat)
+        vertices = [
+                (LANE_MARGIN - FONT_MARGIN, y_start),
+                (LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, y_start + VIBE_IND_SIZE // 2),
+                (LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, y_start - VIBE_IND_SIZE // 2)
+            ]
+        draw.polygon(vertices, fill=VIBE_COLOR)
+        render_text(LANE_MARGIN - FONT_MARGIN, y_start - FONT_SIZE // 2 - VIBE_IND_SIZE - FONT_MARGIN,
+                    f"{vibe_beat:06.2f}",
+                    VIBE_COLOR,
                     align_right=True)
     
     # - sub division
@@ -136,7 +156,8 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     
     # function for rendering wyrm head
     def render_wyrm_head(column: int, rel_beat: float, color: tuple):
-        if not render_enemies:
+        # change to "not render_enemies" if wyrm is prettier
+        if True:
             x_start, y_start = get_note_xy(column, rel_beat)
             vertices = [
                 (x_start, y_start),
@@ -150,10 +171,9 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
 
     # function for rendering short notes
     def render_short_note(column: int, rel_beat: float, color: tuple, enemy_type: EnemyType = EnemyType.NONE):
-        if not render_enemies:
-            x_start, y_start = get_note_xy(column, rel_beat)
-            draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
-        else:
+        x_start, y_start = get_note_xy(column, rel_beat)
+        draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
+        if render_enemies:
             enemy_img_path = os.path.join(PATH_ENEMIES, f"{enemy_type.name.lower()}.png")
             enemy_img = Image.open(enemy_img_path).convert("RGBA")
             enemy_img = enemy_img.resize((NOTE_SIZE, NOTE_SIZE), Image.LANCZOS)
@@ -192,9 +212,7 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
         
         relative_beat_start = note.beat_start - beat_index
         if relative_beat_start >= -beat_padding:
-            # color = VIBE_WYRM_HEAD_COLOR if is_optimal_vibe(note.combo, vibe_data) else WYRM_HEAD_COLOR
-            color = VIBE_WYRM_HEAD_COLOR if note.is_vibe else WYRM_HEAD_COLOR
-            render_wyrm_head(note.column, relative_beat_start, color=color)
+            render_wyrm_head(note.column, relative_beat_start, color=WYRM_HEAD_COLOR)
 
             if DEBUG_COMBO:
                 render_combo_text(note.column, relative_beat_start, note.combo)
@@ -211,13 +229,7 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
             if note.column == other_note.column and note.beat_start == other_note.beat_start:
                 overlap_count += 1
         
-        if overlap_count == 1:
-            # color = VIBE_NOTE_COLOR if is_optimal_vibe(note.combo, vibe_data) else NOTE_COLOR
-            color = VIBE_NOTE_COLOR if note.is_vibe else NOTE_COLOR
-        else:
-            # color = VIBE_OVERLAP_COLOR if is_optimal_vibe(note.combo, vibe_data) else OVERLAP_COLOR
-            color = VIBE_OVERLAP_COLOR if note.is_vibe else OVERLAP_COLOR
-
+        color = NOTE_COLOR if overlap_count == 1 else OVERLAP_COLOR
         render_short_note(note.column, relative_beat, color, note.enemy_type)
 
         if DEBUG_COMBO:
@@ -262,6 +274,7 @@ def flatten(file, render_enemies: bool):
         img.save(os.path.join(PATH_FLAT, file_name))
         print(f"Flatten success on {file_name}.")
     except Exception as e:
+        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
         print(f"Flatten failed on {file_name}: {e}")
         traceback.print_exc()
 
@@ -271,7 +284,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-a", "--all", action="store_true")
-    parser.add_argument("-i", "--input")
+    group.add_argument("-i", "--input")
     args = parser.parse_args()
 
     if args.all:

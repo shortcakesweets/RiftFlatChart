@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>King's Ruse IMPOSSIBLE</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="top-bar">
             <div class="album-info">
-                <img src="./jacket/King's Ruse.png" alt="Album Cover" />
+                <div class="v-container">
+                    <img
+                        class="album-cover"
+                        src="./jacket/King's Ruse.webp"
+                        alt="Album Cover" />
+                    <button id="toggle-button" class="toggle-button">
+                        Enemy Render OFF
+                    </button>
+                </div>
                 <table class="description-table">
                     <tr>
                         <td>Song Name</td>
@@ -36,8 +45,13 @@
 
         <div class="content">
             <img
+                id="chart-img-normal"
                 src="..\flat\King's Ruse_3.png"
-                alt="King's Ruse_3" />
+                alt="King's Ruse" />
+            <img
+                id="chart-img-enemy-render"
+                src="..\flat\King's Ruse_3_er.png"
+                alt="King's Ruse" />
         </div>
     </body>
 </html>
