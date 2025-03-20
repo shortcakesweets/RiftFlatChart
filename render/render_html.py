@@ -143,7 +143,7 @@ def create_row_html(file) -> str:
     row_template = """<tr>
     <td>
         <a href="./render/html/{file_name}.html">
-            <img src="./render/html/jacket/{song_name}.png" class="album-cover">
+            <img src="./render/html/jacket/{song_name}.webp" class="album-cover">
         </a>
     </td>
     <td>
