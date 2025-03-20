@@ -266,7 +266,26 @@ def flatten(file, render_enemies: bool):
         traceback.print_exc()
 
 if __name__ == "__main__":
-    json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
-    for file in json_files:
-        flatten(file, render_enemies=False)
-        flatten(file, render_enemies=True)
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("-a", "--all", action="store_true")
+    parser.add_argument("-i", "--input")
+    args = parser.parse_args()
+
+    if args.all:
+        json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
+        for file in json_files:
+            flatten(file, render_enemies=False)
+            flatten(file, render_enemies=True)
+    else:
+        if not args.input:
+            parser.error("Should specify input. Type --help for more information.")
+        else:
+            try:
+                flatten(args.input, render_enemies=False)
+                flatten(args.input, render_enemies=True)
+            except Exception as e:
+                print(f"Flatten failed for file {args.input}: {e}")
+                traceback.print_exc()
