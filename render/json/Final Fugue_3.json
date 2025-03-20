@@ -28,23 +28,23 @@
     ],
     "optimal_vibes": [
         {
-            "beat": 86.5,
+            "beat": 85.5,
             "enemies": 33
         },
         {
-            "beat": 169.0,
+            "beat": 168.0,
             "enemies": 48
         },
         {
-            "beat": 313.0,
+            "beat": 312.0,
             "enemies": 102
         },
         {
-            "beat": 465.0,
+            "beat": 464.0,
             "enemies": 35
         },
         {
-            "beat": 620.0,
+            "beat": 619.0,
             "enemies": 45
         }
     ],

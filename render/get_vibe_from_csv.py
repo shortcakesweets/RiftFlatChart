@@ -34,11 +34,14 @@ def get_vibe(file):
             if target_row[i] == '':
                 continue
 
-            beat = float(target_row[i+1][1:])
+            beat = float(target_row[i+1][1:]) - 1
+            # spreadsheet was starting beat at 1
             enemies = int(target_row[i+3])
             
             chart.optimal_vibes.append(VibeData(beat, enemies))
-        
+
+        # deprecated
+        """
         # determine vibe for all notes
         all_notes: list[Note] = chart.short_notes + chart.wyrm_notes
         all_notes.sort(key=lambda note: note.beat_start)
@@ -60,7 +63,8 @@ def get_vibe(file):
             
             for i in range(index_from, index_to + 1):
                 all_notes[i].is_vibe = True
-        
+        """
+
         with open(file, "w", encoding="utf-8") as f:
             json.dump(chart, f, indent=4, cls=CustomJsonEncoder)
         print(f"Vibe data added in {file}")
