@@ -37,27 +37,28 @@ NOTE_COLOR      = (255,255,255) # white
 OVERLAP_COLOR   = (255,0,0)     # red
 VIBE_COLOR      = (255,255,0)   # yellow
 
-def create_base_segment(beat_index: int, chart: Chart):
-    width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
-    height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
-    height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
-    height_lane_end     = LANE_PADDING + LANE_MARGIN                        # height of lane end,   excluding padding
+# size constant derived from base constants
+width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
+height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
+height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
+height_lane_end     = LANE_PADDING + LANE_MARGIN                        # height of lane end,   excluding padding
 
+# function that calcs x,y coordinate
+def get_note_xy(column: int, rel_beat: float):
+    NOTE_MARGIN = (LANE_WIDTH - NOTE_SIZE) / 2
+    x = LANE_MARGIN + LANE_GAP * (column + 1) + LANE_WIDTH * column + NOTE_MARGIN
+    
+    BEAT_HEIGHT = LANE_HEIGHT / 16
+    y = height_lane_start - (BEAT_HEIGHT) * rel_beat
+    
+    return x, y
+
+def create_base_segment(beat_index: int, chart: Chart):
     short_notes = chart.short_notes
     wyrm_notes = chart.wyrm_notes
-    
-    # function that calcs x,y coordinate
-    def get_note_xy(column: int, rel_beat: float):
-        NOTE_MARGIN = (LANE_WIDTH - NOTE_SIZE) / 2
-        x = LANE_MARGIN + LANE_GAP * (column + 1) + LANE_WIDTH * column + NOTE_MARGIN
-        
-        BEAT_HEIGHT = LANE_HEIGHT / 16
-        y = height_lane_start - (BEAT_HEIGHT) * rel_beat
-        
-        return x, y
 
     # prepare canvas
-    img = Image.new("RGBA", (width, height), BG_COLOR)
+    img = Image.new("RGB", (width, height), BG_COLOR)
     draw = ImageDraw.Draw(img)
     
     # draw lanes
@@ -289,6 +290,87 @@ def create_base_chart(file):
         print(f"Failed saving on {file_name}: {e}")
         traceback.print_exc()
 
+def create_enemy_segment(beat_index: int, chart: Chart):
+    short_notes = chart.short_notes
+    # wyrms are not used in mob render
+    # wyrm_notes = chart.wyrm_notes
+
+    # prepare canvas
+    img = Image.new("RGBA", (width*MOB_RENDER_ZOOM, height*MOB_RENDER_ZOOM), BG_COLOR)  # x4 larger scale
+
+    # filter only in-range notes
+    beat_from = beat_index
+    beat_to = beat_index + 16
+    filtered_short_notes = list(filter(lambda note: beat_from <= note.beat_start <= beat_to, short_notes))
+
+    # function for rendering short notes
+    def render_short_note(column: int, rel_beat: float, enemy_type: EnemyType = EnemyType.NONE):
+        x_start, y_start = get_note_xy(column, rel_beat)
+        enemy_img_path = os.path.join(PATH_ENEMIES, f"{enemy_type.name.lower()}.png")
+        enemy_img = Image.open(enemy_img_path).convert("RGBA")
+        enemy_img = enemy_img.resize((NOTE_SIZE*MOB_RENDER_ZOOM, NOTE_SIZE*MOB_RENDER_ZOOM), Image.LANCZOS)
+
+        x_start, y_start = get_note_xy(column, rel_beat)
+        img.paste(enemy_img, (int(x_start*MOB_RENDER_ZOOM), int(y_start*MOB_RENDER_ZOOM) - (NOTE_SIZE*MOB_RENDER_ZOOM) // 2), enemy_img)
+
+    # render short notes
+    for note in filtered_short_notes:
+        relative_beat = note.beat_start - beat_index
+        render_short_note(note.column, relative_beat, note.enemy_type)
+    
+    return img
+
+def create_enemy_overlay(file):
+    try:
+        with open(file, 'r') as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Failed JSON open on {file}: {e}")
+        traceback.print_exc()
+        return
+
+    chart = load_chart(data)
+    
+    name = chart.name
+    difficulty = chart.difficulty
+    short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
+    
+    last_beat: float = 0.0
+    last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
+    last_beat = int(math.ceil(last_beat/16)*16)
+    
+    try:
+        img_segments = []
+        for beat_start in range(1, last_beat+1, 16):
+            img_segments.append(create_enemy_segment(beat_start, chart))
+        
+        total_width = sum(img.width for img in img_segments)
+        max_height = max(img.height for img in img_segments)
+        
+        img = Image.new("RGBA", (total_width, max_height))
+        
+        current_x = 0
+        for img_segment in img_segments:
+            img.paste(img_segment, (current_x, 0))
+            current_x += img_segment.width
+    except Exception as e:
+        print(f"Failed image creating on {name}_{difficulty.name.lower()}: {e}")
+        traceback.print_exc()
+        return
+
+    file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"    
+    file_name = f"{name}_{difficulty.name.lower()}_enemy_overlay.png"
+
+    try:
+        os.makedirs(file_hierarchy, exist_ok=True)
+        img.save(os.path.join(file_hierarchy, file_name))
+        print(f"Saved as {file_name}")
+    except Exception as e:
+        name = chart.name
+        difficulty = chart.difficulty
+        print(f"Failed saving on {file_name}: {e}")
+        traceback.print_exc()
+
 if __name__ == "__main__":
     import argparse
 
@@ -298,16 +380,20 @@ if __name__ == "__main__":
     group.add_argument("-i", "--input")
     args = parser.parse_args()
 
+    json_files = []
+
     if args.all:
         json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
-        for file in json_files:
-            create_base_chart(file)
     else:
         if not args.input:
             parser.error("Should specify input. Type --help for more information.")
         else:
-            try:
-                create_base_chart(args.input)
-            except Exception as e:
-                print(f"Flatten failed for file {args.input}: {e}")
-                traceback.print_exc()
+            json_files = [args.input]
+    
+    for file in json_files:
+        try:
+            create_base_chart(file)
+            create_enemy_overlay(file)
+        except Exception as e:
+            print(f"Flatten failed for file {file}: {e}")
+            traceback.print_exc()
