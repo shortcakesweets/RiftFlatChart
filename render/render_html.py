@@ -65,41 +65,47 @@ def render_chart_html(file):
     try:
         with open(file) as f:
             data = json.load(f)
+    except Exception as e:
+        print(f"Failed JSON open on {file}: {e}")
+        traceback.print_exc()
+        return
         
-        chart = load_chart(data)
-        
-        name = chart.name
-        difficulty = chart.difficulty
-        intensity = chart.intensity
+    chart = load_chart(data)
+    
+    name = chart.name
+    difficulty = chart.difficulty
+    intensity = chart.intensity
 
-        file_name = f"{name}_{difficulty.value}"
-        
-        chart_path_normal = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}.png"), PATH_HTML)
-        chart_path_enemy_render = os.path.relpath(os.path.join(PATH_FLAT, f"{file_name}_er.png"), PATH_HTML)
-        
-        base_bpm = chart.base_bpm
-        max_bpm = max(bpm_change.bpm for bpm_change in chart.bpm_changes)
-        min_bpm = min(bpm_change.bpm for bpm_change in chart.bpm_changes)
-        bpm_str = f"{base_bpm}" if min_bpm == max_bpm else f"{min_bpm}-{max_bpm} ({base_bpm})"
-        
-        max_combo = chart.max_combo
-        max_score = chart.max_score
+    file_hierarchy = f"../flat/{name}/{difficulty.name.lower()}"
+    file_name = f"{name}_{difficulty.name.lower()}"
+    
+    chart_path_normal = f"{file_hierarchy}/{file_name}.png"
+    chart_path_enemy_render = f"{file_hierarchy}/{file_name}_er.png"
+    
+    base_bpm = chart.base_bpm
+    max_bpm = max(bpm_change.bpm for bpm_change in chart.bpm_changes)
+    min_bpm = min(bpm_change.bpm for bpm_change in chart.bpm_changes)
+    bpm_str = f"{base_bpm}" if min_bpm == max_bpm else f"{min_bpm}-{max_bpm} ({base_bpm})"
+    
+    max_combo = chart.max_combo
+    max_score = chart.max_score
 
-        html_content = html_template_chart.format(
-            song_name=name,
-            difficulty=f"{difficulty.name}",
-            intensity=f"{intensity}",
-            bpm=bpm_str,
-            max_combo=max_combo,
-            max_score=max_score,
-            chart_normal_src=chart_path_normal,
-            chart_enemy_render_src=chart_path_enemy_render)
+    html_content = html_template_chart.format(
+        song_name=name,
+        difficulty=f"{difficulty.name}",
+        intensity=f"{intensity}",
+        bpm=bpm_str,
+        max_combo=max_combo,
+        max_score=max_score,
+        chart_normal_src=chart_path_normal,
+        chart_enemy_render_src=chart_path_enemy_render)
 
+    try:
         with open(os.path.join(PATH_HTML, f"{file_name}.html"), "w", encoding="utf-8") as f:
             f.write(html_content)
-        print(f"HTML render success on {name} ({difficulty.name}).")
+        print(f"HTML render success on {file_name}).")
     except Exception as e:
-        print(f"HTML render failed on {name} ({difficulty.name}): {e}")
+        print(f"HTML render failed on {file_name}): {e}")
         traceback.print_exc()
 
 # Homepage
@@ -128,6 +134,18 @@ html_template_homepage = """<!DOCTYPE html>
 </html>
 """
 
+row_template = """<tr>
+    <td>
+        <a href="./render/html/{file_name}.html">
+            <img src="./render/html/jacket/{song_name}.webp" class="album-cover">
+        </a>
+    </td>
+    <td>
+        <a href="./render/html/{file_name}.html" class="song-name">{short_name}</a>
+    </td>
+</tr>
+"""
+
 def create_row_html(file) -> str:
     with open(file) as f:
         data = json.load(f)
@@ -138,19 +156,7 @@ def create_row_html(file) -> str:
     short_name = chart.short_name
     difficulty = chart.difficulty
     
-    file_name = f"{name}_{difficulty.value}"
-    
-    row_template = """<tr>
-    <td>
-        <a href="./render/html/{file_name}.html">
-            <img src="./render/html/jacket/{song_name}.webp" class="album-cover">
-        </a>
-    </td>
-    <td>
-        <a href="./render/html/{file_name}.html" class="song-name">{short_name}</a>
-    </td>
-</tr>
-    """
+    file_name = f"{name}_{difficulty.name.lower()}"
     
     row_html_segment = row_template.format(file_name=file_name, song_name=name, short_name=short_name)
     

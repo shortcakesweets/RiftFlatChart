@@ -3,12 +3,13 @@
 ## Bugged Chart
 
 Rift Within (Impossible) chart is currently bugged in-game. Chart will have incorrect data (beat 45-49).
-
-## Optimal vibe point rendering bug
-
-Optimal vibe point rendering has some minor bugs, but starting point will be correct.
+Baboosh has some notes missing.
 
 # Changelog
+
+## 2025-03-21
+
+Vibe points fixed (sorry, it was wrong, but now it's really, really fixed)
 
 ## 2025-03-20
 

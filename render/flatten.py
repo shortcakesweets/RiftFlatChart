@@ -244,17 +244,22 @@ def flatten(file, render_enemies: bool):
     try:
         with open(file, 'r') as f:
             data = json.load(f)
+    except Exception as e:
+        print(f"Failed JSON open on {file}: {e}")
+        traceback.print_exc()
+        return
         
-        chart = load_chart(data)
-        
-        name = chart.name
-        difficulty = chart.difficulty
-        short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
-        
-        last_beat: float = 0.0
-        last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
-        last_beat = int(math.ceil(last_beat/16)*16)
-        
+    chart = load_chart(data)
+    
+    name = chart.name
+    difficulty = chart.difficulty
+    short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
+    
+    last_beat: float = 0.0
+    last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
+    last_beat = int(math.ceil(last_beat/16)*16)
+    
+    try:
         img_segments = []
         for beat_start in range(1, last_beat+1, 16):
             img_segments.append(create_segment(beat_start, chart, render_enemies))
@@ -268,14 +273,23 @@ def flatten(file, render_enemies: bool):
         for img_segment in img_segments:
             img.paste(img_segment, (current_x, 0))
             current_x += img_segment.width
-        
-        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
-        
-        img.save(os.path.join(PATH_FLAT, file_name))
-        print(f"Flatten success on {file_name}.")
     except Exception as e:
-        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
-        print(f"Flatten failed on {file_name}: {e}")
+        print(f"Failed image creating on {name}_{difficulty.name.lower()}: {e}")
+        traceback.print_exc()
+        return
+    
+    file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"
+    file_name = f"{name}_{difficulty.name.lower()}"
+    if render_enemies:
+        file_name += "_er"
+    file_name = f"{file_name}.png"
+    
+    try:
+        os.makedirs(file_hierarchy, exist_ok=True)
+        img.save(os.path.join(file_hierarchy, file_name))
+        print(f"Saved as {file_name}")
+    except Exception as e:
+        print(f"Failed saving on {file_name}: {e}")
         traceback.print_exc()
 
 if __name__ == "__main__":
@@ -286,19 +300,17 @@ if __name__ == "__main__":
     group.add_argument("-a", "--all", action="store_true")
     group.add_argument("-i", "--input")
     args = parser.parse_args()
+    
+    json_files = []
 
     if args.all:
         json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
-        for file in json_files:
-            flatten(file, render_enemies=False)
-            flatten(file, render_enemies=True)
     else:
         if not args.input:
             parser.error("Should specify input. Type --help for more information.")
         else:
-            try:
-                flatten(args.input, render_enemies=False)
-                flatten(args.input, render_enemies=True)
-            except Exception as e:
-                print(f"Flatten failed for file {args.input}: {e}")
-                traceback.print_exc()
+            json_files = [args.input]
+    
+    for file in json_files:
+        flatten(file, render_enemies=False)
+        flatten(file, render_enemies=True)
