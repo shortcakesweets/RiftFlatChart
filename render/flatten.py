@@ -20,6 +20,8 @@ FONT_MARGIN     = 4*4           # also applies to vibe indicators
 WYRM_HEAD_SIZE  = 6*4           # wyrm head (triangle) height
 VIBE_IND_SIZE   = 12*4          # vibe indicator (triagnle pointing right)'s width & height
 
+WEBP_MAX_DIM    = 16383
+
 # color constants
 BG_COLOR        = (0,0,0)       # black
 LANE_COLOR      = (50,50,50)    # dark dark grey
@@ -269,13 +271,37 @@ def flatten(file, render_enemies: bool):
             img.paste(img_segment, (current_x, 0))
             current_x += img_segment.width
         
-        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
+        # cut image when it is too large for webp format
+        unit = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
+        crop_width = (WEBP_MAX_DIM // unit) * unit
+        width, height = img.size
+
+        crop_list = []
+        for x_start in range(0, width, crop_width):
+            x_finish = min(x_start + crop_width, width)
+            crop_segment = img.crop((x_start, 0, x_finish, height))
+            crop_list.append(crop_segment)
+
+        file_base_name = f"{name}_{difficulty.name.lower()}"
+        if render_enemies:
+            file_base_name += "_er"
         
+        file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"
+        os.makedirs(file_hierarchy, exist_ok=True)
+
+        for i, crop_segment in enumerate(crop_list):
+            file_name = f"{file_base_name}_{i}.webp"
+            file_path = os.path.join(file_hierarchy, file_name)
+            crop_segment.save(file_path, "WEBP", quality=85)
+            print(f"Flatten success on {file_name}.")
+        file_name = f"{file_base_name}.png"
+        img.save(os.path.join(file_hierarchy, file_name))
         img.save(os.path.join(PATH_FLAT, file_name))
-        print(f"Flatten success on {file_name}.")
+        print(f"Flateen success on {file_name}")
     except Exception as e:
-        file_name = f"{name}_{difficulty.value}.png" if not render_enemies else f"{name}_{difficulty.value}_er.png"
-        print(f"Flatten failed on {file_name}: {e}")
+        name = chart.name
+        difficulty = chart.difficulty
+        print(f"Flatten failed on {name}_{difficulty.name.lower()}: {e}")
         traceback.print_exc()
 
 if __name__ == "__main__":
