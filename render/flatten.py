@@ -8,19 +8,20 @@ DEBUG_COMBO     = False
 
 # size constants
 # margin - gap - lane - gap - lane - gap - lane - gap - margin
-LANE_WIDTH      = 16*4
-LANE_GAP        = 1*4
-LANE_MARGIN     = 42*4
-LANE_HEIGHT     = 1200*4
-LANE_PADDING    = 8*4           # slightly longer lanes for previewing next notes
-NOTE_SIZE       = 12*4
-NOTE_THICK      = 2*4
-FONT_SIZE       = 12*4
-FONT_MARGIN     = 4*4           # also applies to vibe indicators
-WYRM_HEAD_SIZE  = 6*4           # wyrm head (triangle) height
-VIBE_IND_SIZE   = 12*4          # vibe indicator (triagnle pointing right)'s width & height
+LANE_WIDTH      = 16
+LANE_GAP        = 1
+LANE_MARGIN     = 42
+LANE_HEIGHT     = 1200
+LANE_PADDING    = 8             # slightly longer lanes for previewing next notes
+NOTE_SIZE       = 12
+NOTE_THICK      = 2
+FONT_SIZE       = 12
+FONT_MARGIN     = 4             # also applies to vibe indicators
+WYRM_HEAD_SIZE  = 6             # wyrm head (triangle) height
+VIBE_IND_SIZE   = 12            # vibe indicator (triagnle pointing right)'s width & height
 
 WEBP_MAX_DIM    = 16383
+MOB_RENDER_ZOOM = 4             # only mob, tile renderers are x4 larger than base chart.
 
 # color constants
 BG_COLOR        = (0,0,0)       # black
@@ -36,7 +37,7 @@ NOTE_COLOR      = (255,255,255) # white
 OVERLAP_COLOR   = (255,0,0)     # red
 VIBE_COLOR      = (255,255,0)   # yellow
 
-def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
+def create_base_segment(beat_index: int, chart: Chart):
     width               = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
     height              = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2
     height_lane_start   = LANE_HEIGHT + LANE_PADDING + LANE_MARGIN          # height of lane start, excluding padding
@@ -158,23 +159,20 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     
     # function for rendering wyrm head
     def render_wyrm_head(column: int, rel_beat: float, color: tuple):
-        # change to "not render_enemies" if wyrm is prettier
-        if True:
-            x_start, y_start = get_note_xy(column, rel_beat)
-            vertices = [
-                (x_start, y_start),
-                (x_start + NOTE_SIZE, y_start),
-                (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
-            ]
+        x_start, y_start = get_note_xy(column, rel_beat)
+        vertices = [
+            (x_start, y_start),
+            (x_start + NOTE_SIZE, y_start),
+            (x_start + NOTE_SIZE/2, y_start - WYRM_HEAD_SIZE)
+        ]
 
-            draw.polygon(vertices, fill=color)
-        else:
-            render_short_note(column, rel_beat, color, EnemyType.WYRM)
+        draw.polygon(vertices, fill=color)
 
     # function for rendering short notes
     def render_short_note(column: int, rel_beat: float, color: tuple, enemy_type: EnemyType = EnemyType.NONE):
         x_start, y_start = get_note_xy(column, rel_beat)
         draw.rectangle([x_start, y_start - NOTE_THICK, x_start + NOTE_SIZE, y_start], fill=color)
+        """
         if render_enemies:
             enemy_img_path = os.path.join(PATH_ENEMIES, f"{enemy_type.name.lower()}.png")
             enemy_img = Image.open(enemy_img_path).convert("RGBA")
@@ -182,6 +180,7 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
 
             x_start, y_start = get_note_xy(column, rel_beat)
             img.paste(enemy_img, (int(x_start), int(y_start) - NOTE_SIZE // 2), enemy_img)
+        """
     
     # function for determining if a note is in vibe state
     ## BUG : currently CSV files contain wrong combo values.
@@ -220,12 +219,9 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
                 render_combo_text(note.column, relative_beat_start, note.combo)
     
     # render short notes
-    # vibe_data = data['vibe']
     for note in filtered_short_notes:
         relative_beat = note.beat_start - beat_index
 
-        color = (0,0,0)
-        
         overlap_count: int = 0
         for other_note in filtered_short_notes:
             if note.column == other_note.column and note.beat_start == other_note.beat_start:
@@ -239,27 +235,32 @@ def create_segment(beat_index: int, chart: Chart, render_enemies: bool):
     
     return img
 
-def flatten(file, render_enemies: bool):
+def create_base_chart(file):
     if DEBUG_COMBO:
         print("WARNING: COMBO_DEBUG option is True")
 
     try:
         with open(file, 'r') as f:
             data = json.load(f)
-        
-        chart = load_chart(data)
-        
-        name = chart.name
-        difficulty = chart.difficulty
-        short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
-        
-        last_beat: float = 0.0
-        last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
-        last_beat = int(math.ceil(last_beat/16)*16)
-        
+    except Exception as e:
+        print(f"Failed JSON open on {file}: {e}")
+        traceback.print_exc()
+        return
+
+    chart = load_chart(data)
+    
+    name = chart.name
+    difficulty = chart.difficulty
+    short_notes, wyrm_notes = chart.short_notes, chart.wyrm_notes
+    
+    last_beat: float = 0.0
+    last_beat = max(short_notes[-1].beat_start, max(note.beat_finish for note in wyrm_notes) if len(wyrm_notes) != 0 else 0)
+    last_beat = int(math.ceil(last_beat/16)*16)
+    
+    try:
         img_segments = []
         for beat_start in range(1, last_beat+1, 16):
-            img_segments.append(create_segment(beat_start, chart, render_enemies))
+            img_segments.append(create_base_segment(beat_start, chart))
         
         total_width = sum(img.width for img in img_segments)
         max_height = max(img.height for img in img_segments)
@@ -270,38 +271,22 @@ def flatten(file, render_enemies: bool):
         for img_segment in img_segments:
             img.paste(img_segment, (current_x, 0))
             current_x += img_segment.width
-        
-        # cut image when it is too large for webp format
-        unit = LANE_MARGIN * 2 + LANE_WIDTH * 3 + LANE_GAP * 4
-        crop_width = (WEBP_MAX_DIM // unit) * unit
-        width, height = img.size
+    except Exception as e:
+        print(f"Failed image creating on {name}_{difficulty.name.lower()}: {e}")
+        traceback.print_exc()
+        return
 
-        crop_list = []
-        for x_start in range(0, width, crop_width):
-            x_finish = min(x_start + crop_width, width)
-            crop_segment = img.crop((x_start, 0, x_finish, height))
-            crop_list.append(crop_segment)
+    file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"    
+    file_name = f"{name}_{difficulty.name.lower()}.webp"
 
-        file_base_name = f"{name}_{difficulty.name.lower()}"
-        if render_enemies:
-            file_base_name += "_er"
-        
-        file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"
+    try:
         os.makedirs(file_hierarchy, exist_ok=True)
-
-        for i, crop_segment in enumerate(crop_list):
-            file_name = f"{file_base_name}_{i}.webp"
-            file_path = os.path.join(file_hierarchy, file_name)
-            crop_segment.save(file_path, "WEBP", quality=85)
-            print(f"Flatten success on {file_name}.")
-        file_name = f"{file_base_name}.png"
         img.save(os.path.join(file_hierarchy, file_name))
-        img.save(os.path.join(PATH_FLAT, file_name))
-        print(f"Flateen success on {file_name}")
+        print(f"Saved as {file_name}")
     except Exception as e:
         name = chart.name
         difficulty = chart.difficulty
-        print(f"Flatten failed on {name}_{difficulty.name.lower()}: {e}")
+        print(f"Failed saving on {file_name}: {e}")
         traceback.print_exc()
 
 if __name__ == "__main__":
@@ -316,15 +301,13 @@ if __name__ == "__main__":
     if args.all:
         json_files = glob.glob(os.path.join(PATH_JSON, "*.json"))
         for file in json_files:
-            flatten(file, render_enemies=False)
-            flatten(file, render_enemies=True)
+            create_base_chart(file)
     else:
         if not args.input:
             parser.error("Should specify input. Type --help for more information.")
         else:
             try:
-                flatten(args.input, render_enemies=False)
-                flatten(args.input, render_enemies=True)
+                create_base_chart(args.input)
             except Exception as e:
                 print(f"Flatten failed for file {args.input}: {e}")
                 traceback.print_exc()
