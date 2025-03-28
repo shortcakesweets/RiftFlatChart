@@ -132,7 +132,6 @@ def parse(file) -> None:
     except Exception as e:
         chart = Chart()
         print(f"- Failed to load data for '{output_file}': {e}")
-        traceback.print_exc()
 
     ## Do not uncomment!!
     chart.id = f"{name}_{difficulty.value}"

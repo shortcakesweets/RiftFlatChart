@@ -2,10 +2,16 @@
 
 ## Bugged Chart
 
-Rift Within (Impossible) chart is currently bugged in-game. Chart will have incorrect data (beat 45-49).
 Baboosh has some notes missing.
+Rift Within does not contain vibe data
+Newest dlc (celeste) does not contain bpm changes, max score or vibe data.
 
 # Changelog
+
+## 2025-03-28
+
+Add Celeste DLC
+Fix Rift Within chart
 
 ## 2025-03-21
 

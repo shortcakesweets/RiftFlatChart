@@ -299,6 +299,7 @@ if __name__ == "__main__":
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-a", "--all", action="store_true")
     group.add_argument("-i", "--input")
+    parser.add_argument("-f", "--force", action="store_true", help="force render even if file exists")
     args = parser.parse_args()
     
     json_files = []
@@ -312,5 +313,27 @@ if __name__ == "__main__":
             json_files = [args.input]
     
     for file in json_files:
-        flatten(file, render_enemies=False)
-        flatten(file, render_enemies=True)
+        try:
+            with open(file, 'r') as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Failed JSON open on {file}: {e}")
+            traceback.print_exc()
+        
+        chart = load_chart(data)
+        name = chart.name
+        difficulty = chart.difficulty
+        file_hierarchy = f"{PATH_FLAT}/{name}/{difficulty.name.lower()}"
+        file_name = f"{name}_{difficulty.name.lower()}"
+
+        file_path = os.path.join(file_hierarchy, f"{file_name}.png")
+        file_path_er = os.path.join(file_hierarchy, f"{file_name}_er.png")
+
+        if not args.force and os.path.exists(file_path):
+            print(f"Skipping existing render: {file_name}")
+        else:
+            flatten(file, render_enemies=False)
+        if not args.force and os.path.exists(file_path_er):
+            print(f"Skipping existing render: {file_name}_er")
+        else:
+            flatten(file, render_enemies=True)
