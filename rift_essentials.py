@@ -56,27 +56,29 @@ class BpmChange():
         return f"{self.beat:.2f}, {self.bpm}"
 
 class Note:
-    enemy_uid: str = ""
-    enemy_id: int = 0
-    beat_start: float = 0
-    beat_finish: float = 0
-    column: int = 0
-    is_facing_right: bool = False
+    def __init__(self):
+        self.enemy_uid: str = ""
+        self.enemy_id: int = 0
+        self.beat_start: float = 0
+        self.beat_finish: float = 0
+        self.column: int = 0
+        self.is_facing_right: bool = False
 
 class Chart():
-    key: str = ""
-    name: str = ""
-    short_name: str = ""
-    difficulty: int = 0
-    intensity: int = 0
-    max_combo: int = 0
-    max_score: int = 0
-    divisions: int = 0
-    base_bpm: int = 0
-    bpm_changes: list[BpmChange] = []
-    optimal_vibes: list[float] = []
-    short_notes : list[Note] = []
-    wyrm_notes : list[Note] =  []
+    def __init__(self):
+        self.key: str = ""
+        self.name: str = ""
+        self.short_name: str = ""
+        self.difficulty: int = 0
+        self.intensity: int = 0
+        self.max_combo: int = 0
+        self.max_score: int = 0
+        self.divisions: int = 0
+        self.base_bpm: int = 0
+        self.bpm_changes: list[BpmChange] = []
+        self.optimal_vibes: list[float] = []
+        self.short_notes: list[Note] = []
+        self.wyrm_notes: list[Note] = []
 
     def __str__(self):
         return (
