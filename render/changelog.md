@@ -4,9 +4,13 @@
 
 Baboosh has some notes missing.
 Rift Within does not contain vibe data
-Newest dlc (celeste) does not contain bpm changes, max score or vibe data.
+Newest dlc (celeste) does not contain intensity values
 
 # Changelog
+
+## 2025-03-31
+
+Add vibe path, max score and combo values for celeste dlc
 
 ## 2025-03-28
 

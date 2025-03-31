@@ -1,11 +1,11 @@
 {
     "id": "Resurrections (dannyBstyle Remix)_3",
     "name": "Resurrections (dannyBstyle Remix)",
-    "short_name": "Resurrections (dannyBstyle Remix)",
+    "short_name": "Resurrections Remix",
     "difficulty": "IMPOSSIBLE",
     "intensity": 0,
     "max_combo": 726,
-    "max_score": 0,
+    "max_score": 1973902,
     "divisions": 6,
     "base_bpm": 133,
     "bpm_changes": [
@@ -16,8 +16,20 @@
     ],
     "optimal_vibes": [
         {
-            "beat": -1,
-            "enemies": -1
+            "beat": 114.5,
+            "enemies": 33
+        },
+        {
+            "beat": 185.67,
+            "enemies": 32
+        },
+        {
+            "beat": 321.0,
+            "enemies": 66
+        },
+        {
+            "beat": 349.0,
+            "enemies": 31
         }
     ],
     "short_notes": [

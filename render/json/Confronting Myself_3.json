@@ -5,7 +5,7 @@
     "difficulty": "IMPOSSIBLE",
     "intensity": 0,
     "max_combo": 936,
-    "max_score": 0,
+    "max_score": 2437878,
     "divisions": 8,
     "base_bpm": 132,
     "bpm_changes": [
@@ -16,8 +16,20 @@
     ],
     "optimal_vibes": [
         {
-            "beat": -1,
-            "enemies": -1
+            "beat": 86.5,
+            "enemies": 25
+        },
+        {
+            "beat": 303.0,
+            "enemies": 57
+        },
+        {
+            "beat": 401.0,
+            "enemies": 52
+        },
+        {
+            "beat": 537.5,
+            "enemies": 33
         }
     ],
     "short_notes": [
