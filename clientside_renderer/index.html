@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Renderer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Upload Your Chart Data</h1>
+    <div id="dropZone">
+        Drag and drop a JSON file here<br>or click to select
+    </div>
+    <input type="file" id="fileInput" accept=".json">
+    <div id="uploadStatus">No file uploaded yet.</div>
+    <canvas id="chartCanvas" width="600" height="800"></canvas>
+    <script src="rift_essentials.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

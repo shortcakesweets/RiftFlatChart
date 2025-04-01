@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#dropZone {
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #666;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dropZone.dragover {
+    border-color: #00f;
+    background-color: #e0e0ff;
+    color: #00f;
+}
+
+#fileInput {
+    display: none;
+}
+
+#uploadStatus {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    max-width: 600px;
+    word-wrap: break-word;
+}
+
+#chartCanvas {
+    margin-top: 20px;
+    border: 1px solid #333;
+}
