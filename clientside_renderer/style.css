@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height for flexibility */
     margin: 0;
     background-color: #f0f0f0;
 }
@@ -46,7 +46,15 @@ h1 {
     word-wrap: break-word;
 }
 
-#chartCanvas {
+#chartContainer {
     margin-top: 20px;
+    width: 600px; /* Fixed width for the preview box */
+    height: 400px; /* Fixed height for the preview box */
     border: 1px solid #333;
+    overflow: auto; /* Enable scrolling for overflow */
+    background-color: #000; /* Match BG_COLOR for consistency */
+}
+
+#chartCanvas {
+    display: block; /* Ensure canvas behaves as a block element */
 }
