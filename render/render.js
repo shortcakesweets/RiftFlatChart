@@ -370,3 +370,16 @@ function createChart(jsonData) {
         return null;
     }
 }
+
+function renderBothCanvas(chart){
+    if (chart) {
+        const canvas1 = document.getElementById('chart-canvas');
+        const canvas2 = document.getElementById('chart-canvas-er');
+        renderChart(canvas1, chart, false);
+        renderChart(canvas2, chart, true);
+        updateTable(chart);
+        console.log('Chart object:', chart);
+    } else {
+        alert('Error: Could not create chart from JSON.');
+    }
+}

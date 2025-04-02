@@ -19,6 +19,11 @@ function updateTable(chart) {
     }
 }
 
+function updateAlbumArt(artPath){
+    const albumArt = document.getElementById('album-art');
+    albumArt.src = artPath;
+}
+
 function processFile(file) {
     if (!file.name.endsWith('.json')) {
         alert('Please upload a JSON file.');
@@ -30,16 +35,7 @@ function processFile(file) {
         try {
             chartData = JSON.parse(e.target.result);
             const chart = createChart(chartData);
-            const canvas1 = document.getElementById('chart-canvas');
-            const canvas2 = document.getElementById('chart-canvas-er');
-            if (chart) {
-                renderChart(canvas1, chart, false);
-                renderChart(canvas2, chart, true);
-                updateTable(chart);
-                console.log('Chart object:', chart);
-            } else {
-                alert('Error: Could not create chart from JSON.');
-            }
+            renderBothCanvas(chart);
         } catch (error) {
             alert(`Error parsing JSON: ${error.message}`);
             console.error(error);
@@ -126,20 +122,30 @@ function addToggleFeature() {
 function parseParam(){
     const params = new URLSearchParams(window.location.search);
     const key = params.get("key")
-    const diff=  params.get("diff")
+    const diff = parseInt(params.get("diff"), 10);
 
     if(!key || !diff){
         return;
     }
 
-    /* TODO :
-    1. read "chart_info.json". It is a dictionary.
-    2. read chart_info[key] as data.
-    3. read data['hit'][diff-1] as jsonPath
-    4. read data['art'] as artPath
-    5. update using updateTable(), processFile()
-    6. update album art manually.
-    */
+    fetch('chart_info.json')
+        .then(response => response.json())
+        .then(data => {
+            const subData = data[key];
+            // console.log(subData);
+            const chartPath = subData['hit'][DIFF_STRING[diff-1]];
+            const artPath = subData['art'];
+            // console.log(chartPath, artPath);
+
+            fetch(chartPath)
+                .then(response => response.json())
+                .then(chartJson => createChart(chartJson))
+                .then(chart => {
+                    console.log(chart);
+                    renderBothCanvas(chart);
+                });
+            updateAlbumArt(artPath);
+        });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
