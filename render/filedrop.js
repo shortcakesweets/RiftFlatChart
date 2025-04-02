@@ -1,5 +1,20 @@
 const dropZone = document.getElementById('drop-zone');
 
+function updateTable(chart) {
+    const rows = document.querySelectorAll('.description-table tr');
+    for(let i=0; i<5; i++){
+        rows[i].cells[1].textContent = "";
+    }
+    
+    if (chart) {
+        rows[0].cells[1].textContent = chart.shortName;
+        rows[1].cells[1].textContent = `${DIFF_STRING[chart.difficulty - 1]}(${chart.intensity})`;
+        rows[2].cells[1].textContent = chart.baseBpm;
+        rows[3].cells[1].textContent = chart.maxCombo;
+        rows[4].cells[1].textContent = chart.maxScore;
+    }
+}
+
 function processFile(file) {
     if (!file.name.endsWith('.json')) {
         alert('Please upload a JSON file.');
@@ -12,8 +27,8 @@ function processFile(file) {
             chartData = JSON.parse(e.target.result);
             const chart = createChart(chartData);
             if (chart) {
-                // alert(`Chart loaded: ${file.name}`);
                 renderChart(chart);
+                updateTable(chart);
                 console.log('Chart object:', chart);
             } else {
                 alert('Error: Could not create chart from JSON.');

@@ -49,11 +49,52 @@ function renderText(x, y, text, color, align_right = false){
     ctx.fillText(text, x, y);
 }
 
+const PATH_ENEMIES = "enemies/";
+function getEnemyNameById(id){
+    for(const key in enemyId){
+        if(enemyId[key] === id){
+            return key;
+        }
+    }
+    return null;
+}
+
 function renderShortNote(xOffset, column, relBeat, color, enemyId, isFacingRight, isRenderEnemies){
     const [xStart, yStart] = getNoteXY(column, relBeat);
 
     ctx.fillStyle = color;
     ctx.fillRect(xOffset + xStart, yStart - NOTE_THICK, NOTE_SIZE, NOTE_THICK);
+
+    if(isRenderEnemies){
+        const enemyName = getEnemyNameById(enemyId);
+        if (enemyName) {
+            const enemyImg = new Image();
+            const suffix = isFacingRight ? "_flipped.png" : ".png";
+            enemyImg.src = PATH_ENEMIES + enemyName.toLowerCase() + suffix;
+
+            const drawEnemy = () => {
+                ctx.drawImage(
+                    enemyImg,
+                    xOffset + xStart,
+                    yStart - NOTE_SIZE / 2,
+                    NOTE_SIZE,
+                    NOTE_SIZE
+                );
+            };
+
+            if(enemyImg.complete){
+                drawEnemy();
+            } else {
+                enemyImg.onload = drawEnemy;
+                enemyImg.onerror = function(error) {
+                    console.error("Error loading enemy image:", enemyImg.src, error);
+                };
+            }
+        } else {
+            console.error("No enemy name found for enemyId:", enemyId);
+        }
+    }
+
     // TODO: render enemies
     /* - python code:
     if render_enemies:
@@ -144,7 +185,36 @@ function renderSegment(segmentIndex, chart, isRenderEnemies){
         }
     }
 
-    // TODO : draw vibe trigger indicaters and beats
+    // - draw vibe trigger indicaters and beats
+    const optimalVibes = chart.optimalVibes;
+    optimalVibes.forEach(optimalVibe => {
+        let relBeat = optimalVibe - beatIndex;
+        if(0 <= relBeat && relBeat < 16){
+            [, yStart] = getNoteXY(0, relBeat);
+            vertices = [
+                [X_OFFSET + LANE_MARGIN - FONT_MARGIN, yStart],
+                [X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, yStart + VIBE_IND_SIZE / 2],
+                [X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, yStart - VIBE_IND_SIZE / 2]
+            ];
+
+            ctx.beginPath();
+            ctx.moveTo(vertices[0][0], vertices[0][1]);
+            ctx.lineTo(vertices[1][0], vertices[1][1]);
+            ctx.lineTo(vertices[2][0], vertices[2][1]);
+            ctx.closePath();
+            
+            ctx.fillStyle = VIBE_COLOR;
+            ctx.fill();
+
+            renderText(
+                X_OFFSET + LANE_MARGIN - FONT_MARGIN,
+                yStart - FONT_SIZE / 2 - VIBE_IND_SIZE - FONT_MARGIN,
+                optimalVibe.toFixed(2).padStart(6, '0'),
+                VIBE_COLOR,
+                true
+            );
+        }
+    });
 
     // - sub division
     ctx.fillStyle = SUB_DIV_COLOR;
@@ -172,7 +242,20 @@ function renderSegment(segmentIndex, chart, isRenderEnemies){
         );
     }
 
-    // TODO : draw bpm change texts
+    // draw bpm change texts
+    const bpmChanges = chart.bpmChanges;
+    bpmChanges.forEach(bpmChange => {
+        let relBeat = bpmChange.beat - beatIndex;
+        if(0 <= relBeat && relBeat < 16){
+            [, yFinish] = getNoteXY(0, relBeat);
+            renderText(
+                X_OFFSET + FONT_MARGIN + LANE_MARGIN + LANE_GAP + LANE_WIDTH * 3,
+                yFinish,
+                String(bpmChange.bpm).padStart(3, '0'),
+                FONT_BPM_COLOR
+            );
+        }
+    });
 
     // filter only in-range notes
     const beatFrom = beatIndex;

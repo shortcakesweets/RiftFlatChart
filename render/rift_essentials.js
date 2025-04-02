@@ -101,9 +101,11 @@ function createChart(jsonData) {
         const data = jsonData;
 
         const chart = new Chart();
+        chart.key = data.name;
         chart.name = data.name;
-        chart.shortName = data.name;
+        chart.shortName = data.name; // TODO : fix this
         chart.difficulty = data.diff;
+        chart.intensity = data.intensity;
 
         // Extract note data
         const hitEvents = (data.events || [])
@@ -133,6 +135,16 @@ function createChart(jsonData) {
             }
         }
         chart.maxCombo = chart.shortNotes.length + chart.wyrmNotes.length;
+
+        chart.divisions = data.beatDivisions;
+        chart.baseBpm = data.bpm;
+        chart.bpmChanges.push(new BpmChange(1, chart.baseBpm));
+        const bpmEvents = (data.BpmEvents || [])
+        bpmEvents.forEach(bpmEvent => {
+            chart.bpmChanges.push(new BpmChange(bpmEvent[0], bpmEvent[1]));
+        });
+
+        // TODO : get maximum score and optimal vibe points
 
         return chart;
     } catch (error) {
