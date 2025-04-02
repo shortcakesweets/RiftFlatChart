@@ -7113,5 +7113,13 @@
         }
     ],
     "key": "DLCBanana03",
-    "short_name": "Reach for the Summit"
+    "short_name": "Reach for the Summit",
+    "maxScore": 1002277,
+    "optimalVibes": [
+        55.0,
+        108.0,
+        140.0,
+        220.0,
+        339.0
+    ]
 }

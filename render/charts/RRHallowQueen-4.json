@@ -13784,5 +13784,14 @@
         }
     ],
     "key": "RRHallowQueen",
-    "short_name": "Hallow Queen"
+    "short_name": "Hallow Queen",
+    "maxScore": 1460167,
+    "optimalVibes": [
+        48.0,
+        145.5,
+        194.0,
+        280.0,
+        301.0,
+        365.5
+    ]
 }

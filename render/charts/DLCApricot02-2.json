@@ -12269,5 +12269,12 @@
         }
     ],
     "key": "DLCApricot02",
-    "short_name": "Got Danged"
+    "short_name": "Got Danged",
+    "maxScore": 853221,
+    "optimalVibes": [
+        87.5,
+        245.0,
+        291.0,
+        360.0
+    ]
 }

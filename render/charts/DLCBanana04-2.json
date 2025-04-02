@@ -10414,5 +10414,12 @@
         }
     ],
     "key": "DLCBanana04",
-    "short_name": "Confronting Myself"
+    "short_name": "Confronting Myself",
+    "maxScore": 1196816,
+    "optimalVibes": [
+        203.0,
+        311.0,
+        403.0,
+        538.0
+    ]
 }

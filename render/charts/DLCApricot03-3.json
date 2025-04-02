@@ -15238,5 +15238,12 @@
         }
     ],
     "key": "DLCApricot03",
-    "short_name": "Bootus Bleez"
+    "short_name": "Bootus Bleez",
+    "maxScore": 1485838,
+    "optimalVibes": [
+        83.0,
+        207.5,
+        281.0,
+        337.75
+    ]
 }

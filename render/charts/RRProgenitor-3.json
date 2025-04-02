@@ -24917,5 +24917,12 @@
         }
     ],
     "key": "RRProgenitor",
-    "short_name": "Progenitor"
+    "short_name": "Progenitor",
+    "maxScore": 1967197,
+    "optimalVibes": [
+        169.0,
+        360.0,
+        488.0,
+        713.0
+    ]
 }

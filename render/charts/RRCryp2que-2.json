@@ -8430,5 +8430,11 @@
         }
     ],
     "key": "RRCryp2que",
-    "short_name": "Cryp2que"
+    "short_name": "Cryp2que",
+    "maxScore": 986480,
+    "optimalVibes": [
+        123.0,
+        176.0,
+        264.0
+    ]
 }

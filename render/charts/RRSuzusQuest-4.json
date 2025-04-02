@@ -25752,5 +25752,13 @@
         }
     ],
     "key": "RRSuzusQuest",
-    "short_name": "Suzu's Quest"
+    "short_name": "Suzu's Quest",
+    "maxScore": 2262653,
+    "optimalVibes": [
+        97.0,
+        184.5,
+        263.5,
+        302.75,
+        501.0
+    ]
 }

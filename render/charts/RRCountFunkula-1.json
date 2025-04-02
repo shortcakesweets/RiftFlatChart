@@ -4923,5 +4923,12 @@
         }
     ],
     "key": "RRCountFunkula",
-    "short_name": "Count Funkula"
+    "short_name": "Count Funkula",
+    "maxScore": 576556,
+    "optimalVibes": [
+        68.0,
+        119.0,
+        292.0,
+        361.0
+    ]
 }

@@ -16363,5 +16363,13 @@
         }
     ],
     "key": "RRMatron",
-    "short_name": "What's in the Box?"
+    "short_name": "What's in the Box?",
+    "maxScore": 1877749,
+    "optimalVibes": [
+        74.5,
+        214.0,
+        263.5,
+        404.0,
+        455.0
+    ]
 }

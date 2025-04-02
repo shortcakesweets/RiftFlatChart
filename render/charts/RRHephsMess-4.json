@@ -22829,5 +22829,13 @@
         }
     ],
     "key": "RRHephsMess",
-    "short_name": "Heph's Mess"
+    "short_name": "Heph's Mess",
+    "maxScore": 2045143,
+    "optimalVibes": [
+        89.0,
+        304.0,
+        375.0,
+        574.0,
+        638.0
+    ]
 }

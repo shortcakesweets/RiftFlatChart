@@ -6519,5 +6519,11 @@
         }
     ],
     "key": "RRGlassCages",
-    "short_name": "Glass Cages"
+    "short_name": "Glass Cages",
+    "maxScore": 746538,
+    "optimalVibes": [
+        85.0,
+        199.0,
+        264.0
+    ]
 }

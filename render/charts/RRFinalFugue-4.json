@@ -37789,5 +37789,13 @@
         }
     ],
     "key": "RRFinalFugue",
-    "short_name": "Final Fugue"
+    "short_name": "Final Fugue",
+    "maxScore": 3348652,
+    "optimalVibes": [
+        85.5,
+        168.0,
+        312.0,
+        464.0,
+        619.0
+    ]
 }

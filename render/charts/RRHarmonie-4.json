@@ -17461,5 +17461,12 @@
         }
     ],
     "key": "RRHarmonie",
-    "short_name": "She Banned"
+    "short_name": "She Banned",
+    "maxScore": 1568696,
+    "optimalVibes": [
+        73.5,
+        90.0,
+        169.5,
+        246.0
+    ]
 }

@@ -23503,5 +23503,10 @@
         }
     ],
     "key": "RRReaper",
-    "short_name": "Brave the Harvester"
+    "short_name": "Brave the Harvester",
+    "maxScore": 1754287,
+    "optimalVibes": [
+        176.0,
+        454.0
+    ]
 }

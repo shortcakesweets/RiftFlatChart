@@ -7590,5 +7590,12 @@
         }
     ],
     "key": "RRNecroSonatica",
-    "short_name": "Necro Sonatica"
+    "short_name": "Necro Sonatica",
+    "maxScore": 853136,
+    "optimalVibes": [
+        163.0,
+        217.0,
+        249.0,
+        344.0
+    ]
 }

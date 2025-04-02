@@ -8193,5 +8193,14 @@
         }
     ],
     "key": "DLCBanana05",
-    "short_name": "Scattered and Lost"
+    "short_name": "Scattered and Lost",
+    "maxScore": 2624141,
+    "optimalVibes": [
+        80.0,
+        241.0,
+        351.67,
+        447.67,
+        650.0,
+        697.5
+    ]
 }

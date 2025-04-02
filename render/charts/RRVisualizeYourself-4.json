@@ -24750,5 +24750,12 @@
         }
     ],
     "key": "RRVisualizeYourself",
-    "short_name": "Visualize Yourself"
+    "short_name": "Visualize Yourself",
+    "maxScore": 2104346,
+    "optimalVibes": [
+        92.0,
+        136.5,
+        229.0,
+        352.0
+    ]
 }

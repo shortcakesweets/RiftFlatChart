@@ -8619,5 +8619,11 @@
         }
     ],
     "key": "RRDiscoDisaster",
-    "short_name": "Disco Disaster"
+    "short_name": "Disco Disaster",
+    "maxScore": 1028678,
+    "optimalVibes": [
+        95.0,
+        247.0,
+        317.0
+    ]
 }

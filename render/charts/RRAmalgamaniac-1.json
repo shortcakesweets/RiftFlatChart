@@ -7311,5 +7311,11 @@
         }
     ],
     "key": "RRAmalgamaniac",
-    "short_name": "Amalgamaniac"
+    "short_name": "Amalgamaniac",
+    "maxScore": 618197,
+    "optimalVibes": [
+        136.0,
+        285.0,
+        389.0
+    ]
 }

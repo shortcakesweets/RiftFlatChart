@@ -6882,5 +6882,13 @@
         }
     ],
     "key": "DLCBanana02",
-    "short_name": "Resurrections"
+    "short_name": "Resurrections",
+    "maxScore": 758052,
+    "optimalVibes": [
+        157.0,
+        202.0,
+        311.0,
+        413.0,
+        429.0
+    ]
 }

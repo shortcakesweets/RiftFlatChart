@@ -18271,5 +18271,10 @@
         }
     ],
     "key": "RRHangTenHeph",
-    "short_name": "Hang Ten Heph"
+    "short_name": "Hang Ten Heph",
+    "maxScore": 1930521,
+    "optimalVibes": [
+        207.5,
+        432.5
+    ]
 }

@@ -12147,5 +12147,12 @@
         }
     ],
     "key": "RRThunder",
-    "short_name": "Under the Thunder"
+    "short_name": "Under the Thunder",
+    "maxScore": 1159766,
+    "optimalVibes": [
+        176.0,
+        236.0,
+        255.0,
+        334.5
+    ]
 }

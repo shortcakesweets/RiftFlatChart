@@ -27902,5 +27902,11 @@
         }
     ],
     "key": "RRNecropolis",
-    "short_name": "Necropolis"
+    "short_name": "Necropolis",
+    "maxScore": 2593919,
+    "optimalVibes": [
+        289.0,
+        442.0,
+        609.0
+    ]
 }

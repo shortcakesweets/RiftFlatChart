@@ -9,7 +9,10 @@ function updateTable(chart) {
     if (chart) {
         rows[0].cells[1].textContent = chart.shortName;
         rows[1].cells[1].textContent = `${DIFF_STRING[chart.difficulty - 1]}(${chart.intensity})`;
-        rows[2].cells[1].textContent = chart.baseBpm;
+        const maxBpm = Math.max(...chart.bpmChanges.map(bpmChange => bpmChange.bpm));
+        const minBpm = Math.min(...chart.bpmChanges.map(bpmChange => bpmChange.bpm));
+        const bpmStr = (minBpm === maxBpm) ? `${chart.baseBpm}` : `${minBpm}-${maxBpm} (${chart.baseBpm})`;
+        rows[2].cells[1].textContent = bpmStr;
         rows[3].cells[1].textContent = chart.maxCombo;
         rows[4].cells[1].textContent = chart.maxScore;
     }

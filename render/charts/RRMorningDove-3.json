@@ -13680,5 +13680,12 @@
         }
     ],
     "key": "RRMorningDove",
-    "short_name": "Morning Dove"
+    "short_name": "Morning Dove",
+    "maxScore": 1586380,
+    "optimalVibes": [
+        117.5,
+        247.0,
+        391.0,
+        426.0
+    ]
 }

@@ -9312,5 +9312,12 @@
         }
     ],
     "key": "RROmandOn",
-    "short_name": "Om and On"
+    "short_name": "Om and On",
+    "maxScore": 1104224,
+    "optimalVibes": [
+        118.0,
+        218.0,
+        322.0,
+        406.0
+    ]
 }

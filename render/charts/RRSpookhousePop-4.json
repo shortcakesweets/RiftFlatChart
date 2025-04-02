@@ -32915,5 +32915,12 @@
         }
     ],
     "key": "RRSpookhousePop",
-    "short_name": "Spookhouse Pop"
+    "short_name": "Spookhouse Pop",
+    "maxScore": 2642296,
+    "optimalVibes": [
+        122.67,
+        294.67,
+        377.0,
+        653.67
+    ]
 }

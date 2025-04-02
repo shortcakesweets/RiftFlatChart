@@ -21256,5 +21256,12 @@
         }
     ],
     "key": "DLCBanana01",
-    "short_name": "Ressurections Remix"
+    "short_name": "Ressurections Remix",
+    "maxScore": 1973902,
+    "optimalVibes": [
+        114.5,
+        185.67,
+        321.0,
+        349.0
+    ]
 }

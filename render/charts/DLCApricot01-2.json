@@ -11393,5 +11393,12 @@
         }
     ],
     "key": "DLCApricot01",
-    "short_name": "Slugger's Refrain"
+    "short_name": "Slugger's Refrain",
+    "maxScore": 947187,
+    "optimalVibes": [
+        174.0,
+        246.0,
+        332.0,
+        399.0
+    ]
 }

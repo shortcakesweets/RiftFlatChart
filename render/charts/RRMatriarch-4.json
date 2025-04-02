@@ -19345,5 +19345,14 @@
         }
     ],
     "key": "RRMatriarch",
-    "short_name": "Matriarch"
+    "short_name": "Matriarch",
+    "maxScore": 2385917,
+    "optimalVibes": [
+        37.0,
+        128.0,
+        157.0,
+        244.0,
+        365.0,
+        485.0
+    ]
 }

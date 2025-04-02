@@ -10631,5 +10631,12 @@
         }
     ],
     "key": "RRDeepBlues",
-    "short_name": "King's Ruse"
+    "short_name": "King's Ruse",
+    "maxScore": 874107,
+    "optimalVibes": [
+        58.67,
+        173.67,
+        201.0,
+        253.0
+    ]
 }

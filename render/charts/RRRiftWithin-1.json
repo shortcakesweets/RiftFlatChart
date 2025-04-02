@@ -10420,5 +10420,10 @@
         }
     ],
     "key": "RRRiftWithin",
-    "short_name": "Rift Within"
+    "short_name": "Rift Within",
+    "maxScore": 697693,
+    "optimalVibes": [
+        232.0,
+        444.0
+    ]
 }

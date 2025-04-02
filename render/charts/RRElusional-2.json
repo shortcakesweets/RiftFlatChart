@@ -4965,5 +4965,11 @@
         }
     ],
     "key": "RRElusional",
-    "short_name": "Elusional"
+    "short_name": "Elusional",
+    "maxScore": 582110,
+    "optimalVibes": [
+        115.5,
+        171.0,
+        238.0
+    ]
 }

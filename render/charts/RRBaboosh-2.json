@@ -14677,5 +14677,11 @@
         }
     ],
     "key": "RRBaboosh",
-    "short_name": "Baboosh"
+    "short_name": "Baboosh",
+    "maxScore": 1161032,
+    "optimalVibes": [
+        195.0,
+        262.0,
+        420.0
+    ]
 }

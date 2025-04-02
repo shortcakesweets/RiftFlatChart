@@ -13916,5 +13916,11 @@
         }
     ],
     "key": "RRRavevenge",
-    "short_name": "RAVEVENGE"
+    "short_name": "RAVEVENGE",
+    "maxScore": 1553000,
+    "optimalVibes": [
+        179.0,
+        242.0,
+        360.0
+    ]
 }

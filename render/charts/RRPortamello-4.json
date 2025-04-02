@@ -18634,5 +18634,11 @@
         }
     ],
     "key": "RRPortamello",
-    "short_name": "Portamello"
+    "short_name": "Portamello",
+    "maxScore": 1680730,
+    "optimalVibes": [
+        189.67,
+        242.67,
+        273.0
+    ]
 }

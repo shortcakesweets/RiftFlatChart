@@ -14205,5 +14205,12 @@
         }
     ],
     "key": "RROverthinker",
-    "short_name": "Overthinker"
+    "short_name": "Overthinker",
+    "maxScore": 1719630,
+    "optimalVibes": [
+        133.0,
+        203.0,
+        277.0,
+        346.0
+    ]
 }

@@ -2,7 +2,7 @@
 let canvas = document.getElementById('chart-canvas');
 let ctx = canvas.getContext('2d');
 */
-let canvas = null;
+// let canvas = null;
 let ctx = null;
 
 // size constants
@@ -14,7 +14,7 @@ const LANE_HEIGHT     = 1200*4
 const LANE_PADDING    = 8*4           // slightly longer lanes for previewing next notes
 const NOTE_SIZE       = 12*4
 const NOTE_THICK      = 2*4
-const FONT_SIZE       = 12*4
+const FONT_SIZE       = 14*4
 const FONT_MARGIN     = 4*4           // also applies to vibe indicators
 const WYRM_HEAD_SIZE  = 6*4           // wyrm head (triangle) height
 const VIBE_IND_SIZE   = 12*4          // vibe indicator (triagnle pointing right)'s width & height
@@ -44,7 +44,7 @@ function getNoteXY(column, relBeat) {
 }
 
 function renderText(x, y, text, color, align_right = false){
-    ctx.font = `${FONT_SIZE}px Arial`;
+    ctx.font = `bold ${FONT_SIZE}px Arial`;
     ctx.fillStyle = color;
     if (align_right){
         const textWidth = ctx.measureText(text).width;
@@ -198,7 +198,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies){
 
             renderText(
                 X_OFFSET + LANE_MARGIN - FONT_MARGIN,
-                yStart - FONT_SIZE / 2 - VIBE_IND_SIZE - FONT_MARGIN,
+                yStart - VIBE_IND_SIZE,
                 optimalVibe.toFixed(2).padStart(6, '0'),
                 VIBE_COLOR,
                 true
@@ -351,16 +351,17 @@ function createChart(jsonData) {
             }
         }
         chart.maxCombo = chart.shortNotes.length + chart.wyrmNotes.length;
+        chart.maxScore = data.maxScore ? data.maxScore : 0;
 
         chart.divisions = data.beatDivisions;
         chart.baseBpm = data.bpm;
         chart.bpmChanges.push(new BpmChange(1, chart.baseBpm));
-        const bpmEvents = (data.BpmEvents || [])
+        const bpmEvents = (data.BpmEvents || []);
         bpmEvents.forEach(bpmEvent => {
             chart.bpmChanges.push(new BpmChange(bpmEvent[0], bpmEvent[1]));
         });
 
-        // TODO : get maximum score and optimal vibe points
+        chart.optimalVibes = (data.optimalVibes || []);
 
         return chart;
     } catch (error) {

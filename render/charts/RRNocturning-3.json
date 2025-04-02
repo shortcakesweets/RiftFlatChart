@@ -15290,5 +15290,11 @@
         }
     ],
     "key": "RRNocturning",
-    "short_name": "Nocturning"
+    "short_name": "Nocturning",
+    "maxScore": 1215284,
+    "optimalVibes": [
+        122.0,
+        186.5,
+        374.0
+    ]
 }

@@ -19925,5 +19925,12 @@
         }
     ],
     "key": "RREldritchHouse",
-    "short_name": "Eldritch House"
+    "short_name": "Eldritch House",
+    "maxScore": 2213553,
+    "optimalVibes": [
+        40.5,
+        129.0,
+        192.5,
+        334.67
+    ]
 }

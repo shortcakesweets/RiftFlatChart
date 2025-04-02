@@ -17511,5 +17511,12 @@
         }
     ],
     "key": "RRTwombtorial",
-    "short_name": "Twombtorial"
+    "short_name": "Twombtorial",
+    "maxScore": 1801516,
+    "optimalVibes": [
+        154.0,
+        380.0,
+        465.0,
+        529.0
+    ]
 }
