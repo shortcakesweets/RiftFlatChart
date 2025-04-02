@@ -26,10 +26,16 @@ body {
     margin-right: 2vh;
 }
 
+.album-art {
+    width: 14vh;
+    height: 14vh;
+    object-fit: cover;
+}
+
 .drop-zone {
     width: 14vh;
     height: 14vh;
-    border: 0.5vh dashed whitesmoke;
+    border: 0.3vh dashed whitesmoke;
     background-color: grey;
     display: flex;
     align-items: center;

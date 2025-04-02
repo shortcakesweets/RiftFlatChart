@@ -1,5 +1,9 @@
-const canvas = document.getElementById('chart-canvas');
-const ctx = canvas.getContext('2d');
+/*
+let canvas = document.getElementById('chart-canvas');
+let ctx = canvas.getContext('2d');
+*/
+let canvas = null;
+let ctx = null;
 
 // size constants
 // margin - gap - lane - gap - lane - gap - lane - gap - margin
@@ -94,20 +98,6 @@ function renderShortNote(xOffset, column, relBeat, color, enemyId, isFacingRight
             console.error("No enemy name found for enemyId:", enemyId);
         }
     }
-
-    // TODO: render enemies
-    /* - python code:
-    if render_enemies:
-        enemy_name = EnemyId(enemy_id).name
-        enemy_img_path = os.path.join(PATH_ENEMIES, f"{enemy_name.lower()}.png")
-        enemy_img = Image.open(enemy_img_path).convert("RGBA")
-        enemy_img = enemy_img.resize((NOTE_SIZE, NOTE_SIZE), Image.LANCZOS)
-        if is_facing_right:
-            enemy_img.transpose(Image.FLIP_LEFT_RIGHT)
-
-        x_start, y_start = get_note_xy(column, rel_beat)
-        img.paste(enemy_img, (int(x_start), int(y_start) - NOTE_SIZE // 2), enemy_img)
-    */
 }
 
 function renderWyrmBody(xOffset, column, relBeatStart, relBeatFinish, isRenderEnemies){
@@ -299,7 +289,9 @@ function renderSegment(segmentIndex, chart, isRenderEnemies){
     });
 }
 
-function renderChart(chart) {
+function renderChart(canvas, chart, isRenderEnemies) {
+    ctx = canvas.getContext('2d');
+
     const allBeats = [
         ...chart.shortNotes.map(note => note.beatFinish),
         ...chart.wyrmNotes.map(note => note.beatFinish)
@@ -316,6 +308,64 @@ function renderChart(chart) {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for(let segmentIndex=0; segmentIndex<segmentCount; segmentIndex++){
-        renderSegment(segmentIndex, chart, false);
+        renderSegment(segmentIndex, chart, isRenderEnemies);
+    }
+}
+
+function createChart(jsonData) {
+    try {
+        const data = jsonData;
+
+        const chart = new Chart();
+        chart.key = data.name;
+        chart.name = data.name;
+        chart.shortName = data.name; // TODO : fix this
+        chart.difficulty = data.diff;
+        chart.intensity = data.intensity;
+
+        // Extract note data
+        const hitEvents = (data.events || [])
+            .filter(e => e.Event === "HitEnemy" || e.Event === "WyrmEnd")
+            .sort((a, b) => parseFloat(a.Beat) - parseFloat(b.Beat) || parseInt(a.X) - parseInt(b.X));
+
+        for (const event of hitEvents) {
+            if (event.Event === "HitEnemy") {
+                const note = new Note();
+                note.enemyUid = event.GUID;
+                note.enemyId = parseInt(event.ID);
+                note.beatStart = parseFloat(event.Beat);
+                note.column = parseInt(event.X);
+                note.isFacingRight = event.Facing === "Right";
+                if (note.enemyId !== enemyId.WYRM) {
+                    note.beatFinish = note.beatStart;
+                    chart.shortNotes.push(note);
+                } else {
+                    chart.wyrmNotes.push(note);
+                }
+            } else if (event.Event === "WyrmEnd") {
+                for (const wyrmNote of chart.wyrmNotes) {
+                    if (wyrmNote.enemyUid === event.GUID) {
+                        wyrmNote.beatFinish = parseFloat(event.Beat);
+                    }
+                }
+            }
+        }
+        chart.maxCombo = chart.shortNotes.length + chart.wyrmNotes.length;
+
+        chart.divisions = data.beatDivisions;
+        chart.baseBpm = data.bpm;
+        chart.bpmChanges.push(new BpmChange(1, chart.baseBpm));
+        const bpmEvents = (data.BpmEvents || [])
+        bpmEvents.forEach(bpmEvent => {
+            chart.bpmChanges.push(new BpmChange(bpmEvent[0], bpmEvent[1]));
+        });
+
+        // TODO : get maximum score and optimal vibe points
+
+        return chart;
+    } catch (error) {
+        console.error(`Failed while processing chart data: ${error.message}`);
+        console.error(error.stack);
+        return null;
     }
 }

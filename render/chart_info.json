@@ -1,0 +1,402 @@
+{
+    "RRDiscoDisaster": {
+        "name": "Disco Disaster",
+        "art": "AlbumArts/RRDiscoDisaster.webp",
+        "hit": {
+            "easy": "charts/RRDiscoDisaster-1.json",
+            "medium": "charts/RRDiscoDisaster-2.json",
+            "hard": "charts/RRDiscoDisaster-3.json",
+            "impossible": "charts/RRDiscoDisaster-4.json"
+        }
+    },
+    "RRElusional": {
+        "name": "Elusional",
+        "art": "AlbumArts/RRElusional.webp",
+        "hit": {
+            "easy": "charts/RRElusional-1.json",
+            "medium": "charts/RRElusional-2.json",
+            "hard": "charts/RRElusional-3.json",
+            "impossible": "charts/RRElusional-4.json"
+        }
+    },
+    "RRVisualizeYourself": {
+        "name": "Visualize Yourself",
+        "art": "AlbumArts/RRVisualizeYourself.webp",
+        "hit": {
+            "easy": "charts/RRVisualizeYourself-1.json",
+            "medium": "charts/RRVisualizeYourself-2.json",
+            "hard": "charts/RRVisualizeYourself-3.json",
+            "impossible": "charts/RRVisualizeYourself-4.json"
+        }
+    },
+    "RRSpookhousePop": {
+        "name": "Spookhouse Pop",
+        "art": "AlbumArts/RRSpookhousePop.webp",
+        "hit": {
+            "easy": "charts/RRSpookhousePop-1.json",
+            "medium": "charts/RRSpookhousePop-2.json",
+            "hard": "charts/RRSpookhousePop-3.json",
+            "impossible": "charts/RRSpookhousePop-4.json"
+        }
+    },
+    "RROmandOn": {
+        "name": "Om and On",
+        "art": "AlbumArts/RROmandOn.webp",
+        "hit": {
+            "easy": "charts/RROmandOn-1.json",
+            "medium": "charts/RROmandOn-2.json",
+            "hard": "charts/RROmandOn-3.json",
+            "impossible": "charts/RROmandOn-4.json"
+        }
+    },
+    "RRMorningDove": {
+        "name": "Morning Dove",
+        "art": "AlbumArts/RRMorningDove.webp",
+        "hit": {
+            "easy": "charts/RRMorningDove-1.json",
+            "medium": "charts/RRMorningDove-2.json",
+            "hard": "charts/RRMorningDove-3.json",
+            "impossible": "charts/RRMorningDove-4.json"
+        }
+    },
+    "RRHephsMess": {
+        "name": "Heph's Mess",
+        "art": "AlbumArts/RRHephsMess.webp",
+        "hit": {
+            "easy": "charts/RRHephsMess-1.json",
+            "medium": "charts/RRHephsMess-2.json",
+            "hard": "charts/RRHephsMess-3.json",
+            "impossible": "charts/RRHephsMess-4.json"
+        }
+    },
+    "RRAmalgamaniac": {
+        "name": "Amalgamaniac",
+        "art": "AlbumArts/RRAmalgamaniac.webp",
+        "hit": {
+            "easy": "charts/RRAmalgamaniac-1.json",
+            "medium": "charts/RRAmalgamaniac-2.json",
+            "hard": "charts/RRAmalgamaniac-3.json",
+            "impossible": "charts/RRAmalgamaniac-4.json"
+        }
+    },
+    "RRHangTenHeph": {
+        "name": "Hang Ten Heph",
+        "art": "AlbumArts/RRHangTenHeph.webp",
+        "hit": {
+            "easy": "charts/RRHangTenHeph-1.json",
+            "medium": "charts/RRHangTenHeph-2.json",
+            "hard": "charts/RRHangTenHeph-3.json",
+            "impossible": "charts/RRHangTenHeph-4.json"
+        }
+    },
+    "RRCountFunkula": {
+        "name": "Count Funkula",
+        "art": "AlbumArts/RRCountFunkula.webp",
+        "hit": {
+            "easy": "charts/RRCountFunkula-1.json",
+            "medium": "charts/RRCountFunkula-2.json",
+            "hard": "charts/RRCountFunkula-3.json",
+            "impossible": "charts/RRCountFunkula-4.json"
+        }
+    },
+    "RROverthinker": {
+        "name": "Overthinker",
+        "art": "AlbumArts/RROverthinker.webp",
+        "hit": {
+            "easy": "charts/RROverthinker-1.json",
+            "medium": "charts/RROverthinker-2.json",
+            "hard": "charts/RROverthinker-3.json",
+            "impossible": "charts/RROverthinker-4.json"
+        }
+    },
+    "RRCryp2que": {
+        "name": "Cryp2que",
+        "art": "AlbumArts/RRCryp2que.webp",
+        "hit": {
+            "easy": "charts/RRCryp2que-1.json",
+            "medium": "charts/RRCryp2que-2.json",
+            "hard": "charts/RRCryp2que-3.json",
+            "impossible": "charts/RRCryp2que-4.json"
+        }
+    },
+    "RRNocturning": {
+        "name": "Nocturning",
+        "art": "AlbumArts/RRNocturning.webp",
+        "hit": {
+            "easy": "charts/RRNocturning-1.json",
+            "medium": "charts/RRNocturning-2.json",
+            "hard": "charts/RRNocturning-3.json",
+            "impossible": "charts/RRNocturning-4.json"
+        }
+    },
+    "RRGlassCages": {
+        "name": "Glass Cages",
+        "art": "AlbumArts/RRGlassCages.webp",
+        "hit": {
+            "easy": "charts/RRGlassCages-1.json",
+            "medium": "charts/RRGlassCages-2.json",
+            "hard": "charts/RRGlassCages-3.json",
+            "impossible": "charts/RRGlassCages-4.json"
+        }
+    },
+    "RRHallowQueen": {
+        "name": "Hallow Queen",
+        "art": "AlbumArts/RRHallowQueen.webp",
+        "hit": {
+            "easy": "charts/RRHallowQueen-1.json",
+            "medium": "charts/RRHallowQueen-2.json",
+            "hard": "charts/RRHallowQueen-3.json",
+            "impossible": "charts/RRHallowQueen-4.json"
+        }
+    },
+    "RRProgenitor": {
+        "name": "Progenitor",
+        "art": "AlbumArts/RRProgenitor.webp",
+        "hit": {
+            "easy": "charts/RRProgenitor-1.json",
+            "medium": "charts/RRProgenitor-2.json",
+            "hard": "charts/RRProgenitor-3.json",
+            "impossible": "charts/RRProgenitor-4.json"
+        }
+    },
+    "RRMatriarch": {
+        "name": "Matriarch",
+        "art": "AlbumArts/RRMatriarch.webp",
+        "hit": {
+            "easy": "charts/RRMatriarch-1.json",
+            "medium": "charts/RRMatriarch-2.json",
+            "hard": "charts/RRMatriarch-3.json",
+            "impossible": "charts/RRMatriarch-4.json"
+        }
+    },
+    "RRThunder": {
+        "name": "Under The Thunder",
+        "art": "AlbumArts/RRThunder.webp",
+        "hit": {
+            "easy": "charts/RRThunder-1.json",
+            "medium": "charts/RRThunder-2.json",
+            "hard": "charts/RRThunder-3.json",
+            "impossible": "charts/RRThunder-4.json"
+        }
+    },
+    "RREldritchHouse": {
+        "name": "Eldritch House",
+        "art": "AlbumArts/RREldritchHouse.webp",
+        "hit": {
+            "easy": "charts/RREldritchHouse-1.json",
+            "medium": "charts/RREldritchHouse-2.json",
+            "hard": "charts/RREldritchHouse-3.json",
+            "impossible": "charts/RREldritchHouse-4.json"
+        }
+    },
+    "RRRavevenge": {
+        "name": "Ravevenge",
+        "art": "AlbumArts/RRRavevenge.webp",
+        "hit": {
+            "easy": "charts/RRRavevenge-1.json",
+            "medium": "charts/RRRavevenge-2.json",
+            "hard": "charts/RRRavevenge-3.json",
+            "impossible": "charts/RRRavevenge-4.json"
+        }
+    },
+    "RRRiftWithin": {
+        "name": "Rift Within",
+        "art": "AlbumArts/RRRiftWithin.webp",
+        "hit": {
+            "easy": "charts/RRRiftWithin-1.json",
+            "medium": "charts/RRRiftWithin-2.json",
+            "hard": "charts/RRRiftWithin-3.json",
+            "impossible": "charts/RRRiftWithin-4.json"
+        }
+    },
+    "RRSuzusQuest": {
+        "name": "Suzu's Quest",
+        "art": "AlbumArts/RRSuzusQuest.webp",
+        "hit": {
+            "easy": "charts/RRSuzusQuest-1.json",
+            "medium": "charts/RRSuzusQuest-2.json",
+            "hard": "charts/RRSuzusQuest-3.json",
+            "impossible": "charts/RRSuzusQuest-4.json"
+        }
+    },
+    "RRNecropolis": {
+        "name": "Necropolis",
+        "art": "AlbumArts/RRNecropolis.webp",
+        "hit": {
+            "easy": "charts/RRNecropolis-1.json",
+            "medium": "charts/RRNecropolis-2.json",
+            "hard": "charts/RRNecropolis-3.json",
+            "impossible": "charts/RRNecropolis-4.json"
+        }
+    },
+    "RRBaboosh": {
+        "name": "Baboosh",
+        "art": "AlbumArts/RRBaboosh.webp",
+        "hit": {
+            "easy": "charts/RRBaboosh-1.json",
+            "medium": "charts/RRBaboosh-2.json",
+            "hard": "charts/RRBaboosh-3.json",
+            "impossible": "charts/RRBaboosh-4.json"
+        }
+    },
+    "RRNecroSonatica": {
+        "name": "Necro Sonatica",
+        "art": "AlbumArts/RRNecroSonatica.webp",
+        "hit": {
+            "easy": "charts/RRNecroSonatica-1.json",
+            "medium": "charts/RRNecroSonatica-2.json",
+            "hard": "charts/RRNecroSonatica-3.json",
+            "impossible": "charts/RRNecroSonatica-4.json"
+        }
+    },
+    "RRHarmonie": {
+        "name": "She Banned",
+        "art": "AlbumArts/RRHarmonie.webp",
+        "hit": {
+            "easy": "charts/RRHarmonie-1.json",
+            "medium": "charts/RRHarmonie-2.json",
+            "hard": "charts/RRHarmonie-3.json",
+            "impossible": "charts/RRHarmonie-4.json"
+        }
+    },
+    "RRDeepBlues": {
+        "name": "King's Ruse",
+        "art": "AlbumArts/RRDeepBlues.webp",
+        "hit": {
+            "easy": "charts/RRDeepBlues-1.json",
+            "medium": "charts/RRDeepBlues-2.json",
+            "hard": "charts/RRDeepBlues-3.json",
+            "impossible": "charts/RRDeepBlues-4.json"
+        }
+    },
+    "RRMatron": {
+        "name": "What's In The Box",
+        "art": "AlbumArts/RRMatron.webp",
+        "hit": {
+            "easy": "charts/RRMatron-1.json",
+            "medium": "charts/RRMatron-2.json",
+            "hard": "charts/RRMatron-3.json",
+            "impossible": "charts/RRMatron-4.json"
+        }
+    },
+    "RRReaper": {
+        "name": "Brave The Harvester",
+        "art": "AlbumArts/RRReaper.webp",
+        "hit": {
+            "easy": "charts/RRReaper-1.json",
+            "medium": "charts/RRReaper-2.json",
+            "hard": "charts/RRReaper-3.json",
+            "impossible": "charts/RRReaper-4.json"
+        }
+    },
+    "RRFinalFugue": {
+        "name": "Final Fugue",
+        "art": "AlbumArts/RRFinalFugue.webp",
+        "hit": {
+            "easy": "charts/RRFinalFugue-1.json",
+            "medium": "charts/RRFinalFugue-2.json",
+            "hard": "charts/RRFinalFugue-3.json",
+            "impossible": "charts/RRFinalFugue-4.json"
+        }
+    },
+    "RRTwombtorial": {
+        "name": "Twombtorial",
+        "art": "AlbumArts/RRTwombtorial.webp",
+        "hit": {
+            "easy": "charts/RRTwombtorial-1.json",
+            "medium": "charts/RRTwombtorial-2.json",
+            "hard": "charts/RRTwombtorial-3.json",
+            "impossible": "charts/RRTwombtorial-4.json"
+        }
+    },
+    "RRPortamello": {
+        "name": "Portamello",
+        "art": "AlbumArts/RRPortamello.webp",
+        "hit": {
+            "easy": "charts/RRPortamello-1.json",
+            "medium": "charts/RRPortamello-2.json",
+            "hard": "charts/RRPortamello-3.json",
+            "impossible": "charts/RRPortamello-4.json"
+        }
+    },
+    "DLCApricot01": {
+        "name": "Slugger's Refrain",
+        "art": "AlbumArts/DLCApricot.webp",
+        "hit": {
+            "easy": "charts/DLCApricot01-1.json",
+            "medium": "charts/DLCApricot01-2.json",
+            "hard": "charts/DLCApricot01-3.json",
+            "impossible": "charts/DLCApricot01-4.json"
+        }
+    },
+    "DLCApricot02": {
+        "name": "Got Danged",
+        "art": "AlbumArts/DLCApricot.webp",
+        "hit": {
+            "easy": "charts/DLCApricot02-1.json",
+            "medium": "charts/DLCApricot02-2.json",
+            "hard": "charts/DLCApricot02-3.json",
+            "impossible": "charts/DLCApricot02-4.json"
+        }
+    },
+    "DLCApricot03": {
+        "name": "Bootus Bleez",
+        "art": "AlbumArts/DLCApricot.webp",
+        "hit": {
+            "easy": "charts/DLCApricot03-1.json",
+            "medium": "charts/DLCApricot03-2.json",
+            "hard": "charts/DLCApricot03-3.json",
+            "impossible": "charts/DLCApricot03-4.json"
+        }
+    },
+    "DLCBanana01": {
+        "name": "Resurrections (dannyBstyle Remix)",
+        "art": "AlbumArts/DLCBanana.webp",
+        "hit": {
+            "easy": "charts/DLCBanana01-1.json",
+            "medium": "charts/DLCBanana01-2.json",
+            "hard": "charts/DLCBanana01-3.json",
+            "impossible": "charts/DLCBanana01-4.json"
+        }
+    },
+    "DLCBanana02": {
+        "name": "Scattered And Lost",
+        "art": "AlbumArts/DLCBanana.webp",
+        "hit": {
+            "easy": "charts/DLCBanana02-1.json",
+            "medium": "charts/DLCBanana02-2.json",
+            "hard": "charts/DLCBanana02-3.json",
+            "impossible": "charts/DLCBanana02-4.json"
+        }
+    },
+    "DLCBanana03": {
+        "name": "Reach for the Summit",
+        "art": "AlbumArts/DLCBanana.webp",
+        "hit": {
+            "easy": "charts/DLCBanana03-1.json",
+            "medium": "charts/DLCBanana03-2.json",
+            "hard": "charts/DLCBanana03-3.json",
+            "impossible": "charts/DLCBanana03-4.json"
+        }
+    },
+    "DLCBanana04": {
+        "name": "Confronting Myself",
+        "art": "AlbumArts/DLCBanana.webp",
+        "hit": {
+            "easy": "charts/DLCBanana04-1.json",
+            "medium": "charts/DLCBanana04-2.json",
+            "hard": "charts/DLCBanana04-3.json",
+            "impossible": "charts/DLCBanana04-4.json"
+        }
+    },
+    "DLCBanana05": {
+        "name": "Resurrections",
+        "art": "AlbumArts/DLCBanana.webp",
+        "hit": {
+            "easy": "charts/DLCBanana05-1.json",
+            "medium": "charts/DLCBanana05-2.json",
+            "hard": "charts/DLCBanana05-3.json",
+            "impossible": "charts/DLCBanana05-4.json"
+        }
+    }
+}

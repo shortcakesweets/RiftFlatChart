@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Renderer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="chart-info">
+            <div class="v-container">
+                <img
+                    class="album-art"
+                    src="./jacket/Amalgamaniac.webp"
+                    alt="Album Art" />
+                <button id="toggle-button" class="toggle-button">
+                    Enemy Render OFF
+                </button>
+            </div>
+            <table class="description-table">
+                <tr>
+                    <td>Song Name</td>
+                    <td>song name</td>
+                </tr>
+                <tr>
+                    <td>Difficulty</td>
+                    <td>Impossible(42)</td>
+                </tr>
+                <tr>
+                    <td>BPM</td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <td>Max Combo</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>Max Score</td>
+                    <td>7777777</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="chart-div">
+        <canvas class="chart-canvas" id="chart-canvas"></canvas>
+        <canvas class="chart-canvas" id="chart-canvas-er"></canvas>
+    </div>
+    <script src="onload.js"></script>
+    <script src="rift_essentials.js"></script>
+    <script src="render.js"></script>
+</body>
+</html>

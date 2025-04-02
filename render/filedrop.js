@@ -26,8 +26,11 @@ function processFile(file) {
         try {
             chartData = JSON.parse(e.target.result);
             const chart = createChart(chartData);
+            const canvas1 = document.getElementById('chart-canvas');
+            const canvas2 = document.getElementById('chart-canvas-er');
             if (chart) {
-                renderChart(chart);
+                renderChart(canvas1, chart, false);
+                renderChart(canvas2, chart, true);
                 updateTable(chart);
                 console.log('Chart object:', chart);
             } else {
