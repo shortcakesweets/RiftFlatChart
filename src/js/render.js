@@ -53,7 +53,7 @@ function renderText(x, y, text, color, align_right = false){
     ctx.fillText(text, x, y);
 }
 
-const PATH_ENEMIES = "enemies/";
+const PATH_ENEMIES = "../../data/enemies/";
 function getEnemyNameById(id){
     for(const key in enemyId){
         if(enemyId[key] === id){

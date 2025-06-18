@@ -128,7 +128,7 @@ function parseParam(){
         return;
     }
 
-    fetch('chart_info.json')
+    fetch('../../data/charts/chart_list.json')
         .then(response => response.json())
         .then(data => {
             const subData = data[key];
