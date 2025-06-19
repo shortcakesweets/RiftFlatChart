@@ -1,97 +1,207 @@
+/* Center the card in the middle of the page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.top-bar {
-    height: 20vh;
-    font-size: 2vh;
-    background-color: #333;
-    color: #fff;
-    padding: 2vh;
-    display: flex;
-    align-items: center;
-}
-
-.chart-info {
-    display: flex;
-    align-items: center;
-}
-
-.v-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 2vh;
-}
-
-.album-art {
-    width: 14vh;
-    height: 14vh;
-    object-fit: cover;
-}
-
-.drop-zone {
-    width: 14vh;
-    height: 14vh;
-    border: 0.3vh dashed whitesmoke;
-    background-color: grey;
-    display: flex;
-    align-items: center;
+	margin: 0;
+	background-color: #1a252f;
+	font-family: "Oxanium", sans-serif;
     justify-content: center;
+    background: url('../../data/misc/bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #1a252f;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.site-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.site-logo {
+	height: 80px; /* adjust to your logo size */
+	max-width: 80%;
+	object-fit: contain;
+}
+
+.site-title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+	margin-top: 8px;
     text-align: center;
-    color: whitesmoke;
-    font-size: 2vh;
-    cursor: pointer;
-    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.drop-zone.dragover{
-    border-color: blue;
-    background-color: #e0e0ff;
-    color: blue;
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
 }
 
-.toggle-button {
-    width: 14vh;
-    height: 3vh;
-    margin-top: 1vh;
-    border-radius: 0.5vh;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    font-size: 1vh;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.scroll-wrapper {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	overflow-y: scroll;
 }
 
-.toggle-button.on {
-    background-color: #e74c3c;
+.scroll-wrapper::-webkit-scrollbar {
+	display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
-.description-table,
-tr,
-td {
-    border: 0.2vh solid;
-    border-collapse: collapse;
-    border-color: aliceblue;
+.card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+	max-width: 70vh;
+    margin: 0 auto;
 }
 
-.description-table tr {
-    height: 4vh;
+/* Card layout */
+.card {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-template-rows: auto auto;
+	gap: 10px;
+    margin: 0 16px;
+	padding: 16px;
+	border-radius: 12px;
+	background-color: #2c3e50;
+	color: white;
+	width: minmax(60vh, 1fr);
 }
 
-.description-table td {
-    padding-inline: 1.5vh;
+.dlc-card {
+	position: relative;
 }
 
-.chart-div {
-    text-align: center;
-    overflow-x: auto;
-    background-color: black;
+.card-dlc-ribbon {
+	position: absolute;
+	top: 0;
+	right: 12px;
+	background-color: #2ecc71; /* green */
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 8px 18px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
-.chart-canvas {
-    width: auto;
+@media (max-width: 600px) {
+    .card-dlc-ribbon {
+		position: absolute;
+		top: 0;
+		right: 12px;
+		background-color: #2ecc71; /* green */
+		color: white;
+		font-weight: bold;
+		font-size: 1rem;
+		padding: 4px 12px;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
 }
+
+.card-image {
+	display: flex;
+	align-items: center;
+}
+
+/* Image column */
+.card-image img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 8px;
+	grid-row: span 2;
+}
+
+@media (max-width: 600px) {
+	.card-image img {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+/* Text column */
+.card-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* vertical center */
+	align-items: center; /* horizontal center */
+	text-align: center;
+}
+
+.card-title {
+	font-size: 1.5rem;
+	overflow-wrap: break-word;
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	.card-title {
+		font-size: 1.25rem;
+	}
+}
+
+.card-subtitle {
+	font-size: 1rem;
+	color: #bdc3c7;
+	margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+	.card-subtitle {
+		font-size: 0.8rem;
+	}
+}
+
+/* Bottom stat row */
+.card-difficulty {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+	grid-column: 1 / -1; /* span both columns */
+	margin-top: 8px;
+}
+
+.difficulty {
+	background: #34495e;
+	padding: 8px;
+	border-radius: 6px;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: bolder;
+	white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+	.difficulty {
+		font-size: 1rem;
+	}
+}
+
+.difficulty:nth-child(1) {
+	background-color: #00adb0;
+}
+
+.difficulty:nth-child(2) {
+	background-color: #3687e2;
+}
+
+.difficulty:nth-child(3) {
+	background-color: #e62b72;
+}
+
+.difficulty:nth-child(4) {
+	background-color: #853dd6;
+}
+
+

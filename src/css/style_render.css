@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    height: 20vh;
+    font-size: 2vh;
+    background-color: #333;
+    color: #fff;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+.chart-info {
+    display: flex;
+    align-items: center;
+}
+
+.v-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+.album-art {
+    width: 14vh;
+    height: 14vh;
+    object-fit: cover;
+}
+
+.drop-zone {
+    width: 14vh;
+    height: 14vh;
+    border: 0.3vh dashed whitesmoke;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.drop-zone.dragover{
+    border-color: blue;
+    background-color: #e0e0ff;
+    color: blue;
+}
+
+.toggle-button {
+    width: 14vh;
+    height: 3vh;
+    margin-top: 1vh;
+    border-radius: 0.5vh;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    font-size: 1vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button.on {
+    background-color: #e74c3c;
+}
+
+.description-table,
+tr,
+td {
+    border: 0.2vh solid;
+    border-collapse: collapse;
+    border-color: aliceblue;
+}
+
+.description-table tr {
+    height: 4vh;
+}
+
+.description-table td {
+    padding-inline: 1.5vh;
+}
+
+.chart-div {
+    text-align: center;
+    overflow-x: auto;
+    background-color: black;
+}
+
+.chart-canvas {
+    width: auto;
+}
