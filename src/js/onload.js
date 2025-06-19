@@ -133,7 +133,7 @@ function parseParam(){
         .then(data => {
             const subData = data[key];
             // console.log(subData);
-            const chartPath = subData['hit'][DIFF_STRING[diff-1]];
+            const chartPath = subData['chart'][DIFF_STRING[diff-1]];
             const artPath = subData['art'];
             // console.log(chartPath, artPath);
 
