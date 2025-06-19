@@ -36,7 +36,7 @@ const cardTemplateDlc = `
 `;
 
 function createCard(chart, key) {
-	const { name: title, art, dlc, artist, intensity } = chart;
+        const { title, art, dlc, artist, intensity } = chart;
 
 	const albumArtUrl = art.startsWith("../../") ? art.slice(6) : art;
 	const chartUrlEasy = `src/html/render_main.html?key=${key}&diff=1`;
