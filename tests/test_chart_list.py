@@ -13,7 +13,7 @@ def test_chart_list_integrity_verbose():
     chart_list = load_chart_list()
     total = len(chart_list)
     required_keys = {
-        "name",
+        "title",
         "art",
         "chart",
         "update_date",
@@ -27,7 +27,7 @@ def test_chart_list_integrity_verbose():
 
     failed = []
     for key, data in chart_list.items():
-        name = data.get("name", key)
+        name = data.get("title", key)
         try:
             missing = required_keys - data.keys()
             if missing:
