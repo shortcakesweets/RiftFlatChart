@@ -101,9 +101,9 @@ export function createChart(jsonData) {
         const data = jsonData;
 
         const chart = new Chart();
-        chart.key = data.name;
-        chart.name = data.name;
-        chart.shortName = data.name; // TODO : fix this
+        chart.key = data.title;
+        chart.name = data.title;
+        chart.shortName = data.title; // TODO : fix this
         chart.difficulty = data.diff;
         chart.intensity = data.intensity;
 
