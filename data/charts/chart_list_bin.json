@@ -3,10 +3,10 @@
         "title": "Disco Disaster",
         "art": "../../data/album_arts/RRDiscoDisaster.webp",
         "chart": {
-            "easy": "../../charts/bin/Disco Disaster_RRDiscoDisaster_Easy.bin",
-            "medium": "../../charts/bin/Disco Disaster_RRDiscoDisaster_Medium.bin",
-            "hard": "../../charts/bin/Disco Disaster_RRDiscoDisaster_Hard.bin",
-            "impossible": "../../charts/bin/Disco Disaster_RRDiscoDisaster_Impossible.bin"
+            "easy": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Easy.bin",
+            "medium": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Medium.bin",
+            "hard": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Hard.bin",
+            "impossible": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -22,10 +22,10 @@
         "title": "Elusional",
         "art": "../../data/album_arts/RRElusional.webp",
         "chart": {
-            "easy": "../../charts/bin/Elusional_RRElusional_Easy.bin",
-            "medium": "../../charts/bin/Elusional_RRElusional_Medium.bin",
-            "hard": "../../charts/bin/Elusional_RRElusional_Hard.bin",
-            "impossible": "../../charts/bin/Elusional_RRElusional_Impossible.bin"
+            "easy": "../../data/charts/bin/Elusional_RRElusional_Easy.bin",
+            "medium": "../../data/charts/bin/Elusional_RRElusional_Medium.bin",
+            "hard": "../../data/charts/bin/Elusional_RRElusional_Hard.bin",
+            "impossible": "../../data/charts/bin/Elusional_RRElusional_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -41,10 +41,10 @@
         "title": "Visualize Yourself",
         "art": "../../data/album_arts/RRVisualizeYourself.webp",
         "chart": {
-            "easy": "../../charts/bin/Visualize Yourself_RRVisualizeYourself_Easy.bin",
-            "medium": "../../charts/bin/Visualize Yourself_RRVisualizeYourself_Medium.bin",
-            "hard": "../../charts/bin/Visualize Yourself_RRVisualizeYourself_Hard.bin",
-            "impossible": "../../charts/bin/Visualize Yourself_RRVisualizeYourself_Impossible.bin"
+            "easy": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Easy.bin",
+            "medium": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Medium.bin",
+            "hard": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Hard.bin",
+            "impossible": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -60,10 +60,10 @@
         "title": "Spookhouse Pop",
         "art": "../../data/album_arts/RRSpookhousePop.webp",
         "chart": {
-            "easy": "../../charts/bin/Spookhouse Pop_RRSpookhousePop_Easy.bin",
-            "medium": "../../charts/bin/Spookhouse Pop_RRSpookhousePop_Medium.bin",
-            "hard": "../../charts/bin/Spookhouse Pop_RRSpookhousePop_Hard.bin",
-            "impossible": "../../charts/bin/Spookhouse Pop_RRSpookhousePop_Impossible.bin"
+            "easy": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Easy.bin",
+            "medium": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Medium.bin",
+            "hard": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Hard.bin",
+            "impossible": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -79,10 +79,10 @@
         "title": "Om and On",
         "art": "../../data/album_arts/RROmandOn.webp",
         "chart": {
-            "easy": "../../charts/bin/Om and On_RROmandOn_Easy.bin",
-            "medium": "../../charts/bin/Om and On_RROmandOn_Medium.bin",
-            "hard": "../../charts/bin/Om and On_RROmandOn_Hard.bin",
-            "impossible": "../../charts/bin/Om and On_RROmandOn_Impossible.bin"
+            "easy": "../../data/charts/bin/Om and On_RROmandOn_Easy.bin",
+            "medium": "../../data/charts/bin/Om and On_RROmandOn_Medium.bin",
+            "hard": "../../data/charts/bin/Om and On_RROmandOn_Hard.bin",
+            "impossible": "../../data/charts/bin/Om and On_RROmandOn_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -98,10 +98,10 @@
         "title": "Morning Dove",
         "art": "../../data/album_arts/RRMorningDove.webp",
         "chart": {
-            "easy": "../../charts/bin/Morning Dove_RRMorningDove_Easy.bin",
-            "medium": "../../charts/bin/Morning Dove_RRMorningDove_Medium.bin",
-            "hard": "../../charts/bin/Morning Dove_RRMorningDove_Hard.bin",
-            "impossible": "../../charts/bin/Morning Dove_RRMorningDove_Impossible.bin"
+            "easy": "../../data/charts/bin/Morning Dove_RRMorningDove_Easy.bin",
+            "medium": "../../data/charts/bin/Morning Dove_RRMorningDove_Medium.bin",
+            "hard": "../../data/charts/bin/Morning Dove_RRMorningDove_Hard.bin",
+            "impossible": "../../data/charts/bin/Morning Dove_RRMorningDove_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -117,10 +117,10 @@
         "title": "Heph's Mess",
         "art": "../../data/album_arts/RRHephsMess.webp",
         "chart": {
-            "easy": "../../charts/bin/Heph's Mess_RRHephsMess_Easy.bin",
-            "medium": "../../charts/bin/Heph's Mess_RRHephsMess_Medium.bin",
-            "hard": "../../charts/bin/Heph's Mess_RRHephsMess_Hard.bin",
-            "impossible": "../../charts/bin/Heph's Mess_RRHephsMess_Impossible.bin"
+            "easy": "../../data/charts/bin/Heph's Mess_RRHephsMess_Easy.bin",
+            "medium": "../../data/charts/bin/Heph's Mess_RRHephsMess_Medium.bin",
+            "hard": "../../data/charts/bin/Heph's Mess_RRHephsMess_Hard.bin",
+            "impossible": "../../data/charts/bin/Heph's Mess_RRHephsMess_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -136,10 +136,10 @@
         "title": "Amalgamaniac",
         "art": "../../data/album_arts/RRAmalgamaniac.webp",
         "chart": {
-            "easy": "../../charts/bin/Amalgamaniac_RRAmalgamaniac_Easy.bin",
-            "medium": "../../charts/bin/Amalgamaniac_RRAmalgamaniac_Medium.bin",
-            "hard": "../../charts/bin/Amalgamaniac_RRAmalgamaniac_Hard.bin",
-            "impossible": "../../charts/bin/Amalgamaniac_RRAmalgamaniac_Impossible.bin"
+            "easy": "../../data/charts/bin/Amalgamaniac_RRAmalgamaniac_Easy.bin",
+            "medium": "../../data/charts/bin/Amalgamaniac_RRAmalgamaniac_Medium.bin",
+            "hard": "../../data/charts/bin/Amalgamaniac_RRAmalgamaniac_Hard.bin",
+            "impossible": "../../data/charts/bin/Amalgamaniac_RRAmalgamaniac_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -155,10 +155,10 @@
         "title": "Hang Ten Heph",
         "art": "../../data/album_arts/RRHangTenHeph.webp",
         "chart": {
-            "easy": "../../charts/bin/Hang Ten Heph_RRHangTenHeph_Easy.bin",
-            "medium": "../../charts/bin/Hang Ten Heph_RRHangTenHeph_Medium.bin",
-            "hard": "../../charts/bin/Hang Ten Heph_RRHangTenHeph_Hard.bin",
-            "impossible": "../../charts/bin/Hang Ten Heph_RRHangTenHeph_Impossible.bin"
+            "easy": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Easy.bin",
+            "medium": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Medium.bin",
+            "hard": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Hard.bin",
+            "impossible": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -174,10 +174,10 @@
         "title": "Count Funkula",
         "art": "../../data/album_arts/RRCountFunkula.webp",
         "chart": {
-            "easy": "../../charts/bin/Count Funkula_RRCountFunkula_Easy.bin",
-            "medium": "../../charts/bin/Count Funkula_RRCountFunkula_Medium.bin",
-            "hard": "../../charts/bin/Count Funkula_RRCountFunkula_Hard.bin",
-            "impossible": "../../charts/bin/Count Funkula_RRCountFunkula_Impossible.bin"
+            "easy": "../../data/charts/bin/Count Funkula_RRCountFunkula_Easy.bin",
+            "medium": "../../data/charts/bin/Count Funkula_RRCountFunkula_Medium.bin",
+            "hard": "../../data/charts/bin/Count Funkula_RRCountFunkula_Hard.bin",
+            "impossible": "../../data/charts/bin/Count Funkula_RRCountFunkula_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -193,10 +193,10 @@
         "title": "Overthinker",
         "art": "../../data/album_arts/RROverthinker.webp",
         "chart": {
-            "easy": "../../charts/bin/Overthinker_RROverthinker_Easy.bin",
-            "medium": "../../charts/bin/Overthinker_RROverthinker_Medium.bin",
-            "hard": "../../charts/bin/Overthinker_RROverthinker_Hard.bin",
-            "impossible": "../../charts/bin/Overthinker_RROverthinker_Impossible.bin"
+            "easy": "../../data/charts/bin/Overthinker_RROverthinker_Easy.bin",
+            "medium": "../../data/charts/bin/Overthinker_RROverthinker_Medium.bin",
+            "hard": "../../data/charts/bin/Overthinker_RROverthinker_Hard.bin",
+            "impossible": "../../data/charts/bin/Overthinker_RROverthinker_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -212,10 +212,10 @@
         "title": "Cryp2que",
         "art": "../../data/album_arts/RRCryp2que.webp",
         "chart": {
-            "easy": "../../charts/bin/Cryp2que_RRCryp2que_Easy.bin",
-            "medium": "../../charts/bin/Cryp2que_RRCryp2que_Medium.bin",
-            "hard": "../../charts/bin/Cryp2que_RRCryp2que_Hard.bin",
-            "impossible": "../../charts/bin/Cryp2que_RRCryp2que_Impossible.bin"
+            "easy": "../../data/charts/bin/Cryp2que_RRCryp2que_Easy.bin",
+            "medium": "../../data/charts/bin/Cryp2que_RRCryp2que_Medium.bin",
+            "hard": "../../data/charts/bin/Cryp2que_RRCryp2que_Hard.bin",
+            "impossible": "../../data/charts/bin/Cryp2que_RRCryp2que_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -231,10 +231,10 @@
         "title": "Nocturning",
         "art": "../../data/album_arts/RRNocturning.webp",
         "chart": {
-            "easy": "../../charts/bin/Nocturning_RRNocturning_Easy.bin",
-            "medium": "../../charts/bin/Nocturning_RRNocturning_Medium.bin",
-            "hard": "../../charts/bin/Nocturning_RRNocturning_Hard.bin",
-            "impossible": "../../charts/bin/Nocturning_RRNocturning_Impossible.bin"
+            "easy": "../../data/charts/bin/Nocturning_RRNocturning_Easy.bin",
+            "medium": "../../data/charts/bin/Nocturning_RRNocturning_Medium.bin",
+            "hard": "../../data/charts/bin/Nocturning_RRNocturning_Hard.bin",
+            "impossible": "../../data/charts/bin/Nocturning_RRNocturning_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -250,10 +250,10 @@
         "title": "Glass Cages",
         "art": "../../data/album_arts/RRGlassCages.webp",
         "chart": {
-            "easy": "../../charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Easy.bin",
-            "medium": "../../charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Medium.bin",
-            "hard": "../../charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Hard.bin",
-            "impossible": "../../charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Impossible.bin"
+            "easy": "../../data/charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Easy.bin",
+            "medium": "../../data/charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Medium.bin",
+            "hard": "../../data/charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Hard.bin",
+            "impossible": "../../data/charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -269,10 +269,10 @@
         "title": "Hallow Queen",
         "art": "../../data/album_arts/RRHallowQueen.webp",
         "chart": {
-            "easy": "../../charts/bin/Hallow Queen_RRHallowQueen_Easy.bin",
-            "medium": "../../charts/bin/Hallow Queen_RRHallowQueen_Medium.bin",
-            "hard": "../../charts/bin/Hallow Queen_RRHallowQueen_Hard.bin",
-            "impossible": "../../charts/bin/Hallow Queen_RRHallowQueen_Impossible.bin"
+            "easy": "../../data/charts/bin/Hallow Queen_RRHallowQueen_Easy.bin",
+            "medium": "../../data/charts/bin/Hallow Queen_RRHallowQueen_Medium.bin",
+            "hard": "../../data/charts/bin/Hallow Queen_RRHallowQueen_Hard.bin",
+            "impossible": "../../data/charts/bin/Hallow Queen_RRHallowQueen_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -288,10 +288,10 @@
         "title": "Progenitor",
         "art": "../../data/album_arts/RRProgenitor.webp",
         "chart": {
-            "easy": "../../charts/bin/Progenitor_RRProgenitor_Easy.bin",
-            "medium": "../../charts/bin/Progenitor_RRProgenitor_Medium.bin",
-            "hard": "../../charts/bin/Progenitor_RRProgenitor_Hard.bin",
-            "impossible": "../../charts/bin/Progenitor_RRProgenitor_Impossible.bin"
+            "easy": "../../data/charts/bin/Progenitor_RRProgenitor_Easy.bin",
+            "medium": "../../data/charts/bin/Progenitor_RRProgenitor_Medium.bin",
+            "hard": "../../data/charts/bin/Progenitor_RRProgenitor_Hard.bin",
+            "impossible": "../../data/charts/bin/Progenitor_RRProgenitor_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -307,10 +307,10 @@
         "title": "Matriarch",
         "art": "../../data/album_arts/RRMatriarch.webp",
         "chart": {
-            "easy": "../../charts/bin/Matriarch_RRMatriarch_Easy.bin",
-            "medium": "../../charts/bin/Matriarch_RRMatriarch_Medium.bin",
-            "hard": "../../charts/bin/Matriarch_RRMatriarch_Hard.bin",
-            "impossible": "../../charts/bin/Matriarch_RRMatriarch_Impossible.bin"
+            "easy": "../../data/charts/bin/Matriarch_RRMatriarch_Easy.bin",
+            "medium": "../../data/charts/bin/Matriarch_RRMatriarch_Medium.bin",
+            "hard": "../../data/charts/bin/Matriarch_RRMatriarch_Hard.bin",
+            "impossible": "../../data/charts/bin/Matriarch_RRMatriarch_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -326,10 +326,10 @@
         "title": "Under The Thunder",
         "art": "../../data/album_arts/RRThunder.webp",
         "chart": {
-            "easy": "../../charts/bin/Under the Thunder_RRThunder_Easy.bin",
-            "medium": "../../charts/bin/Under the Thunder_RRThunder_Medium.bin",
-            "hard": "../../charts/bin/Under the Thunder_RRThunder_Hard.bin",
-            "impossible": "../../charts/bin/Under the Thunder_RRThunder_Impossible.bin"
+            "easy": "../../data/charts/bin/Under the Thunder_RRThunder_Easy.bin",
+            "medium": "../../data/charts/bin/Under the Thunder_RRThunder_Medium.bin",
+            "hard": "../../data/charts/bin/Under the Thunder_RRThunder_Hard.bin",
+            "impossible": "../../data/charts/bin/Under the Thunder_RRThunder_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -345,10 +345,10 @@
         "title": "Eldritch House",
         "art": "../../data/album_arts/RREldritchHouse.webp",
         "chart": {
-            "easy": "../../charts/bin/Eldritch House_RREldritchHouse_Easy.bin",
-            "medium": "../../charts/bin/Eldritch House_RREldritchHouse_Medium.bin",
-            "hard": "../../charts/bin/Eldritch House_RREldritchHouse_Hard.bin",
-            "impossible": "../../charts/bin/Eldritch House_RREldritchHouse_Impossible.bin"
+            "easy": "../../data/charts/bin/Eldritch House_RREldritchHouse_Easy.bin",
+            "medium": "../../data/charts/bin/Eldritch House_RREldritchHouse_Medium.bin",
+            "hard": "../../data/charts/bin/Eldritch House_RREldritchHouse_Hard.bin",
+            "impossible": "../../data/charts/bin/Eldritch House_RREldritchHouse_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -364,10 +364,10 @@
         "title": "Ravevenge",
         "art": "../../data/album_arts/RRRavevenge.webp",
         "chart": {
-            "easy": "../../charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Easy.bin",
-            "medium": "../../charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Medium.bin",
-            "hard": "../../charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Hard.bin",
-            "impossible": "../../charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Impossible.bin"
+            "easy": "../../data/charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Easy.bin",
+            "medium": "../../data/charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Medium.bin",
+            "hard": "../../data/charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Hard.bin",
+            "impossible": "../../data/charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -383,10 +383,10 @@
         "title": "Rift Within",
         "art": "../../data/album_arts/RRRiftWithin.webp",
         "chart": {
-            "easy": "../../charts/bin/Rift Within_RRRiftWithin_Easy.bin",
-            "medium": "../../charts/bin/Rift Within_RRRiftWithin_Medium.bin",
-            "hard": "../../charts/bin/Rift Within_RRRiftWithin_Hard.bin",
-            "impossible": "../../charts/bin/Rift Within_RRRiftWithin_Impossible.bin"
+            "easy": "../../data/charts/bin/Rift Within_RRRiftWithin_Easy.bin",
+            "medium": "../../data/charts/bin/Rift Within_RRRiftWithin_Medium.bin",
+            "hard": "../../data/charts/bin/Rift Within_RRRiftWithin_Hard.bin",
+            "impossible": "../../data/charts/bin/Rift Within_RRRiftWithin_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -402,10 +402,10 @@
         "title": "Suzu's Quest",
         "art": "../../data/album_arts/RRSuzusQuest.webp",
         "chart": {
-            "easy": "../../charts/bin/Suzu's Quest_RRSuzusQuest_Easy.bin",
-            "medium": "../../charts/bin/Suzu's Quest_RRSuzusQuest_Medium.bin",
-            "hard": "../../charts/bin/Suzu's Quest_RRSuzusQuest_Hard.bin",
-            "impossible": "../../charts/bin/Suzu's Quest_RRSuzusQuest_Impossible.bin"
+            "easy": "../../data/charts/bin/Suzu's Quest_RRSuzusQuest_Easy.bin",
+            "medium": "../../data/charts/bin/Suzu's Quest_RRSuzusQuest_Medium.bin",
+            "hard": "../../data/charts/bin/Suzu's Quest_RRSuzusQuest_Hard.bin",
+            "impossible": "../../data/charts/bin/Suzu's Quest_RRSuzusQuest_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -421,10 +421,10 @@
         "title": "Necropolis",
         "art": "../../data/album_arts/RRNecropolis.webp",
         "chart": {
-            "easy": "../../charts/bin/Necropolis_RRNecropolis_Easy.bin",
-            "medium": "../../charts/bin/Necropolis_RRNecropolis_Medium.bin",
-            "hard": "../../charts/bin/Necropolis_RRNecropolis_Hard.bin",
-            "impossible": "../../charts/bin/Necropolis_RRNecropolis_Impossible.bin"
+            "easy": "../../data/charts/bin/Necropolis_RRNecropolis_Easy.bin",
+            "medium": "../../data/charts/bin/Necropolis_RRNecropolis_Medium.bin",
+            "hard": "../../data/charts/bin/Necropolis_RRNecropolis_Hard.bin",
+            "impossible": "../../data/charts/bin/Necropolis_RRNecropolis_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -440,10 +440,10 @@
         "title": "Baboosh",
         "art": "../../data/album_arts/RRBaboosh.webp",
         "chart": {
-            "easy": "../../charts/bin/Baboosh_RRBaboosh_Easy.bin",
-            "medium": "../../charts/bin/Baboosh_RRBaboosh_Medium.bin",
-            "hard": "../../charts/bin/Baboosh_RRBaboosh_Hard.bin",
-            "impossible": "../../charts/bin/Baboosh_RRBaboosh_Impossible.bin"
+            "easy": "../../data/charts/bin/Baboosh_RRBaboosh_Easy.bin",
+            "medium": "../../data/charts/bin/Baboosh_RRBaboosh_Medium.bin",
+            "hard": "../../data/charts/bin/Baboosh_RRBaboosh_Hard.bin",
+            "impossible": "../../data/charts/bin/Baboosh_RRBaboosh_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -459,10 +459,10 @@
         "title": "Necro Sonatica",
         "art": "../../data/album_arts/RRNecroSonatica.webp",
         "chart": {
-            "easy": "../../charts/bin/Necro Sonatica_RRNecroSonatica_Easy.bin",
-            "medium": "../../charts/bin/Necro Sonatica_RRNecroSonatica_Medium.bin",
-            "hard": "../../charts/bin/Necro Sonatica_RRNecroSonatica_Hard.bin",
-            "impossible": "../../charts/bin/Necro Sonatica_RRNecroSonatica_Impossible.bin"
+            "easy": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Easy.bin",
+            "medium": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Medium.bin",
+            "hard": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Hard.bin",
+            "impossible": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -478,10 +478,10 @@
         "title": "She Banned",
         "art": "../../data/album_arts/RRHarmonie.webp",
         "chart": {
-            "easy": "../../charts/bin/She Banned_RRHarmonie_Easy.bin",
-            "medium": "../../charts/bin/She Banned_RRHarmonie_Medium.bin",
-            "hard": "../../charts/bin/She Banned_RRHarmonie_Hard.bin",
-            "impossible": "../../charts/bin/She Banned_RRHarmonie_Impossible.bin"
+            "easy": "../../data/charts/bin/She Banned_RRHarmonie_Easy.bin",
+            "medium": "../../data/charts/bin/She Banned_RRHarmonie_Medium.bin",
+            "hard": "../../data/charts/bin/She Banned_RRHarmonie_Hard.bin",
+            "impossible": "../../data/charts/bin/She Banned_RRHarmonie_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -497,10 +497,10 @@
         "title": "King's Ruse",
         "art": "../../data/album_arts/RRDeepBlues.webp",
         "chart": {
-            "easy": "../../charts/bin/King's Ruse_RRDeepBlues_Easy.bin",
-            "medium": "../../charts/bin/King's Ruse_RRDeepBlues_Medium.bin",
-            "hard": "../../charts/bin/King's Ruse_RRDeepBlues_Hard.bin",
-            "impossible": "../../charts/bin/King's Ruse_RRDeepBlues_Impossible.bin"
+            "easy": "../../data/charts/bin/King's Ruse_RRDeepBlues_Easy.bin",
+            "medium": "../../data/charts/bin/King's Ruse_RRDeepBlues_Medium.bin",
+            "hard": "../../data/charts/bin/King's Ruse_RRDeepBlues_Hard.bin",
+            "impossible": "../../data/charts/bin/King's Ruse_RRDeepBlues_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -516,10 +516,10 @@
         "title": "What's In The Box",
         "art": "../../data/album_arts/RRMatron.webp",
         "chart": {
-            "easy": "../../charts/bin/What's in the Box_RRMatron_Easy.bin",
-            "medium": "../../charts/bin/What's in the Box_RRMatron_Medium.bin",
-            "hard": "../../charts/bin/What's in the Box_RRMatron_Hard.bin",
-            "impossible": "../../charts/bin/What's in the Box_RRMatron_Impossible.bin"
+            "easy": "../../data/charts/bin/What's in the Box_RRMatron_Easy.bin",
+            "medium": "../../data/charts/bin/What's in the Box_RRMatron_Medium.bin",
+            "hard": "../../data/charts/bin/What's in the Box_RRMatron_Hard.bin",
+            "impossible": "../../data/charts/bin/What's in the Box_RRMatron_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -535,10 +535,10 @@
         "title": "Brave The Harvester",
         "art": "../../data/album_arts/RRReaper.webp",
         "chart": {
-            "easy": "../../charts/bin/Brave the Harvester_RRReaper_Easy.bin",
-            "medium": "../../charts/bin/Brave the Harvester_RRReaper_Medium.bin",
-            "hard": "../../charts/bin/Brave the Harvester_RRReaper_Hard.bin",
-            "impossible": "../../charts/bin/Brave the Harvester_RRReaper_Impossible.bin"
+            "easy": "../../data/charts/bin/Brave the Harvester_RRReaper_Easy.bin",
+            "medium": "../../data/charts/bin/Brave the Harvester_RRReaper_Medium.bin",
+            "hard": "../../data/charts/bin/Brave the Harvester_RRReaper_Hard.bin",
+            "impossible": "../../data/charts/bin/Brave the Harvester_RRReaper_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -554,10 +554,10 @@
         "title": "Final Fugue",
         "art": "../../data/album_arts/RRFinalFugue.webp",
         "chart": {
-            "easy": "../../charts/bin/Final Fugue_RRFinalFugue_Easy.bin",
-            "medium": "../../charts/bin/Final Fugue_RRFinalFugue_Medium.bin",
-            "hard": "../../charts/bin/Final Fugue_RRFinalFugue_Hard.bin",
-            "impossible": "../../charts/bin/Final Fugue_RRFinalFugue_Impossible.bin"
+            "easy": "../../data/charts/bin/Final Fugue_RRFinalFugue_Easy.bin",
+            "medium": "../../data/charts/bin/Final Fugue_RRFinalFugue_Medium.bin",
+            "hard": "../../data/charts/bin/Final Fugue_RRFinalFugue_Hard.bin",
+            "impossible": "../../data/charts/bin/Final Fugue_RRFinalFugue_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -573,10 +573,10 @@
         "title": "Twombtorial",
         "art": "../../data/album_arts/RRTwombtorial.webp",
         "chart": {
-            "easy": "../../charts/bin/Twombtorial_RRTwombtorial_Easy.bin",
-            "medium": "../../charts/bin/Twombtorial_RRTwombtorial_Medium.bin",
-            "hard": "../../charts/bin/Twombtorial_RRTwombtorial_Hard.bin",
-            "impossible": "../../charts/bin/Twombtorial_RRTwombtorial_Impossible.bin"
+            "easy": "../../data/charts/bin/Twombtorial_RRTwombtorial_Easy.bin",
+            "medium": "../../data/charts/bin/Twombtorial_RRTwombtorial_Medium.bin",
+            "hard": "../../data/charts/bin/Twombtorial_RRTwombtorial_Hard.bin",
+            "impossible": "../../data/charts/bin/Twombtorial_RRTwombtorial_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -592,10 +592,10 @@
         "title": "Portamello",
         "art": "../../data/album_arts/RRPortamello.webp",
         "chart": {
-            "easy": "../../charts/bin/Portamello_RRPortamello_Easy.bin",
-            "medium": "../../charts/bin/Portamello_RRPortamello_Medium.bin",
-            "hard": "../../charts/bin/Portamello_RRPortamello_Hard.bin",
-            "impossible": "../../charts/bin/Portamello_RRPortamello_Impossible.bin"
+            "easy": "../../data/charts/bin/Portamello_RRPortamello_Easy.bin",
+            "medium": "../../data/charts/bin/Portamello_RRPortamello_Medium.bin",
+            "hard": "../../data/charts/bin/Portamello_RRPortamello_Hard.bin",
+            "impossible": "../../data/charts/bin/Portamello_RRPortamello_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -611,10 +611,10 @@
         "title": "Slugger's Refrain",
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
-            "easy": "../../charts/bin/Slugger's Refrain_DLCApricot01_Easy.bin",
-            "medium": "../../charts/bin/Slugger's Refrain_DLCApricot01_Medium.bin",
-            "hard": "../../charts/bin/Slugger's Refrain_DLCApricot01_Hard.bin",
-            "impossible": "../../charts/bin/Slugger's Refrain_DLCApricot01_Impossible.bin"
+            "easy": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Easy.bin",
+            "medium": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Medium.bin",
+            "hard": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Hard.bin",
+            "impossible": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -630,10 +630,10 @@
         "title": "Got Danged",
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
-            "easy": "../../charts/bin/Got Danged_DLCApricot02_Easy.bin",
-            "medium": "../../charts/bin/Got Danged_DLCApricot02_Medium.bin",
-            "hard": "../../charts/bin/Got Danged_DLCApricot02_Hard.bin",
-            "impossible": "../../charts/bin/Got Danged_DLCApricot02_Impossible.bin"
+            "easy": "../../data/charts/bin/Got Danged_DLCApricot02_Easy.bin",
+            "medium": "../../data/charts/bin/Got Danged_DLCApricot02_Medium.bin",
+            "hard": "../../data/charts/bin/Got Danged_DLCApricot02_Hard.bin",
+            "impossible": "../../data/charts/bin/Got Danged_DLCApricot02_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -649,10 +649,10 @@
         "title": "Bootus Bleez",
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
-            "easy": "../../charts/bin/Bootus Bleez_DLCApricot03_Easy.bin",
-            "medium": "../../charts/bin/Bootus Bleez_DLCApricot03_Medium.bin",
-            "hard": "../../charts/bin/Bootus Bleez_DLCApricot03_Hard.bin",
-            "impossible": "../../charts/bin/Bootus Bleez_DLCApricot03_Impossible.bin"
+            "easy": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Easy.bin",
+            "medium": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Medium.bin",
+            "hard": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Hard.bin",
+            "impossible": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -668,10 +668,10 @@
         "title": "Resurrections (dannyBstyle Remix)",
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
-            "easy": "../../charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
-            "medium": "../../charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Medium.bin",
-            "hard": "../../charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Hard.bin",
-            "impossible": "../../charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Impossible.bin"
+            "easy": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
+            "medium": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Medium.bin",
+            "hard": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Hard.bin",
+            "impossible": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -687,10 +687,10 @@
         "title": "Scattered And Lost",
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
-            "easy": "../../charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
-            "medium": "../../charts/bin/Scattered and Lost_DLCBanana02_Medium.bin",
-            "hard": "../../charts/bin/Scattered and Lost_DLCBanana02_Hard.bin",
-            "impossible": "../../charts/bin/Scattered and Lost_DLCBanana02_Impossible.bin"
+            "easy": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
+            "medium": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Medium.bin",
+            "hard": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Hard.bin",
+            "impossible": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "DLCBanana",
@@ -706,10 +706,10 @@
         "title": "Reach for the Summit",
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
-            "easy": "../../charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
-            "medium": "../../charts/bin/Reach for the Summit_DLCBanana03_Medium.bin",
-            "hard": "../../charts/bin/Reach for the Summit_DLCBanana03_Hard.bin",
-            "impossible": "../../charts/bin/Reach for the Summit_DLCBanana03_Impossible.bin"
+            "easy": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
+            "medium": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Medium.bin",
+            "hard": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Hard.bin",
+            "impossible": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "DLCBanana",
@@ -725,10 +725,10 @@
         "title": "Confronting Myself",
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
-            "easy": "../../charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
-            "medium": "../../charts/bin/Confronting Myself_DLCBanana04_Medium.bin",
-            "hard": "../../charts/bin/Confronting Myself_DLCBanana04_Hard.bin",
-            "impossible": "../../charts/bin/Confronting Myself_DLCBanana04_Impossible.bin"
+            "easy": "../../data/charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
+            "medium": "../../data/charts/bin/Confronting Myself_DLCBanana04_Medium.bin",
+            "hard": "../../data/charts/bin/Confronting Myself_DLCBanana04_Hard.bin",
+            "impossible": "../../data/charts/bin/Confronting Myself_DLCBanana04_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "DLCBanana",
@@ -744,10 +744,10 @@
         "title": "Resurrections",
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
-            "easy": "../../charts/bin/Resurrections_DLCBanana05_Easy.bin",
-            "medium": "../../charts/bin/Resurrections_DLCBanana05_Medium.bin",
-            "hard": "../../charts/bin/Resurrections_DLCBanana05_Hard.bin",
-            "impossible": "../../charts/bin/Resurrections_DLCBanana05_Impossible.bin"
+            "easy": "../../data/charts/bin/Resurrections_DLCBanana05_Easy.bin",
+            "medium": "../../data/charts/bin/Resurrections_DLCBanana05_Medium.bin",
+            "hard": "../../data/charts/bin/Resurrections_DLCBanana05_Hard.bin",
+            "impossible": "../../data/charts/bin/Resurrections_DLCBanana05_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "DLCBanana",
