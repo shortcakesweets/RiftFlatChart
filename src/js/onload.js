@@ -1,3 +1,6 @@
+import { createChart, DIFF_STRING } from './rift_essentials_json.js';
+import { renderBothCanvas } from './render.js';
+
 let isEnemyRenderOn = false;
 const dropZone = document.getElementById('drop-zone');
 

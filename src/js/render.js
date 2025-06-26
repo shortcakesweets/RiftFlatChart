@@ -5,6 +5,8 @@ let ctx = canvas.getContext('2d');
 // let canvas = null;
 let ctx = null;
 
+import { enemyId } from './rift_essentials_json.js';
+
 // size constants
 // margin - gap - lane - gap - lane - gap - lane - gap - margin
 const LANE_WIDTH      = 16*4
@@ -289,7 +291,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies){
     });
 }
 
-function renderChart(canvas, chart, isRenderEnemies) {
+export function renderChart(canvas, chart, isRenderEnemies) {
     ctx = canvas.getContext('2d');
 
     const allBeats = [
@@ -312,66 +314,8 @@ function renderChart(canvas, chart, isRenderEnemies) {
     }
 }
 
-function createChart(jsonData) {
-    try {
-        const data = jsonData;
 
-        const chart = new Chart();
-        chart.key = data.name;
-        chart.name = data.name;
-        chart.shortName = data.name; // TODO : fix this
-        chart.difficulty = data.diff;
-        chart.intensity = data.intensity;
-
-        // Extract note data
-        const hitEvents = (data.events || [])
-            .filter(e => e.Event === "HitEnemy" || e.Event === "WyrmEnd")
-            .sort((a, b) => parseFloat(a.Beat) - parseFloat(b.Beat) || parseInt(a.X) - parseInt(b.X));
-
-        for (const event of hitEvents) {
-            if (event.Event === "HitEnemy") {
-                const note = new Note();
-                note.enemyUid = event.GUID;
-                note.enemyId = parseInt(event.ID);
-                note.beatStart = parseFloat(event.Beat);
-                note.column = parseInt(event.X);
-                note.isFacingRight = event.Facing === "Right";
-                if (note.enemyId !== enemyId.WYRM) {
-                    note.beatFinish = note.beatStart;
-                    chart.shortNotes.push(note);
-                } else {
-                    chart.wyrmNotes.push(note);
-                }
-            } else if (event.Event === "WyrmEnd") {
-                for (const wyrmNote of chart.wyrmNotes) {
-                    if (wyrmNote.enemyUid === event.GUID) {
-                        wyrmNote.beatFinish = parseFloat(event.Beat);
-                    }
-                }
-            }
-        }
-        chart.maxCombo = chart.shortNotes.length + chart.wyrmNotes.length;
-        chart.maxScore = data.maxScore ? data.maxScore : 0;
-
-        chart.divisions = data.beatDivisions;
-        chart.baseBpm = data.bpm;
-        chart.bpmChanges.push(new BpmChange(1, chart.baseBpm));
-        const bpmEvents = (data.BpmEvents || []);
-        bpmEvents.forEach(bpmEvent => {
-            chart.bpmChanges.push(new BpmChange(bpmEvent[0], bpmEvent[1]));
-        });
-
-        chart.optimalVibes = (data.optimalVibes || []);
-
-        return chart;
-    } catch (error) {
-        console.error(`Failed while processing chart data: ${error.message}`);
-        console.error(error.stack);
-        return null;
-    }
-}
-
-function renderBothCanvas(chart){
+export function renderBothCanvas(chart){
     if (chart) {
         const canvas1 = document.getElementById('chart-canvas');
         const canvas2 = document.getElementById('chart-canvas-er');
