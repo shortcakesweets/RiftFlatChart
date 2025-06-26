@@ -1,3 +1,5 @@
+const EPS = 1e-6; // Used for floating point comparisons
+
 class Cursor {
 	/** @param {DataView} view */
 	constructor(view) {
@@ -41,7 +43,7 @@ class Cursor {
 	}
 }
 
-const EnemyType = Object.freeze({
+export const EnemyType = Object.freeze({
 	None: 0,
 	GreenSlime: 1,
 	BlueSlime: 2,
@@ -78,7 +80,7 @@ const EnemyType = Object.freeze({
 	Ham: 33,
 });
 
-class NoteFull {
+export class NoteFull {
 	constructor() {
 		this.timeBegin = 0.0;
 		this.beatBegin = 0.0;
@@ -92,7 +94,7 @@ class NoteFull {
 	}
 }
 
-class BpmChange {
+export class BpmChange {
 	constructor(beat = 0, bpm = 0) {
 		this.beat = beat;
 		this.bpm = bpm;
@@ -103,7 +105,7 @@ class BpmChange {
 	}
 }
 
-class VibeFull {
+export class VibeFull {
 	constructor() {
 		this.timeBeginEarliest = 0.0;
 		this.beatBeginEarliest = 0.0;
@@ -116,7 +118,7 @@ class VibeFull {
 	}
 }
 
-class ChartFull {
+export class ChartFull {
 	constructor() {
 		this.chartName = "";
 		this.levelID = "";
@@ -142,7 +144,7 @@ class ChartFull {
 	}
 }
 
-function createChartFull(binDataBuffer) {
+export function createChartFull(binDataBuffer) {
 	const chart = new ChartFull();
 	const cur = new Cursor(new DataView(binDataBuffer));
 
@@ -242,7 +244,6 @@ function createChartFull(binDataBuffer) {
 	}
 	chart.maxScore += 2 * chart.maxCombo;		// frame perfect bonus
 	chart.maxScore += chart.maxScoreBonusVibe;	// vibe bonus
-	console.log("maxScore:", chart.maxScore);
 
 	// 3. BPM changes - Currently unreliable; need bpmChangeEvents in the chart data!!
 	let lastBpm = chart.baseBpm;
@@ -263,10 +264,47 @@ function createChartFull(binDataBuffer) {
 	const totalVibes = [...chart.singleVibes, ...chart.doubleVibes]
 		.filter((v) => v.isOptimal)
 		.sort((a, b) => a.beatBeginLatest - b.beatBeginLatest);
+	
+	const beatVibeGainsExtended = [...chart.beatVibeGains, 999999]; // Add a large number to ensure the last vibe is always included
+	for (let i=0; i<beatVibeGainsExtended.length - 1; i++) {
+		const beatFrom = beatVibeGainsExtended[i];
+		const beatTo = beatVibeGainsExtended[i + 1];
+
+		const vibesInRange = totalVibes
+			.filter((v) => beatFrom < v.beatBeginEarliest && v.beatBeginLatest < beatTo)
+			.sort((a, b) => {
+				/* ---------- 1. integer-compatibility check ------------------- */
+				const aIsInt = Math.abs(a.beatBeginLatest - Math.round(a.beatBeginLatest)) < EPS;
+				const bIsInt = Math.abs(b.beatBeginLatest - Math.round(b.beatBeginLatest)) < EPS;
+
+				if(aIsInt !== bIsInt) {
+					return aIsInt ? -1 : 1; // Sort integers first
+				}
+
+				/* ---------- 2. 4N+1, 2N+1 type grouping for integers --------- */
+				if(aIsInt && bIsInt){
+					const aIs4NP1 = Math.round(a.beatBeginLatest) % 4 === 1;
+					const bIs4NP1 = Math.round(b.beatBeginLatest) % 4 === 1;
+
+					if(aIs4NP1 !== bIs4NP1) return aIs4NP1 ? -1 : 1;
+
+					const aIs2NP1 = Math.round(a.beatBeginLatest) % 2 === 1;
+					const bIs2NP1 = Math.round(b.beatBeginLatest) % 2 === 1;
+					if(aIs2NP1 !== bIs2NP1) return aIs2NP1 ? -1 : 1;
+				}
+
+				/* ---------- 3. fallback: descending order ------------------- */
+				return b.beatBeginLatest - a.beatBeginLatest;
+			});
+		
+		const bestCandidate = vibesInRange[0]; // Select the best candidate after sorting
+
+		if (bestCandidate) chart.optimalVibes.push(bestCandidate);
+	}
 
 	for (const beat of chart.beatVibeGains) {
 		const latestVibe = totalVibes
-			.filter((v) => v.beatBeginLatest <= beat)
+			.filter((v) => v.beatBeginEarliest < beat)
 			.reduce((latest, v) => (!latest || v.beatBeginLatest > latest.beatBeginLatest ? v : latest), null);
 		if (latestVibe && !chart.optimalVibes.includes(latestVibe)) chart.optimalVibes.push(latestVibe);
 	}
