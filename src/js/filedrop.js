@@ -1,3 +1,6 @@
+import { createChart, DIFF_STRING } from './rift_essentials_json.js';
+import { renderChart } from './render.js';
+
 const dropZone = document.getElementById('drop-zone');
 
 function updateTable(chart) {
