@@ -142,142 +142,136 @@ class ChartFull {
 	}
 }
 
-async function loadChart(path) {
-	try {
-		const res = await fetch(path);
-		if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-		const buf = await res.arrayBuffer();
+function createChartFull(binDataBuffer) {
+	const chart = new ChartFull();
+	const cur = new Cursor(new DataView(binDataBuffer));
 
-		const chart = new ChartFull();
-		const cur = new Cursor(new DataView(buf));
+	// Header
+	const magic = cur.string();
+	if (magic != "RIFT_CHART_DATA") throw new Error(`Wrong Header`);
 
-		// Header
-		const magic = cur.string();
-		if (magic != "RIFT_CHART_DATA") throw new Error(`Wrong Header`);
+	const version = cur.int32();
 
-		const version = cur.int32();
+	// Read chart data
+	chart.chartName = cur.string();
+	chart.levelID = cur.string();
+	chart.difficulty = cur.int32();
+	chart.intensity = cur.float32();
+	chart.isCustom = cur.bool();
+	chart.baseBpm = cur.float32();
+	chart.division = cur.int32();
 
-		// Read chart data
-		chart.chartName = cur.string();
-		chart.levelID = cur.string();
-		chart.difficulty = cur.int32();
-		chart.intensity = cur.float32();
-		chart.isCustom = cur.bool();
-		chart.baseBpm = cur.float32();
-		chart.division = cur.int32();
-
-		const beatTimingCount = cur.int32();
-		for (let i = 0; i < beatTimingCount; i++) {
-			chart.beatTimings.push(cur.float64());
-		}
-
-		const hitCount = cur.int32();
-		for (let i = 0; i < hitCount; i++) {
-			const note = new NoteFull();
-			note.timeBegin = cur.float64();
-			note.beatBegin = cur.float64();
-			note.timeEnd = cur.float64();
-			note.beatEnd = cur.float64();
-			note.enemyType = cur.int32();
-			note.column = cur.int32();
-			note.isFacingLeft = cur.bool();
-			note.score = cur.int32();
-			note.isVibeGain = cur.bool();
-			chart.notes.push(note);
-		}
-
-		chart.maxScoreBonusVibe = cur.int32();
-
-		const singleVibeCount = cur.int32();
-		for (let i = 0; i < singleVibeCount; i++) {
-			const vibe = new VibeFull();
-			vibe.timeBeginEarliest = cur.float64();
-			vibe.beatBeginEarliest = cur.float64();
-			vibe.timeBeginLatest = cur.float64();
-			vibe.beatBeginLatest = cur.float64();
-			vibe.timeEnd = cur.float64();
-			vibe.beatEnd = cur.float64();
-			vibe.scoreBonus = cur.int32();
-			vibe.isOptimal = cur.bool();
-			chart.singleVibes.push(vibe);
-		}
-
-		const doubleVibeCount = cur.int32();
-		for (let i = 0; i < doubleVibeCount; i++) {
-			const vibe = new VibeFull();
-			vibe.timeBeginEarliest = cur.float64();
-			vibe.beatBeginEarliest = cur.float64();
-			vibe.timeBeginLatest = cur.float64();
-			vibe.beatBeginLatest = cur.float64();
-			vibe.timeEnd = cur.float64();
-			vibe.beatEnd = cur.float64();
-			vibe.scoreBonus = cur.int32();
-			vibe.isOptimal = cur.bool();
-			chart.doubleVibes.push(vibe);
-		}
-
-		/*
-    console.log("chartName:",   chart.chartName);
-    console.log("levelID:",     chart.levelID);
-    console.log("difficulty:",  chart.difficulty);
-    console.log("intensity:",   chart.intensity);
-    console.log("isCustom:",    chart.isCustom);
-    console.log("baseBpm:",     chart.baseBpm);
-    console.log("division:",    chart.division);
-    console.log("beatTimings:", chart.beatTimings);
-    console.log("hitCount:",    hitCount);
-    console.log("maxScoreBonusVibe:", chart.maxScoreBonusVibe);
-    console.log("singleVibes:", chart.singleVibes);
-    console.log("doubleVibes:", chart.doubleVibes);
-    */
-
-		// Calculate derived properties
-		// 1. Notes
-		chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
-		chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
-
-		// 2. Combos and scores
-		chart.maxCombo = chart.notes.filter((n) => n.enemyType !== EnemyType.None).length;
-
-		chart.maxScore = 0;
-		for (const note of chart.notes) chart.maxScore += note.score;
-		chart.maxScore += 2 * chart.maxCombo;
-		chart.maxScore += chart.maxScoreBonusVibe;
-
-		// 3. BPM changes - Currently unreliable; need bpmChangeEvents in the chart data!!
-		let lastBpm = chart.baseBpm;
-		for (let i = 0; i < chart.beatTimings.length - 1; i++) {
-			const timeBegin = chart.beatTimings[i];
-			const timeEnd = chart.beatTimings[i + 1];
-			let bpm = 60.0 / (timeEnd - timeBegin);
-			bpm = parseFloat(bpm.toFixed(2));
-			if (bpm != lastBpm) {
-				chart.bpmChanges.push(new BpmChange(i + 1, bpm));
-				lastBpm = bpm;
-			}
-		}
-
-		// 4. Optimal vibes
-		for (const note of chart.notes.filter((n) => n.isVibeGain)) chart.beatVibeGains.push(note.beatEnd);
-
-		const totalVibes = [...chart.singleVibes, ...chart.doubleVibes]
-			.filter((v) => v.isOptimal)
-			.sort((a, b) => a.beatBeginLatest - b.beatBeginLatest);
-
-		for (const beat of chart.beatVibeGains) {
-			const latestVibe = totalVibes
-				.filter((v) => v.beatBeginLatest <= beat)
-				.reduce((latest, v) => (!latest || v.beatBeginLatest > latest.beatBeginLatest ? v : latest), null);
-			if (latestVibe && !chart.optimalVibes.includes(latestVibe)) chart.optimalVibes.push(latestVibe);
-		}
-		const lastVibe = totalVibes.length > 0 ? totalVibes[totalVibes.length - 1] : null;
-		if (lastVibe && !chart.optimalVibes.includes(lastVibe)) chart.optimalVibes.push(lastVibe);
-	} catch (err) {
-		console.error("Failed to load chart", err);
+	const beatTimingCount = cur.int32();
+	for (let i = 0; i < beatTimingCount; i++) {
+		chart.beatTimings.push(cur.float64());
 	}
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-	const path = "../../data/charts/bin/Under the Thunder_RRThunder_Impossible.bin";
-	loadChart(path);
-});
+	const hitCount = cur.int32();
+	for (let i = 0; i < hitCount; i++) {
+		const note = new NoteFull();
+		note.timeBegin = cur.float64();
+		note.beatBegin = cur.float64();
+		note.timeEnd = cur.float64();
+		note.beatEnd = cur.float64();
+		note.enemyType = cur.int32();
+		note.column = cur.int32();
+		note.isFacingLeft = cur.bool();
+		note.score = cur.int32();
+		note.isVibeGain = cur.bool();
+		chart.notes.push(note);
+	}
+
+	chart.maxScoreBonusVibe = cur.int32();
+
+	const singleVibeCount = cur.int32();
+	for (let i = 0; i < singleVibeCount; i++) {
+		const vibe = new VibeFull();
+		vibe.timeBeginEarliest = cur.float64();
+		vibe.beatBeginEarliest = cur.float64();
+		vibe.timeBeginLatest = cur.float64();
+		vibe.beatBeginLatest = cur.float64();
+		vibe.timeEnd = cur.float64();
+		vibe.beatEnd = cur.float64();
+		vibe.scoreBonus = cur.int32();
+		vibe.isOptimal = cur.bool();
+		chart.singleVibes.push(vibe);
+	}
+
+	const doubleVibeCount = cur.int32();
+	for (let i = 0; i < doubleVibeCount; i++) {
+		const vibe = new VibeFull();
+		vibe.timeBeginEarliest = cur.float64();
+		vibe.beatBeginEarliest = cur.float64();
+		vibe.timeBeginLatest = cur.float64();
+		vibe.beatBeginLatest = cur.float64();
+		vibe.timeEnd = cur.float64();
+		vibe.beatEnd = cur.float64();
+		vibe.scoreBonus = cur.int32();
+		vibe.isOptimal = cur.bool();
+		chart.doubleVibes.push(vibe);
+	}
+
+	/*
+	console.log("chartName:",   chart.chartName);
+	console.log("levelID:",     chart.levelID);
+	console.log("difficulty:",  chart.difficulty);
+	console.log("intensity:",   chart.intensity);
+	console.log("isCustom:",    chart.isCustom);
+	console.log("baseBpm:",     chart.baseBpm);
+	console.log("division:",    chart.division);
+	console.log("beatTimings:", chart.beatTimings);
+	console.log("hitCount:",    hitCount);
+	console.log("maxScoreBonusVibe:", chart.maxScoreBonusVibe);
+	console.log("singleVibes:", chart.singleVibes);
+	console.log("doubleVibes:", chart.doubleVibes);
+	*/
+
+	// Calculate derived properties
+	// 1. Notes
+	chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
+	chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
+
+	// 2. Combos and scores
+	chart.maxCombo = chart.notes.filter((n) => n.enemyType !== EnemyType.None).length;
+
+	chart.maxScore = 0;
+	for (const note of chart.notes){
+		chart.maxScore += note.score;			// hit
+		if(note.enemyType == EnemyType.Wyrm)	// wyrm ticks
+			chart.maxScore += 333 * Math.round(note.beatEnd - note.beatBegin);
+	}
+	chart.maxScore += 2 * chart.maxCombo;		// frame perfect bonus
+	chart.maxScore += chart.maxScoreBonusVibe;	// vibe bonus
+	console.log("maxScore:", chart.maxScore);
+
+	// 3. BPM changes - Currently unreliable; need bpmChangeEvents in the chart data!!
+	let lastBpm = chart.baseBpm;
+	for (let i = 0; i < chart.beatTimings.length - 1; i++) {
+		const timeBegin = chart.beatTimings[i];
+		const timeEnd = chart.beatTimings[i + 1];
+		let bpm = 60.0 / (timeEnd - timeBegin);
+		bpm = parseFloat(bpm.toFixed(2));
+		if (bpm != lastBpm) {
+			chart.bpmChanges.push(new BpmChange(i + 1, bpm));
+			lastBpm = bpm;
+		}
+	}
+
+	// 4. Optimal vibes
+	for (const note of chart.notes.filter((n) => n.isVibeGain)) chart.beatVibeGains.push(note.beatEnd);
+
+	const totalVibes = [...chart.singleVibes, ...chart.doubleVibes]
+		.filter((v) => v.isOptimal)
+		.sort((a, b) => a.beatBeginLatest - b.beatBeginLatest);
+
+	for (const beat of chart.beatVibeGains) {
+		const latestVibe = totalVibes
+			.filter((v) => v.beatBeginLatest <= beat)
+			.reduce((latest, v) => (!latest || v.beatBeginLatest > latest.beatBeginLatest ? v : latest), null);
+		if (latestVibe && !chart.optimalVibes.includes(latestVibe)) chart.optimalVibes.push(latestVibe);
+	}
+	const lastVibe = totalVibes.length > 0 ? totalVibes[totalVibes.length - 1] : null;
+	if (lastVibe && !chart.optimalVibes.includes(lastVibe)) chart.optimalVibes.push(lastVibe);
+
+	return chart;
+}
