@@ -94,10 +94,11 @@ export class NoteFull {
 	}
 }
 
-export class BpmChange {
-	constructor(beat = 0, bpm = 0) {
-		this.beat = beat;
-		this.bpm = bpm;
+export class BpmChangeFull {
+	constructor() {
+		this.time = 0.0;
+		this.beat = 0.0;
+		this.bpm = 0.0;
 	}
 
 	toString() {
@@ -115,6 +116,7 @@ export class VibeFull {
 		this.beatEnd = 0.0;
 		this.scoreBonus = 0;
 		this.isOptimal = false;
+		this.vibePower = 0;
 	}
 }
 
@@ -125,22 +127,22 @@ export class ChartFull {
 		this.difficulty = 0;
 		this.intensity = 0.0;
 		this.isCustom = false;
+		this.maxScoreWithoutVibe = 0;
+		this.maxCombo = 0;
 		this.baseBpm = 0.0;
 		this.division = 0;
+		this.bpmChanges = [];
 		this.beatTimings = [];
 		this.notes = [];
 		this.maxScoreBonusVibe = 0;
 		this.singleVibes = [];
 		this.doubleVibes = [];
 
-		// Calculated properties (not stored in the file)
+		// Calculated properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
-		this.maxCombo = 0;
-		this.maxScore = 0;
-		this.bpmChanges = [];
-		this.beatVibeGains = []; // beat information when a vibe gain occurs
-		this.optimalVibes = []; // optimal vibes for the chart
+		this.vibePhrases = [];			// consists of [beatFrom, beatTo]. player will earn 1 vibe at beatFrom.
+		this.optimalVibeGroups = [];
 	}
 }
 
@@ -160,8 +162,19 @@ export function createChartFull(binDataBuffer) {
 	chart.difficulty = cur.int32();
 	chart.intensity = cur.float32();
 	chart.isCustom = cur.bool();
+	chart.maxScoreWithoutVibe = cur.int32();
+	chart.maxCombo = cur.int32();
 	chart.baseBpm = cur.float32();
 	chart.division = cur.int32();
+
+	const bpmChangeCount = cur.int32();
+	for (let i = 0; i < bpmChangeCount; i++) {
+		const bpmChange = new BpmChangeFull();
+		bpmChange.time = cur.float64();
+		bpmChange.beat = cur.float64();
+		bpmChange.bpm = cur.float32();
+		chart.bpmChanges.push(bpmChange);
+	}
 
 	const beatTimingCount = cur.int32();
 	for (let i = 0; i < beatTimingCount; i++) {
@@ -196,6 +209,7 @@ export function createChartFull(binDataBuffer) {
 		vibe.beatEnd = cur.float64();
 		vibe.scoreBonus = cur.int32();
 		vibe.isOptimal = cur.bool();
+		vibe.vibePower = 1;
 		chart.singleVibes.push(vibe);
 	}
 
@@ -210,6 +224,7 @@ export function createChartFull(binDataBuffer) {
 		vibe.beatEnd = cur.float64();
 		vibe.scoreBonus = cur.int32();
 		vibe.isOptimal = cur.bool();
+		vibe.vibePower = 2;
 		chart.doubleVibes.push(vibe);
 	}
 
@@ -233,83 +248,30 @@ export function createChartFull(binDataBuffer) {
 	chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
 	chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
 
-	// 2. Combos and scores
-	chart.maxCombo = chart.notes.filter((n) => n.enemyType !== EnemyType.None).length;
-
-	chart.maxScore = 0;
-	for (const note of chart.notes){
-		chart.maxScore += note.score;			// hit
-		if(note.enemyType == EnemyType.Wyrm)	// wyrm ticks
-			chart.maxScore += 333 * Math.round(note.beatEnd - note.beatBegin);
+	// 2. Vibetree
+	// A vibe tree is a structure that organizes vibes by vibe phrases.
+	// Each node contains all optimal vibes that can be triggered in that phrase's beat range.
+	// By vibe's nature, no two vibes can be triggered in the same node.
+	const vibeGainNotes = chart.notes.filter((n) => n.isVibeGain);
+	for(let i=0; i<vibeGainNotes.length; i++) {
+		const beatFrom = vibeGainNotes[i].beatEnd;
+		const beatTo = (i < vibeGainNotes.length - 1) ? vibeGainNotes[i+1].beatEnd : Infinity;
+		chart.vibePhrases.push({
+			beatFrom: beatFrom,
+			beatTo: beatTo
+		});
 	}
-	chart.maxScore += 2 * chart.maxCombo;		// frame perfect bonus
-	chart.maxScore += chart.maxScoreBonusVibe;	// vibe bonus
-
-	// 3. BPM changes - Currently unreliable; need bpmChangeEvents in the chart data!!
-	let lastBpm = chart.baseBpm;
-	for (let i = 0; i < chart.beatTimings.length - 1; i++) {
-		const timeBegin = chart.beatTimings[i];
-		const timeEnd = chart.beatTimings[i + 1];
-		let bpm = 60.0 / (timeEnd - timeBegin);
-		bpm = parseFloat(bpm.toFixed(2));
-		if (bpm != lastBpm) {
-			chart.bpmChanges.push(new BpmChange(i + 1, bpm));
-			lastBpm = bpm;
-		}
-	}
-
-	// 4. Optimal vibes
-	for (const note of chart.notes.filter((n) => n.isVibeGain)) chart.beatVibeGains.push(note.beatEnd);
 
 	const totalVibes = [...chart.singleVibes, ...chart.doubleVibes]
 		.filter((v) => v.isOptimal)
 		.sort((a, b) => a.beatBeginLatest - b.beatBeginLatest);
-	
-	const beatVibeGainsExtended = [...chart.beatVibeGains, 999999]; // Add a large number to ensure the last vibe is always included
-	for (let i=0; i<beatVibeGainsExtended.length - 1; i++) {
-		const beatFrom = beatVibeGainsExtended[i];
-		const beatTo = beatVibeGainsExtended[i + 1];
 
-		const vibesInRange = totalVibes
-			.filter((v) => beatFrom < v.beatBeginEarliest && v.beatBeginLatest < beatTo)
-			.sort((a, b) => {
-				/* ---------- 1. integer-compatibility check ------------------- */
-				const aIsInt = Math.abs(a.beatBeginLatest - Math.round(a.beatBeginLatest)) < EPS;
-				const bIsInt = Math.abs(b.beatBeginLatest - Math.round(b.beatBeginLatest)) < EPS;
-
-				if(aIsInt !== bIsInt) {
-					return aIsInt ? -1 : 1; // Sort integers first
-				}
-
-				/* ---------- 2. 4N+1, 2N+1 type grouping for integers --------- */
-				if(aIsInt && bIsInt){
-					const aIs4NP1 = Math.round(a.beatBeginLatest) % 4 === 1;
-					const bIs4NP1 = Math.round(b.beatBeginLatest) % 4 === 1;
-
-					if(aIs4NP1 !== bIs4NP1) return aIs4NP1 ? -1 : 1;
-
-					const aIs2NP1 = Math.round(a.beatBeginLatest) % 2 === 1;
-					const bIs2NP1 = Math.round(b.beatBeginLatest) % 2 === 1;
-					if(aIs2NP1 !== bIs2NP1) return aIs2NP1 ? -1 : 1;
-				}
-
-				/* ---------- 3. fallback: descending order ------------------- */
-				return b.beatBeginLatest - a.beatBeginLatest;
-			});
-		
-		const bestCandidate = vibesInRange[0]; // Select the best candidate after sorting
-
-		if (bestCandidate) chart.optimalVibes.push(bestCandidate);
+	for(const phrase of chart.vibePhrases) {
+		const optimalVibes = totalVibes.filter((v) => v.beatBeginLatest >= phrase.beatFrom && v.beatBeginLatest < phrase.beatTo);
+		if (optimalVibes.length > 0) {
+			chart.optimalVibeGroups.push(optimalVibes);
+		}
 	}
-
-	for (const beat of chart.beatVibeGains) {
-		const latestVibe = totalVibes
-			.filter((v) => v.beatBeginEarliest < beat)
-			.reduce((latest, v) => (!latest || v.beatBeginLatest > latest.beatBeginLatest ? v : latest), null);
-		if (latestVibe && !chart.optimalVibes.includes(latestVibe)) chart.optimalVibes.push(latestVibe);
-	}
-	const lastVibe = totalVibes.length > 0 ? totalVibes[totalVibes.length - 1] : null;
-	if (lastVibe && !chart.optimalVibes.includes(lastVibe)) chart.optimalVibes.push(lastVibe);
 
 	return chart;
 }

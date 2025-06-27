@@ -60,17 +60,11 @@ async function test() {
             check(chartJson.intensity, chartBin.intensity, "intensity");
             check(chartJson.baseBpm, chartBin.baseBpm, "baseBpm");
             check(chartJson.divisions, chartBin.division, "division");
-            check(
-                chartJson.optimalVibes.length,
-                chartBin.optimalVibes.length,
-                "optimalVibes.length"
-            );
             check(chartJson.maxCombo, chartBin.maxCombo, "maxCombo");
-            check(chartJson.maxScore, chartBin.maxScore, "maxScore");
+            check(chartJson.maxScore, chartBin.maxScoreWithoutVibe + chartBin.maxScoreBonusVibe, "maxScore");
         }
     }
     console.log(mismatches);
-
 }
 
 document.addEventListener("DOMContentLoaded", test);
