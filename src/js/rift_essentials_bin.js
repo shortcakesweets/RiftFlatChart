@@ -141,8 +141,6 @@ export class ChartFull {
 		// Calculated properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
-		this.vibePhrases = [];			// consists of [beatFrom, beatTo]. player will earn 1 vibe at beatFrom.
-		this.optimalVibeGroups = [];
 	}
 }
 
@@ -248,30 +246,8 @@ export function createChartFull(binDataBuffer) {
 	chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
 	chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
 
-	// 2. Vibetree
-	// A vibe tree is a structure that organizes vibes by vibe phrases.
-	// Each node contains all optimal vibes that can be triggered in that phrase's beat range.
-	// By vibe's nature, no two vibes can be triggered in the same node.
-	const vibeGainNotes = chart.notes.filter((n) => n.isVibeGain);
-	for(let i=0; i<vibeGainNotes.length; i++) {
-		const beatFrom = vibeGainNotes[i].beatEnd;
-		const beatTo = (i < vibeGainNotes.length - 1) ? vibeGainNotes[i+1].beatEnd : Infinity;
-		chart.vibePhrases.push({
-			beatFrom: beatFrom,
-			beatTo: beatTo
-		});
-	}
-
-	const totalVibes = [...chart.singleVibes, ...chart.doubleVibes]
-		.filter((v) => v.isOptimal)
-		.sort((a, b) => a.beatBeginLatest - b.beatBeginLatest);
-
-	for(const phrase of chart.vibePhrases) {
-		const optimalVibes = totalVibes.filter((v) => v.beatBeginLatest >= phrase.beatFrom && v.beatBeginLatest < phrase.beatTo);
-		if (optimalVibes.length > 0) {
-			chart.optimalVibeGroups.push(optimalVibes);
-		}
-	}
+	// 2. Vibes
+	// TODO: reconsrtuct the optimal vibe paths from the single/double vibe data
 
 	return chart;
 }
