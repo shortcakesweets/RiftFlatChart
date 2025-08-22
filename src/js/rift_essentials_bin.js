@@ -106,6 +106,47 @@ export class BpmChangeFull {
 	}
 }
 
+class TimeStamp {
+	constructor() {
+		this.time = 0.0;
+		this.beat = 0.0;
+		this.bpm = 0.0;
+	}
+
+	toString() {
+		return `${this.beat.toFixed(2)}, ${this.bpm}`;
+	}
+}
+
+// enum, but better this way
+const NO_TRIGGER_0 	= 0;
+const NO_TRIGGER_1 	= 1;
+const NO_TRIGGER_2 	= 2;
+const TRIGGER_1		= 3;
+const TRIGGER_2		= 4;
+
+class VibeSegement {
+	constructor() {
+		// vibe trigger time information
+		this.time = 0.0;
+		this.beat = 0.0;
+
+		// vibe power (this can be 0, which means we do not trigger vibe)
+		this.vibePowerOnTrigger = 0; // 0, 50, 100
+		// score bonus (if vibe power is 0, automatically 0)
+		this.scoreBonus = 0;
+
+		// The first note that is not vibed after this vibe.
+		//  if vibe power is 0, this will automatically point to next index
+		this.nextNonVibeNoteIdx = 0;
+
+		// accumulated score bonus
+		// DEFINITION:	By this vibe trigger (or non-trigger), attainable maximum score bonus
+		//				from this point until the end of the song.
+		this.accScoreBonus = 0;
+	}
+}
+
 export class VibeFull {
 	constructor() {
 		this.timeBeginEarliest = 0.0;
@@ -141,6 +182,8 @@ export class ChartFull {
 		// Calculated properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
+		this.vibeGainPoints = [];
+		this.timeStamps = [];
 	}
 }
 
@@ -148,6 +191,7 @@ export function createChartFull(binDataBuffer) {
 	const chart = new ChartFull();
 	const cur = new Cursor(new DataView(binDataBuffer));
 
+	//#region Create Chart
 	// Header
 	const magic = cur.string();
 	if (magic != "RIFT_CHART_DATA") throw new Error(`Wrong Header`);
@@ -166,6 +210,12 @@ export function createChartFull(binDataBuffer) {
 	chart.division = cur.int32();
 
 	const bpmChangeCount = cur.int32();
+	// add basic bpm
+	const baseBpmChange = new BpmChangeFull();
+	baseBpmChange.time = 0;
+	baseBpmChange.beat = 0;
+	baseBpmChange.bpm = chart.baseBpm;
+	chart.bpmChanges.push(baseBpmChange);
 	for (let i = 0; i < bpmChangeCount; i++) {
 		const bpmChange = new BpmChangeFull();
 		bpmChange.time = cur.float64();
@@ -240,14 +290,113 @@ export function createChartFull(binDataBuffer) {
 	console.log("singleVibes:", chart.singleVibes);
 	console.log("doubleVibes:", chart.doubleVibes);
 	*/
+	//#endregion
 
-	// Calculate derived properties
-	// 1. Notes
-	chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
-	chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
+	//#region Create Derived Properties
+	// 1. Notes (and vibe gain points)
+	chart.shortNotes = chart.notes.filter(
+		(n) => Number(n.enemyType) !== Number(EnemyType.None) &&
+			   Number(n.enemyType) !== Number(EnemyType.Wyrm)
+	);
+	
+	chart.wyrmNotes = chart.notes.filter(
+		(n) => Number(n.enemyType) === Number(EnemyType.Wyrm)
+	);
+
+	chart.vibeGainPoints = chart.notes.filter(
+		(n) => Number(n.enemyType) === Number(EnemyType.None) && n.isVibeGain
+	);
+
+	const vibeGainTimeStamps = [];
+	for(const note of chart.vibeGainPoints){
+		const timeStamp = new TimeStamp();
+		timeStamp.time = note.timeEnd;
+		timeStamp.beat = note.beatEnd;
+		// We will ignore bpm for this data
+		vibeGainTimeStamps.push(timeStamp);
+	}
+
+	chart.timeStamps = [];
+	const maxBeatShortNote = chart.shortNotes[chart.shortNotes.length - 1];
+	const maxBeatWyrmNote = chart.wyrmNotes[chart.wyrmNotes.length - 1]; // potential bug: should sort by beatEnd first (currently sorted by beatStart)
+	const maxBeat = Math.round(
+		Math.max(
+			maxBeatShortNote === undefined ? 0 : maxBeatShortNote.beatEnd,
+			maxBeatWyrmNote === undefined ? 0 : maxBeatWyrmNote.beatEnd
+		)
+		+8 // add more beats at the end
+	);
+	for(let i=0; i<chart.bpmChanges.length; i++){
+		const currBeat = chart.bpmChanges[i].beat;
+		const currTime = chart.bpmChanges[i].time;
+		const currBpm = chart.bpmChanges[i].bpm;
+		const timePerBeat = 60 / chart.bpmChanges[i].bpm;
+		const nextBeat = (i == chart.bpmChanges.length - 1 ? maxBeat : chart.bpmChanges[i+1].beat);
+		for(let j=Math.round(currBeat * chart.division); j / chart.division < nextBeat; j++){
+			const divisionDelta = j / chart.division - currBeat;
+			const stamp = new TimeStamp();
+			stamp.time = currTime + divisionDelta * timePerBeat;
+			stamp.beat = j / chart.division;
+			stamp.bpm = currBpm;
+			chart.timeStamps.push(stamp);
+		}
+	}
+	//#endregion
 
 	// 2. Vibes
 	// TODO: reconsrtuct the optimal vibe paths from the single/double vibe data
+
+	// helper function
+	function getVibeEndPointWithoutExtension(vibeTriggerNoteIdx) {
+		let timeFrom = allNotes[vibeTriggerNoteIdx].timeBegin;
+		let idxEnd = vibeTriggerNoteIdx;
+		while(allNotes[vibeTriggerNoteIdx].timeBegin) {}
+	}
+
+	// 2-1. Create note array
+	const allNotes = [...chart.shortNotes, ...chart.wyrmNotes].sort((a, b) => {
+		return a.beatBegin - b.beatBegin;
+	});
+	const N = allNotes.length;
+
+	// dp[idx][vibeType]
+	// DEFINITION:	VibeSegment information on note index 'idx', with vibe trigger type 'vibeType'.
+	const dp = Array.from({length : N }, () => 
+		Array.from({ length: 5 }, () => new VibeSegement())
+	);
+
+	// DP initialization
+	for(let idx=0; idx<N; idx++){
+		for(let vibeType=0; vibeType<5; vibeType++){
+			const note = allNotes[idx];	
+			dp[idx][vibeType].time = note.timeBegin;
+			dp[idx][vibeType].beat = note.beatBegin;
+			dp[idx][vibeType].vibePowerOnTrigger = () => {
+				switch (vibeType) {
+					case NO_TRIGGER_0:
+					case NO_TRIGGER_1:
+					case NO_TRIGGER_2:
+						return 0;
+			
+					case TRIGGER_1:
+						return 50;
+			
+					case TRIGGER_2:
+						return 100;
+			
+					default:
+						return 0; // or throw an error if unexpected
+				}
+			};
+		}
+
+		// for vibePower 0 only:
+		for(let vibeType=0; vibeType<3; vibeType++){
+			dp[idx][vibeType].nextNonVibeNoteIdx = idx+1;
+		}
+
+		// for vibePower 1: WIP
+	}
 
 	return chart;
 }
