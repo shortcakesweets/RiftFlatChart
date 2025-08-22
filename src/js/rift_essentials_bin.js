@@ -1,5 +1,3 @@
-const EPS = 1e-6; // Used for floating point comparisons
-
 class Cursor {
 	/** @param {DataView} view */
 	constructor(view) {
@@ -36,7 +34,11 @@ class Cursor {
 	}
 	string() {
 		const len = this.uint8();
-		const bytes = new Uint8Array(this.v.buffer, this.v.byteOffset + this.o, len);
+		const bytes = new Uint8Array(
+			this.v.buffer,
+			this.v.byteOffset + this.o,
+			len
+		);
 		const s = new TextDecoder().decode(bytes);
 		this.o += len;
 		return s;
@@ -106,6 +108,13 @@ export class BpmChangeFull {
 	}
 }
 
+// enum, but better this way
+const NO_TRIGGER_0 	= 0;
+const NO_TRIGGER_1 	= 1;
+const NO_TRIGGER_2 	= 2;
+const TRIGGER_1		= 3;
+const TRIGGER_2		= 4;
+
 export class VibeFull {
 	constructor() {
 		this.timeBeginEarliest = 0.0;
@@ -117,6 +126,39 @@ export class VibeFull {
 		this.scoreBonus = 0;
 		this.isOptimal = false;
 		this.vibePower = 0;
+	}
+
+	/** Helper function
+	 * evaluates trigger difficulty of this vibe, heuristically
+	 * depends by triggerable window, integer, .5 integer, and 4th beat closeness
+	 */
+	getTriggerDifficulty() {
+		// Trigger window (30%)
+		const window = this.timeBeginLatest - this.timeBeginEarliest;
+		const windowDifficulty = Math.exp(-window / 0.25);
+
+		// Integer closeness (20%)
+		const beat = this.beatBeginLatest;
+		const nearestInt = Math.round(beat);
+		const deltaInt = Math.abs(beat - nearestInt);
+		const intDifficulty = deltaInt * 2;
+
+		// Half-integer closeness (10%)
+		const nearestHalfInt = Math.round(beat * 2) / 2;
+		const deltaHalfInt = Math.abs(beat - nearestHalfInt);
+		const halfIntDifficulty = deltaHalfInt * 4;
+
+		// 4th beat closeness (40%)
+		const nearest4thBeat = Math.round((beat - 1) / 4) * 4 + 1;
+		const delta4thBeat = Math.abs(beat - nearest4thBeat);
+		const onBeatDifficulty = delta4thBeat / 2;
+
+		const totalDifficulty =
+			windowDifficulty * 0.3 +
+			intDifficulty * 0.2 +
+			halfIntDifficulty * 0.1 +
+			onBeatDifficulty * 0.4;
+		return totalDifficulty;
 	}
 }
 
@@ -141,6 +183,12 @@ export class ChartFull {
 		// Calculated properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
+		this.groupedOptimalSingleVibes = [];
+		this.groupedOptimalDoubleVibes = [];
+		this.vibeGainPoints = [];
+		this.timeStamps = [];
+		this.allOptimalVibeSequences = [];
+		this.bestOptimalVibeSequence = [];
 	}
 }
 
@@ -148,6 +196,7 @@ export function createChartFull(binDataBuffer) {
 	const chart = new ChartFull();
 	const cur = new Cursor(new DataView(binDataBuffer));
 
+	//#region Create Chart
 	// Header
 	const magic = cur.string();
 	if (magic != "RIFT_CHART_DATA") throw new Error(`Wrong Header`);
@@ -166,6 +215,12 @@ export function createChartFull(binDataBuffer) {
 	chart.division = cur.int32();
 
 	const bpmChangeCount = cur.int32();
+	// add basic bpm
+	const baseBpmChange = new BpmChangeFull();
+	baseBpmChange.time = 0;
+	baseBpmChange.beat = 0;
+	baseBpmChange.bpm = chart.baseBpm;
+	chart.bpmChanges.push(baseBpmChange);
 	for (let i = 0; i < bpmChangeCount; i++) {
 		const bpmChange = new BpmChangeFull();
 		bpmChange.time = cur.float64();
@@ -240,14 +295,127 @@ export function createChartFull(binDataBuffer) {
 	console.log("singleVibes:", chart.singleVibes);
 	console.log("doubleVibes:", chart.doubleVibes);
 	*/
+	//#endregion
 
-	// Calculate derived properties
-	// 1. Notes
-	chart.shortNotes = chart.notes.filter((n) => n.enemyType !== EnemyType.None && n.enemyType !== EnemyType.Wyrm);
-	chart.wyrmNotes = chart.notes.filter((n) => n.enemyType === EnemyType.Wyrm);
+	//#region Create Derived Properties
+	// Short notes
+	chart.shortNotes = chart.notes.filter(
+		(n) =>
+			Number(n.enemyType) !== Number(EnemyType.None) &&
+			Number(n.enemyType) !== Number(EnemyType.Wyrm)
+	);
+
+	// Wyrm notes
+	chart.wyrmNotes = chart.notes.filter(
+		(n) => Number(n.enemyType) === Number(EnemyType.Wyrm)
+	);
+
+	// Vibe gain points (as Note type)
+	chart.vibeGainPoints = chart.notes.filter(
+		(n) => Number(n.enemyType) === Number(EnemyType.None) && n.isVibeGain
+	);
+
+	// Optimal vibes
+	for (let i = 0; i < chart.vibeGainPoints.length; i++) {
+		const timeFrom = chart.vibeGainPoints[i].timeBegin;
+		const timeTo =
+			i == chart.vibeGainPoints.length - 1
+				? Infinity
+				: chart.vibeGainPoints[i + 1].timeBegin;
+
+		chart.groupedOptimalSingleVibes.push(
+			chart.singleVibes.filter((v) => {
+				return (
+					v.isOptimal &&
+					timeFrom < v.timeBeginEarliest &&
+					v.timeBeginLatest <= timeTo
+				);
+			})
+		);
+		chart.groupedOptimalDoubleVibes.push(
+			chart.doubleVibes.filter((v) => {
+				return (
+					v.isOptimal &&
+					timeFrom < v.timeBeginEarliest &&
+					v.timeBeginLatest <= timeTo
+				);
+			})
+		);
+	}
+	//#endregion
 
 	// 2. Vibes
-	// TODO: reconsrtuct the optimal vibe paths from the single/double vibe data
+
+	/** Helper function
+	 * returns next candidates, when vibe was ended at 'time'.
+	 */
+	function getCandidates(time) {
+		const groupedIdx = chart.vibeGainPoints.findIndex(
+			(vibe) => time <= vibe.timeBegin
+		);
+		if (groupedIdx == -1) return [];
+
+		const singles = chart.groupedOptimalSingleVibes[groupedIdx] ?? [];
+		const doubles = chart.groupedOptimalDoubleVibes[groupedIdx + 1] ?? [];
+		return [...singles, ...doubles];
+	}
+
+	let sequence = [];
+	function dfs(time) {
+		const candidates = getCandidates(time);
+		if (candidates.length == 0) {
+			chart.allOptimalVibeSequences.push(sequence.slice());
+		} else {
+			for (const vibe of candidates) {
+				sequence.push(vibe);
+				dfs(vibe.timeEnd);
+				sequence.pop();
+			}
+		}
+	}
+	dfs(0);
+
+	chart.bestOptimalVibeSequence = chart.allOptimalVibeSequences.reduce(
+		(smallest, current) => {
+			const currentDifficulty = current.reduce(
+				(sum, vibe) => sum + vibe.getTriggerDifficulty(),
+				0
+			);
+			const smallestDifficulty = smallest.reduce(
+				(sum, vibe) => sum + vibe.getTriggerDifficulty(),
+				0
+			);
+			return currentDifficulty < smallestDifficulty ? current : smallest;
+		},
+		chart.allOptimalVibeSequences[0]
+	);
+
+	console.log(chart.chartName, chart.difficulty);
+	// show groups
+	/*
+	console.log(chart.groupedOptimalSingleVibes);
+	console.log(chart.groupedOptimalDoubleVibes);
+	*/
+	console.log(
+		chart.allOptimalVibeSequences.map((seq) => ({
+			windows: seq.map((v) => ({
+				timeBeginLatest: v.timeBeginLatest,
+				timeEnd: v.timeEnd,
+			})),
+			totalBonus: seq.reduce((sum, v) => sum + (v.scoreBonus ?? 0), 0),
+			triggerDifficulty: seq.reduce(
+				(sum, v) => sum + v.getTriggerDifficulty(),
+				0
+			),
+		}))
+	);
+	console.log(
+		chart.bestOptimalVibeSequence.map((v) => ({
+			timeDelta: v.timeBeginLatest - v.timeBeginEarliest,
+			beat: v.beatBeginLatest,
+		}))
+	);
+	console.log(chart);
 
 	return chart;
 }
