@@ -15,29 +15,7 @@ async function test() {
             const chartBin = createChartFull(dataBin);
             console.log(chartBin);
 
-            // Create a segment group by "vibe gain points"
-            /*
-            const allVibes = [...chartBin.singleVibes, ...chartBin.doubleVibes].sort((a, b) => a.beatEnd - b.beatEnd);
-            const vibeGainPoints = chartBin.vibeGainPoints.map(vibe => vibe.beatEnd).concat(999999);
-            const groups = Array.from({length: vibeGainPoints.length}, () => []);
-            let i = 0;
-            for(let g = 0; g < vibeGainPoints.length - 1; g++){
-                const beatLow = vibeGainPoints[g];
-                const beatHigh = vibeGainPoints[g+1];
-
-                while(i < allVibes.length){
-                    const vibeBeat = allVibes[i].beatEnd;
-                    if(vibeBeat < beatLow){ i++; continue; }
-
-                    if(vibeBeat < beatHigh) groups[g].push(allVibes[i++]);
-                    else break;
-                }
-            }
-
-            console.log(vibeGainPoints);
-            console.log(groups);
-            */
-
+            break;
         }
 
         break;

@@ -293,20 +293,23 @@ export function createChartFull(binDataBuffer) {
 	//#endregion
 
 	//#region Create Derived Properties
-	// 1. Notes (and vibe gain points)
+	// Short notes
 	chart.shortNotes = chart.notes.filter(
 		(n) => Number(n.enemyType) !== Number(EnemyType.None) &&
 			   Number(n.enemyType) !== Number(EnemyType.Wyrm)
 	);
 	
+	// Wyrm notes
 	chart.wyrmNotes = chart.notes.filter(
 		(n) => Number(n.enemyType) === Number(EnemyType.Wyrm)
 	);
 
+	// vibe gain points (as Note type)
 	chart.vibeGainPoints = chart.notes.filter(
 		(n) => Number(n.enemyType) === Number(EnemyType.None) && n.isVibeGain
 	);
 
+	// vibe gain points (as timestamp type)
 	const vibeGainTimeStamps = [];
 	for(const note of chart.vibeGainPoints){
 		const timeStamp = new TimeStamp();
@@ -316,6 +319,7 @@ export function createChartFull(binDataBuffer) {
 		vibeGainTimeStamps.push(timeStamp);
 	}
 
+	// timestamps (for all subdivisions)
 	chart.timeStamps = [];
 	const maxBeatShortNote = chart.shortNotes[chart.shortNotes.length - 1];
 	const maxBeatWyrmNote = chart.wyrmNotes[chart.wyrmNotes.length - 1]; // potential bug: should sort by beatEnd first (currently sorted by beatStart)
@@ -345,28 +349,136 @@ export function createChartFull(binDataBuffer) {
 
 	// 2. Vibes
 	// TODO: reconsrtuct the optimal vibe paths from the single/double vibe data
-
-	// helper function
-	function getVibeEndPointWithoutExtension(vibeTriggerNoteIdx) {
-		let timeFrom = allNotes[vibeTriggerNoteIdx].timeBegin;
-		let idxEnd = vibeTriggerNoteIdx;
-		while(allNotes[vibeTriggerNoteIdx].timeBegin) {}
-	}
-
-	// 2-1. Create note array
 	const allNotes = [...chart.shortNotes, ...chart.wyrmNotes].sort((a, b) => {
 		return a.beatBegin - b.beatBegin;
 	});
-	const N = allNotes.length;
+
+	/*
+	helper function
+	returns the first next viable note's index that is not effected by this vibe trigger
+	if there is no such note, returns the note array's size (N)
+	*/
+	function getVibeEndNoteIndex(vibeTriggerNoteIdx, vibePower) {
+		let timeFrom = allNotes[vibeTriggerNoteIdx].timeBegin;
+
+		// find next vibeGainingPoint
+		let extendedByNextVibeGain = false;
+		let roundedVibeEndTime = 0; // outside of while scope for future use
+		while(true){
+			const nextVibeGainPoint = (
+				extendedByNextVibeGain ?
+					chart.vibeGainPoints.find(vp => timeFrom < vp.timeBegin) :
+					chart.vibeGainPoints.find(vp => timeFrom <= vp.timeBegin)
+			);
+
+			// vibe end timing (raw estimate)
+			const estimatedVibeEndTime = timeFrom + vibePower / 10;
+
+			// vibe end timing (subdivision rounding)
+			let lo = 0;
+			let hi = chart.timeStamps.length - 1;
+			if(chart.timeStamps[lo].time >= estimatedVibeEndTime){ // yeah never gonna happen
+				roundedVibeEndTime = chart.timeStamps[lo].time;
+			}
+			else if(chart.timeStamps[hi].time < estimatedVibeEndTime){
+				roundedVibeEndTime = chart.timeStamps[hi].time;
+			}
+			else{
+				while(lo + 1 < hi){
+					const mid = (lo + hi) >> 1;
+					if(chart.timeStamps[mid].time < estimatedVibeEndTime){
+						lo = mid;
+					}
+					else hi = mid;
+				}
+				const loTime = chart.timeStamps[lo].time;
+				const hiTime = chart.timeStamps[hi].time;
+				roundedVibeEndTime = (
+					Math.abs(loTime - estimatedVibeEndTime) < Math.abs(hiTime - estimatedVibeEndTime) ?
+						loTime : hiTime
+				);
+			}
+
+			// check if new vibe gain available. If so, recalcaulte from there
+			if(nextVibeGainPoint !== undefined && nextVibeGainPoint.timeBegin <= roundedVibeEndTime){
+				const timeDelta = nextVibeGainPoint.timeBegin - timeFrom;
+				vibePower -= timeDelta * 10;
+				vibePower += 50;
+				timeFrom = nextVibeGainPoint.timeBegin;
+				extendedByNextVibeGain = true;
+			}
+			else break;
+		}
+
+		// find the last effected note (except grace time)
+		let lo = 0;
+		let hi = allNotes.length - 1;
+		let res = 0;
+		if(allNotes[lo].timeBegin > roundedVibeEndTime){ // never gonna happen
+			res = lo;
+		}
+		else if(allNotes[hi].timeBegin <= roundedVibeEndTime){
+			res = hi;
+		}
+		else{
+			while(lo + 1 < hi){
+				const mid = (lo + hi) >> 1;
+				if(allNotes[mid].timeBegin <= roundedVibeEndTime){
+					lo = mid;
+				}
+				else hi = mid;
+			}
+			res = lo;
+		}
+
+		// early return if the effected note is the last note
+		if(res + 1 == allNotes.length){
+			return res;
+		}
+		
+		// apply grace time, and check if the next note is in that range
+		const subdivisionTime = (60 / chart.baseBpm / chart.division);
+		const hitWindow = 0.175;
+		const graceTime = hitWindow - (Math.floor(hitWindow / subdivisionTime) * subdivisionTime);
+
+		if(allNotes[res+1] < roundedVibeEndTime + graceTime){
+			return res+1;
+		}
+		else{
+			return res;
+		}
+	}
+
+	/* let's first test how the helper function works...
+	On "Disco Disaster EASY", there are total 4 vibe gain points
+		[85,	139,	265,	311]		(beat)
+		[40.32, 66.24, 	126.72, 148.799]	(time)
+	
+	There are total 147 notes in this chart. (there are no Wyrm notes, all short notes)
+
+	we will test by using note at index 43 (time: 60.48, beat: 127)
+	using single vibe will stop at approx time 65.48
+	using double vibe will be enlongated at second vibe gain
+	*/
+	//const singleVibeEndIndex = getVibeEndNoteIndex(43, 50);
+	//const doubleVibeEndIndex = getVibeEndNoteIndex(43, 100);
+	/* result
+	single vibe end point = 230
+	*/
+	//console.log(singleVibeEndIndex, allNotes[singleVibeEndIndex]);
+	//console.log(doubleVibeEndIndex, allNotes[doubleVibeEndIndex]);
+
+	// 2-1. Create note array
+	
 
 	// dp[idx][vibeType]
 	// DEFINITION:	VibeSegment information on note index 'idx', with vibe trigger type 'vibeType'.
-	const dp = Array.from({length : N }, () => 
+	const dp = Array.from({length : allNotes.length }, () => 
 		Array.from({ length: 5 }, () => new VibeSegement())
 	);
 
 	// DP initialization
-	for(let idx=0; idx<N; idx++){
+	for(let idx=0; idx<allNotes.length; idx++){
 		for(let vibeType=0; vibeType<5; vibeType++){
 			const note = allNotes[idx];	
 			dp[idx][vibeType].time = note.timeBegin;
@@ -396,6 +508,7 @@ export function createChartFull(binDataBuffer) {
 		}
 
 		// for vibePower 1: WIP
+		
 	}
 
 	return chart;
