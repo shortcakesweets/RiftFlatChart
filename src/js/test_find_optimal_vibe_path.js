@@ -6,45 +6,32 @@ async function test() {
     const chartListBin = await fetch("../../data/charts/chart_list_bin.json").then((r) => r.json());
     const keysBin = Object.keys(chartListBin);
 
+    /*
     for(const key of keysBin){
         const pathsBin = chartListBin[key].chart;
         for (const diff of DIFF_STRING){
             const dataBin = await fetch(pathsBin[diff]).then((r) =>
                 r.arrayBuffer()
             );
+            const t0 = performance.now();
             const chartBin = createChartFull(dataBin);
-            console.log(chartBin);
-
-            break;
+            const t1 = performance.now();
+            console.log(chartBin, (t1-t0).toFixed(3));
         }
-
-        break;
     }
-}
+    */
 
-// Finds optimal vibe and register to chart.
-// return value: void
-function getOptimalVibe(chart){
-    const vibeGainPoints = chartBin.vibeGainPoints;
-
-}
-
-// Gets vibe end time
-function getVibeEndPoint(timeTrigger, vibePower, chart){
-    const vibeGainPoints = chartBin.vibeGainPoints;
-
-    let timeProgressed = 0;
-
-
-    
-
-    // extension = [hit window] - [largest multiple of a subdivision that is shorter than the hit window]
-
-}
-
-// helper function that rounds some time value to a subdivision
-function getNearestSubdivTime(time, subdivision, bpm){
-    const timeSubdivision = 60 / 5;
+    for(const key of ["RRDiscoDisaster"]){
+        const pathsBin = chartListBin[key].chart;
+        for (const diff of DIFF_STRING){
+            const dataBin = await fetch(pathsBin[diff]).then((r) =>
+                r.arrayBuffer()
+            );
+            const t0 = performance.now();
+            const chartBin = createChartFull(dataBin);
+            const t1 = performance.now();
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", test);

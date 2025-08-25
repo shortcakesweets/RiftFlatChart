@@ -1,5 +1,3 @@
-const EPS = 1e-6; // Used for floating point comparisons
-
 class Cursor {
 	/** @param {DataView} view */
 	constructor(view) {
@@ -36,7 +34,11 @@ class Cursor {
 	}
 	string() {
 		const len = this.uint8();
-		const bytes = new Uint8Array(this.v.buffer, this.v.byteOffset + this.o, len);
+		const bytes = new Uint8Array(
+			this.v.buffer,
+			this.v.byteOffset + this.o,
+			len
+		);
 		const s = new TextDecoder().decode(bytes);
 		this.o += len;
 		return s;
@@ -106,46 +108,12 @@ export class BpmChangeFull {
 	}
 }
 
-class TimeStamp {
-	constructor() {
-		this.time = 0.0;
-		this.beat = 0.0;
-		this.bpm = 0.0;
-	}
-
-	toString() {
-		return `${this.beat.toFixed(2)}, ${this.bpm}`;
-	}
-}
-
 // enum, but better this way
 const NO_TRIGGER_0 	= 0;
 const NO_TRIGGER_1 	= 1;
 const NO_TRIGGER_2 	= 2;
 const TRIGGER_1		= 3;
 const TRIGGER_2		= 4;
-
-class VibeSegement {
-	constructor() {
-		// vibe trigger time information
-		this.time = 0.0;
-		this.beat = 0.0;
-
-		// vibe power (this can be 0, which means we do not trigger vibe)
-		this.vibePowerOnTrigger = 0; // 0, 50, 100
-		// score bonus (if vibe power is 0, automatically 0)
-		this.scoreBonus = 0;
-
-		// The first note that is not vibed after this vibe.
-		//  if vibe power is 0, this will automatically point to next index
-		this.nextNonVibeNoteIdx = 0;
-
-		// accumulated score bonus
-		// DEFINITION:	By this vibe trigger (or non-trigger), attainable maximum score bonus
-		//				from this point until the end of the song.
-		this.accScoreBonus = 0;
-	}
-}
 
 export class VibeFull {
 	constructor() {
@@ -158,6 +126,39 @@ export class VibeFull {
 		this.scoreBonus = 0;
 		this.isOptimal = false;
 		this.vibePower = 0;
+	}
+
+	/** Helper function
+	 * evaluates trigger difficulty of this vibe, heuristically
+	 * depends by triggerable window, integer, .5 integer, and 4th beat closeness
+	 */
+	getTriggerDifficulty() {
+		// Trigger window (30%)
+		const window = this.timeBeginLatest - this.timeBeginEarliest;
+		const windowDifficulty = Math.exp(-window / 0.25);
+
+		// Integer closeness (20%)
+		const beat = this.beatBeginLatest;
+		const nearestInt = Math.round(beat);
+		const deltaInt = Math.abs(beat - nearestInt);
+		const intDifficulty = deltaInt * 2;
+
+		// Half-integer closeness (10%)
+		const nearestHalfInt = Math.round(beat * 2) / 2;
+		const deltaHalfInt = Math.abs(beat - nearestHalfInt);
+		const halfIntDifficulty = deltaHalfInt * 4;
+
+		// 4th beat closeness (40%)
+		const nearest4thBeat = Math.round((beat - 1) / 4) * 4 + 1;
+		const delta4thBeat = Math.abs(beat - nearest4thBeat);
+		const onBeatDifficulty = delta4thBeat / 2;
+
+		const totalDifficulty =
+			windowDifficulty * 0.3 +
+			intDifficulty * 0.2 +
+			halfIntDifficulty * 0.1 +
+			onBeatDifficulty * 0.4;
+		return totalDifficulty;
 	}
 }
 
@@ -182,8 +183,12 @@ export class ChartFull {
 		// Calculated properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
+		this.groupedOptimalSingleVibes = [];
+		this.groupedOptimalDoubleVibes = [];
 		this.vibeGainPoints = [];
 		this.timeStamps = [];
+		this.allOptimalVibeSequences = [];
+		this.bestOptimalVibeSequence = [];
 	}
 }
 
@@ -295,221 +300,122 @@ export function createChartFull(binDataBuffer) {
 	//#region Create Derived Properties
 	// Short notes
 	chart.shortNotes = chart.notes.filter(
-		(n) => Number(n.enemyType) !== Number(EnemyType.None) &&
-			   Number(n.enemyType) !== Number(EnemyType.Wyrm)
+		(n) =>
+			Number(n.enemyType) !== Number(EnemyType.None) &&
+			Number(n.enemyType) !== Number(EnemyType.Wyrm)
 	);
-	
+
 	// Wyrm notes
 	chart.wyrmNotes = chart.notes.filter(
 		(n) => Number(n.enemyType) === Number(EnemyType.Wyrm)
 	);
 
-	// vibe gain points (as Note type)
+	// Vibe gain points (as Note type)
 	chart.vibeGainPoints = chart.notes.filter(
 		(n) => Number(n.enemyType) === Number(EnemyType.None) && n.isVibeGain
 	);
 
-	// vibe gain points (as timestamp type)
-	const vibeGainTimeStamps = [];
-	for(const note of chart.vibeGainPoints){
-		const timeStamp = new TimeStamp();
-		timeStamp.time = note.timeEnd;
-		timeStamp.beat = note.beatEnd;
-		// We will ignore bpm for this data
-		vibeGainTimeStamps.push(timeStamp);
-	}
+	// Optimal vibes
+	for (let i = 0; i < chart.vibeGainPoints.length; i++) {
+		const timeFrom = chart.vibeGainPoints[i].timeBegin;
+		const timeTo =
+			i == chart.vibeGainPoints.length - 1
+				? Infinity
+				: chart.vibeGainPoints[i + 1].timeBegin;
 
-	// timestamps (for all subdivisions)
-	chart.timeStamps = [];
-	const maxBeatShortNote = chart.shortNotes[chart.shortNotes.length - 1];
-	const maxBeatWyrmNote = chart.wyrmNotes[chart.wyrmNotes.length - 1]; // potential bug: should sort by beatEnd first (currently sorted by beatStart)
-	const maxBeat = Math.round(
-		Math.max(
-			maxBeatShortNote === undefined ? 0 : maxBeatShortNote.beatEnd,
-			maxBeatWyrmNote === undefined ? 0 : maxBeatWyrmNote.beatEnd
-		)
-		+8 // add more beats at the end
-	);
-	for(let i=0; i<chart.bpmChanges.length; i++){
-		const currBeat = chart.bpmChanges[i].beat;
-		const currTime = chart.bpmChanges[i].time;
-		const currBpm = chart.bpmChanges[i].bpm;
-		const timePerBeat = 60 / chart.bpmChanges[i].bpm;
-		const nextBeat = (i == chart.bpmChanges.length - 1 ? maxBeat : chart.bpmChanges[i+1].beat);
-		for(let j=Math.round(currBeat * chart.division); j / chart.division < nextBeat; j++){
-			const divisionDelta = j / chart.division - currBeat;
-			const stamp = new TimeStamp();
-			stamp.time = currTime + divisionDelta * timePerBeat;
-			stamp.beat = j / chart.division;
-			stamp.bpm = currBpm;
-			chart.timeStamps.push(stamp);
-		}
+		chart.groupedOptimalSingleVibes.push(
+			chart.singleVibes.filter((v) => {
+				return (
+					v.isOptimal &&
+					timeFrom < v.timeBeginEarliest &&
+					v.timeBeginLatest <= timeTo
+				);
+			})
+		);
+		chart.groupedOptimalDoubleVibes.push(
+			chart.doubleVibes.filter((v) => {
+				return (
+					v.isOptimal &&
+					timeFrom < v.timeBeginEarliest &&
+					v.timeBeginLatest <= timeTo
+				);
+			})
+		);
 	}
 	//#endregion
 
 	// 2. Vibes
-	// TODO: reconsrtuct the optimal vibe paths from the single/double vibe data
-	const allNotes = [...chart.shortNotes, ...chart.wyrmNotes].sort((a, b) => {
-		return a.beatBegin - b.beatBegin;
-	});
 
-	/*
-	helper function
-	returns the first next viable note's index that is not effected by this vibe trigger
-	if there is no such note, returns the note array's size (N)
-	*/
-	function getVibeEndNoteIndex(vibeTriggerNoteIdx, vibePower) {
-		let timeFrom = allNotes[vibeTriggerNoteIdx].timeBegin;
+	/** Helper function
+	 * returns next candidates, when vibe was ended at 'time'.
+	 */
+	function getCandidates(time) {
+		const groupedIdx = chart.vibeGainPoints.findIndex(
+			(vibe) => time <= vibe.timeBegin
+		);
+		if (groupedIdx == -1) return [];
 
-		// find next vibeGainingPoint
-		let extendedByNextVibeGain = false;
-		let roundedVibeEndTime = 0; // outside of while scope for future use
-		while(true){
-			const nextVibeGainPoint = (
-				extendedByNextVibeGain ?
-					chart.vibeGainPoints.find(vp => timeFrom < vp.timeBegin) :
-					chart.vibeGainPoints.find(vp => timeFrom <= vp.timeBegin)
-			);
-
-			// vibe end timing (raw estimate)
-			const estimatedVibeEndTime = timeFrom + vibePower / 10;
-
-			// vibe end timing (subdivision rounding)
-			let lo = 0;
-			let hi = chart.timeStamps.length - 1;
-			if(chart.timeStamps[lo].time >= estimatedVibeEndTime){ // yeah never gonna happen
-				roundedVibeEndTime = chart.timeStamps[lo].time;
-			}
-			else if(chart.timeStamps[hi].time < estimatedVibeEndTime){
-				roundedVibeEndTime = chart.timeStamps[hi].time;
-			}
-			else{
-				while(lo + 1 < hi){
-					const mid = (lo + hi) >> 1;
-					if(chart.timeStamps[mid].time < estimatedVibeEndTime){
-						lo = mid;
-					}
-					else hi = mid;
-				}
-				const loTime = chart.timeStamps[lo].time;
-				const hiTime = chart.timeStamps[hi].time;
-				roundedVibeEndTime = (
-					Math.abs(loTime - estimatedVibeEndTime) < Math.abs(hiTime - estimatedVibeEndTime) ?
-						loTime : hiTime
-				);
-			}
-
-			// check if new vibe gain available. If so, recalcaulte from there
-			if(nextVibeGainPoint !== undefined && nextVibeGainPoint.timeBegin <= roundedVibeEndTime){
-				const timeDelta = nextVibeGainPoint.timeBegin - timeFrom;
-				vibePower -= timeDelta * 10;
-				vibePower += 50;
-				timeFrom = nextVibeGainPoint.timeBegin;
-				extendedByNextVibeGain = true;
-			}
-			else break;
-		}
-
-		// find the last effected note (except grace time)
-		let lo = 0;
-		let hi = allNotes.length - 1;
-		let res = 0;
-		if(allNotes[lo].timeBegin > roundedVibeEndTime){ // never gonna happen
-			res = lo;
-		}
-		else if(allNotes[hi].timeBegin <= roundedVibeEndTime){
-			res = hi;
-		}
-		else{
-			while(lo + 1 < hi){
-				const mid = (lo + hi) >> 1;
-				if(allNotes[mid].timeBegin <= roundedVibeEndTime){
-					lo = mid;
-				}
-				else hi = mid;
-			}
-			res = lo;
-		}
-
-		// early return if the effected note is the last note
-		if(res + 1 == allNotes.length){
-			return res;
-		}
-		
-		// apply grace time, and check if the next note is in that range
-		const subdivisionTime = (60 / chart.baseBpm / chart.division);
-		const hitWindow = 0.175;
-		const graceTime = hitWindow - (Math.floor(hitWindow / subdivisionTime) * subdivisionTime);
-
-		if(allNotes[res+1] < roundedVibeEndTime + graceTime){
-			return res+1;
-		}
-		else{
-			return res;
-		}
+		const singles = chart.groupedOptimalSingleVibes[groupedIdx] ?? [];
+		const doubles = chart.groupedOptimalDoubleVibes[groupedIdx + 1] ?? [];
+		return [...singles, ...doubles];
 	}
 
-	/* let's first test how the helper function works...
-	On "Disco Disaster EASY", there are total 4 vibe gain points
-		[85,	139,	265,	311]		(beat)
-		[40.32, 66.24, 	126.72, 148.799]	(time)
-	
-	There are total 147 notes in this chart. (there are no Wyrm notes, all short notes)
+	let sequence = [];
+	function dfs(time) {
+		const candidates = getCandidates(time);
+		if (candidates.length == 0) {
+			chart.allOptimalVibeSequences.push(sequence.slice());
+		} else {
+			for (const vibe of candidates) {
+				sequence.push(vibe);
+				dfs(vibe.timeEnd);
+				sequence.pop();
+			}
+		}
+	}
+	dfs(0);
 
-	we will test by using note at index 43 (time: 60.48, beat: 127)
-	using single vibe will stop at approx time 65.48
-	using double vibe will be enlongated at second vibe gain
-	*/
-	//const singleVibeEndIndex = getVibeEndNoteIndex(43, 50);
-	//const doubleVibeEndIndex = getVibeEndNoteIndex(43, 100);
-	/* result
-	single vibe end point = 230
-	*/
-	//console.log(singleVibeEndIndex, allNotes[singleVibeEndIndex]);
-	//console.log(doubleVibeEndIndex, allNotes[doubleVibeEndIndex]);
-
-	// 2-1. Create note array
-	
-
-	// dp[idx][vibeType]
-	// DEFINITION:	VibeSegment information on note index 'idx', with vibe trigger type 'vibeType'.
-	const dp = Array.from({length : allNotes.length }, () => 
-		Array.from({ length: 5 }, () => new VibeSegement())
+	chart.bestOptimalVibeSequence = chart.allOptimalVibeSequences.reduce(
+		(smallest, current) => {
+			const currentDifficulty = current.reduce(
+				(sum, vibe) => sum + vibe.getTriggerDifficulty(),
+				0
+			);
+			const smallestDifficulty = smallest.reduce(
+				(sum, vibe) => sum + vibe.getTriggerDifficulty(),
+				0
+			);
+			return currentDifficulty < smallestDifficulty ? current : smallest;
+		},
+		chart.allOptimalVibeSequences[0]
 	);
 
-	// DP initialization
-	for(let idx=0; idx<allNotes.length; idx++){
-		for(let vibeType=0; vibeType<5; vibeType++){
-			const note = allNotes[idx];	
-			dp[idx][vibeType].time = note.timeBegin;
-			dp[idx][vibeType].beat = note.beatBegin;
-			dp[idx][vibeType].vibePowerOnTrigger = () => {
-				switch (vibeType) {
-					case NO_TRIGGER_0:
-					case NO_TRIGGER_1:
-					case NO_TRIGGER_2:
-						return 0;
-			
-					case TRIGGER_1:
-						return 50;
-			
-					case TRIGGER_2:
-						return 100;
-			
-					default:
-						return 0; // or throw an error if unexpected
-				}
-			};
-		}
-
-		// for vibePower 0 only:
-		for(let vibeType=0; vibeType<3; vibeType++){
-			dp[idx][vibeType].nextNonVibeNoteIdx = idx+1;
-		}
-
-		// for vibePower 1: WIP
-		
-	}
+	console.log(chart.chartName, chart.difficulty);
+	// show groups
+	/*
+	console.log(chart.groupedOptimalSingleVibes);
+	console.log(chart.groupedOptimalDoubleVibes);
+	*/
+	console.log(
+		chart.allOptimalVibeSequences.map((seq) => ({
+			windows: seq.map((v) => ({
+				timeBeginLatest: v.timeBeginLatest,
+				timeEnd: v.timeEnd,
+			})),
+			totalBonus: seq.reduce((sum, v) => sum + (v.scoreBonus ?? 0), 0),
+			triggerDifficulty: seq.reduce(
+				(sum, v) => sum + v.getTriggerDifficulty(),
+				0
+			),
+		}))
+	);
+	console.log(
+		chart.bestOptimalVibeSequence.map((v) => ({
+			timeDelta: v.timeBeginLatest - v.timeBeginEarliest,
+			beat: v.beatBeginLatest,
+		}))
+	);
+	console.log(chart);
 
 	return chart;
 }
