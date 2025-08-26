@@ -5,6 +5,10 @@ const DIFF_STRING = ["easy", "medium", "hard", "impossible"];
 let isEnemyRenderOn = false;
 const dropZone = document.getElementById("drop-zone");
 
+function numberRounder(bpm){
+	return bpm.toFixed(3).replace(/(?:\.0+|(\.\d*?[1-9])0+)$/, '$1');
+}
+
 function updateTable(chart) {
 	const rows = document.querySelectorAll(".description-table tr");
 	for (let i = 0; i < 5; i++) {
@@ -16,16 +20,17 @@ function updateTable(chart) {
 		rows[1].cells[1].textContent = `${DIFF_STRING[chart.difficulty - 1]}(${
 			chart.intensity
 		})`;
-		const maxBpm = Math.max(
+		const maxBpm = numberRounder(Math.max(
 			...chart.bpmChanges.map((bpmChange) => bpmChange.bpm)
-		);
-		const minBpm = Math.min(
+		));
+		const minBpm = numberRounder(Math.min(
 			...chart.bpmChanges.map((bpmChange) => bpmChange.bpm)
-		);
+		));
+		const baseBpm = numberRounder(chart.baseBpm);
 		const bpmStr =
 			minBpm === maxBpm
 				? `${chart.baseBpm}`
-				: `${minBpm}-${maxBpm} (${chart.baseBpm})`;
+				: `${minBpm}-${maxBpm} (${baseBpm})`;
 		rows[2].cells[1].textContent = bpmStr;
 		rows[3].cells[1].textContent = chart.maxCombo;
 		rows[4].cells[1].textContent = chart.maxScore;

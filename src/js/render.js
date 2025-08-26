@@ -30,6 +30,10 @@ const NOTE_COLOR         = 'rgb(255, 255, 255)'; // white
 const OVERLAP_COLOR      = 'rgb(255, 0, 0)';     // red
 const VIBE_COLOR         = 'rgb(255, 255, 0)';   // yellow
 
+function numberRounder(bpm){
+	return bpm.toFixed(3).replace(/(?:\.0+|(\.\d*?[1-9])0+)$/, '$1');
+}
+
 function getNoteXY(column, relBeat) {
 	const noteMargin = (LANE_WIDTH - NOTE_SIZE) / 2;
 	const x =
@@ -170,9 +174,11 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 
 	// draw beat divisions
 	// - main division & beat count texts
-	const optimalVibeBeats = chart.bestOptimalVibeSequence.map(
-		(v) => v.beatBeginLatest
-	);
+	const bestOptimalVibeSequence = chart.bestOptimalVibeSequence.map((vibe) => ({
+		...vibe,
+		beatBeginLatest: Number(vibe.beatBeginLatest.toFixed(3)),
+	}));
+	const optimalVibeBeats = bestOptimalVibeSequence.map((v) => v.beatBeginLatest);
 	for (let relBeat = 0; relBeat < 17; relBeat += 4) {
 		const [, yFinish] = getNoteXY(0, relBeat);
 
@@ -197,10 +203,13 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	}
 
 	// - draw vibe trigger indicaters and beats
-	for (const optimalVibeBeat of optimalVibeBeats) {
-		let relBeat = optimalVibeBeat - beatIndex;
+	for (const vibe of bestOptimalVibeSequence) {
+		let actBeat = vibe.beatBeginLatest;
+		let relBeat = actBeat - beatIndex;
 		if (0 <= relBeat && relBeat < 16) {
 			const [, yStart] = getNoteXY(0, relBeat);
+
+			// First indicater
 			const vertices = [
 				[X_OFFSET + LANE_MARGIN - FONT_MARGIN, yStart],
 				[
@@ -218,14 +227,45 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 			ctx.lineTo(vertices[1][0], vertices[1][1]);
 			ctx.lineTo(vertices[2][0], vertices[2][1]);
 			ctx.closePath();
-
 			ctx.fillStyle = VIBE_COLOR;
 			ctx.fill();
+			
+			// Second indicater, if needed
+			if(vibe.vibePower == 2){
+				const vertices2 = [
+					[X_OFFSET + LANE_MARGIN - FONT_MARGIN * 1.5 - VIBE_IND_SIZE, yStart],
+					[
+						X_OFFSET + LANE_MARGIN - FONT_MARGIN * 1.5 - VIBE_IND_SIZE * 2,
+						yStart + VIBE_IND_SIZE / 2,
+					],
+					[
+						X_OFFSET + LANE_MARGIN - FONT_MARGIN * 1.5 - VIBE_IND_SIZE * 2,
+						yStart - VIBE_IND_SIZE / 2,
+					],
+				]
+				ctx.beginPath();
+				ctx.moveTo(vertices2[0][0], vertices2[0][1]);
+				ctx.lineTo(vertices2[1][0], vertices2[1][1]);
+				ctx.lineTo(vertices2[2][0], vertices2[2][1]);
+				ctx.closePath();
+				ctx.fillStyle = VIBE_COLOR;
+				ctx.fill();
+			}
 
+			// Beat text
 			renderText(
 				X_OFFSET + LANE_MARGIN - FONT_MARGIN,
 				yStart - VIBE_IND_SIZE,
-				optimalVibeBeat.toFixed(2).padStart(6, "0"),
+				numberRounder(actBeat),
+				VIBE_COLOR,
+				true
+			);
+			// Timing text
+			const timeDiffMs = Math.round((vibe.timeBeginLatest - vibe.timeBeginEarliest) * 1000);
+			renderText(
+				X_OFFSET + LANE_MARGIN - FONT_MARGIN,
+				yStart + VIBE_IND_SIZE * 2,
+				`(${timeDiffMs.toString()}ms)`,
 				VIBE_COLOR,
 				true
 			);
@@ -261,6 +301,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	// draw bpm change texts
 	for (const bpmChange of chart.bpmChanges) {
 		let relBeat = bpmChange.beat - beatIndex;
+		const bpmRounded = bpmChange.bpm.toFixed(3).replace(/(?:\.0+|(\.\d*?[1-9])0+)$/, '$1');
 		if (0 <= relBeat && relBeat < 16) {
 			const [, yFinish] = getNoteXY(0, relBeat);
 			renderText(
@@ -270,7 +311,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 					LANE_GAP +
 					LANE_WIDTH * 3,
 				yFinish,
-				String(bpmChange.bpm).padStart(3, "0"),
+				bpmRounded,
 				FONT_BPM_COLOR
 			);
 		}
@@ -286,7 +327,8 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	const filteredWyrmNotes = chart.wyrmNotes.filter(
 		(note) =>
 			(beatBegin <= note.beatBegin && note.beatBegin <= beatEnd) ||
-			(beatBegin <= note.beatEnd && note.beatEnd <= beatEnd)
+			(beatBegin <= note.beatEnd && note.beatEnd <= beatEnd) ||
+			(note.beatBegin <= beatBegin && beatBegin <= note.beatEnd)
 	);
 
 	// render wyrm notes
