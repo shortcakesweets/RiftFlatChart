@@ -109,9 +109,9 @@ export class BpmChangeFull {
 }
 
 // enum, but better this way
-const NO_TRIGGER_0 	= 0;
-const NO_TRIGGER_1 	= 1;
-const NO_TRIGGER_2 	= 2;
+const NO_TRIGGER_0	= 0;
+const NO_TRIGGER_1	= 1;
+const NO_TRIGGER_2	= 2;
 const TRIGGER_1		= 3;
 const TRIGGER_2		= 4;
 
@@ -126,38 +126,40 @@ export class VibeFull {
 		this.scoreBonus = 0;
 		this.isOptimal = false;
 		this.vibePower = 0;
+
+		// derived attribute
+		this.beatDeltaFromPrevNote = 0;
 	}
 
 	/** Helper function
 	 * evaluates trigger difficulty of this vibe, heuristically
-	 * depends by triggerable window, integer, .5 integer, and 4th beat closeness
 	 */
 	getTriggerDifficulty() {
+		const beat = this.beatBeginLatest;
+
 		// Trigger window (30%)
 		const window = this.timeBeginLatest - this.timeBeginEarliest;
-		const windowDifficulty = Math.exp(-window / 0.25);
+		const windowDifficulty = Math.min(1, window / 0.5);
 
-		// Integer closeness (20%)
-		const beat = this.beatBeginLatest;
-		const nearestInt = Math.round(beat);
-		const deltaInt = Math.abs(beat - nearestInt);
-		const intDifficulty = deltaInt * 2;
+		// Sparsity (30%)
+		const sparsity = this.beatDeltaFromPrevNote;
+		const sparseDifficulty = sparsity >= 1 ? 0 : sparsity >= 0.5 ? 0.5 : 0;
 
-		// Half-integer closeness (10%)
-		const nearestHalfInt = Math.round(beat * 2) / 2;
-		const deltaHalfInt = Math.abs(beat - nearestHalfInt);
-		const halfIntDifficulty = deltaHalfInt * 4;
-
-		// 4th beat closeness (40%)
+		// 4th beat closeness (20%)
 		const nearest4thBeat = Math.round((beat - 1) / 4) * 4 + 1;
 		const delta4thBeat = Math.abs(beat - nearest4thBeat);
-		const onBeatDifficulty = delta4thBeat / 2;
+		const onBeatDifficulty = delta4thBeat < 0.125 ? 0 : 1;
+
+		// Integer closeness (20%)
+		const nearestInt = Math.round(beat);
+		const deltaInt = Math.abs(beat - nearestInt);
+		const intDifficulty = deltaInt < 0.125 ? 0 : 1;
 
 		const totalDifficulty =
 			windowDifficulty * 0.3 +
-			intDifficulty * 0.2 +
-			halfIntDifficulty * 0.1 +
-			onBeatDifficulty * 0.4;
+			sparseDifficulty * 0.3 +
+			onBeatDifficulty * 0.2 +
+			intDifficulty * 0.2;
 		return totalDifficulty;
 	}
 }
@@ -341,6 +343,23 @@ export function createChartFull(binDataBuffer) {
 				);
 			})
 		);
+	}
+
+	// Optimal vibe's beat delta from previous notes
+	const allNotes = [...chart.shortNotes, ...chart.wyrmNotes].sort(
+		(a, b) => a.beatBegin - b.beatBegin
+	);
+	for (const vibe of [...chart.singleVibes, ...chart.doubleVibes]) {
+		let lo = 0;
+		let hi = allNotes.length - 1;
+		while (lo + 1 < hi) {
+			const mid = (lo + hi) >> 1;
+			if (allNotes[mid].beatBegin < vibe.beatBeginLatest) {
+				lo = mid;
+			} else hi = mid;
+		}
+		vibe.beatDeltaFromPrevNote =
+			vibe.beatBeginLatest - allNotes[lo].beatBegin;
 	}
 	//#endregion
 
