@@ -1,135 +1,496 @@
 {
-    "RRDiscoDisaster": {
-        "title": "Disco Disaster",
-        "art": "../../data/album_arts/RRDiscoDisaster.webp",
+    "DLCApricot01": {
+        "title": "Slugger's Refrain",
+        "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Easy.bin",
-            "medium": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Medium.bin",
-            "hard": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Hard.bin",
-            "impossible": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Impossible.bin"
+            "easy": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Easy.bin",
+            "medium": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Medium.bin",
+            "hard": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Hard.bin",
+            "impossible": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Impossible.bin"
         },
-        "update_date": "1970-01-01",
+        "update_date": "2025-02-13",
         "dlc": "",
         "artist": "",
         "intensity": [
-            1,
-            4,
-            7,
-            22
-        ]
-    },
-    "RRElusional": {
-        "title": "Elusional",
-        "art": "../../data/album_arts/RRElusional.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Elusional_RRElusional_Easy.bin",
-            "medium": "../../data/charts/bin/Elusional_RRElusional_Medium.bin",
-            "hard": "../../data/charts/bin/Elusional_RRElusional_Hard.bin",
-            "impossible": "../../data/charts/bin/Elusional_RRElusional_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            2,
             6,
-            11,
-            21
-        ]
-    },
-    "RRVisualizeYourself": {
-        "title": "Visualize Yourself",
-        "art": "../../data/album_arts/RRVisualizeYourself.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Easy.bin",
-            "medium": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Medium.bin",
-            "hard": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Hard.bin",
-            "impossible": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            3,
-            7,
             14,
-            24
+            21,
+            30
         ]
     },
-    "RRSpookhousePop": {
-        "title": "Spookhouse Pop",
-        "art": "../../data/album_arts/RRSpookhousePop.webp",
+    "DLCApricot02": {
+        "title": "Got Danged",
+        "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Easy.bin",
-            "medium": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Medium.bin",
-            "hard": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Hard.bin",
-            "impossible": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Impossible.bin"
+            "easy": "../../data/charts/bin/Got Danged_DLCApricot02_Easy.bin",
+            "medium": "../../data/charts/bin/Got Danged_DLCApricot02_Medium.bin",
+            "hard": "../../data/charts/bin/Got Danged_DLCApricot02_Hard.bin",
+            "impossible": "../../data/charts/bin/Got Danged_DLCApricot02_Impossible.bin"
         },
-        "update_date": "1970-01-01",
+        "update_date": "2025-02-13",
         "dlc": "",
         "artist": "",
         "intensity": [
-            4,
+            5,
+            12,
+            20,
+            30
+        ]
+    },
+    "DLCApricot03": {
+        "title": "Bootus Bleez",
+        "art": "../../data/album_arts/DLCApricot.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Easy.bin",
+            "medium": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Medium.bin",
+            "hard": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Hard.bin",
+            "impossible": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Impossible.bin"
+        },
+        "update_date": "2025-02-13",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
             6,
+            10,
+            19,
+            29
+        ]
+    },
+    "DLCBanana01": {
+        "title": "Resurrections (dannyBstyle Remix)",
+        "art": "../../data/album_arts/DLCBanana01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
+            "medium": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Medium.bin",
+            "hard": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Hard.bin",
+            "impossible": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Impossible.bin"
+        },
+        "update_date": "2025-03-27",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            6,
+            10,
+            17,
+            27
+        ]
+    },
+    "DLCBanana02": {
+        "title": "Scattered and Lost",
+        "art": "../../data/album_arts/DLCBanana02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
+            "medium": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Medium.bin",
+            "hard": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Hard.bin",
+            "impossible": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Impossible.bin"
+        },
+        "update_date": "2025-03-27",
+        "dlc": "Celeste",
+        "artist": "",
+        "intensity": [
+            4,
+            8,
             16,
+            25
+        ]
+    },
+    "DLCBanana03": {
+        "title": "Reach for the Summit",
+        "art": "../../data/album_arts/DLCBanana03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
+            "medium": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Medium.bin",
+            "hard": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Hard.bin",
+            "impossible": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Impossible.bin"
+        },
+        "update_date": "2025-03-27",
+        "dlc": "Celeste",
+        "artist": "",
+        "intensity": [
+            7,
+            11,
+            18,
+            30
+        ]
+    },
+    "DLCBanana04": {
+        "title": "Confronting Myself",
+        "art": "../../data/album_arts/DLCBanana04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
+            "medium": "../../data/charts/bin/Confronting Myself_DLCBanana04_Medium.bin",
+            "hard": "../../data/charts/bin/Confronting Myself_DLCBanana04_Hard.bin",
+            "impossible": "../../data/charts/bin/Confronting Myself_DLCBanana04_Impossible.bin"
+        },
+        "update_date": "2025-03-27",
+        "dlc": "Celeste",
+        "artist": "",
+        "intensity": [
+            6,
+            9,
+            17,
+            26
+        ]
+    },
+    "DLCBanana05": {
+        "title": "Resurrections",
+        "art": "../../data/album_arts/DLCBanana05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Resurrections_DLCBanana05_Easy.bin",
+            "medium": "../../data/charts/bin/Resurrections_DLCBanana05_Medium.bin",
+            "hard": "../../data/charts/bin/Resurrections_DLCBanana05_Hard.bin",
+            "impossible": "../../data/charts/bin/Resurrections_DLCBanana05_Impossible.bin"
+        },
+        "update_date": "2025-03-27",
+        "dlc": "Celeste",
+        "artist": "",
+        "intensity": [
+            6,
+            10,
+            17,
             23
         ]
     },
-    "RROmandOn": {
-        "title": "Om and On",
-        "art": "../../data/album_arts/RROmandOn.webp",
+    "DLCCherry01": {
+        "title": "It's Pizza Time!",
+        "art": "../../data/album_arts/DLCCherry01.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Om and On_RROmandOn_Easy.bin",
-            "medium": "../../data/charts/bin/Om and On_RROmandOn_Medium.bin",
-            "hard": "../../data/charts/bin/Om and On_RROmandOn_Hard.bin",
-            "impossible": "../../data/charts/bin/Om and On_RROmandOn_Impossible.bin"
+            "easy": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Easy.bin",
+            "medium": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Medium.bin",
+            "hard": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Hard.bin",
+            "impossible": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Impossible.bin"
         },
-        "update_date": "1970-01-01",
-        "dlc": "",
+        "update_date": "2025-05-06",
+        "dlc": "Pizza Tower",
         "artist": "",
         "intensity": [
-            4,
-            6,
+            7,
+            13,
+            19,
+            24
+        ]
+    },
+    "DLCCherry02": {
+        "title": "The Death That I Deservioli",
+        "art": "../../data/album_arts/DLCCherry02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Easy.bin",
+            "medium": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Medium.bin",
+            "hard": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Hard.bin",
+            "impossible": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Impossible.bin"
+        },
+        "update_date": "2025-05-06",
+        "dlc": "Pizza Tower",
+        "artist": "",
+        "intensity": [
+            7,
+            11,
             18,
             26
         ]
     },
-    "RRMorningDove": {
-        "title": "Morning Dove",
-        "art": "../../data/album_arts/RRMorningDove.webp",
+    "DLCCherry03": {
+        "title": "Unexpectancy, Pt. 3",
+        "art": "../../data/album_arts/DLCCherry03.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Morning Dove_RRMorningDove_Easy.bin",
-            "medium": "../../data/charts/bin/Morning Dove_RRMorningDove_Medium.bin",
-            "hard": "../../data/charts/bin/Morning Dove_RRMorningDove_Hard.bin",
-            "impossible": "../../data/charts/bin/Morning Dove_RRMorningDove_Impossible.bin"
+            "easy": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Easy.bin",
+            "medium": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Medium.bin",
+            "hard": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Hard.bin",
+            "impossible": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Impossible.bin"
         },
-        "update_date": "1970-01-01",
-        "dlc": "",
+        "update_date": "2025-05-06",
+        "dlc": "Pizza Tower",
         "artist": "",
         "intensity": [
-            6,
             8,
             16,
+            21,
+            29
+        ]
+    },
+    "DLCCherry04": {
+        "title": "World Wide Noise",
+        "art": "../../data/album_arts/DLCCherry04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/World Wide Noise_DLCCherry04_Easy.bin",
+            "medium": "../../data/charts/bin/World Wide Noise_DLCCherry04_Medium.bin",
+            "hard": "../../data/charts/bin/World Wide Noise_DLCCherry04_Hard.bin",
+            "impossible": "../../data/charts/bin/World Wide Noise_DLCCherry04_Impossible.bin"
+        },
+        "update_date": "2025-05-06",
+        "dlc": "Pizza Tower",
+        "artist": "",
+        "intensity": [
+            5,
+            10,
+            19,
+            28
+        ]
+    },
+    "DLCGuava01": {
+        "title": "BIBBIDIBA",
+        "art": "../../data/album_arts/DLCGuava01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/BIBBIDIBA_DLCGuava01_Easy.bin",
+            "medium": "../../data/charts/bin/BIBBIDIBA_DLCGuava01_Medium.bin",
+            "hard": "../../data/charts/bin/BIBBIDIBA_DLCGuava01_Hard.bin",
+            "impossible": "../../data/charts/bin/BIBBIDIBA_DLCGuava01_Impossible.bin"
+        },
+        "update_date": "2025-06-26",
+        "dlc": "Hololive",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            14,
             22
         ]
     },
-    "RRHephsMess": {
-        "title": "Heph's Mess",
-        "art": "../../data/album_arts/RRHephsMess.webp",
+    "DLCGuava02": {
+        "title": "REFLECT",
+        "art": "../../data/album_arts/DLCGuava02.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Heph's Mess_RRHephsMess_Easy.bin",
-            "medium": "../../data/charts/bin/Heph's Mess_RRHephsMess_Medium.bin",
-            "hard": "../../data/charts/bin/Heph's Mess_RRHephsMess_Hard.bin",
-            "impossible": "../../data/charts/bin/Heph's Mess_RRHephsMess_Impossible.bin"
+            "easy": "../../data/charts/bin/REFLECT_DLCGuava02_Easy.bin",
+            "medium": "../../data/charts/bin/REFLECT_DLCGuava02_Medium.bin",
+            "hard": "../../data/charts/bin/REFLECT_DLCGuava02_Hard.bin",
+            "impossible": "../../data/charts/bin/REFLECT_DLCGuava02_Impossible.bin"
         },
-        "update_date": "1970-01-01",
+        "update_date": "2025-06-26",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            7,
+            12,
+            17,
+            23
+        ]
+    },
+    "DLCGuava03": {
+        "title": "Play Dice!",
+        "art": "../../data/album_arts/DLCGuava03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Play Dice!_DLCGuava03_Easy.bin",
+            "medium": "../../data/charts/bin/Play Dice!_DLCGuava03_Medium.bin",
+            "hard": "../../data/charts/bin/Play Dice!_DLCGuava03_Hard.bin",
+            "impossible": "../../data/charts/bin/Play Dice!_DLCGuava03_Impossible.bin"
+        },
+        "update_date": "2025-06-26",
+        "dlc": "Hololive",
+        "artist": "",
+        "intensity": [
+            8,
+            13,
+            19,
+            25
+        ]
+    },
+    "DLCGuava04": {
+        "title": "Ahoy!! 我ら宝鐘海賊団☆",
+        "art": "../../data/album_arts/DLCGuava04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Ahoy!! 我ら宝鐘海賊団☆_DLCGuava04_Easy.bin",
+            "medium": "../../data/charts/bin/Ahoy!! 我ら宝鐘海賊団☆_DLCGuava04_Medium.bin",
+            "hard": "../../data/charts/bin/Ahoy!! 我ら宝鐘海賊団☆_DLCGuava04_Hard.bin",
+            "impossible": "../../data/charts/bin/Ahoy!! 我ら宝鐘海賊団☆_DLCGuava04_Impossible.bin"
+        },
+        "update_date": "2025-06-26",
+        "dlc": "Hololive",
+        "artist": "",
+        "intensity": [
+            7,
+            14,
+            20,
+            30
+        ]
+    },
+    "DLCGuava05": {
+        "title": "Carbonated Love",
+        "art": "../../data/album_arts/DLCGuava05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Carbonated Love_DLCGuava05_Easy.bin",
+            "medium": "../../data/charts/bin/Carbonated Love_DLCGuava05_Medium.bin",
+            "hard": "../../data/charts/bin/Carbonated Love_DLCGuava05_Hard.bin",
+            "impossible": "../../data/charts/bin/Carbonated Love_DLCGuava05_Impossible.bin"
+        },
+        "update_date": "2025-06-26",
+        "dlc": "Hololive",
+        "artist": "",
+        "intensity": [
+            5,
+            10,
+            15,
+            23
+        ]
+    },
+    "DLCKiwi01": {
+        "title": "Too Real",
+        "art": "../../data/album_arts/DLCKiwi01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Too Real_DLCKiwi01_Easy.bin",
+            "medium": "../../data/charts/bin/Too Real_DLCKiwi01_Medium.bin",
+            "hard": "../../data/charts/bin/Too Real_DLCKiwi01_Hard.bin",
+            "impossible": "../../data/charts/bin/Too Real_DLCKiwi01_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            16,
+            25
+        ]
+    },
+    "DLCKiwi02": {
+        "title": "M@GICAL-CURE! LOVE - SHOT!",
+        "art": "../../data/album_arts/DLCKiwi02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/M@GICAL-CURE! LOVE - SHOT!_DLCKiwi02_Easy.bin",
+            "medium": "../../data/charts/bin/M@GICAL-CURE! LOVE - SHOT!_DLCKiwi02_Medium.bin",
+            "hard": "../../data/charts/bin/M@GICAL-CURE! LOVE - SHOT!_DLCKiwi02_Hard.bin",
+            "impossible": "../../data/charts/bin/M@GICAL-CURE! LOVE - SHOT!_DLCKiwi02_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "Hatsune Miku",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            18,
+            26
+        ]
+    },
+    "DLCKiwi03": {
+        "title": "Intergalactic Bound",
+        "art": "../../data/album_arts/DLCKiwi03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Intergalactic Bound_DLCKiwi03_Easy.bin",
+            "medium": "../../data/charts/bin/Intergalactic Bound_DLCKiwi03_Medium.bin",
+            "hard": "../../data/charts/bin/Intergalactic Bound_DLCKiwi03_Hard.bin",
+            "impossible": "../../data/charts/bin/Intergalactic Bound_DLCKiwi03_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "Hatsune Miku",
+        "artist": "",
+        "intensity": [
+            3,
+            8,
+            15,
+            23
+        ]
+    },
+    "DLCKiwi04": {
+        "title": "Just 1dB Louder",
+        "art": "../../data/album_arts/DLCKiwi04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Just 1dB Louder_DLCKiwi04_Easy.bin",
+            "medium": "../../data/charts/bin/Just 1dB Louder_DLCKiwi04_Medium.bin",
+            "hard": "../../data/charts/bin/Just 1dB Louder_DLCKiwi04_Hard.bin",
+            "impossible": "../../data/charts/bin/Just 1dB Louder_DLCKiwi04_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "Hatsune Miku",
+        "artist": "",
+        "intensity": [
+            4,
+            11,
+            18,
+            26
+        ]
+    },
+    "DLCKiwi05": {
+        "title": "MikuFiesta",
+        "art": "../../data/album_arts/DLCKiwi05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/MikuFiesta_DLCKiwi05_Easy.bin",
+            "medium": "../../data/charts/bin/MikuFiesta_DLCKiwi05_Medium.bin",
+            "hard": "../../data/charts/bin/MikuFiesta_DLCKiwi05_Hard.bin",
+            "impossible": "../../data/charts/bin/MikuFiesta_DLCKiwi05_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "Hatsune Miku",
+        "artist": "",
+        "intensity": [
+            3,
+            9,
+            16,
+            24
+        ]
+    },
+    "DLCKiwi06": {
+        "title": "Radiant Revival",
+        "art": "../../data/album_arts/DLCKiwi06.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Radiant Revival_DLCKiwi06_Easy.bin",
+            "medium": "../../data/charts/bin/Radiant Revival_DLCKiwi06_Medium.bin",
+            "hard": "../../data/charts/bin/Radiant Revival_DLCKiwi06_Hard.bin",
+            "impossible": "../../data/charts/bin/Radiant Revival_DLCKiwi06_Impossible.bin"
+        },
+        "update_date": "2025-06-13",
+        "dlc": "Hatsune Miku",
+        "artist": "",
+        "intensity": [
+            4,
+            7,
+            16,
+            23
+        ]
+    },
+    "DLCOG02": {
+        "title": "Crypteque",
+        "art": "../../data/album_arts/DLCOG02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Crypteque_DLCOG02_Easy.bin",
+            "medium": "../../data/charts/bin/Crypteque_DLCOG02_Medium.bin",
+            "hard": "../../data/charts/bin/Crypteque_DLCOG02_Hard.bin",
+            "impossible": "../../data/charts/bin/Crypteque_DLCOG02_Impossible.bin"
+        },
+        "update_date": "2025-04-24",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            5,
+            9,
+            13,
+            24
+        ]
+    },
+    "DLCOG06": {
+        "title": "Power Cords",
+        "art": "../../data/album_arts/DLCOG06.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Power Cords_DLCOG06_Easy.bin",
+            "medium": "../../data/charts/bin/Power Cords_DLCOG06_Medium.bin",
+            "hard": "../../data/charts/bin/Power Cords_DLCOG06_Hard.bin",
+            "impossible": "../../data/charts/bin/Power Cords_DLCOG06_Impossible.bin"
+        },
+        "update_date": "2025-04-24",
         "dlc": "",
         "artist": "",
         "intensity": [
             2,
-            5,
-            13,
-            19
+            7,
+            12,
+            23
+        ]
+    },
+    "DLCOG07": {
+        "title": "Fungal Funk",
+        "art": "../../data/album_arts/DLCOG07.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Fungal Funk_DLCOG07_Easy.bin",
+            "medium": "../../data/charts/bin/Fungal Funk_DLCOG07_Medium.bin",
+            "hard": "../../data/charts/bin/Fungal Funk_DLCOG07_Hard.bin",
+            "impossible": "../../data/charts/bin/Fungal Funk_DLCOG07_Impossible.bin"
+        },
+        "update_date": "2025-04-24",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            12,
+            17,
+            24
         ]
     },
     "RRAmalgamaniac": {
@@ -151,23 +512,23 @@
             24
         ]
     },
-    "RRHangTenHeph": {
-        "title": "Hang Ten Heph",
-        "art": "../../data/album_arts/RRHangTenHeph.webp",
+    "RRBaboosh": {
+        "title": "Baboosh",
+        "art": "../../data/album_arts/RRBaboosh.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Easy.bin",
-            "medium": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Medium.bin",
-            "hard": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Hard.bin",
-            "impossible": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Impossible.bin"
+            "easy": "../../data/charts/bin/Baboosh_RRBaboosh_Easy.bin",
+            "medium": "../../data/charts/bin/Baboosh_RRBaboosh_Medium.bin",
+            "hard": "../../data/charts/bin/Baboosh_RRBaboosh_Hard.bin",
+            "impossible": "../../data/charts/bin/Baboosh_RRBaboosh_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
         "artist": "",
         "intensity": [
-            4,
-            8,
-            17,
-            25
+            6,
+            12,
+            19,
+            30
         ]
     },
     "RRCountFunkula": {
@@ -189,25 +550,6 @@
             29
         ]
     },
-    "RROverthinker": {
-        "title": "Overthinker",
-        "art": "../../data/album_arts/RROverthinker.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Overthinker_RROverthinker_Easy.bin",
-            "medium": "../../data/charts/bin/Overthinker_RROverthinker_Medium.bin",
-            "hard": "../../data/charts/bin/Overthinker_RROverthinker_Hard.bin",
-            "impossible": "../../data/charts/bin/Overthinker_RROverthinker_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            4,
-            9,
-            13,
-            28
-        ]
-    },
     "RRCryp2que": {
         "title": "Cryp2que",
         "art": "../../data/album_arts/RRCryp2que.webp",
@@ -227,23 +569,99 @@
             27
         ]
     },
-    "RRNocturning": {
-        "title": "Nocturning",
-        "art": "../../data/album_arts/RRNocturning.webp",
+    "RRDeepBlues": {
+        "title": "King's Ruse",
+        "art": "../../data/album_arts/RRDeepBlues.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Nocturning_RRNocturning_Easy.bin",
-            "medium": "../../data/charts/bin/Nocturning_RRNocturning_Medium.bin",
-            "hard": "../../data/charts/bin/Nocturning_RRNocturning_Hard.bin",
-            "impossible": "../../data/charts/bin/Nocturning_RRNocturning_Impossible.bin"
+            "easy": "../../data/charts/bin/King's Ruse_RRDeepBlues_Easy.bin",
+            "medium": "../../data/charts/bin/King's Ruse_RRDeepBlues_Medium.bin",
+            "hard": "../../data/charts/bin/King's Ruse_RRDeepBlues_Hard.bin",
+            "impossible": "../../data/charts/bin/King's Ruse_RRDeepBlues_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
         "artist": "",
         "intensity": [
             3,
+            11,
+            15,
+            28
+        ]
+    },
+    "RRDiscoDisaster": {
+        "title": "Disco Disaster",
+        "art": "../../data/album_arts/RRDiscoDisaster.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Easy.bin",
+            "medium": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Medium.bin",
+            "hard": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Hard.bin",
+            "impossible": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            1,
+            4,
+            7,
+            22
+        ]
+    },
+    "RREldritchHouse": {
+        "title": "Eldritch House",
+        "art": "../../data/album_arts/RREldritchHouse.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Eldritch House_RREldritchHouse_Easy.bin",
+            "medium": "../../data/charts/bin/Eldritch House_RREldritchHouse_Medium.bin",
+            "hard": "../../data/charts/bin/Eldritch House_RREldritchHouse_Hard.bin",
+            "impossible": "../../data/charts/bin/Eldritch House_RREldritchHouse_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            16,
+            25
+        ]
+    },
+    "RRElusional": {
+        "title": "Elusional",
+        "art": "../../data/album_arts/RRElusional.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Elusional_RRElusional_Easy.bin",
+            "medium": "../../data/charts/bin/Elusional_RRElusional_Medium.bin",
+            "hard": "../../data/charts/bin/Elusional_RRElusional_Hard.bin",
+            "impossible": "../../data/charts/bin/Elusional_RRElusional_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            2,
             6,
-            12,
-            23
+            11,
+            21
+        ]
+    },
+    "RRFinalFugue": {
+        "title": "Final Fugue",
+        "art": "../../data/album_arts/RRFinalFugue.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Final Fugue_RRFinalFugue_Easy.bin",
+            "medium": "../../data/charts/bin/Final Fugue_RRFinalFugue_Medium.bin",
+            "hard": "../../data/charts/bin/Final Fugue_RRFinalFugue_Hard.bin",
+            "impossible": "../../data/charts/bin/Final Fugue_RRFinalFugue_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            6,
+            13,
+            20,
+            30
         ]
     },
     "RRGlassCages": {
@@ -284,23 +702,61 @@
             18
         ]
     },
-    "RRProgenitor": {
-        "title": "Progenitor",
-        "art": "../../data/album_arts/RRProgenitor.webp",
+    "RRHangTenHeph": {
+        "title": "Hang Ten Heph",
+        "art": "../../data/album_arts/RRHangTenHeph.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Progenitor_RRProgenitor_Easy.bin",
-            "medium": "../../data/charts/bin/Progenitor_RRProgenitor_Medium.bin",
-            "hard": "../../data/charts/bin/Progenitor_RRProgenitor_Hard.bin",
-            "impossible": "../../data/charts/bin/Progenitor_RRProgenitor_Impossible.bin"
+            "easy": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Easy.bin",
+            "medium": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Medium.bin",
+            "hard": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Hard.bin",
+            "impossible": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
         "artist": "",
         "intensity": [
-            3,
-            13,
-            19,
+            4,
+            8,
+            17,
             25
+        ]
+    },
+    "RRHarmonie": {
+        "title": "She Banned",
+        "art": "../../data/album_arts/RRHarmonie.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/She Banned_RRHarmonie_Easy.bin",
+            "medium": "../../data/charts/bin/She Banned_RRHarmonie_Medium.bin",
+            "hard": "../../data/charts/bin/She Banned_RRHarmonie_Hard.bin",
+            "impossible": "../../data/charts/bin/She Banned_RRHarmonie_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            17,
+            22
+        ]
+    },
+    "RRHephsMess": {
+        "title": "Heph's Mess",
+        "art": "../../data/album_arts/RRHephsMess.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Heph's Mess_RRHephsMess_Easy.bin",
+            "medium": "../../data/charts/bin/Heph's Mess_RRHephsMess_Medium.bin",
+            "hard": "../../data/charts/bin/Heph's Mess_RRHephsMess_Hard.bin",
+            "impossible": "../../data/charts/bin/Heph's Mess_RRHephsMess_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            2,
+            5,
+            13,
+            19
         ]
     },
     "RRMatriarch": {
@@ -322,33 +778,14 @@
             23
         ]
     },
-    "RRThunder": {
-        "title": "Under The Thunder",
-        "art": "../../data/album_arts/RRThunder.webp",
+    "RRMatron": {
+        "title": "What's In The Box",
+        "art": "../../data/album_arts/RRMatron.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Under the Thunder_RRThunder_Easy.bin",
-            "medium": "../../data/charts/bin/Under the Thunder_RRThunder_Medium.bin",
-            "hard": "../../data/charts/bin/Under the Thunder_RRThunder_Hard.bin",
-            "impossible": "../../data/charts/bin/Under the Thunder_RRThunder_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            4,
-            12,
-            17,
-            27
-        ]
-    },
-    "RREldritchHouse": {
-        "title": "Eldritch House",
-        "art": "../../data/album_arts/RREldritchHouse.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Eldritch House_RREldritchHouse_Easy.bin",
-            "medium": "../../data/charts/bin/Eldritch House_RREldritchHouse_Medium.bin",
-            "hard": "../../data/charts/bin/Eldritch House_RREldritchHouse_Hard.bin",
-            "impossible": "../../data/charts/bin/Eldritch House_RREldritchHouse_Impossible.bin"
+            "easy": "../../data/charts/bin/What's in the Box_RRMatron_Easy.bin",
+            "medium": "../../data/charts/bin/What's in the Box_RRMatron_Medium.bin",
+            "hard": "../../data/charts/bin/What's in the Box_RRMatron_Hard.bin",
+            "impossible": "../../data/charts/bin/What's in the Box_RRMatron_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -356,7 +793,159 @@
         "intensity": [
             4,
             9,
+            14,
+            26
+        ]
+    },
+    "RRMorningDove": {
+        "title": "Morning Dove",
+        "art": "../../data/album_arts/RRMorningDove.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Morning Dove_RRMorningDove_Easy.bin",
+            "medium": "../../data/charts/bin/Morning Dove_RRMorningDove_Medium.bin",
+            "hard": "../../data/charts/bin/Morning Dove_RRMorningDove_Hard.bin",
+            "impossible": "../../data/charts/bin/Morning Dove_RRMorningDove_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            6,
+            8,
             16,
+            22
+        ]
+    },
+    "RRNecropolis": {
+        "title": "Necropolis",
+        "art": "../../data/album_arts/RRNecropolis.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Necropolis_RRNecropolis_Easy.bin",
+            "medium": "../../data/charts/bin/Necropolis_RRNecropolis_Medium.bin",
+            "hard": "../../data/charts/bin/Necropolis_RRNecropolis_Hard.bin",
+            "impossible": "../../data/charts/bin/Necropolis_RRNecropolis_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            10,
+            16,
+            18
+        ]
+    },
+    "RRNecroSonatica": {
+        "title": "Necro Sonatica",
+        "art": "../../data/album_arts/RRNecroSonatica.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Easy.bin",
+            "medium": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Medium.bin",
+            "hard": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Hard.bin",
+            "impossible": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            8,
+            16,
+            21,
+            30
+        ]
+    },
+    "RRNocturning": {
+        "title": "Nocturning",
+        "art": "../../data/album_arts/RRNocturning.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Nocturning_RRNocturning_Easy.bin",
+            "medium": "../../data/charts/bin/Nocturning_RRNocturning_Medium.bin",
+            "hard": "../../data/charts/bin/Nocturning_RRNocturning_Hard.bin",
+            "impossible": "../../data/charts/bin/Nocturning_RRNocturning_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            3,
+            6,
+            12,
+            23
+        ]
+    },
+    "RROmandOn": {
+        "title": "Om and On",
+        "art": "../../data/album_arts/RROmandOn.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Om and On_RROmandOn_Easy.bin",
+            "medium": "../../data/charts/bin/Om and On_RROmandOn_Medium.bin",
+            "hard": "../../data/charts/bin/Om and On_RROmandOn_Hard.bin",
+            "impossible": "../../data/charts/bin/Om and On_RROmandOn_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            6,
+            18,
+            26
+        ]
+    },
+    "RROverthinker": {
+        "title": "Overthinker",
+        "art": "../../data/album_arts/RROverthinker.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Overthinker_RROverthinker_Easy.bin",
+            "medium": "../../data/charts/bin/Overthinker_RROverthinker_Medium.bin",
+            "hard": "../../data/charts/bin/Overthinker_RROverthinker_Hard.bin",
+            "impossible": "../../data/charts/bin/Overthinker_RROverthinker_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            13,
+            28
+        ]
+    },
+    "RRPortamello": {
+        "title": "Portamello",
+        "art": "../../data/album_arts/RRPortamello.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Portamello_RRPortamello_Easy.bin",
+            "medium": "../../data/charts/bin/Portamello_RRPortamello_Medium.bin",
+            "hard": "../../data/charts/bin/Portamello_RRPortamello_Hard.bin",
+            "impossible": "../../data/charts/bin/Portamello_RRPortamello_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            5,
+            10,
+            15,
+            20
+        ]
+    },
+    "RRProgenitor": {
+        "title": "Progenitor",
+        "art": "../../data/album_arts/RRProgenitor.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Progenitor_RRProgenitor_Easy.bin",
+            "medium": "../../data/charts/bin/Progenitor_RRProgenitor_Medium.bin",
+            "hard": "../../data/charts/bin/Progenitor_RRProgenitor_Hard.bin",
+            "impossible": "../../data/charts/bin/Progenitor_RRProgenitor_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            3,
+            13,
+            19,
             25
         ]
     },
@@ -379,6 +968,25 @@
             27
         ]
     },
+    "RRReaper": {
+        "title": "Brave The Harvester",
+        "art": "../../data/album_arts/RRReaper.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Brave the Harvester_RRReaper_Easy.bin",
+            "medium": "../../data/charts/bin/Brave the Harvester_RRReaper_Medium.bin",
+            "hard": "../../data/charts/bin/Brave the Harvester_RRReaper_Hard.bin",
+            "impossible": "../../data/charts/bin/Brave the Harvester_RRReaper_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            6,
+            14,
+            20,
+            27
+        ]
+    },
     "RRRiftWithin": {
         "title": "Rift Within",
         "art": "../../data/album_arts/RRRiftWithin.webp",
@@ -396,6 +1004,25 @@
             10,
             17,
             26
+        ]
+    },
+    "RRSpookhousePop": {
+        "title": "Spookhouse Pop",
+        "art": "../../data/album_arts/RRSpookhousePop.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Easy.bin",
+            "medium": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Medium.bin",
+            "hard": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Hard.bin",
+            "impossible": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Impossible.bin"
+        },
+        "update_date": "1970-01-01",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            6,
+            16,
+            23
         ]
     },
     "RRSuzusQuest": {
@@ -417,156 +1044,23 @@
             24
         ]
     },
-    "RRNecropolis": {
-        "title": "Necropolis",
-        "art": "../../data/album_arts/RRNecropolis.webp",
+    "RRThunder": {
+        "title": "Under The Thunder",
+        "art": "../../data/album_arts/RRThunder.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Necropolis_RRNecropolis_Easy.bin",
-            "medium": "../../data/charts/bin/Necropolis_RRNecropolis_Medium.bin",
-            "hard": "../../data/charts/bin/Necropolis_RRNecropolis_Hard.bin",
-            "impossible": "../../data/charts/bin/Necropolis_RRNecropolis_Impossible.bin"
+            "easy": "../../data/charts/bin/Under the Thunder_RRThunder_Easy.bin",
+            "medium": "../../data/charts/bin/Under the Thunder_RRThunder_Medium.bin",
+            "hard": "../../data/charts/bin/Under the Thunder_RRThunder_Hard.bin",
+            "impossible": "../../data/charts/bin/Under the Thunder_RRThunder_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
         "artist": "",
         "intensity": [
             4,
-            10,
-            16,
-            18
-        ]
-    },
-    "RRBaboosh": {
-        "title": "Baboosh",
-        "art": "../../data/album_arts/RRBaboosh.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Baboosh_RRBaboosh_Easy.bin",
-            "medium": "../../data/charts/bin/Baboosh_RRBaboosh_Medium.bin",
-            "hard": "../../data/charts/bin/Baboosh_RRBaboosh_Hard.bin",
-            "impossible": "../../data/charts/bin/Baboosh_RRBaboosh_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
             12,
-            19,
-            30
-        ]
-    },
-    "RRNecroSonatica": {
-        "title": "Necro Sonatica",
-        "art": "../../data/album_arts/RRNecroSonatica.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Easy.bin",
-            "medium": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Medium.bin",
-            "hard": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Hard.bin",
-            "impossible": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            8,
-            16,
-            21,
-            30
-        ]
-    },
-    "RRHarmonie": {
-        "title": "She Banned",
-        "art": "../../data/album_arts/RRHarmonie.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/She Banned_RRHarmonie_Easy.bin",
-            "medium": "../../data/charts/bin/She Banned_RRHarmonie_Medium.bin",
-            "hard": "../../data/charts/bin/She Banned_RRHarmonie_Hard.bin",
-            "impossible": "../../data/charts/bin/She Banned_RRHarmonie_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            5,
-            11,
             17,
-            22
-        ]
-    },
-    "RRDeepBlues": {
-        "title": "King's Ruse",
-        "art": "../../data/album_arts/RRDeepBlues.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/King's Ruse_RRDeepBlues_Easy.bin",
-            "medium": "../../data/charts/bin/King's Ruse_RRDeepBlues_Medium.bin",
-            "hard": "../../data/charts/bin/King's Ruse_RRDeepBlues_Hard.bin",
-            "impossible": "../../data/charts/bin/King's Ruse_RRDeepBlues_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            3,
-            11,
-            15,
-            28
-        ]
-    },
-    "RRMatron": {
-        "title": "What's In The Box",
-        "art": "../../data/album_arts/RRMatron.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/What's in the Box_RRMatron_Easy.bin",
-            "medium": "../../data/charts/bin/What's in the Box_RRMatron_Medium.bin",
-            "hard": "../../data/charts/bin/What's in the Box_RRMatron_Hard.bin",
-            "impossible": "../../data/charts/bin/What's in the Box_RRMatron_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            4,
-            9,
-            14,
-            26
-        ]
-    },
-    "RRReaper": {
-        "title": "Brave The Harvester",
-        "art": "../../data/album_arts/RRReaper.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Brave the Harvester_RRReaper_Easy.bin",
-            "medium": "../../data/charts/bin/Brave the Harvester_RRReaper_Medium.bin",
-            "hard": "../../data/charts/bin/Brave the Harvester_RRReaper_Hard.bin",
-            "impossible": "../../data/charts/bin/Brave the Harvester_RRReaper_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
-            14,
-            20,
             27
-        ]
-    },
-    "RRFinalFugue": {
-        "title": "Final Fugue",
-        "art": "../../data/album_arts/RRFinalFugue.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Final Fugue_RRFinalFugue_Easy.bin",
-            "medium": "../../data/charts/bin/Final Fugue_RRFinalFugue_Medium.bin",
-            "hard": "../../data/charts/bin/Final Fugue_RRFinalFugue_Hard.bin",
-            "impossible": "../../data/charts/bin/Final Fugue_RRFinalFugue_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
-            13,
-            20,
-            30
         ]
     },
     "RRTwombtorial": {
@@ -588,175 +1082,23 @@
             23
         ]
     },
-    "RRPortamello": {
-        "title": "Portamello",
-        "art": "../../data/album_arts/RRPortamello.webp",
+    "RRVisualizeYourself": {
+        "title": "Visualize Yourself",
+        "art": "../../data/album_arts/RRVisualizeYourself.webp",
         "chart": {
-            "easy": "../../data/charts/bin/Portamello_RRPortamello_Easy.bin",
-            "medium": "../../data/charts/bin/Portamello_RRPortamello_Medium.bin",
-            "hard": "../../data/charts/bin/Portamello_RRPortamello_Hard.bin",
-            "impossible": "../../data/charts/bin/Portamello_RRPortamello_Impossible.bin"
+            "easy": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Easy.bin",
+            "medium": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Medium.bin",
+            "hard": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Hard.bin",
+            "impossible": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
         "artist": "",
         "intensity": [
-            5,
-            10,
-            15,
-            20
-        ]
-    },
-    "DLCApricot01": {
-        "title": "Slugger's Refrain",
-        "art": "../../data/album_arts/DLCApricot.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Easy.bin",
-            "medium": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Medium.bin",
-            "hard": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Hard.bin",
-            "impossible": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
+            3,
+            7,
             14,
-            21,
-            30
-        ]
-    },
-    "DLCApricot02": {
-        "title": "Got Danged",
-        "art": "../../data/album_arts/DLCApricot.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Got Danged_DLCApricot02_Easy.bin",
-            "medium": "../../data/charts/bin/Got Danged_DLCApricot02_Medium.bin",
-            "hard": "../../data/charts/bin/Got Danged_DLCApricot02_Hard.bin",
-            "impossible": "../../data/charts/bin/Got Danged_DLCApricot02_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            5,
-            12,
-            20,
-            30
-        ]
-    },
-    "DLCApricot03": {
-        "title": "Bootus Bleez",
-        "art": "../../data/album_arts/DLCApricot.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Easy.bin",
-            "medium": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Medium.bin",
-            "hard": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Hard.bin",
-            "impossible": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
-            10,
-            19,
-            29
-        ]
-    },
-    "DLCBanana01": {
-        "title": "Resurrections (dannyBstyle Remix)",
-        "art": "../../data/album_arts/DLCBanana.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
-            "medium": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Medium.bin",
-            "hard": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Hard.bin",
-            "impossible": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "",
-        "artist": "",
-        "intensity": [
-            6,
-            10,
-            17,
-            0
-        ]
-    },
-    "DLCBanana02": {
-        "title": "Scattered And Lost",
-        "art": "../../data/album_arts/DLCBanana.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
-            "medium": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Medium.bin",
-            "hard": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Hard.bin",
-            "impossible": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "DLCBanana",
-        "artist": "",
-        "intensity": [
-            0,
-            0,
-            0,
-            0
-        ]
-    },
-    "DLCBanana03": {
-        "title": "Reach for the Summit",
-        "art": "../../data/album_arts/DLCBanana.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
-            "medium": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Medium.bin",
-            "hard": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Hard.bin",
-            "impossible": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "DLCBanana",
-        "artist": "",
-        "intensity": [
-            0,
-            0,
-            0,
-            0
-        ]
-    },
-    "DLCBanana04": {
-        "title": "Confronting Myself",
-        "art": "../../data/album_arts/DLCBanana.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
-            "medium": "../../data/charts/bin/Confronting Myself_DLCBanana04_Medium.bin",
-            "hard": "../../data/charts/bin/Confronting Myself_DLCBanana04_Hard.bin",
-            "impossible": "../../data/charts/bin/Confronting Myself_DLCBanana04_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "DLCBanana",
-        "artist": "",
-        "intensity": [
-            0,
-            0,
-            0,
-            0
-        ]
-    },
-    "DLCBanana05": {
-        "title": "Resurrections",
-        "art": "../../data/album_arts/DLCBanana.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/Resurrections_DLCBanana05_Easy.bin",
-            "medium": "../../data/charts/bin/Resurrections_DLCBanana05_Medium.bin",
-            "hard": "../../data/charts/bin/Resurrections_DLCBanana05_Hard.bin",
-            "impossible": "../../data/charts/bin/Resurrections_DLCBanana05_Impossible.bin"
-        },
-        "update_date": "1970-01-01",
-        "dlc": "DLCBanana",
-        "artist": "",
-        "intensity": [
-            0,
-            0,
-            0,
-            0
+            24
         ]
     }
 }
