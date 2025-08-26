@@ -170,7 +170,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 
 	// draw beat divisions
 	// - main division & beat count texts
-	const optimalVibeBeats = chart.bestOpimalVibeSequence.map(
+	const optimalVibeBeats = chart.bestOptimalVibeSequence.map(
 		(v) => v.beatBeginLatest
 	);
 	for (let relBeat = 0; relBeat < 17; relBeat += 4) {
@@ -200,8 +200,8 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	for (const optimalVibeBeat of optimalVibeBeats) {
 		let relBeat = optimalVibeBeat - beatIndex;
 		if (0 <= relBeat && relBeat < 16) {
-			[, yStart] = getNoteXY(0, relBeat);
-			vertices = [
+			const [, yStart] = getNoteXY(0, relBeat);
+			const vertices = [
 				[X_OFFSET + LANE_MARGIN - FONT_MARGIN, yStart],
 				[
 					X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE,
@@ -225,7 +225,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 			renderText(
 				X_OFFSET + LANE_MARGIN - FONT_MARGIN,
 				yStart - VIBE_IND_SIZE,
-				optimalVibe.toFixed(2).padStart(6, "0"),
+				optimalVibeBeat.toFixed(2).padStart(6, "0"),
 				VIBE_COLOR,
 				true
 			);
@@ -236,7 +236,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	ctx.fillStyle = SUB_DIV_COLOR;
 	for (let relBeat = 0; relBeat < 17; relBeat++) {
 		if (relBeat % 4 != 0) {
-			[, yFinish] = getNoteXY(0, relBeat);
+			const [, yFinish] = getNoteXY(0, relBeat);
 			ctx.fillRect(
 				X_OFFSET + LANE_MARGIN,
 				yFinish - LANE_GAP,
@@ -262,7 +262,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 	for (const bpmChange of chart.bpmChanges) {
 		let relBeat = bpmChange.beat - beatIndex;
 		if (0 <= relBeat && relBeat < 16) {
-			[, yFinish] = getNoteXY(0, relBeat);
+			const [, yFinish] = getNoteXY(0, relBeat);
 			renderText(
 				X_OFFSET +
 					FONT_MARGIN +
@@ -333,7 +333,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 				note.column,
 				relBeat,
 				color,
-				note.enemyId,
+				note.enemyType,
 				note.isFacingRight,
 				isRenderEnemies
 			);
@@ -371,8 +371,6 @@ export function renderBothCanvas(chart) {
 		const canvas2 = document.getElementById("chart-canvas-er");
 		renderChart(canvas1, chart, false);
 		renderChart(canvas2, chart, true);
-		updateTable(chart);
-		console.log("Chart object:", chart);
 	} else {
 		alert("Error: chart is null");
 	}
