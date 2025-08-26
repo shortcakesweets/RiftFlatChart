@@ -1,4 +1,4 @@
-import { createChart, DIFF_STRING } from './rift_essentials_json.js';
+import { createChartFromBin, createChartFromJson } from './rift_essentials.js';
 import { renderChart } from './render.js';
 
 const dropZone = document.getElementById('drop-zone');

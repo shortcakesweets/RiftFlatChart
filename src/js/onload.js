@@ -1,4 +1,4 @@
-import { createChart, DIFF_STRING } from './rift_essentials_json.js';
+import { createChartFromBin, createChartFromJson } from './rift_essentials.js';
 import { renderBothCanvas } from './render.js';
 
 let isEnemyRenderOn = false;

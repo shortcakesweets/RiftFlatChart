@@ -1,3 +1,4 @@
+//#region Classes
 class Cursor {
 	/** @param {DataView} view */
 	constructor(view) {
@@ -45,44 +46,134 @@ class Cursor {
 	}
 }
 
+// Enemy type from bin files. This is the default enum that we will use.
 export const EnemyType = Object.freeze({
-	None: 0,
-	GreenSlime: 1,
-	BlueSlime: 2,
-	YellowSlime: 3,
-	BlueBat: 4,
-	YellowBat: 5,
-	RedBat: 6,
-	GreenZombie: 7,
-	BlueZombie: 8,
-	RedZombie: 9,
-	WhiteSkeleton: 10,
-	WhiteShieldSkeleton: 11,
-	WhiteDoubleShieldSkeleton: 12,
-	YellowSkeleton: 13,
-	YellowShieldSkeleton: 14,
-	BlackSkeleton: 15,
-	BlackShieldSkeleton: 16,
-	BlueArmadillo: 17,
-	RedArmadillo: 18,
-	YellowArmadillo: 19,
-	Wyrm: 20,
-	GreenHarpy: 21,
-	BlueHarpy: 22,
-	RedHarpy: 23,
-	Blademaster: 24,
-	BlueBlademaster: 25,
-	YellowBlademaster: 26,
-	WhiteSkull: 27,
-	BlueSkull: 28,
-	RedSkull: 29,
-	Apple: 30,
-	Cheese: 31,
-	Drumstick: 32,
-	Ham: 33,
+	NONE: 0,
+	GREEN_SLIME: 1,
+	BLUE_SLIME: 2,
+	YELLOW_SLIME: 3,
+	BLUE_BAT: 4,
+	YELLOW_BAT: 5,
+	RED_BAT: 6,
+	GREEN_ZOMBIE: 7,
+	BLUE_ZOMBIE: 8,
+	RED_ZOMBIE: 9,
+	WHITE_SKELETON: 10,
+	WHITE_SHIELD_SKELETON: 11,
+	WHITE_DOUBLE_SHIELD_SKELETON: 12,
+	YELLOW_SKELETON: 13,
+	YELLOW_SHIELD_SKELETON: 14,
+	BLACK_SKELETON: 15,
+	BLACK_SHIELD_SKELETON: 16,
+	BLUE_ARMADILLO: 17,
+	RED_ARMADILLO: 18,
+	YELLOW_ARMADILLO: 19,
+	WYRM: 20,
+	GREEN_HARPY: 21,
+	BLUE_HARPY: 22,
+	RED_HARPY: 23,
+	BLADEMASTER: 24,
+	BLUE_BLADEMASTER: 25,
+	YELLOW_BLADEMASTER: 26,
+	WHITE_SKULL: 27,
+	BLUE_SKULL: 28,
+	RED_SKULL: 29,
+	APPLE: 30,
+	CHEESE: 31,
+	DRUMSTICK: 32,
+	HAM: 33,
 });
 
-export class NoteFull {
+// Enemy type from JSON files. Use idToEnemyType() to convert to EnemyType.
+const enemyId = Object.freeze({
+	GREEN_SLIME: 1722,
+	BLUE_SLIME: 4355,
+	YELLOW_SLIME: 9189,
+	WHITE_SKELETON: 2202,
+	WHITE_SHIELD_SKELETON: 1911,
+	YELLOW_SKELETON: 6803,
+	YELLOW_SHIELD_SKELETON: 4871,
+	BLACK_SKELETON: 2716,
+	BLACK_SHIELD_SKELETON: 3307,
+	WHITE_DOUBLE_SHIELD_SKELETON: 6471,
+	WYRM: 7794,
+	WYRM_BODY: 8079,
+	WYRM_TAIL: 9888,
+	BLUE_BAT: 8675309,
+	YELLOW_BAT: 717,
+	RED_BAT: 911,
+	GREEN_HARPY: 8519,
+	RED_HARPY: 3826,
+	BLUE_HARPY: 8156,
+	BLADEMASTER: 929,
+	BLUE_BLADEMASTER: 3685,
+	YELLOW_BLADEMASTER: 7288,
+	WHITE_SKULL: 4601,
+	BLUE_SKULL: 3543,
+	RED_SKULL: 7685,
+	GREEN_ZOMBIE: 1234,
+	BLUE_ZOMBIE: 1235,
+	RED_ZOMBIE: 1236,
+	CHEESE: 2054,
+	APPLE: 7358,
+	DRUMSTICK: 1817,
+	HAM: 3211,
+	BLUE_ARMADILLO: 7831,
+	YELLOW_ARMADILLO: 6311,
+	RED_ARMADILLO: 1707,
+});
+
+const ID_TO_TYPE = Object.freeze({
+	[enemyId.GREEN_SLIME]: EnemyType.GREEN_SLIME,
+	[enemyId.BLUE_SLIME]: EnemyType.BLUE_SLIME,
+	[enemyId.YELLOW_SLIME]: EnemyType.YELLOW_SLIME,
+
+	[enemyId.WHITE_SKELETON]: EnemyType.WHITE_SKELETON,
+	[enemyId.WHITE_SHIELD_SKELETON]: EnemyType.WHITE_SHIELD_SKELETON,
+	[enemyId.WHITE_DOUBLE_SHIELD_SKELETON]:
+		EnemyType.WHITE_DOUBLE_SHIELD_SKELETON,
+	[enemyId.YELLOW_SKELETON]: EnemyType.YELLOW_SKELETON,
+	[enemyId.YELLOW_SHIELD_SKELETON]: EnemyType.YELLOW_SHIELD_SKELETON,
+	[enemyId.BLACK_SKELETON]: EnemyType.BLACK_SKELETON,
+	[enemyId.BLACK_SHIELD_SKELETON]: EnemyType.BLACK_SHIELD_SKELETON,
+
+	[enemyId.BLUE_ARMADILLO]: EnemyType.BLUE_ARMADILLO,
+	[enemyId.RED_ARMADILLO]: EnemyType.RED_ARMADILLO,
+	[enemyId.YELLOW_ARMADILLO]: EnemyType.YELLOW_ARMADILLO,
+
+	[enemyId.WYRM]: EnemyType.WYRM,
+	[enemyId.WYRM_BODY]: EnemyType.WYRM,
+	[enemyId.WYRM_TAIL]: EnemyType.WYRM,
+
+	[enemyId.BLUE_BAT]: EnemyType.BLUE_BAT,
+	[enemyId.YELLOW_BAT]: EnemyType.YELLOW_BAT,
+	[enemyId.RED_BAT]: EnemyType.RED_BAT,
+
+	[enemyId.GREEN_HARPY]: EnemyType.GREEN_HARPY,
+	[enemyId.BLUE_HARPY]: EnemyType.BLUE_HARPY,
+	[enemyId.RED_HARPY]: EnemyType.RED_HARPY,
+
+	[enemyId.BLADEMASTER]: EnemyType.BLADEMASTER,
+	[enemyId.BLUE_BLADEMASTER]: EnemyType.BLUE_BLADEMASTER,
+	[enemyId.YELLOW_BLADEMASTER]: EnemyType.YELLOW_BLADEMASTER,
+
+	[enemyId.WHITE_SKULL]: EnemyType.WHITE_SKULL,
+	[enemyId.BLUE_SKULL]: EnemyType.BLUE_SKULL,
+	[enemyId.RED_SKULL]: EnemyType.RED_SKULL,
+
+	[enemyId.APPLE]: EnemyType.APPLE,
+	[enemyId.CHEESE]: EnemyType.CHEESE,
+	[enemyId.DRUMSTICK]: EnemyType.DRUMSTICK,
+	[enemyId.HAM]: EnemyType.HAM,
+});
+
+export function idToEnemyType(id) {
+	const n = Number(id);
+	if (!Number.isFinite(n)) return EnemyType.NONE;
+	return ID_TO_TYPE[n] ?? EnemyType.NONE;
+}
+
+export class Note {
 	constructor() {
 		this.timeBegin = 0.0;
 		this.beatBegin = 0.0;
@@ -93,10 +184,13 @@ export class NoteFull {
 		this.isFacingLeft = false;
 		this.score = 0;
 		this.isVibeGain = false;
+
+		// only used in JSON data
+		this.enemyGuid = "";
 	}
 }
 
-export class BpmChangeFull {
+export class BpmChange {
 	constructor() {
 		this.time = 0.0;
 		this.beat = 0.0;
@@ -108,14 +202,7 @@ export class BpmChangeFull {
 	}
 }
 
-// enum, but better this way
-const NO_TRIGGER_0	= 0;
-const NO_TRIGGER_1	= 1;
-const NO_TRIGGER_2	= 2;
-const TRIGGER_1		= 3;
-const TRIGGER_2		= 4;
-
-export class VibeFull {
+export class Vibe {
 	constructor() {
 		this.timeBeginEarliest = 0.0;
 		this.beatBeginEarliest = 0.0;
@@ -127,7 +214,7 @@ export class VibeFull {
 		this.isOptimal = false;
 		this.vibePower = 0;
 
-		// derived attribute
+		// Derived properties (not stored in the binary file)
 		this.beatDeltaFromPrevNote = 0;
 	}
 
@@ -164,13 +251,14 @@ export class VibeFull {
 	}
 }
 
-export class ChartFull {
+export class Chart {
 	constructor() {
 		this.chartName = "";
 		this.levelID = "";
 		this.difficulty = 0;
 		this.intensity = 0.0;
 		this.isCustom = false;
+		this.maxScore = 0;
 		this.maxScoreWithoutVibe = 0;
 		this.maxCombo = 0;
 		this.baseBpm = 0.0;
@@ -182,23 +270,24 @@ export class ChartFull {
 		this.singleVibes = [];
 		this.doubleVibes = [];
 
-		// Calculated properties (not stored in the binary file)
+		// Derived properties (not stored in the binary file)
 		this.shortNotes = [];
 		this.wyrmNotes = [];
 		this.groupedOptimalSingleVibes = [];
 		this.groupedOptimalDoubleVibes = [];
 		this.vibeGainPoints = [];
-		this.timeStamps = [];
 		this.allOptimalVibeSequences = [];
 		this.bestOptimalVibeSequence = [];
 	}
 }
+//#endregion
 
-export function createChartFull(binDataBuffer) {
-	const chart = new ChartFull();
+export function createChartFromBin(binDataBuffer) {
+	const chart = new Chart();
 	const cur = new Cursor(new DataView(binDataBuffer));
 
-	//#region Create Chart
+	// 1. Parse
+	//#region Chart - parse
 	// Header
 	const magic = cur.string();
 	if (magic != "RIFT_CHART_DATA") throw new Error(`Wrong Header`);
@@ -217,14 +306,13 @@ export function createChartFull(binDataBuffer) {
 	chart.division = cur.int32();
 
 	const bpmChangeCount = cur.int32();
-	// add basic bpm
-	const baseBpmChange = new BpmChangeFull();
+	const baseBpmChange = new BpmChange();
 	baseBpmChange.time = 0;
 	baseBpmChange.beat = 0;
 	baseBpmChange.bpm = chart.baseBpm;
-	chart.bpmChanges.push(baseBpmChange);
+	chart.bpmChanges.push(baseBpmChange); // add basic bpm
 	for (let i = 0; i < bpmChangeCount; i++) {
-		const bpmChange = new BpmChangeFull();
+		const bpmChange = new BpmChange();
 		bpmChange.time = cur.float64();
 		bpmChange.beat = cur.float64();
 		bpmChange.bpm = cur.float32();
@@ -238,7 +326,7 @@ export function createChartFull(binDataBuffer) {
 
 	const hitCount = cur.int32();
 	for (let i = 0; i < hitCount; i++) {
-		const note = new NoteFull();
+		const note = new Note();
 		note.timeBegin = cur.float64();
 		note.beatBegin = cur.float64();
 		note.timeEnd = cur.float64();
@@ -252,10 +340,11 @@ export function createChartFull(binDataBuffer) {
 	}
 
 	chart.maxScoreBonusVibe = cur.int32();
+	chart.maxScore = chart.maxScoreBonusVibe + chart.maxScoreWithoutVibe;
 
 	const singleVibeCount = cur.int32();
 	for (let i = 0; i < singleVibeCount; i++) {
-		const vibe = new VibeFull();
+		const vibe = new Vibe();
 		vibe.timeBeginEarliest = cur.float64();
 		vibe.beatBeginEarliest = cur.float64();
 		vibe.timeBeginLatest = cur.float64();
@@ -270,7 +359,7 @@ export function createChartFull(binDataBuffer) {
 
 	const doubleVibeCount = cur.int32();
 	for (let i = 0; i < doubleVibeCount; i++) {
-		const vibe = new VibeFull();
+		const vibe = new Vibe();
 		vibe.timeBeginEarliest = cur.float64();
 		vibe.beatBeginEarliest = cur.float64();
 		vibe.timeBeginLatest = cur.float64();
@@ -297,24 +386,23 @@ export function createChartFull(binDataBuffer) {
 	console.log("singleVibes:", chart.singleVibes);
 	console.log("doubleVibes:", chart.doubleVibes);
 	*/
-	//#endregion
 
-	//#region Create Derived Properties
+	// Derived properties
 	// Short notes
 	chart.shortNotes = chart.notes.filter(
 		(n) =>
-			Number(n.enemyType) !== Number(EnemyType.None) &&
-			Number(n.enemyType) !== Number(EnemyType.Wyrm)
+			Number(n.enemyType) !== Number(EnemyType.NONE) &&
+			Number(n.enemyType) !== Number(EnemyType.WYRM)
 	);
 
 	// Wyrm notes
 	chart.wyrmNotes = chart.notes.filter(
-		(n) => Number(n.enemyType) === Number(EnemyType.Wyrm)
+		(n) => Number(n.enemyType) === Number(EnemyType.WYRM)
 	);
 
 	// Vibe gain points (as Note type)
 	chart.vibeGainPoints = chart.notes.filter(
-		(n) => Number(n.enemyType) === Number(EnemyType.None) && n.isVibeGain
+		(n) => Number(n.enemyType) === Number(EnemyType.NONE) && n.isVibeGain
 	);
 
 	// Optimal vibes
@@ -364,7 +452,7 @@ export function createChartFull(binDataBuffer) {
 	//#endregion
 
 	// 2. Vibes
-
+	//#region Chart - vibes
 	/** Helper function
 	 * returns next candidates, when vibe was ended at 'time'.
 	 */
@@ -409,12 +497,9 @@ export function createChartFull(binDataBuffer) {
 		chart.allOptimalVibeSequences[0]
 	);
 
-	console.log(chart.chartName, chart.difficulty);
-	// show groups
+	// Logging
 	/*
-	console.log(chart.groupedOptimalSingleVibes);
-	console.log(chart.groupedOptimalDoubleVibes);
-	*/
+	console.log(chart.chartName, chart.difficulty);
 	console.log(
 		chart.allOptimalVibeSequences.map((seq) => ({
 			windows: seq.map((v) => ({
@@ -435,6 +520,93 @@ export function createChartFull(binDataBuffer) {
 		}))
 	);
 	console.log(chart);
+	*/
+	//#endregion
+
+	return chart;
+}
+
+export function createChartFromJson(jsonData) {
+	const data = jsonData;
+
+	const chart = new Chart();
+	chart.chartName = data.title;
+	// WARNING: cannot track chart.levelID
+	chart.difficulty = data.diff;
+	chart.intensity = data.intensity;
+	// WARNING: cannot track chart.isCustom
+	chart.maxScore = data.maxScore ?? 0;
+	// WARNING: cannot track chart.maxScoreWithoutVibe
+	// WARNING: cannot track chart.maxScoreBonusVibe
+	chart.baseBpm = data.bpm;
+	chart.division = data.beatDivisions;
+	
+	const baseBpmChange = new BpmChange();
+	baseBpmChange.beat = 0;
+	baseBpmChange.bpm = chart.baseBpm;
+	chart.bpmChanges.push(baseBpmChange); // add basic bpm
+	const bpmEvents = data.BpmEvents || [];
+	for(const bpmEvent of bpmEvents){
+		const bpmChange = new BpmChange();
+		// WARNING: cannot track bpmChange.time
+		bpmChange.beat = bpmEvent[0];
+		bpmChange.bpm = bpmEvent[1];
+		chart.bpmChanges.push(bpmChange);
+	}
+	// TODO: implement beatTimings (optional)
+
+	// WARNING : will not construct chart.notes
+	const hitEvents = (data.events || [])
+		.filter((e) => e.Event === "HitEnemy" || e.Event === "WyrmEnd")
+		.sort(
+			(a, b) =>
+				parseFloat(a.Beat) - parseFloat(b.Beat) ||
+				parseInt(a.X) - parseInt(b.X)
+		);
+	for (const event of hitEvents) {
+		if (event.Event === "HitEnemy") {
+			const note = new Note();
+			const enemyId = parseInt(event.ID);
+			note.enemyGuid = event.GUID;
+			note.timeBegin = parseFloat(event.Time);
+			note.beatBegin = parseFloat(event.Beat);
+			note.enemyType = idToEnemyType(enemyId);
+			// WARNING: cannot track note.score
+			if (note.enemyType !== EnemyType.WYRM) {
+				note.timeEnd = note.timeBegin;
+				note.beatEnd = note.beatBegin;
+				chart.shortNotes.push(note);
+			} else {
+				// will add information later with WyrmEnd
+				chart.wyrmNotes.push(note);
+			}
+			note.column = parseInt(event.X);
+			note.isFacingLeft = !(event.Facing === "Right");
+			note.isVibeGain = (event.Vibe === "True");
+			
+		} else if (event.Event === "WyrmEnd") {
+			for (const wyrmNote of chart.wyrmNotes) {
+				if (wyrmNote.enemyGuid === event.GUID) {
+					wyrmNote.timeEnd = parseFloat(event.Time);
+					wyrmNote.beatEnd = parseFloat(event.Beat);
+				}
+			}
+		}
+	}
+	chart.maxCombo = chart.shortNotes.length + chart.wyrmNotes.length;
+	
+	// optimal vibes
+	// WARNING: cannot track chart.groupedOptimalSingleVibes
+	// WARNING: cannot track chart.groupedOptimalDoubleVibes
+	// WARNING: cannot track chart.vibeGainPoints
+	// WARNING: cannot track chart.allOptimalVibeSequences
+	const optimalVibeBeats = data.optimalVibes || [];
+	for(const beat of optimalVibeBeats){
+		const vibe = new Vibe();
+		// WARNING: can only track beatBeginLatest
+		vibe.beatBeginLatest = beat;
+		chart.bestOptimalVibeSequence.push(vibe);
+	}
 
 	return chart;
 }

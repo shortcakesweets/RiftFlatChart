@@ -1,11 +1,6 @@
-/*
-let canvas = document.getElementById('chart-canvas');
-let ctx = canvas.getContext('2d');
-*/
-// let canvas = null;
 let ctx = null;
 
-import { enemyId } from './rift_essentials_json.js';
+import { EnemyType } from "./rift_essentials.js";
 
 // size constants
 // margin - gap - lane - gap - lane - gap - lane - gap - margin
@@ -36,294 +31,349 @@ const OVERLAP_COLOR      = 'rgb(255, 0, 0)';     // red
 const VIBE_COLOR         = 'rgb(255, 255, 0)';   // yellow
 
 function getNoteXY(column, relBeat) {
-    const noteMargin = (LANE_WIDTH - NOTE_SIZE) / 2;
-    const x = LANE_MARGIN + LANE_GAP * (column + 1) + LANE_WIDTH * column + noteMargin;
+	const noteMargin = (LANE_WIDTH - NOTE_SIZE) / 2;
+	const x =
+		LANE_MARGIN +
+		LANE_GAP * (column + 1) +
+		LANE_WIDTH * column +
+		noteMargin;
 
-    const beatHeight = LANE_HEIGHT / 16;
-    const yRelBeatZero = LANE_MARGIN + LANE_PADDING + LANE_HEIGHT;
-    const y = yRelBeatZero - relBeat * beatHeight;
-    return [x, y];
+	const beatHeight = LANE_HEIGHT / 16;
+	const yRelBeatZero = LANE_MARGIN + LANE_PADDING + LANE_HEIGHT;
+	const y = yRelBeatZero - relBeat * beatHeight;
+	return [x, y];
 }
 
-function renderText(x, y, text, color, align_right = false){
-    ctx.font = `bold ${FONT_SIZE}px Arial`;
-    ctx.fillStyle = color;
-    if (align_right){
-        const textWidth = ctx.measureText(text).width;
-        x -= textWidth;
-    }
-    ctx.fillText(text, x, y);
+function renderText(x, y, text, color, align_right = false) {
+	ctx.font = `bold ${FONT_SIZE}px Arial`;
+	ctx.fillStyle = color;
+	if (align_right) {
+		const textWidth = ctx.measureText(text).width;
+		x -= textWidth;
+	}
+	ctx.fillText(text, x, y);
 }
 
 const PATH_ENEMIES = "../../data/enemies/";
-function getEnemyNameById(id){
-    for(const key in enemyId){
-        if(enemyId[key] === id){
-            return key;
-        }
-    }
-    return null;
+function getEnemyNameByType(type) {
+	for (const key in EnemyType) {
+		if (EnemyType[key] === type) return key;
+	}
+	return null;
 }
 
-function renderShortNote(xOffset, column, relBeat, color, enemyId, isFacingRight, isRenderEnemies){
-    const [xStart, yStart] = getNoteXY(column, relBeat);
+function renderShortNote(
+	xOffset,
+	column,
+	relBeat,
+	color,
+	enemyType,
+	isFacingLeft,
+	isRenderEnemies
+) {
+	const [xStart, yStart] = getNoteXY(column, relBeat);
 
-    ctx.fillStyle = color;
-    ctx.fillRect(xOffset + xStart, yStart - NOTE_THICK, NOTE_SIZE, NOTE_THICK);
+	ctx.fillStyle = color;
+	ctx.fillRect(xOffset + xStart, yStart - NOTE_THICK, NOTE_SIZE, NOTE_THICK);
 
-    if(isRenderEnemies){
-        const enemyName = getEnemyNameById(enemyId);
-        if (enemyName) {
-            const enemyImg = new Image();
-            const suffix = isFacingRight ? "_flipped.png" : ".png";
-            enemyImg.src = PATH_ENEMIES + enemyName.toLowerCase() + suffix;
+	if (isRenderEnemies) {
+		const enemyName = getEnemyNameByType(enemyType);
+		if (enemyName) {
+			const enemyImg = new Image();
+			const suffix = isFacingLeft ? ".png" : "_flipped.png";
+			enemyImg.src = PATH_ENEMIES + enemyName.toLowerCase() + suffix;
 
-            const drawEnemy = () => {
-                ctx.drawImage(
-                    enemyImg,
-                    xOffset + xStart,
-                    yStart - NOTE_SIZE / 2,
-                    NOTE_SIZE,
-                    NOTE_SIZE
-                );
-            };
+			const drawEnemy = () => {
+				ctx.drawImage(
+					enemyImg,
+					xOffset + xStart,
+					yStart - NOTE_SIZE / 2,
+					NOTE_SIZE,
+					NOTE_SIZE
+				);
+			};
 
-            if(enemyImg.complete){
-                drawEnemy();
-            } else {
-                enemyImg.onload = drawEnemy;
-                enemyImg.onerror = function(error) {
-                    console.error("Error loading enemy image:", enemyImg.src, error);
-                };
-            }
-        } else {
-            console.error("No enemy name found for enemyId:", enemyId);
-        }
-    }
+			if (enemyImg.complete) {
+				drawEnemy();
+			} else {
+				enemyImg.onload = drawEnemy;
+				enemyImg.onerror = function (error) {
+					console.error(
+						"Error loading enemy image:",
+						enemyImg.src,
+						error
+					);
+				};
+			}
+		} else {
+			console.error("No enemy name found for enemyType:", enemyType);
+		}
+	}
 }
 
-function renderWyrmBody(xOffset, column, relBeatStart, relBeatFinish, isRenderEnemies){
-    const [xStart, yStart] = getNoteXY(column, relBeatStart);
-    const [, yFinish] = getNoteXY(column, relBeatFinish);
-    
-    ctx.fillStyle = WYRM_BODY_COLOR;
-    ctx.fillRect(xOffset + xStart, yFinish, NOTE_SIZE, yStart - yFinish);
+// Not used for the time being
+function renderWyrmBody(
+	xOffset,
+	column,
+	relBeatBegin,
+	relBeatEnd,
+	isRenderEnemies
+) {
+	const [xStart, yStart] = getNoteXY(column, relBeatBegin);
+	const [, yFinish] = getNoteXY(column, relBeatEnd);
+
+	ctx.fillStyle = WYRM_BODY_COLOR;
+	ctx.fillRect(xOffset + xStart, yFinish, NOTE_SIZE, yStart - yFinish);
 }
 
-function renderWyrmHead(xOffset, column, relBeat, isRenderEnemies){
-    // change to "not render enemies" if wyrm is prettier
-    if(true){
-        const [xStart, yStart] = getNoteXY(column, relBeat);
-        const vertices = [
-            [xOffset + xStart, yStart],
-            [xOffset + xStart + NOTE_SIZE, yStart],
-            [xOffset + xStart + NOTE_SIZE / 2, yStart - WYRM_HEAD_SIZE]
-        ];
-        
-        ctx.beginPath();
-        ctx.moveTo(vertices[0][0], vertices[0][1]);
-        ctx.lineTo(vertices[1][0], vertices[1][1]);
-        ctx.lineTo(vertices[2][0], vertices[2][1]);
-        ctx.closePath();
-        
-        ctx.fillStyle = WYRM_HEAD_COLOR;
-        ctx.fill();
-    }
-    else{
-        // wyrm head id : 7794
-        renderShortNote(xOffset, column, relBeat, WYRM_HEAD_COLOR, 7794, false);
-    }
+function renderWyrmHead(xOffset, column, relBeat, isRenderEnemies) {
+	// change to "not render enemies" if wyrm is prettier
+	if (true) {
+		const [xStart, yStart] = getNoteXY(column, relBeat);
+		const vertices = [
+			[xOffset + xStart, yStart],
+			[xOffset + xStart + NOTE_SIZE, yStart],
+			[xOffset + xStart + NOTE_SIZE / 2, yStart - WYRM_HEAD_SIZE],
+		];
+
+		ctx.beginPath();
+		ctx.moveTo(vertices[0][0], vertices[0][1]);
+		ctx.lineTo(vertices[1][0], vertices[1][1]);
+		ctx.lineTo(vertices[2][0], vertices[2][1]);
+		ctx.closePath();
+
+		ctx.fillStyle = WYRM_HEAD_COLOR;
+		ctx.fill();
+	} else {
+		// wyrm head id : 7794
+		renderShortNote(xOffset, column, relBeat, WYRM_HEAD_COLOR, 7794, false);
+	}
 }
 
-function renderSegment(segmentIndex, chart, isRenderEnemies){
-    const beatIndex = segmentIndex * 16 + 1;
-    const X_OFFSET = (LANE_MARGIN * 2 + LANE_GAP * 4 + LANE_WIDTH * 3) * segmentIndex;
+function renderSegment(segmentIndex, chart, isRenderEnemies) {
+	const beatIndex = segmentIndex * 16 + 1;
+	const X_OFFSET =
+		(LANE_MARGIN * 2 + LANE_GAP * 4 + LANE_WIDTH * 3) * segmentIndex;
 
-    // render lanes
-    ctx.fillStyle = LANE_COLOR;
-    for(let i=0; i<3; i++){
-        let xStart = LANE_MARGIN + LANE_GAP + (LANE_WIDTH + LANE_GAP) * i;
-        ctx.fillRect(
-            X_OFFSET + xStart,
-            LANE_MARGIN,
-            LANE_WIDTH,
-            LANE_HEIGHT + LANE_PADDING * 2
-        );
-        xStart += LANE_WIDTH + LANE_GAP;
-    }
+	// render lanes
+	ctx.fillStyle = LANE_COLOR;
+	for (let i = 0; i < 3; i++) {
+		let xStart = LANE_MARGIN + LANE_GAP + (LANE_WIDTH + LANE_GAP) * i;
+		ctx.fillRect(
+			X_OFFSET + xStart,
+			LANE_MARGIN,
+			LANE_WIDTH,
+			LANE_HEIGHT + LANE_PADDING * 2
+		);
+		xStart += LANE_WIDTH + LANE_GAP;
+	}
 
-    // draw beat divisions
-    // - main division & beat count texts
-    for(let relBeat = 0; relBeat < 17; relBeat+=4){
-        const [, yFinish] = getNoteXY(0, relBeat);
+	// draw beat divisions
+	// - main division & beat count texts
+	const optimalVibeBeats = chart.bestOpimalVibeSequence.map(
+		(v) => v.beatBeginLatest
+	);
+	for (let relBeat = 0; relBeat < 17; relBeat += 4) {
+		const [, yFinish] = getNoteXY(0, relBeat);
 
-        ctx.fillStyle = MAIN_DIV_COLOR;
-        ctx.fillRect(
-            X_OFFSET + LANE_MARGIN,
-            yFinish - LANE_GAP,
-            LANE_WIDTH * 3 + LANE_GAP * 4,
-            LANE_GAP
-        );
+		ctx.fillStyle = MAIN_DIV_COLOR;
+		ctx.fillRect(
+			X_OFFSET + LANE_MARGIN,
+			yFinish - LANE_GAP,
+			LANE_WIDTH * 3 + LANE_GAP * 4,
+			LANE_GAP
+		);
 
-        const actBeat = relBeat + beatIndex;
-        if(!chart.optimalVibes.includes(actBeat)){
-            renderText(
-                X_OFFSET + LANE_MARGIN - FONT_MARGIN,
-                yFinish,
-                String(actBeat).padStart(3, '0'),
-                FONT_MEASURE_COLOR,
-                true
-            );
-        }
-    }
+		const actBeat = relBeat + beatIndex;
+		if (!optimalVibeBeats.includes(actBeat)) {
+			renderText(
+				X_OFFSET + LANE_MARGIN - FONT_MARGIN,
+				yFinish,
+				String(actBeat).padStart(3, "0"),
+				FONT_MEASURE_COLOR,
+				true
+			);
+		}
+	}
 
-    // - draw vibe trigger indicaters and beats
-    const optimalVibes = chart.optimalVibes;
-    optimalVibes.forEach(optimalVibe => {
-        let relBeat = optimalVibe - beatIndex;
-        if(0 <= relBeat && relBeat < 16){
-            [, yStart] = getNoteXY(0, relBeat);
-            vertices = [
-                [X_OFFSET + LANE_MARGIN - FONT_MARGIN, yStart],
-                [X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, yStart + VIBE_IND_SIZE / 2],
-                [X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE, yStart - VIBE_IND_SIZE / 2]
-            ];
+	// - draw vibe trigger indicaters and beats
+	for (const optimalVibeBeat of optimalVibeBeats) {
+		let relBeat = optimalVibeBeat - beatIndex;
+		if (0 <= relBeat && relBeat < 16) {
+			[, yStart] = getNoteXY(0, relBeat);
+			vertices = [
+				[X_OFFSET + LANE_MARGIN - FONT_MARGIN, yStart],
+				[
+					X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE,
+					yStart + VIBE_IND_SIZE / 2,
+				],
+				[
+					X_OFFSET + LANE_MARGIN - FONT_MARGIN - VIBE_IND_SIZE,
+					yStart - VIBE_IND_SIZE / 2,
+				],
+			];
 
-            ctx.beginPath();
-            ctx.moveTo(vertices[0][0], vertices[0][1]);
-            ctx.lineTo(vertices[1][0], vertices[1][1]);
-            ctx.lineTo(vertices[2][0], vertices[2][1]);
-            ctx.closePath();
-            
-            ctx.fillStyle = VIBE_COLOR;
-            ctx.fill();
+			ctx.beginPath();
+			ctx.moveTo(vertices[0][0], vertices[0][1]);
+			ctx.lineTo(vertices[1][0], vertices[1][1]);
+			ctx.lineTo(vertices[2][0], vertices[2][1]);
+			ctx.closePath();
 
-            renderText(
-                X_OFFSET + LANE_MARGIN - FONT_MARGIN,
-                yStart - VIBE_IND_SIZE,
-                optimalVibe.toFixed(2).padStart(6, '0'),
-                VIBE_COLOR,
-                true
-            );
-        }
-    });
+			ctx.fillStyle = VIBE_COLOR;
+			ctx.fill();
 
-    // - sub division
-    ctx.fillStyle = SUB_DIV_COLOR;
-    for(let relBeat = 0; relBeat < 17; relBeat++){
-        if(relBeat % 4 != 0){
-            [, yFinish] = getNoteXY(0, relBeat);
-            ctx.fillRect(
-                X_OFFSET + LANE_MARGIN,
-                yFinish - LANE_GAP,
-                LANE_WIDTH * 3 + LANE_GAP * 4,
-                LANE_GAP
-            );
-        }
-    }
+			renderText(
+				X_OFFSET + LANE_MARGIN - FONT_MARGIN,
+				yStart - VIBE_IND_SIZE,
+				optimalVibe.toFixed(2).padStart(6, "0"),
+				VIBE_COLOR,
+				true
+			);
+		}
+	}
 
-    // draw gaps
-    for(let i=0; i<4; i++){
-        let xStart = LANE_MARGIN + (LANE_GAP + LANE_WIDTH) * i;
-        ctx.fillStyle = GAP_COLOR;
-        ctx.fillRect(
-            X_OFFSET + xStart,
-            LANE_MARGIN,
-            LANE_GAP,
-            LANE_PADDING * 2 + LANE_HEIGHT
-        );
-    }
+	// - sub division
+	ctx.fillStyle = SUB_DIV_COLOR;
+	for (let relBeat = 0; relBeat < 17; relBeat++) {
+		if (relBeat % 4 != 0) {
+			[, yFinish] = getNoteXY(0, relBeat);
+			ctx.fillRect(
+				X_OFFSET + LANE_MARGIN,
+				yFinish - LANE_GAP,
+				LANE_WIDTH * 3 + LANE_GAP * 4,
+				LANE_GAP
+			);
+		}
+	}
 
-    // draw bpm change texts
-    const bpmChanges = chart.bpmChanges;
-    bpmChanges.forEach(bpmChange => {
-        let relBeat = bpmChange.beat - beatIndex;
-        if(0 <= relBeat && relBeat < 16){
-            [, yFinish] = getNoteXY(0, relBeat);
-            renderText(
-                X_OFFSET + FONT_MARGIN + LANE_MARGIN + LANE_GAP + LANE_WIDTH * 3,
-                yFinish,
-                String(bpmChange.bpm).padStart(3, '0'),
-                FONT_BPM_COLOR
-            );
-        }
-    });
+	// draw gaps
+	for (let i = 0; i < 4; i++) {
+		let xStart = LANE_MARGIN + (LANE_GAP + LANE_WIDTH) * i;
+		ctx.fillStyle = GAP_COLOR;
+		ctx.fillRect(
+			X_OFFSET + xStart,
+			LANE_MARGIN,
+			LANE_GAP,
+			LANE_PADDING * 2 + LANE_HEIGHT
+		);
+	}
 
-    // filter only in-range notes
-    const beatFrom = beatIndex;
-    const beatTo = beatIndex + 16;
+	// draw bpm change texts
+	for (const bpmChange of chart.bpmChanges) {
+		let relBeat = bpmChange.beat - beatIndex;
+		if (0 <= relBeat && relBeat < 16) {
+			[, yFinish] = getNoteXY(0, relBeat);
+			renderText(
+				X_OFFSET +
+					FONT_MARGIN +
+					LANE_MARGIN +
+					LANE_GAP +
+					LANE_WIDTH * 3,
+				yFinish,
+				String(bpmChange.bpm).padStart(3, "0"),
+				FONT_BPM_COLOR
+			);
+		}
+	}
 
-    const filteredShortNotes = chart.shortNotes.filter(note => 
-        beatFrom <= note.beatStart && note.beatStart <= beatTo
-    );
-    const filteredWyrmNotes = chart.wyrmNotes.filter(note => 
-        (beatFrom <= note.beatStart && note.beatStart <= beatTo) || 
-        (beatFrom <= note.beatFinish && note.beatFinish <= beatTo)
-    );
+	// filter only in-range notes
+	const beatBegin = beatIndex;
+	const beatEnd = beatIndex + 16;
 
-    // render wyrm notes
-    filteredWyrmNotes.forEach(note => {
-        const beatPadding = LANE_PADDING / (LANE_HEIGHT / 16);
-        
-        const relBeatStart = Math.max(note.beatStart - beatIndex, -beatPadding);
-        const relBeatFinish = Math.min(note.beatFinish - beatIndex, 16 + beatPadding);
+	const filteredShortNotes = chart.shortNotes.filter(
+		(note) => beatBegin <= note.beatBegin && note.beatBegin <= beatEnd
+	);
+	const filteredWyrmNotes = chart.wyrmNotes.filter(
+		(note) =>
+			(beatBegin <= note.beatBegin && note.beatBegin <= beatEnd) ||
+			(beatBegin <= note.beatEnd && note.beatEnd <= beatEnd)
+	);
 
-        renderWyrmBody(X_OFFSET, note.column, relBeatStart, relBeatFinish, isRenderEnemies);
+	// render wyrm notes
+	for (const note of filteredWyrmNotes) {
+		const beatPadding = LANE_PADDING / (LANE_HEIGHT / 16);
 
-        const relBeatStartWithoutPadding = note.beatStart - beatIndex;
-        if(relBeatStartWithoutPadding >= -beatPadding){
-            renderWyrmHead(X_OFFSET, note.column, relBeatStartWithoutPadding, isRenderEnemies);
-        }
-    });
+		const relBeatBegin = Math.max(note.beatBegin - beatIndex, -beatPadding);
+		const relBeatEnd = Math.min(note.beatEnd - beatIndex, 16 + beatPadding);
 
-    // render short notes
-    filteredShortNotes.forEach(note => {
-        const relBeat = note.beatStart - beatIndex;
-        let overlap_count = 0;
+		renderWyrmBody(
+			X_OFFSET,
+			note.column,
+			relBeatBegin,
+			relBeatEnd,
+			isRenderEnemies
+		);
 
-        filteredShortNotes.forEach(otherNote => {
-            if(note.column == otherNote.column && note.beatStart == otherNote.beatStart){
-                overlap_count += 1;
-            }
-            const color = overlap_count == 1 ? NOTE_COLOR : OVERLAP_COLOR;
-            renderShortNote(X_OFFSET, note.column, relBeat, color, note.enemyId, note.isFacingRight, isRenderEnemies);
-        });
-    });
+		const relBeatBeginWithoutPadding = note.beatBegin - beatIndex;
+		if (relBeatBeginWithoutPadding >= -beatPadding) {
+			renderWyrmHead(
+				X_OFFSET,
+				note.column,
+				relBeatBeginWithoutPadding,
+				isRenderEnemies
+			);
+		}
+	}
+
+	// render short notes
+	for (const note of filteredShortNotes) {
+		const relBeat = note.beatBegin - beatIndex;
+		let overlap_count = 0;
+
+		for (const otherNote of filteredShortNotes) {
+			if (
+				note.column == otherNote.column &&
+				note.beatBegin == otherNote.beatBegin
+			) {
+				overlap_count += 1;
+			}
+			const color = overlap_count == 1 ? NOTE_COLOR : OVERLAP_COLOR;
+			renderShortNote(
+				X_OFFSET,
+				note.column,
+				relBeat,
+				color,
+				note.enemyId,
+				note.isFacingRight,
+				isRenderEnemies
+			);
+		}
+	}
 }
 
 export function renderChart(canvas, chart, isRenderEnemies) {
-    ctx = canvas.getContext('2d');
+	ctx = canvas.getContext("2d");
 
-    const allBeats = [
-        ...chart.shortNotes.map(note => note.beatFinish),
-        ...chart.wyrmNotes.map(note => note.beatFinish)
-    ];
-    const beatsPerSegment = 16;
-    const maxBeat = allBeats.length > 0 ? Math.max(...allBeats) : beatsPerSegment;
-    const segmentCount = Math.ceil(maxBeat / beatsPerSegment);
+	const allBeats = [
+		...chart.shortNotes.map((note) => note.beatEnd),
+		...chart.wyrmNotes.map((note) => note.beatEnd),
+	];
+	const beatsPerSegment = 16;
+	const maxBeat =
+		allBeats.length > 0 ? Math.max(...allBeats) : beatsPerSegment;
+	const segmentCount = Math.ceil(maxBeat / beatsPerSegment);
 
-    const segmentWidth = LANE_MARGIN * 2 + LANE_GAP * 4 + LANE_WIDTH * 3;
-    canvas.width = segmentWidth * segmentCount;
-    canvas.height = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2;
+	const segmentWidth = LANE_MARGIN * 2 + LANE_GAP * 4 + LANE_WIDTH * 3;
+	canvas.width = segmentWidth * segmentCount;
+	canvas.height = LANE_HEIGHT + LANE_PADDING * 2 + LANE_MARGIN * 2;
 
-    ctx.fillStyle = BG_COLOR;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = BG_COLOR;
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    for(let segmentIndex=0; segmentIndex<segmentCount; segmentIndex++){
-        renderSegment(segmentIndex, chart, isRenderEnemies);
-    }
+	for (let segmentIndex = 0; segmentIndex < segmentCount; segmentIndex++) {
+		renderSegment(segmentIndex, chart, isRenderEnemies);
+	}
 }
 
-
-export function renderBothCanvas(chart){
-    if (chart) {
-        const canvas1 = document.getElementById('chart-canvas');
-        const canvas2 = document.getElementById('chart-canvas-er');
-        renderChart(canvas1, chart, false);
-        renderChart(canvas2, chart, true);
-        updateTable(chart);
-        console.log('Chart object:', chart);
-    } else {
-        alert('Error: Could not create chart from JSON.');
-    }
+export function renderBothCanvas(chart) {
+	if (chart) {
+		const canvas1 = document.getElementById("chart-canvas");
+		const canvas2 = document.getElementById("chart-canvas-er");
+		renderChart(canvas1, chart, false);
+		renderChart(canvas2, chart, true);
+		updateTable(chart);
+		console.log("Chart object:", chart);
+	} else {
+		alert("Error: chart is null");
+	}
 }
