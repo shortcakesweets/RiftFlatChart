@@ -145,10 +145,8 @@ function parseParam() {
 		.then((response) => response.json())
 		.then((data) => {
 			const subData = data[key];
-			// console.log(subData);
 			const chartPath = subData["chart"][DIFF_STRING[diff - 1]];
 			const artPath = subData["art"];
-			// console.log(chartPath, artPath);
 
 			fetch(chartPath)
 				.then((response) => response.arrayBuffer())

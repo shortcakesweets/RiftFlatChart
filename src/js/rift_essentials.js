@@ -224,29 +224,29 @@ export class Vibe {
 	getTriggerDifficulty() {
 		const beat = this.beatBeginLatest;
 
-		// Trigger window (30%)
+		// Trigger window (50%)
 		const window = this.timeBeginLatest - this.timeBeginEarliest;
-		const windowDifficulty = Math.min(1, window / 0.5);
+		const windowDifficulty = Math.max(0, Math.min(1, 1 - 10 * window));
 
-		// Sparsity (30%)
+		// Sparsity (40%)
 		const sparsity = this.beatDeltaFromPrevNote;
-		const sparseDifficulty = sparsity >= 1 ? 0 : sparsity >= 0.5 ? 0.5 : 0;
+		const sparseDifficulty = sparsity >= 1 ? 0 : sparsity >= 0.5 ? 0.5 : 1;
 
-		// 4th beat closeness (20%)
+		// 4th beat closeness (5%)
 		const nearest4thBeat = Math.round((beat - 1) / 4) * 4 + 1;
 		const delta4thBeat = Math.abs(beat - nearest4thBeat);
 		const onBeatDifficulty = delta4thBeat < 0.125 ? 0 : 1;
 
-		// Integer closeness (20%)
+		// Integer closeness (5%)
 		const nearestInt = Math.round(beat);
 		const deltaInt = Math.abs(beat - nearestInt);
 		const intDifficulty = deltaInt < 0.125 ? 0 : 1;
 
 		const totalDifficulty =
-			windowDifficulty * 0.3 +
-			sparseDifficulty * 0.3 +
-			onBeatDifficulty * 0.2 +
-			intDifficulty * 0.2;
+			windowDifficulty * 0.5 +
+			sparseDifficulty * 0.4 +
+			onBeatDifficulty * 0.05 +
+			intDifficulty * 0.05;
 		return totalDifficulty;
 	}
 }
@@ -308,13 +308,14 @@ export function createChartFromBin(binDataBuffer) {
 	const bpmChangeCount = cur.int32();
 	const baseBpmChange = new BpmChange();
 	baseBpmChange.time = 0;
-	baseBpmChange.beat = 0;
+	baseBpmChange.beat = 1;
 	baseBpmChange.bpm = chart.baseBpm;
 	chart.bpmChanges.push(baseBpmChange); // add basic bpm
 	for (let i = 0; i < bpmChangeCount; i++) {
 		const bpmChange = new BpmChange();
 		bpmChange.time = cur.float64();
-		bpmChange.beat = cur.float64();
+		// ???
+		bpmChange.beat = cur.float64() + 1;
 		bpmChange.bpm = cur.float32();
 		chart.bpmChanges.push(bpmChange);
 	}
