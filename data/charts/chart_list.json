@@ -227,6 +227,101 @@
             28
         ]
     },
+    "DLCEggplant01": {
+        "title": "The Final Battle",
+        "art": "../../data/album_arts/DLCEggplant01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Final Battle_DLCEggplant01_Easy.bin",
+            "medium": "../../data/charts/bin/The Final Battle_DLCEggplant01_Medium.bin",
+            "hard": "../../data/charts/bin/The Final Battle_DLCEggplant01_Hard.bin",
+            "impossible": "../../data/charts/bin/The Final Battle_DLCEggplant01_Impossible.bin"
+        },
+        "update_date": "2025-08-14",
+        "dlc": "Everhood",
+        "artist": "",
+        "intensity": [
+            6,
+            10,
+            16,
+            22
+        ]
+    },
+    "DLCEggplant02": {
+        "title": "Feisty Flowers",
+        "art": "../../data/album_arts/DLCEggplant02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Easy.bin",
+            "medium": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Medium.bin",
+            "hard": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Hard.bin",
+            "impossible": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Impossible.bin"
+        },
+        "update_date": "2025-08-14",
+        "dlc": "Everhood",
+        "artist": "",
+        "intensity": [
+            5,
+            10,
+            19,
+            29
+        ]
+    },
+    "DLCEggplant03": {
+        "title": "Revenge",
+        "art": "../../data/album_arts/DLCEggplant03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Revenge_DLCEggplant03_Easy.bin",
+            "medium": "../../data/charts/bin/Revenge_DLCEggplant03_Medium.bin",
+            "hard": "../../data/charts/bin/Revenge_DLCEggplant03_Hard.bin",
+            "impossible": "../../data/charts/bin/Revenge_DLCEggplant03_Impossible.bin"
+        },
+        "update_date": "2025-08-14",
+        "dlc": "Everhood",
+        "artist": "",
+        "intensity": [
+            5,
+            12,
+            20,
+            29
+        ]
+    },
+    "DLCEggplant04": {
+        "title": "Why Oh You Are LOVE",
+        "art": "../../data/album_arts/DLCEggplant04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Easy.bin",
+            "medium": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Medium.bin",
+            "hard": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Hard.bin",
+            "impossible": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Impossible.bin"
+        },
+        "update_date": "2025-08-14",
+        "dlc": "Everhood",
+        "artist": "",
+        "intensity": [
+            5,
+            15,
+            21,
+            30
+        ]
+    },
+    "DLCEggplant05": {
+        "title": "Powers Of Destruction",
+        "art": "../../data/album_arts/DLCEggplant05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Easy.bin",
+            "medium": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Medium.bin",
+            "hard": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Hard.bin",
+            "impossible": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Impossible.bin"
+        },
+        "update_date": "2025-08-14",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            7,
+            11,
+            14,
+            20
+        ]
+    },
     "DLCGuava01": {
         "title": "BIBBIDIBA",
         "art": "../../data/album_arts/DLCGuava01.webp",
