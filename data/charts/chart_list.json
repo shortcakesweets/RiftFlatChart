@@ -58,7 +58,7 @@
     },
     "DLCBanana01": {
         "title": "Resurrections (dannyBstyle Remix)",
-        "art": "../../data/album_arts/DLCBanana01.webp",
+        "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
             "medium": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Medium.bin",
@@ -77,7 +77,7 @@
     },
     "DLCBanana02": {
         "title": "Scattered and Lost",
-        "art": "../../data/album_arts/DLCBanana02.webp",
+        "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
             "medium": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Medium.bin",
@@ -96,7 +96,7 @@
     },
     "DLCBanana03": {
         "title": "Reach for the Summit",
-        "art": "../../data/album_arts/DLCBanana03.webp",
+        "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
             "medium": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Medium.bin",
@@ -115,7 +115,7 @@
     },
     "DLCBanana04": {
         "title": "Confronting Myself",
-        "art": "../../data/album_arts/DLCBanana04.webp",
+        "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
             "medium": "../../data/charts/bin/Confronting Myself_DLCBanana04_Medium.bin",
@@ -134,7 +134,7 @@
     },
     "DLCBanana05": {
         "title": "Resurrections",
-        "art": "../../data/album_arts/DLCBanana05.webp",
+        "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Resurrections_DLCBanana05_Easy.bin",
             "medium": "../../data/charts/bin/Resurrections_DLCBanana05_Medium.bin",
@@ -153,7 +153,7 @@
     },
     "DLCCherry01": {
         "title": "It's Pizza Time!",
-        "art": "../../data/album_arts/DLCCherry01.webp",
+        "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Easy.bin",
             "medium": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Medium.bin",
@@ -172,7 +172,7 @@
     },
     "DLCCherry02": {
         "title": "The Death That I Deservioli",
-        "art": "../../data/album_arts/DLCCherry02.webp",
+        "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Easy.bin",
             "medium": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Medium.bin",
@@ -191,7 +191,7 @@
     },
     "DLCCherry03": {
         "title": "Unexpectancy, Pt. 3",
-        "art": "../../data/album_arts/DLCCherry03.webp",
+        "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Easy.bin",
             "medium": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Medium.bin",
@@ -210,7 +210,7 @@
     },
     "DLCCherry04": {
         "title": "World Wide Noise",
-        "art": "../../data/album_arts/DLCCherry04.webp",
+        "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/World Wide Noise_DLCCherry04_Easy.bin",
             "medium": "../../data/charts/bin/World Wide Noise_DLCCherry04_Medium.bin",
@@ -229,7 +229,7 @@
     },
     "DLCEggplant01": {
         "title": "The Final Battle",
-        "art": "../../data/album_arts/DLCEggplant01.webp",
+        "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Final Battle_DLCEggplant01_Easy.bin",
             "medium": "../../data/charts/bin/The Final Battle_DLCEggplant01_Medium.bin",
@@ -248,7 +248,7 @@
     },
     "DLCEggplant02": {
         "title": "Feisty Flowers",
-        "art": "../../data/album_arts/DLCEggplant02.webp",
+        "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Easy.bin",
             "medium": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Medium.bin",
@@ -267,7 +267,7 @@
     },
     "DLCEggplant03": {
         "title": "Revenge",
-        "art": "../../data/album_arts/DLCEggplant03.webp",
+        "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Revenge_DLCEggplant03_Easy.bin",
             "medium": "../../data/charts/bin/Revenge_DLCEggplant03_Medium.bin",
@@ -286,7 +286,7 @@
     },
     "DLCEggplant04": {
         "title": "Why Oh You Are LOVE",
-        "art": "../../data/album_arts/DLCEggplant04.webp",
+        "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Easy.bin",
             "medium": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Medium.bin",
@@ -305,7 +305,7 @@
     },
     "DLCEggplant05": {
         "title": "Powers Of Destruction",
-        "art": "../../data/album_arts/DLCEggplant05.webp",
+        "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Easy.bin",
             "medium": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Medium.bin",

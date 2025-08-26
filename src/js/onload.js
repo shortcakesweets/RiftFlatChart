@@ -12,7 +12,7 @@ function updateTable(chart) {
 	}
 
 	if (chart) {
-		rows[0].cells[1].textContent = chart.shortName;
+		rows[0].cells[1].textContent = chart.chartName;
 		rows[1].cells[1].textContent = `${DIFF_STRING[chart.difficulty - 1]}(${
 			chart.intensity
 		})`;
@@ -152,7 +152,9 @@ function parseParam() {
 				.then((response) => response.arrayBuffer())
 				.then((chartBin) => createChartFromBin(chartBin))
 				.then((chart) => {
+					console.log(chart);
 					renderBothCanvas(chart);
+					updateTable(chart);
 				});
 			updateAlbumArt(artPath);
 		});
