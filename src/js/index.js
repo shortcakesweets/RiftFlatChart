@@ -36,7 +36,7 @@ const cardTemplateDlc = `
 `;
 
 function createCard(chart, key) {
-        const { title, art, dlc, artist, intensity } = chart;
+	const { title, art, dlc, artist, intensity } = chart;
 
 	const albumArtUrl = art.startsWith("../../") ? art.slice(6) : art;
 	const chartUrlEasy = `src/html/render_main.html?key=${key}&diff=1`;
@@ -94,11 +94,12 @@ function clearChartCards() {
 
 function renderChartCards(chartDict) {
 	const container = document.querySelector(".card-container");
-	if (container && typeof chartDict === "object") {
-		Object.entries(chartDict).forEach(([key, chart]) => {
-			const card = createCard(chart, key);
-			container.appendChild(card);
-		});
+	if (!container || chartDict == null || typeof chartDict !== "object")
+		return;
+
+	for (const [key, chart] of Object.entries(chartDict)) {
+		const card = createCard(chart, key);
+		container.appendChild(card);
 	}
 }
 
