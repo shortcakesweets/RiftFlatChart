@@ -35,6 +35,9 @@ const cardTemplateDlc = `
     </div>
 `;
 
+const SORT_OPTION_ALPHABETICAL = 0;
+const SORT_OPTION_UPDATE = 1;
+
 function createCard(chart, key) {
 	const { title, art, dlc, artist, intensity } = chart;
 
@@ -92,12 +95,33 @@ function clearChartCards() {
 	}
 }
 
-function renderChartCards(chartDict) {
+function renderChartCards(chartDict, sortOption = SORT_OPTION_UPDATE) {
+	let chartEntries = Object.entries(chartDict);
+
+	if (sortOption === SORT_OPTION_ALPHABETICAL) {
+		chartEntries.sort((a, b) => {
+			const titleA = a[1].title.toLowerCase();
+			const titleB = b[1].title.toLowerCase();
+			return titleA.localeCompare(titleB);
+		});
+	} else if (sortOption === SORT_OPTION_UPDATE) {
+		chartEntries.sort((a, b) => {
+			const updateA = a[1].update_date || "";
+			const updateB = b[1].update_date || "";
+			if (updateA === updateB) {
+				const titleA = a[1].title.toLowerCase();
+				const titleB = b[1].title.toLowerCase();
+				return titleA.localeCompare(titleB);
+			}
+			return updateB.localeCompare(updateA); // Newest first
+		});
+	}
+
 	const container = document.querySelector(".card-container");
 	if (!container || chartDict == null || typeof chartDict !== "object")
 		return;
 
-	for (const [key, chart] of Object.entries(chartDict)) {
+	for (const [key, chart] of chartEntries) {
 		const card = createCard(chart, key);
 		container.appendChild(card);
 	}
