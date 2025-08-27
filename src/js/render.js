@@ -376,7 +376,7 @@ function renderSegment(segmentIndex, chart, isRenderEnemies) {
 				relBeat,
 				color,
 				note.enemyType,
-				note.isFacingRight,
+				note.isFacingLeft,
 				isRenderEnemies
 			);
 		}
