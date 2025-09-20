@@ -531,6 +531,101 @@
             23
         ]
     },
+    "DLCMango01": {
+        "title": "Final Boss",
+        "art": "../../data/album_arts/DLCMango01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Final Boss_DLCMango01_Easy.bin",
+            "medium": "../../data/charts/bin/Final Boss_DLCMango01_Medium.bin",
+            "hard": "../../data/charts/bin/Final Boss_DLCMango01_Hard.bin",
+            "impossible": "../../data/charts/bin/Final Boss_DLCMango01_Impossible.bin"
+        },
+        "update_date": "2025-09-19",
+        "dlc": "Monstercat",
+        "artist": "",
+        "intensity": [
+            2,
+            9,
+            17,
+            24
+        ]
+    },
+    "DLCMango02": {
+        "title": "New Game",
+        "art": "../../data/album_arts/DLCMango02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/New Game_DLCMango02_Easy.bin",
+            "medium": "../../data/charts/bin/New Game_DLCMango02_Medium.bin",
+            "hard": "../../data/charts/bin/New Game_DLCMango02_Hard.bin",
+            "impossible": "../../data/charts/bin/New Game_DLCMango02_Impossible.bin"
+        },
+        "update_date": "2025-09-19",
+        "dlc": "Monstercat",
+        "artist": "",
+        "intensity": [
+            6,
+            11,
+            19,
+            25
+        ]
+    },
+    "DLCMango03": {
+        "title": "Crab Rave",
+        "art": "../../data/album_arts/DLCMango03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Crab Rave_DLCMango03_Easy.bin",
+            "medium": "../../data/charts/bin/Crab Rave_DLCMango03_Medium.bin",
+            "hard": "../../data/charts/bin/Crab Rave_DLCMango03_Hard.bin",
+            "impossible": "../../data/charts/bin/Crab Rave_DLCMango03_Impossible.bin"
+        },
+        "update_date": "2025-09-19",
+        "dlc": "Monstercat",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            18,
+            24
+        ]
+    },
+    "DLCMango04": {
+        "title": "PLAY",
+        "art": "../../data/album_arts/DLCMango04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/PLAY_DLCMango04_Easy.bin",
+            "medium": "../../data/charts/bin/PLAY_DLCMango04_Medium.bin",
+            "hard": "../../data/charts/bin/PLAY_DLCMango04_Hard.bin",
+            "impossible": "../../data/charts/bin/PLAY_DLCMango04_Impossible.bin"
+        },
+        "update_date": "2025-09-19",
+        "dlc": "Monstercat",
+        "artist": "",
+        "intensity": [
+            6,
+            11,
+            16,
+            26
+        ]
+    },
+    "DLCMango05": {
+        "title": "Waiting For You (feat. Joanna Jones)",
+        "art": "../../data/album_arts/DLCMango05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Waiting For You (feat. Joanna Jones)_DLCMango05_Easy.bin",
+            "medium": "../../data/charts/bin/Waiting For You (feat. Joanna Jones)_DLCMango05_Medium.bin",
+            "hard": "../../data/charts/bin/Waiting For You (feat. Joanna Jones)_DLCMango05_Hard.bin",
+            "impossible": "../../data/charts/bin/Waiting For You (feat. Joanna Jones)_DLCMango05_Impossible.bin"
+        },
+        "update_date": "2025-09-19",
+        "dlc": "Monstercat",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            16,
+            22
+        ]
+    },
     "DLCOG02": {
         "title": "Crypteque",
         "art": "../../data/album_arts/DLCOG02.webp",
