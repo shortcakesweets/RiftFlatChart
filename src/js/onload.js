@@ -29,7 +29,7 @@ function updateTable(chart) {
 		const baseBpm = numberRounder(chart.baseBpm);
 		const bpmStr =
 			minBpm === maxBpm
-				? `${chart.baseBpm}`
+				? `${baseBpm}`
 				: `${minBpm}-${maxBpm} (${baseBpm})`;
 		rows[2].cells[1].textContent = bpmStr;
 		rows[3].cells[1].textContent = chart.maxCombo;
