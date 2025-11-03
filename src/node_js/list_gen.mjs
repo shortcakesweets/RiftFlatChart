@@ -89,48 +89,60 @@ async function main() {
 
 	for (const key of sortedKeys) {
 		const { title, files } = groups[key];
-
-		if (Object.prototype.hasOwnProperty.call(existing, key)) {
-			console.log(`${key} -skipped-`);
-			continue;
-		}
-
-		// Compute intensities per difficulty; 0 when not reconstructable
+		const hadPrev = Object.prototype.hasOwnProperty.call(existing, key);
+		const prev = hadPrev ? existing[key] : {};
+	  
+		// Compute intensities per difficulty (fallback to previous if missing/failed)
+		const DIFFS = /** @type {const} */ (["easy", "medium", "hard", "impossible"]);
 		const intensities = [];
-		for (const d of DIFFS) {
-			const fp = files[d];
-			if (!fp) {
-				intensities.push(0);
-				continue;
-			}
-			try {
-				const buf = await fs.readFile(fp);
-				const ab = toArrayBuffer(buf);
-				const chart = createChartFromBin(ab);
-				const val = Number(chart?.intensity);
-				intensities.push(Number.isFinite(val) ? val : 0);
-			} catch {
-				intensities.push(0);
-			}
+	  
+		for (let i = 0; i < DIFFS.length; i++) {
+		  const d = DIFFS[i];
+		  const fp = files[d];
+		  if (!fp) {
+			// no .bin for this diff → keep previous value (or 0)
+			const prevVal = Array.isArray(prev.intensity) ? prev.intensity[i] : undefined;
+			intensities.push(Number.isFinite(prevVal) ? prevVal : 0);
+			continue;
+		  }
+		  try {
+			const buf = await fs.readFile(fp);
+			const ab  = toArrayBuffer(buf);
+			const val = Number(createChartFromBin(ab)?.intensity);
+			intensities.push(Number.isFinite(val) ? val : (
+			  Array.isArray(prev.intensity) && Number.isFinite(prev.intensity[i]) ? prev.intensity[i] : 0
+			));
+		  } catch {
+			const prevVal = Array.isArray(prev.intensity) ? prev.intensity[i] : undefined;
+			intensities.push(Number.isFinite(prevVal) ? prevVal : 0);
+		  }
 		}
-
-		additions[key] = {
-			title,
-			art: `../../data/album_arts/${key}.webp`, // convention-based guess
-			chart: {
-				easy: files.easy ? relBin(files.easy) : "",
-				medium: files.medium ? relBin(files.medium) : "",
-				hard: files.hard ? relBin(files.hard) : "",
-				impossible: files.impossible ? relBin(files.impossible) : "",
-			},
-			update_date: "", // not reconstructable → blank
-			dlc: "", // unknown → blank
-			artist: "", // unknown → blank
-			intensity: intensities,
+	  
+		// Always output like: "../../data/charts/bin/<file>.bin"
+		const relBin = (p) => p ? path.posix.join("../../data/charts/bin", path.basename(p)) : "";
+	  
+		const mergedEntry = {
+		  // start from previous entry to preserve unknown/custom fields
+		  ...(prev || {}),
+		  // prefer previous title if it exists; else use discovered title
+		  title: (prev && prev.title) ? prev.title : title,
+		  // keep existing art if present; else fill with the conventional path
+		  art: (prev && prev.art) ? prev.art : `../../data/album_arts/${key}.webp`,
+		  // update chart paths only when the .bin exists; otherwise keep old path (or empty)
+		  chart: {
+			easy:       files.easy       ? relBin(files.easy)       : prev?.chart?.easy       ?? "",
+			medium:     files.medium     ? relBin(files.medium)     : prev?.chart?.medium     ?? "",
+			hard:       files.hard       ? relBin(files.hard)       : prev?.chart?.hard       ?? "",
+			impossible: files.impossible ? relBin(files.impossible) : prev?.chart?.impossible ?? "",
+		  },
+		  // intensity updated per diff with per-index fallbacks above
+		  intensity: intensities,
 		};
-
-		console.log(`${key} +added+`);
-	}
+	  
+		additions[key] = mergedEntry;
+		console.log(`${key} ${hadPrev ? "+updated+" : "+added+"}`);
+	  }
+	  
 
 	// 5) Merge and write (preserve existing; append new)
 	const merged = { ...existing, ...additions };
