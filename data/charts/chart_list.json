@@ -683,6 +683,120 @@
             24
         ]
     },
+    "DLCOrange01": {
+        "title": "Main Theme",
+        "art": "../../data/album_arts/DLCOrange01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Main Theme_DLCOrange01_Easy.bin",
+            "medium": "../../data/charts/bin/Main Theme_DLCOrange01_Medium.bin",
+            "hard": "../../data/charts/bin/Main Theme_DLCOrange01_Hard.bin",
+            "impossible": "../../data/charts/bin/Main Theme_DLCOrange01_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            17,
+            24
+        ]
+    },
+    "DLCOrange02": {
+        "title": "La Danse Macabre (Lich Yard)",
+        "art": "../../data/album_arts/DLCOrange02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Easy.bin",
+            "medium": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Medium.bin",
+            "hard": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Hard.bin",
+            "impossible": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "Shovel Knight",
+        "artist": "",
+        "intensity": [
+            5,
+            7,
+            20,
+            27
+        ]
+    },
+    "DLCOrange03": {
+        "title": "Strike the Earth! (Plains of Passage)",
+        "art": "../../data/album_arts/DLCOrange03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Easy.bin",
+            "medium": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Medium.bin",
+            "hard": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Hard.bin",
+            "impossible": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "Shovel Knight",
+        "artist": "",
+        "intensity": [
+            2,
+            8,
+            16,
+            27
+        ]
+    },
+    "DLCOrange04": {
+        "title": "In the Halls of the Usurper (Pridemoor Keep)",
+        "art": "../../data/album_arts/DLCOrange04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Easy.bin",
+            "medium": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Medium.bin",
+            "hard": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Hard.bin",
+            "impossible": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "Shovel Knight",
+        "artist": "",
+        "intensity": [
+            5,
+            9,
+            17,
+            22
+        ]
+    },
+    "DLCOrange05": {
+        "title": "High Above the Land (The Flying Machine)",
+        "art": "../../data/album_arts/DLCOrange05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Easy.bin",
+            "medium": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Medium.bin",
+            "hard": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Hard.bin",
+            "impossible": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "Shovel Knight",
+        "artist": "",
+        "intensity": [
+            4,
+            7,
+            16,
+            21
+        ]
+    },
+    "DLCOrange06": {
+        "title": "An Underlying Problem (The Lost City)",
+        "art": "../../data/album_arts/DLCOrange06.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Easy.bin",
+            "medium": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Medium.bin",
+            "hard": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Hard.bin",
+            "impossible": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Impossible.bin"
+        },
+        "update_date": "2025-10-31",
+        "dlc": "Shovel Knight",
+        "artist": "",
+        "intensity": [
+            4,
+            11,
+            18,
+            23
+        ]
+    },
     "RRAmalgamaniac": {
         "title": "Amalgamaniac",
         "art": "../../data/album_arts/RRAmalgamaniac.webp",
