@@ -685,7 +685,7 @@
     },
     "DLCOrange01": {
         "title": "Main Theme",
-        "art": "../../data/album_arts/DLCOrange01.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/Main Theme_DLCOrange01_Easy.bin",
             "medium": "../../data/charts/bin/Main Theme_DLCOrange01_Medium.bin",
@@ -704,7 +704,7 @@
     },
     "DLCOrange02": {
         "title": "La Danse Macabre (Lich Yard)",
-        "art": "../../data/album_arts/DLCOrange02.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Easy.bin",
             "medium": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Medium.bin",
@@ -723,7 +723,7 @@
     },
     "DLCOrange03": {
         "title": "Strike the Earth! (Plains of Passage)",
-        "art": "../../data/album_arts/DLCOrange03.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Easy.bin",
             "medium": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Medium.bin",
@@ -742,7 +742,7 @@
     },
     "DLCOrange04": {
         "title": "In the Halls of the Usurper (Pridemoor Keep)",
-        "art": "../../data/album_arts/DLCOrange04.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Easy.bin",
             "medium": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Medium.bin",
@@ -761,7 +761,7 @@
     },
     "DLCOrange05": {
         "title": "High Above the Land (The Flying Machine)",
-        "art": "../../data/album_arts/DLCOrange05.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Easy.bin",
             "medium": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Medium.bin",
@@ -780,7 +780,7 @@
     },
     "DLCOrange06": {
         "title": "An Underlying Problem (The Lost City)",
-        "art": "../../data/album_arts/DLCOrange06.webp",
+        "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Easy.bin",
             "medium": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Medium.bin",
