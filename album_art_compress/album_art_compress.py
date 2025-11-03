@@ -1,8 +1,12 @@
-import os
+import os, sys
 from PIL import Image
 
-input_folder = 'aa_old'
-output_folder = 'aa_new'
+input_folder = 'aa_before'
+output_folder = 'aa_after'
+
+if not os.path.isdir(input_folder):
+    print(f"Input folder not found: {input_folder}")
+    sys.exit(1)
 
 os.makedirs(output_folder, exist_ok=True)
 
