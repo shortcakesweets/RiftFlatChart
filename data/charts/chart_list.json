@@ -322,6 +322,25 @@
             19
         ]
     },
+    "DLCFig01": {
+        "title": "WORN OUT TAPES [tally-ho version]",
+        "art": "../../data/album_arts/DLCFig01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/WORN OUT TAPES [tally-ho version]_DLCFig01_Easy.bin",
+            "medium": "../../data/charts/bin/WORN OUT TAPES [tally-ho version]_DLCFig01_Medium.bin",
+            "hard": "../../data/charts/bin/WORN OUT TAPES [tally-ho version]_DLCFig01_Hard.bin",
+            "impossible": "../../data/charts/bin/WORN OUT TAPES [tally-ho version]_DLCFig01_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Unbeatable",
+        "artist": "",
+        "intensity": [
+            5,
+            12,
+            16,
+            25
+        ]
+    },
     "DLCGuava01": {
         "title": "BIBBIDIBA",
         "art": "../../data/album_arts/DLCGuava01.webp",
@@ -795,6 +814,101 @@
             11,
             18,
             23
+        ]
+    },
+    "DLCStrawberry02": {
+        "title": "Blammed",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Blammed_DLCStrawberry02_Easy.bin",
+            "medium": "../../data/charts/bin/Blammed_DLCStrawberry02_Medium.bin",
+            "hard": "../../data/charts/bin/Blammed_DLCStrawberry02_Hard.bin",
+            "impossible": "../../data/charts/bin/Blammed_DLCStrawberry02_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Friday Night Funkin'",
+        "artist": "",
+        "intensity": [
+            7,
+            12,
+            18,
+            25
+        ]
+    },
+    "DLCStrawberry03": {
+        "title": "Stress",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Stress_DLCStrawberry03_Easy.bin",
+            "medium": "../../data/charts/bin/Stress_DLCStrawberry03_Medium.bin",
+            "hard": "../../data/charts/bin/Stress_DLCStrawberry03_Hard.bin",
+            "impossible": "../../data/charts/bin/Stress_DLCStrawberry03_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Friday Night Funkin'",
+        "artist": "",
+        "intensity": [
+            7,
+            15,
+            21,
+            28
+        ]
+    },
+    "DLCStrawberry04": {
+        "title": "Darnell",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Darnell_DLCStrawberry04_Easy.bin",
+            "medium": "../../data/charts/bin/Darnell_DLCStrawberry04_Medium.bin",
+            "hard": "../../data/charts/bin/Darnell_DLCStrawberry04_Hard.bin",
+            "impossible": "../../data/charts/bin/Darnell_DLCStrawberry04_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Friday Night Funkin'",
+        "artist": "",
+        "intensity": [
+            6,
+            10,
+            19,
+            27
+        ]
+    },
+    "DLCStrawberry05": {
+        "title": "Ugh",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Ugh_DLCStrawberry05_Easy.bin",
+            "medium": "../../data/charts/bin/Ugh_DLCStrawberry05_Medium.bin",
+            "hard": "../../data/charts/bin/Ugh_DLCStrawberry05_Hard.bin",
+            "impossible": "../../data/charts/bin/Ugh_DLCStrawberry05_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Friday Night Funkin'",
+        "artist": "",
+        "intensity": [
+            5,
+            12,
+            17,
+            24
+        ]
+    },
+    "DLCStrawberry06": {
+        "title": "Senpai",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Senpai_DLCStrawberry06_Easy.bin",
+            "medium": "../../data/charts/bin/Senpai_DLCStrawberry06_Medium.bin",
+            "hard": "../../data/charts/bin/Senpai_DLCStrawberry06_Hard.bin",
+            "impossible": "../../data/charts/bin/Senpai_DLCStrawberry06_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "Friday Night Funkin'",
+        "artist": "",
+        "intensity": [
+            2,
+            10,
+            16,
+            24
         ]
     },
     "RRAmalgamaniac": {
