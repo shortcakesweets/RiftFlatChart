@@ -816,6 +816,25 @@
             23
         ]
     },
+    "DLCStrawberry01": {
+        "title": "Dad Battle",
+        "art": "../../data/album_arts/DLCStrawberry.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Easy.bin",
+            "medium": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Medium.bin",
+            "hard": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Hard.bin",
+            "impossible": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Impossible.bin"
+        },
+        "update_date": "2025-12-11",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            4,
+            10,
+            16,
+            21
+        ]
+    },
     "DLCStrawberry02": {
         "title": "Blammed",
         "art": "../../data/album_arts/DLCStrawberry.webp",
