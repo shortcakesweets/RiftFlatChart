@@ -758,6 +758,25 @@
             22
         ]
     },
+    "DLCOG04": {
+        "title": "Portabellohead",
+        "art": "../../data/album_arts/DLCOG02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Portabellohead_DLCOG04_Easy.bin",
+            "medium": "../../data/charts/bin/Portabellohead_DLCOG04_Medium.bin",
+            "hard": "../../data/charts/bin/Portabellohead_DLCOG04_Hard.bin",
+            "impossible": "../../data/charts/bin/Portabellohead_DLCOG04_Impossible.bin"
+        },
+        "update_date": "2026-02-05",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            3,
+            8,
+            13,
+            18
+        ]
+    },
     "DLCOG06": {
         "title": "Power Cords",
         "art": "../../data/album_arts/DLCOG06.webp",
@@ -794,6 +813,25 @@
             11,
             16,
             22
+        ]
+    },
+    "DLCOG09": {
+        "title": "March of the Profane",
+        "art": "../../data/album_arts/DLCOG02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/March of the Profane_DLCOG09_Easy.bin",
+            "medium": "../../data/charts/bin/March of the Profane_DLCOG09_Medium.bin",
+            "hard": "../../data/charts/bin/March of the Profane_DLCOG09_Hard.bin",
+            "impossible": "../../data/charts/bin/March of the Profane_DLCOG09_Impossible.bin"
+        },
+        "update_date": "2026-02-19",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            5,
+            12,
+            17,
+            24
         ]
     },
     "DLCOrange01": {
