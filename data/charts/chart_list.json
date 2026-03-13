@@ -227,6 +227,95 @@
             26
         ]
     },
+    "DLCDurian01": {
+        "title": "Digital Drive",
+        "art": "../../data/album_arts/DLCDurian.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Digital Drive_DLCDurian01_Easy.bin",
+            "medium": "../../data/charts/bin/Digital Drive_DLCDurian01_Medium.bin",
+            "hard": "../../data/charts/bin/Digital Drive_DLCDurian01_Hard.bin",
+            "impossible": "../../data/charts/bin/Digital Drive_DLCDurian01_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "dlc": "VA-11 Hall-A",
+        "intensity": [
+            3,
+            6,
+            18,
+            24
+        ]
+    },
+    "DLCDurian02": {
+        "title": "Every Day is Night",
+        "art": "../../data/album_arts/DLCDurian.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Every Day is Night_DLCDurian02_Easy.bin",
+            "medium": "../../data/charts/bin/Every Day is Night_DLCDurian02_Medium.bin",
+            "hard": "../../data/charts/bin/Every Day is Night_DLCDurian02_Hard.bin",
+            "impossible": "../../data/charts/bin/Every Day is Night_DLCDurian02_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "dlc": "VA-11 Hall-A",
+        "intensity": [
+            3,
+            8,
+            14,
+            22
+        ]
+    },
+    "DLCDurian03": {
+        "title": "Drive Me Wild",
+        "art": "../../data/album_arts/DLCDurian.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Drive Me Wild_DLCDurian03_Easy.bin",
+            "medium": "../../data/charts/bin/Drive Me Wild_DLCDurian03_Medium.bin",
+            "hard": "../../data/charts/bin/Drive Me Wild_DLCDurian03_Hard.bin",
+            "impossible": "../../data/charts/bin/Drive Me Wild_DLCDurian03_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "dlc": "VA-11 Hall-A",
+        "intensity": [
+            5,
+            11,
+            15,
+            20
+        ]
+    },
+    "DLCDurian04": {
+        "title": "YLIAD",
+        "art": "../../data/album_arts/DLCDurian.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/YLIAD_DLCDurian04_Easy.bin",
+            "medium": "../../data/charts/bin/YLIAD_DLCDurian04_Medium.bin",
+            "hard": "../../data/charts/bin/YLIAD_DLCDurian04_Hard.bin",
+            "impossible": "../../data/charts/bin/YLIAD_DLCDurian04_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "intensity": [
+            4,
+            8,
+            14,
+            20
+        ]
+    },
+    "DLCDurian05": {
+        "title": "Welcome to VA-11 HALL-A",
+        "art": "../../data/album_arts/DLCDurian.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Welcome to VA-11 HALL-A_DLCDurian05_Easy.bin",
+            "medium": "../../data/charts/bin/Welcome to VA-11 HALL-A_DLCDurian05_Medium.bin",
+            "hard": "../../data/charts/bin/Welcome to VA-11 HALL-A_DLCDurian05_Hard.bin",
+            "impossible": "../../data/charts/bin/Welcome to VA-11 HALL-A_DLCDurian05_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "dlc": "VA-11 Hall-A",
+        "intensity": [
+            2,
+            8,
+            13,
+            21
+        ]
+    },
     "DLCEggplant01": {
         "title": "The Final Battle",
         "art": "../../data/album_arts/DLCEggplant.webp",
@@ -814,6 +903,23 @@
             11,
             18,
             23
+        ]
+    },
+    "DLCPineapple01": {
+        "title": "The Magician",
+        "art": "../../data/album_arts/DLCPineapple.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Magician_DLCPineapple01_Easy.bin",
+            "medium": "../../data/charts/bin/The Magician_DLCPineapple01_Medium.bin",
+            "hard": "../../data/charts/bin/The Magician_DLCPineapple01_Hard.bin",
+            "impossible": "../../data/charts/bin/The Magician_DLCPineapple01_Impossible.bin"
+        },
+        "update_date": "2026-03-12",
+        "intensity": [
+            4,
+            12,
+            17,
+            25
         ]
     },
     "DLCStrawberry01": {
