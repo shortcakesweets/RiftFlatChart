@@ -238,6 +238,7 @@
         },
         "update_date": "2026-03-12",
         "dlc": "VA-11 Hall-A",
+        "artist": "",
         "intensity": [
             3,
             6,
@@ -256,6 +257,7 @@
         },
         "update_date": "2026-03-12",
         "dlc": "VA-11 Hall-A",
+        "artist": "",
         "intensity": [
             3,
             8,
@@ -274,6 +276,7 @@
         },
         "update_date": "2026-03-12",
         "dlc": "VA-11 Hall-A",
+        "artist": "",
         "intensity": [
             5,
             11,
@@ -291,6 +294,7 @@
             "impossible": "../../data/charts/bin/YLIAD_DLCDurian04_Impossible.bin"
         },
         "update_date": "2026-03-12",
+        "artist": "",
         "intensity": [
             4,
             8,
@@ -309,6 +313,7 @@
         },
         "update_date": "2026-03-12",
         "dlc": "VA-11 Hall-A",
+        "artist": "",
         "intensity": [
             2,
             8,
@@ -915,6 +920,7 @@
             "impossible": "../../data/charts/bin/The Magician_DLCPineapple01_Impossible.bin"
         },
         "update_date": "2026-03-12",
+        "artist": "",
         "intensity": [
             4,
             12,
