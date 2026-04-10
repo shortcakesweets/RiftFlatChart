@@ -1080,6 +1080,120 @@
             24
         ]
     },
+    "DLCVanilla01": {
+        "title": "Spider Dance",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Spider Dance_DLCVanilla01_Easy.bin",
+            "medium": "../../data/charts/bin/Spider Dance_DLCVanilla01_Medium.bin",
+            "hard": "../../data/charts/bin/Spider Dance_DLCVanilla01_Hard.bin",
+            "impossible": "../../data/charts/bin/Spider Dance_DLCVanilla01_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "",
+        "artist": "",
+        "intensity": [
+            2,
+            6,
+            13,
+            18
+        ]
+    },
+    "DLCVanilla02": {
+        "title": "Hopes and Dreams",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Hopes and Dreams_DLCVanilla02_Easy.bin",
+            "medium": "../../data/charts/bin/Hopes and Dreams_DLCVanilla02_Medium.bin",
+            "hard": "../../data/charts/bin/Hopes and Dreams_DLCVanilla02_Hard.bin",
+            "impossible": "../../data/charts/bin/Hopes and Dreams_DLCVanilla02_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "Undertale",
+        "artist": "",
+        "intensity": [
+            3,
+            9,
+            15,
+            19
+        ]
+    },
+    "DLCVanilla03": {
+        "title": "Death by Glamour",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Easy.bin",
+            "medium": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Medium.bin",
+            "hard": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Hard.bin",
+            "impossible": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "Undertale",
+        "artist": "",
+        "intensity": [
+            5,
+            13,
+            16,
+            24
+        ]
+    },
+    "DLCVanilla04": {
+        "title": "Bergentrückung - Asgore",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Bergentr-ckung - Asgore_DLCVanilla04_Easy.bin",
+            "medium": "../../data/charts/bin/Bergentr-ckung - Asgore_DLCVanilla04_Medium.bin",
+            "hard": "../../data/charts/bin/Bergentr-ckung - Asgore_DLCVanilla04_Hard.bin",
+            "impossible": "../../data/charts/bin/Bergentr-ckung - Asgore_DLCVanilla04_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "Undertale",
+        "artist": "",
+        "intensity": [
+            4,
+            10,
+            15,
+            21
+        ]
+    },
+    "DLCVanilla05": {
+        "title": "Battle Against a True Hero",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Battle Against a True Hero_DLCVanilla05_Easy.bin",
+            "medium": "../../data/charts/bin/Battle Against a True Hero_DLCVanilla05_Medium.bin",
+            "hard": "../../data/charts/bin/Battle Against a True Hero_DLCVanilla05_Hard.bin",
+            "impossible": "../../data/charts/bin/Battle Against a True Hero_DLCVanilla05_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "Undertale",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            17,
+            26
+        ]
+    },
+    "DLCVanilla06": {
+        "title": "MEGALOVANIA",
+        "art": "../../data/album_arts/DLCVanilla.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/MEGALOVANIA_DLCVanilla06_Easy.bin",
+            "medium": "../../data/charts/bin/MEGALOVANIA_DLCVanilla06_Medium.bin",
+            "hard": "../../data/charts/bin/MEGALOVANIA_DLCVanilla06_Hard.bin",
+            "impossible": "../../data/charts/bin/MEGALOVANIA_DLCVanilla06_Impossible.bin"
+        },
+        "update_date": "2026-04-09",
+        "dlc": "Undertale",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            17,
+            25
+        ]
+    },
     "RRAmalgamaniac": {
         "title": "Amalgamaniac",
         "art": "../../data/album_arts/RRAmalgamaniac.webp",
