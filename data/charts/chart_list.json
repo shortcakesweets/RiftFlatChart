@@ -530,6 +530,82 @@
             21
         ]
     },
+    "DLCIcaco01": {
+        "title": "POP-STARS",
+        "art": "../../data/album_arts/DLCIcaco01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/POP-STARS_DLCIcaco01_Easy.bin",
+            "medium": "../../data/charts/bin/POP-STARS_DLCIcaco01_Medium.bin",
+            "hard": "../../data/charts/bin/POP-STARS_DLCIcaco01_Hard.bin",
+            "impossible": "../../data/charts/bin/POP-STARS_DLCIcaco01_Impossible.bin"
+        },
+        "update_date": "2026-06-25",
+        "dlc": "K/DA (Riot Games)",
+        "artist": "",
+        "intensity": [
+            4,
+            11,
+            17,
+            24
+        ]
+    },
+    "DLCIcaco02": {
+        "title": "More",
+        "art": "../../data/album_arts/DLCIcaco02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/More_DLCIcaco02_Easy.bin",
+            "medium": "../../data/charts/bin/More_DLCIcaco02_Medium.bin",
+            "hard": "../../data/charts/bin/More_DLCIcaco02_Hard.bin",
+            "impossible": "../../data/charts/bin/More_DLCIcaco02_Impossible.bin"
+        },
+        "update_date": "2026-06-25",
+        "dlc": "K/DA (Riot Games)",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            16,
+            24
+        ]
+    },
+    "DLCIcaco03": {
+        "title": "Villain",
+        "art": "../../data/album_arts/DLCIcaco03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Villain_DLCIcaco03_Easy.bin",
+            "medium": "../../data/charts/bin/Villain_DLCIcaco03_Medium.bin",
+            "hard": "../../data/charts/bin/Villain_DLCIcaco03_Hard.bin",
+            "impossible": "../../data/charts/bin/Villain_DLCIcaco03_Impossible.bin"
+        },
+        "update_date": "2026-06-25",
+        "dlc": "K/DA (Riot Games)",
+        "artist": "",
+        "intensity": [
+            4,
+            10,
+            15,
+            23
+        ]
+    },
+    "DLCIcaco04": {
+        "title": "The Baddest",
+        "art": "../../data/album_arts/DLCIcaco04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Baddest_DLCIcaco04_Easy.bin",
+            "medium": "../../data/charts/bin/The Baddest_DLCIcaco04_Medium.bin",
+            "hard": "../../data/charts/bin/The Baddest_DLCIcaco04_Hard.bin",
+            "impossible": "../../data/charts/bin/The Baddest_DLCIcaco04_Impossible.bin"
+        },
+        "update_date": "2026-06-25",
+        "dlc": "K/DA (Riot Games)",
+        "artist": "",
+        "intensity": [
+            5,
+            10,
+            19,
+            25
+        ]
+    },
     "DLCKiwi01": {
         "title": "Too Real",
         "art": "../../data/album_arts/DLCKiwi01.webp",
