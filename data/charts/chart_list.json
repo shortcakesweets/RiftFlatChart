@@ -1383,6 +1383,24 @@
             25
         ]
     },
+    "DLCYuzu01": {
+        "title": "Sought (Among Us - Seek Remix)",
+        "art": "../../data/album_arts/DLCYuzu01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Sought (Among Us - Seek Remix)_DLCYuzu01_Easy.bin",
+            "medium": "../../data/charts/bin/Sought (Among Us - Seek Remix)_DLCYuzu01_Medium.bin",
+            "hard": "../../data/charts/bin/Sought (Among Us - Seek Remix)_DLCYuzu01_Hard.bin",
+            "impossible": "../../data/charts/bin/Sought (Among Us - Seek Remix)_DLCYuzu01_Impossible.bin"
+        },
+        "update_date": "2026-07-29",
+        "artist": "",
+        "intensity": [
+            4,
+            9,
+            15,
+            24
+        ]
+    },
     "RRAmalgamaniac": {
         "title": "Amalgamaniac",
         "art": "../../data/album_arts/RRAmalgamaniac.webp",
