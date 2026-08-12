@@ -720,6 +720,100 @@
             21
         ]
     },
+    "DLCLychee01": {
+        "title": "The Girl Who Glitched (Ai.Mi's Theme)",
+        "art": "../../data/album_arts/DLCLychee01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Girl Who Glitched (Ai.Mi's Theme)_DLCLychee01_Easy.bin",
+            "medium": "../../data/charts/bin/The Girl Who Glitched (Ai.Mi's Theme)_DLCLychee01_Medium.bin",
+            "hard": "../../data/charts/bin/The Girl Who Glitched (Ai.Mi's Theme)_DLCLychee01_Hard.bin",
+            "impossible": "../../data/charts/bin/The Girl Who Glitched (Ai.Mi's Theme)_DLCLychee01_Impossible.bin"
+        },
+        "dlc": "Omega Strikers",
+        "artist": "",
+        "intensity": [
+            3,
+            11,
+            16,
+            23
+        ]
+    },
+    "DLCLychee02": {
+        "title": "Thousand Absolutes (Octavia's Theme)",
+        "art": "../../data/album_arts/DLCLychee02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Thousand Absolutes (Octavia's Theme)_DLCLychee02_Easy.bin",
+            "medium": "../../data/charts/bin/Thousand Absolutes (Octavia's Theme)_DLCLychee02_Medium.bin",
+            "hard": "../../data/charts/bin/Thousand Absolutes (Octavia's Theme)_DLCLychee02_Hard.bin",
+            "impossible": "../../data/charts/bin/Thousand Absolutes (Octavia's Theme)_DLCLychee02_Impossible.bin"
+        },
+        "update_date": "2025-08-05",
+        "dlc": "Omega Strikers",
+        "artist": "",
+        "intensity": [
+            7,
+            13,
+            19,
+            26
+        ]
+    },
+    "DLCLychee03": {
+        "title": "Curtain Call (Finii's Theme)",
+        "art": "../../data/album_arts/DLCLychee03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Curtain Call (Finii's Theme)_DLCLychee03_Easy.bin",
+            "medium": "../../data/charts/bin/Curtain Call (Finii's Theme)_DLCLychee03_Medium.bin",
+            "hard": "../../data/charts/bin/Curtain Call (Finii's Theme)_DLCLychee03_Hard.bin",
+            "impossible": "../../data/charts/bin/Curtain Call (Finii's Theme)_DLCLychee03_Impossible.bin"
+        },
+        "update_date": "2025-08-05",
+        "dlc": "Omega Strikers",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            18,
+            25
+        ]
+    },
+    "DLCLychee04": {
+        "title": "Go Strike! (Juliette's Theme)",
+        "art": "../../data/album_arts/DLCLychee04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Go Strike! (Juliette's Theme)_DLCLychee04_Easy.bin",
+            "medium": "../../data/charts/bin/Go Strike! (Juliette's Theme)_DLCLychee04_Medium.bin",
+            "hard": "../../data/charts/bin/Go Strike! (Juliette's Theme)_DLCLychee04_Hard.bin",
+            "impossible": "../../data/charts/bin/Go Strike! (Juliette's Theme)_DLCLychee04_Impossible.bin"
+        },
+        "update_date": "2025-08-05",
+        "dlc": "Omega Strikers",
+        "artist": "",
+        "intensity": [
+            6,
+            12,
+            17,
+            21
+        ]
+    },
+    "DLCLychee05": {
+        "title": "Methods of Madness (Kazan's Theme)",
+        "art": "../../data/album_arts/DLCLychee05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Methods of Madness (Kazan's Theme)_DLCLychee05_Easy.bin",
+            "medium": "../../data/charts/bin/Methods of Madness (Kazan's Theme)_DLCLychee05_Medium.bin",
+            "hard": "../../data/charts/bin/Methods of Madness (Kazan's Theme)_DLCLychee05_Hard.bin",
+            "impossible": "../../data/charts/bin/Methods of Madness (Kazan's Theme)_DLCLychee05_Impossible.bin"
+        },
+        "update_date": "2025-08-05",
+        "dlc": "Omega Strikers",
+        "artist": "",
+        "intensity": [
+            6,
+            11,
+            17,
+            27
+        ]
+    },
     "DLCMango01": {
         "title": "Final Boss",
         "art": "../../data/album_arts/DLCMango01.webp",
