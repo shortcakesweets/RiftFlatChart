@@ -1477,6 +1477,119 @@
             25
         ]
     },
+    "DLCWatermelon01": {
+        "title": "My One and Oni",
+        "art": "../../data/album_arts/DLCWatermelon01.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/My One and Oni_DLCWatermelon01_Easy.bin",
+            "medium": "../../data/charts/bin/My One and Oni_DLCWatermelon01_Medium.bin",
+            "hard": "../../data/charts/bin/My One and Oni_DLCWatermelon01_Hard.bin",
+            "impossible": "../../data/charts/bin/My One and Oni_DLCWatermelon01_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "artist": "",
+        "intensity": [
+            6,
+            12,
+            17,
+            23
+        ]
+    },
+    "DLCWatermelon02": {
+        "title": "Highlight",
+        "art": "../../data/album_arts/DLCWatermelon02.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Highlight_DLCWatermelon02_Easy.bin",
+            "medium": "../../data/charts/bin/Highlight_DLCWatermelon02_Medium.bin",
+            "hard": "../../data/charts/bin/Highlight_DLCWatermelon02_Hard.bin",
+            "impossible": "../../data/charts/bin/Highlight_DLCWatermelon02_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            17,
+            23
+        ]
+    },
+    "DLCWatermelon03": {
+        "title": "CONNECT-COMMUNE",
+        "art": "../../data/album_arts/DLCWatermelon03.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Easy.bin",
+            "medium": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Medium.bin",
+            "hard": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Hard.bin",
+            "impossible": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
+        "artist": "",
+        "intensity": [
+            6,
+            12,
+            17,
+            23
+        ]
+    },
+    "DLCWatermelon04": {
+        "title": "Artifact",
+        "art": "../../data/album_arts/DLCWatermelon04.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Artifact_DLCWatermelon04_Easy.bin",
+            "medium": "../../data/charts/bin/Artifact_DLCWatermelon04_Medium.bin",
+            "hard": "../../data/charts/bin/Artifact_DLCWatermelon04_Hard.bin",
+            "impossible": "../../data/charts/bin/Artifact_DLCWatermelon04_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
+        "artist": "",
+        "intensity": [
+            7,
+            13,
+            17,
+            26
+        ]
+    },
+    "DLCWatermelon05": {
+        "title": "Hello Builder",
+        "art": "../../data/album_arts/DLCWatermelon05.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Hello Builder_DLCWatermelon05_Easy.bin",
+            "medium": "../../data/charts/bin/Hello Builder_DLCWatermelon05_Medium.bin",
+            "hard": "../../data/charts/bin/Hello Builder_DLCWatermelon05_Hard.bin",
+            "impossible": "../../data/charts/bin/Hello Builder_DLCWatermelon05_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
+        "artist": "",
+        "intensity": [
+            7,
+            14,
+            20,
+            27
+        ]
+    },
+    "DLCWatermelon06": {
+        "title": "Wonder Style",
+        "art": "../../data/album_arts/DLCWatermelon06.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Wonder Style_DLCWatermelon06_Easy.bin",
+            "medium": "../../data/charts/bin/Wonder Style_DLCWatermelon06_Medium.bin",
+            "hard": "../../data/charts/bin/Wonder Style_DLCWatermelon06_Hard.bin",
+            "impossible": "../../data/charts/bin/Wonder Style_DLCWatermelon06_Impossible.bin"
+        },
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
+        "artist": "",
+        "intensity": [
+            5,
+            11,
+            16,
+            25
+        ]
+    },
     "DLCYuzu01": {
         "title": "Sought (Among Us - Seek Remix)",
         "art": "../../data/album_arts/DLCYuzu01.webp",
