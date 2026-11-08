@@ -1,6 +1,7 @@
 {
     "DLCApricot01": {
         "title": "Slugger's Refrain",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
             "easy": "../../data/charts/bin/Slugger's Refrain_DLCApricot01_Easy.bin",
@@ -20,6 +21,7 @@
     },
     "DLCApricot02": {
         "title": "Got Danged",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
             "easy": "../../data/charts/bin/Got Danged_DLCApricot02_Easy.bin",
@@ -39,6 +41,7 @@
     },
     "DLCApricot03": {
         "title": "Bootus Bleez",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCApricot.webp",
         "chart": {
             "easy": "../../data/charts/bin/Bootus Bleez_DLCApricot03_Easy.bin",
@@ -58,6 +61,7 @@
     },
     "DLCBanana01": {
         "title": "Resurrections (dannyBstyle Remix)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Resurrections (dannyBstyle Remix)_DLCBanana01_Easy.bin",
@@ -77,6 +81,7 @@
     },
     "DLCBanana02": {
         "title": "Scattered and Lost",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Scattered and Lost_DLCBanana02_Easy.bin",
@@ -96,6 +101,7 @@
     },
     "DLCBanana03": {
         "title": "Reach for the Summit",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Reach for the Summit_DLCBanana03_Easy.bin",
@@ -115,6 +121,7 @@
     },
     "DLCBanana04": {
         "title": "Confronting Myself",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Confronting Myself_DLCBanana04_Easy.bin",
@@ -134,6 +141,7 @@
     },
     "DLCBanana05": {
         "title": "Resurrections",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCBanana.webp",
         "chart": {
             "easy": "../../data/charts/bin/Resurrections_DLCBanana05_Easy.bin",
@@ -153,6 +161,7 @@
     },
     "DLCCherry01": {
         "title": "It's Pizza Time!",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/It's Pizza Time!_DLCCherry01_Easy.bin",
@@ -172,6 +181,7 @@
     },
     "DLCCherry02": {
         "title": "The Death That I Deservioli",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Death That I Deservioli_DLCCherry02_Easy.bin",
@@ -191,6 +201,7 @@
     },
     "DLCCherry03": {
         "title": "Unexpectancy, Pt. 3",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Unexpectancy, Pt. 3_DLCCherry03_Easy.bin",
@@ -210,6 +221,7 @@
     },
     "DLCCherry04": {
         "title": "World Wide Noise",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCCherry.webp",
         "chart": {
             "easy": "../../data/charts/bin/World Wide Noise_DLCCherry04_Easy.bin",
@@ -229,6 +241,7 @@
     },
     "DLCDurian01": {
         "title": "Digital Drive",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCDurian.webp",
         "chart": {
             "easy": "../../data/charts/bin/Digital Drive_DLCDurian01_Easy.bin",
@@ -248,6 +261,7 @@
     },
     "DLCDurian02": {
         "title": "Every Day is Night",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCDurian.webp",
         "chart": {
             "easy": "../../data/charts/bin/Every Day is Night_DLCDurian02_Easy.bin",
@@ -267,6 +281,7 @@
     },
     "DLCDurian03": {
         "title": "Drive Me Wild",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCDurian.webp",
         "chart": {
             "easy": "../../data/charts/bin/Drive Me Wild_DLCDurian03_Easy.bin",
@@ -286,6 +301,7 @@
     },
     "DLCDurian04": {
         "title": "YLIAD",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCDurian.webp",
         "chart": {
             "easy": "../../data/charts/bin/YLIAD_DLCDurian04_Easy.bin",
@@ -304,6 +320,7 @@
     },
     "DLCDurian05": {
         "title": "Welcome to VA-11 HALL-A",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCDurian.webp",
         "chart": {
             "easy": "../../data/charts/bin/Welcome to VA-11 HALL-A_DLCDurian05_Easy.bin",
@@ -323,6 +340,7 @@
     },
     "DLCEggplant01": {
         "title": "The Final Battle",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Final Battle_DLCEggplant01_Easy.bin",
@@ -342,6 +360,7 @@
     },
     "DLCEggplant02": {
         "title": "Feisty Flowers",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Feisty Flowers_DLCEggplant02_Easy.bin",
@@ -361,6 +380,7 @@
     },
     "DLCEggplant03": {
         "title": "Revenge",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Revenge_DLCEggplant03_Easy.bin",
@@ -380,6 +400,7 @@
     },
     "DLCEggplant04": {
         "title": "Why Oh You Are LOVE",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Easy.bin",
@@ -399,6 +420,7 @@
     },
     "DLCEggplant05": {
         "title": "Powers Of Destruction",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCEggplant.webp",
         "chart": {
             "easy": "../../data/charts/bin/Powers Of Destruction_DLCEggplant05_Easy.bin",
@@ -418,6 +440,7 @@
     },
     "DLCFig01": {
         "title": "WORN OUT TAPES [tally-ho version]",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCFig01.webp",
         "chart": {
             "easy": "../../data/charts/bin/WORN OUT TAPES [tally-ho version]_DLCFig01_Easy.bin",
@@ -437,6 +460,7 @@
     },
     "DLCGuava01": {
         "title": "BIBBIDIBA",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCGuava01.webp",
         "chart": {
             "easy": "../../data/charts/bin/BIBBIDIBA_DLCGuava01_Easy.bin",
@@ -456,6 +480,7 @@
     },
     "DLCGuava02": {
         "title": "REFLECT",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCGuava02.webp",
         "chart": {
             "easy": "../../data/charts/bin/REFLECT_DLCGuava02_Easy.bin",
@@ -475,6 +500,7 @@
     },
     "DLCGuava03": {
         "title": "Play Dice!",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCGuava03.webp",
         "chart": {
             "easy": "../../data/charts/bin/Play Dice!_DLCGuava03_Easy.bin",
@@ -494,6 +520,7 @@
     },
     "DLCGuava04": {
         "title": "Ahoy!! 我ら宝鐘海賊団☆",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCGuava04.webp",
         "chart": {
             "easy": "../../data/charts/bin/Ahoy!! 我ら宝鐘海賊団☆_DLCGuava04_Easy.bin",
@@ -513,6 +540,7 @@
     },
     "DLCGuava05": {
         "title": "Carbonated Love",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCGuava05.webp",
         "chart": {
             "easy": "../../data/charts/bin/Carbonated Love_DLCGuava05_Easy.bin",
@@ -532,6 +560,7 @@
     },
     "DLCIcaco01": {
         "title": "POP-STARS",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCIcaco01.webp",
         "chart": {
             "easy": "../../data/charts/bin/POP-STARS_DLCIcaco01_Easy.bin",
@@ -551,6 +580,7 @@
     },
     "DLCIcaco02": {
         "title": "More",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCIcaco02.webp",
         "chart": {
             "easy": "../../data/charts/bin/More_DLCIcaco02_Easy.bin",
@@ -570,6 +600,7 @@
     },
     "DLCIcaco03": {
         "title": "Villain",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCIcaco03.webp",
         "chart": {
             "easy": "../../data/charts/bin/Villain_DLCIcaco03_Easy.bin",
@@ -589,6 +620,7 @@
     },
     "DLCIcaco04": {
         "title": "The Baddest",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCIcaco04.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Baddest_DLCIcaco04_Easy.bin",
@@ -608,6 +640,7 @@
     },
     "DLCKiwi01": {
         "title": "Too Real",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi01.webp",
         "chart": {
             "easy": "../../data/charts/bin/Too Real_DLCKiwi01_Easy.bin",
@@ -627,6 +660,7 @@
     },
     "DLCKiwi02": {
         "title": "M@GICAL-CURE! LOVE - SHOT!",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi02.webp",
         "chart": {
             "easy": "../../data/charts/bin/M@GICAL-CURE! LOVE - SHOT!_DLCKiwi02_Easy.bin",
@@ -646,6 +680,7 @@
     },
     "DLCKiwi03": {
         "title": "Intergalactic Bound",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi03.webp",
         "chart": {
             "easy": "../../data/charts/bin/Intergalactic Bound_DLCKiwi03_Easy.bin",
@@ -665,6 +700,7 @@
     },
     "DLCKiwi04": {
         "title": "Just 1dB Louder",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi04.webp",
         "chart": {
             "easy": "../../data/charts/bin/Just 1dB Louder_DLCKiwi04_Easy.bin",
@@ -684,6 +720,7 @@
     },
     "DLCKiwi05": {
         "title": "MikuFiesta",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi05.webp",
         "chart": {
             "easy": "../../data/charts/bin/MikuFiesta_DLCKiwi05_Easy.bin",
@@ -703,6 +740,7 @@
     },
     "DLCKiwi06": {
         "title": "Radiant Revival",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCKiwi06.webp",
         "chart": {
             "easy": "../../data/charts/bin/Radiant Revival_DLCKiwi06_Easy.bin",
@@ -722,6 +760,7 @@
     },
     "DLCLychee01": {
         "title": "The Girl Who Glitched (Ai.Mi's Theme)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCLychee01.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Girl Who Glitched (Ai.Mi's Theme)_DLCLychee01_Easy.bin",
@@ -740,6 +779,7 @@
     },
     "DLCLychee02": {
         "title": "Thousand Absolutes (Octavia's Theme)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCLychee02.webp",
         "chart": {
             "easy": "../../data/charts/bin/Thousand Absolutes (Octavia's Theme)_DLCLychee02_Easy.bin",
@@ -759,6 +799,7 @@
     },
     "DLCLychee03": {
         "title": "Curtain Call (Finii's Theme)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCLychee03.webp",
         "chart": {
             "easy": "../../data/charts/bin/Curtain Call (Finii's Theme)_DLCLychee03_Easy.bin",
@@ -778,6 +819,7 @@
     },
     "DLCLychee04": {
         "title": "Go Strike! (Juliette's Theme)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCLychee04.webp",
         "chart": {
             "easy": "../../data/charts/bin/Go Strike! (Juliette's Theme)_DLCLychee04_Easy.bin",
@@ -797,6 +839,7 @@
     },
     "DLCLychee05": {
         "title": "Methods of Madness (Kazan's Theme)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCLychee05.webp",
         "chart": {
             "easy": "../../data/charts/bin/Methods of Madness (Kazan's Theme)_DLCLychee05_Easy.bin",
@@ -816,6 +859,7 @@
     },
     "DLCMango01": {
         "title": "Final Boss",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCMango01.webp",
         "chart": {
             "easy": "../../data/charts/bin/Final Boss_DLCMango01_Easy.bin",
@@ -835,6 +879,7 @@
     },
     "DLCMango02": {
         "title": "New Game",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCMango02.webp",
         "chart": {
             "easy": "../../data/charts/bin/New Game_DLCMango02_Easy.bin",
@@ -854,6 +899,7 @@
     },
     "DLCMango03": {
         "title": "Crab Rave",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCMango03.webp",
         "chart": {
             "easy": "../../data/charts/bin/Crab Rave_DLCMango03_Easy.bin",
@@ -873,6 +919,7 @@
     },
     "DLCMango04": {
         "title": "PLAY",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCMango04.webp",
         "chart": {
             "easy": "../../data/charts/bin/PLAY_DLCMango04_Easy.bin",
@@ -892,6 +939,7 @@
     },
     "DLCMango05": {
         "title": "Waiting For You (feat. Joanna Jones)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCMango05.webp",
         "chart": {
             "easy": "../../data/charts/bin/Waiting For You (feat. Joanna Jones)_DLCMango05_Easy.bin",
@@ -911,6 +959,7 @@
     },
     "DLCOG02": {
         "title": "Crypteque",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOG02.webp",
         "chart": {
             "easy": "../../data/charts/bin/Crypteque_DLCOG02_Easy.bin",
@@ -930,6 +979,7 @@
     },
     "DLCOG04": {
         "title": "Portabellohead",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOG02.webp",
         "chart": {
             "easy": "../../data/charts/bin/Portabellohead_DLCOG04_Easy.bin",
@@ -949,6 +999,7 @@
     },
     "DLCOG06": {
         "title": "Power Cords",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOG06.webp",
         "chart": {
             "easy": "../../data/charts/bin/Power Cords_DLCOG06_Easy.bin",
@@ -968,6 +1019,7 @@
     },
     "DLCOG07": {
         "title": "Fungal Funk",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOG07.webp",
         "chart": {
             "easy": "../../data/charts/bin/Fungal Funk_DLCOG07_Easy.bin",
@@ -987,6 +1039,7 @@
     },
     "DLCOG09": {
         "title": "March of the Profane",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOG02.webp",
         "chart": {
             "easy": "../../data/charts/bin/March of the Profane_DLCOG09_Easy.bin",
@@ -1006,6 +1059,7 @@
     },
     "DLCOrange01": {
         "title": "Main Theme",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/Main Theme_DLCOrange01_Easy.bin",
@@ -1025,6 +1079,7 @@
     },
     "DLCOrange02": {
         "title": "La Danse Macabre (Lich Yard)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/La Danse Macabre (Lich Yard)_DLCOrange02_Easy.bin",
@@ -1044,6 +1099,7 @@
     },
     "DLCOrange03": {
         "title": "Strike the Earth! (Plains of Passage)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/Strike the Earth! (Plains of Passage)_DLCOrange03_Easy.bin",
@@ -1063,6 +1119,7 @@
     },
     "DLCOrange04": {
         "title": "In the Halls of the Usurper (Pridemoor Keep)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/In the Halls of the Usurper (Pridemoor Keep)_DLCOrange04_Easy.bin",
@@ -1082,6 +1139,7 @@
     },
     "DLCOrange05": {
         "title": "High Above the Land (The Flying Machine)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/High Above the Land (The Flying Machine)_DLCOrange05_Easy.bin",
@@ -1101,6 +1159,7 @@
     },
     "DLCOrange06": {
         "title": "An Underlying Problem (The Lost City)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCOrange.webp",
         "chart": {
             "easy": "../../data/charts/bin/An Underlying Problem (The Lost City)_DLCOrange06_Easy.bin",
@@ -1120,6 +1179,7 @@
     },
     "DLCPineapple01": {
         "title": "The Magician",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCPineapple.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Magician_DLCPineapple01_Easy.bin",
@@ -1138,6 +1198,7 @@
     },
     "DLCRaspberry01": {
         "title": "A Banj After Midnight (feat. M Gewehr)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/A Banj After Midnight (feat. M Gewehr)_DLCRaspberry01_Easy.bin",
@@ -1157,6 +1218,7 @@
     },
     "DLCRaspberry02": {
         "title": "Goo",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Goo_DLCRaspberry02_Easy.bin",
@@ -1176,6 +1238,7 @@
     },
     "DLCRaspberry03": {
         "title": "Phantom Funk (feat. Lawrence Ravagnan)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Phantom Funk (feat. Lawrence Ravagnan)_DLCRaspberry03_Easy.bin",
@@ -1195,6 +1258,7 @@
     },
     "DLCRaspberry04": {
         "title": "The Showdown Throwdown",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/The Showdown Throwdown_DLCRaspberry04_Easy.bin",
@@ -1214,6 +1278,7 @@
     },
     "DLCRaspberry05": {
         "title": "Ultra Creepy",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Ultra Creepy_DLCRaspberry05_Easy.bin",
@@ -1232,6 +1297,7 @@
     },
     "DLCRaspberry06": {
         "title": "Inside",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCRaspberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Inside_DLCRaspberry06_Easy.bin",
@@ -1251,6 +1317,7 @@
     },
     "DLCStrawberry01": {
         "title": "Dad Battle",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Easy.bin",
@@ -1270,6 +1337,7 @@
     },
     "DLCStrawberry02": {
         "title": "Blammed",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Blammed_DLCStrawberry02_Easy.bin",
@@ -1289,6 +1357,7 @@
     },
     "DLCStrawberry03": {
         "title": "Stress",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Stress_DLCStrawberry03_Easy.bin",
@@ -1308,6 +1377,7 @@
     },
     "DLCStrawberry04": {
         "title": "Darnell",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Darnell_DLCStrawberry04_Easy.bin",
@@ -1327,6 +1397,7 @@
     },
     "DLCStrawberry05": {
         "title": "Ugh",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Ugh_DLCStrawberry05_Easy.bin",
@@ -1346,6 +1417,7 @@
     },
     "DLCStrawberry06": {
         "title": "Senpai",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCStrawberry.webp",
         "chart": {
             "easy": "../../data/charts/bin/Senpai_DLCStrawberry06_Easy.bin",
@@ -1365,6 +1437,7 @@
     },
     "DLCVanilla01": {
         "title": "Spider Dance",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/Spider Dance_DLCVanilla01_Easy.bin",
@@ -1384,6 +1457,7 @@
     },
     "DLCVanilla02": {
         "title": "Hopes and Dreams",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/Hopes and Dreams_DLCVanilla02_Easy.bin",
@@ -1403,6 +1477,7 @@
     },
     "DLCVanilla03": {
         "title": "Death by Glamour",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Easy.bin",
@@ -1422,6 +1497,7 @@
     },
     "DLCVanilla04": {
         "title": "Bergentrückung - Asgore",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/Bergentr-ckung - Asgore_DLCVanilla04_Easy.bin",
@@ -1441,6 +1517,7 @@
     },
     "DLCVanilla05": {
         "title": "Battle Against a True Hero",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/Battle Against a True Hero_DLCVanilla05_Easy.bin",
@@ -1460,6 +1537,7 @@
     },
     "DLCVanilla06": {
         "title": "MEGALOVANIA",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCVanilla.webp",
         "chart": {
             "easy": "../../data/charts/bin/MEGALOVANIA_DLCVanilla06_Easy.bin",
@@ -1479,6 +1557,7 @@
     },
     "DLCWatermelon01": {
         "title": "My One and Oni",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCWatermelon01.webp",
         "chart": {
             "easy": "../../data/charts/bin/My One and Oni_DLCWatermelon01_Easy.bin",
@@ -1497,6 +1576,7 @@
     },
     "DLCWatermelon02": {
         "title": "Highlight",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCWatermelon02.webp",
         "chart": {
             "easy": "../../data/charts/bin/Highlight_DLCWatermelon02_Easy.bin",
@@ -1516,6 +1596,7 @@
     },
     "DLCWatermelon03": {
         "title": "CONNECT-COMMUNE",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCWatermelon03.webp",
         "chart": {
             "easy": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Easy.bin",
@@ -1550,10 +1631,12 @@
             13,
             17,
             26
-        ]
+        ],
+        "free_dlc": false
     },
     "DLCWatermelon05": {
         "title": "Hello Builder",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCWatermelon05.webp",
         "chart": {
             "easy": "../../data/charts/bin/Hello Builder_DLCWatermelon05_Easy.bin",
@@ -1573,6 +1656,7 @@
     },
     "DLCWatermelon06": {
         "title": "Wonder Style",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCWatermelon06.webp",
         "chart": {
             "easy": "../../data/charts/bin/Wonder Style_DLCWatermelon06_Easy.bin",
@@ -1592,6 +1676,7 @@
     },
     "DLCYuzu01": {
         "title": "Sought (Among Us - Seek Remix)",
+        "free_dlc": false,
         "art": "../../data/album_arts/DLCYuzu01.webp",
         "chart": {
             "easy": "../../data/charts/bin/Sought (Among Us - Seek Remix)_DLCYuzu01_Easy.bin",
@@ -1610,6 +1695,7 @@
     },
     "RRAmalgamaniac": {
         "title": "Amalgamaniac",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRAmalgamaniac.webp",
         "chart": {
             "easy": "../../data/charts/bin/Amalgamaniac_RRAmalgamaniac_Easy.bin",
@@ -1629,6 +1715,7 @@
     },
     "RRBaboosh": {
         "title": "Baboosh",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRBaboosh.webp",
         "chart": {
             "easy": "../../data/charts/bin/Baboosh_RRBaboosh_Easy.bin",
@@ -1648,6 +1735,7 @@
     },
     "RRCountFunkula": {
         "title": "Count Funkula",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRCountFunkula.webp",
         "chart": {
             "easy": "../../data/charts/bin/Count Funkula_RRCountFunkula_Easy.bin",
@@ -1667,6 +1755,7 @@
     },
     "RRCryp2que": {
         "title": "Cryp2que",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRCryp2que.webp",
         "chart": {
             "easy": "../../data/charts/bin/Cryp2que_RRCryp2que_Easy.bin",
@@ -1686,6 +1775,7 @@
     },
     "RRDeepBlues": {
         "title": "King's Ruse",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRDeepBlues.webp",
         "chart": {
             "easy": "../../data/charts/bin/King's Ruse_RRDeepBlues_Easy.bin",
@@ -1705,6 +1795,7 @@
     },
     "RRDiscoDisaster": {
         "title": "Disco Disaster",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRDiscoDisaster.webp",
         "chart": {
             "easy": "../../data/charts/bin/Disco Disaster_RRDiscoDisaster_Easy.bin",
@@ -1724,6 +1815,7 @@
     },
     "RREldritchHouse": {
         "title": "Eldritch House",
+        "free_dlc": false,
         "art": "../../data/album_arts/RREldritchHouse.webp",
         "chart": {
             "easy": "../../data/charts/bin/Eldritch House_RREldritchHouse_Easy.bin",
@@ -1743,6 +1835,7 @@
     },
     "RRElusional": {
         "title": "Elusional",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRElusional.webp",
         "chart": {
             "easy": "../../data/charts/bin/Elusional_RRElusional_Easy.bin",
@@ -1762,6 +1855,7 @@
     },
     "RRFinalFugue": {
         "title": "Final Fugue",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRFinalFugue.webp",
         "chart": {
             "easy": "../../data/charts/bin/Final Fugue_RRFinalFugue_Easy.bin",
@@ -1781,6 +1875,7 @@
     },
     "RRGlassCages": {
         "title": "Glass Cages",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRGlassCages.webp",
         "chart": {
             "easy": "../../data/charts/bin/Glass Cages (feat. Sarah Hubbard)_RRGlassCages_Easy.bin",
@@ -1800,6 +1895,7 @@
     },
     "RRHallowQueen": {
         "title": "Hallow Queen",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRHallowQueen.webp",
         "chart": {
             "easy": "../../data/charts/bin/Hallow Queen_RRHallowQueen_Easy.bin",
@@ -1819,6 +1915,7 @@
     },
     "RRHangTenHeph": {
         "title": "Hang Ten Heph",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRHangTenHeph.webp",
         "chart": {
             "easy": "../../data/charts/bin/Hang Ten Heph_RRHangTenHeph_Easy.bin",
@@ -1838,6 +1935,7 @@
     },
     "RRHarmonie": {
         "title": "She Banned",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRHarmonie.webp",
         "chart": {
             "easy": "../../data/charts/bin/She Banned_RRHarmonie_Easy.bin",
@@ -1857,6 +1955,7 @@
     },
     "RRHephsMess": {
         "title": "Heph's Mess",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRHephsMess.webp",
         "chart": {
             "easy": "../../data/charts/bin/Heph's Mess_RRHephsMess_Easy.bin",
@@ -1876,6 +1975,7 @@
     },
     "RRMatriarch": {
         "title": "Matriarch",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRMatriarch.webp",
         "chart": {
             "easy": "../../data/charts/bin/Matriarch_RRMatriarch_Easy.bin",
@@ -1895,6 +1995,7 @@
     },
     "RRMatron": {
         "title": "What's In The Box",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRMatron.webp",
         "chart": {
             "easy": "../../data/charts/bin/What's in the Box_RRMatron_Easy.bin",
@@ -1914,6 +2015,7 @@
     },
     "RRMorningDove": {
         "title": "Morning Dove",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRMorningDove.webp",
         "chart": {
             "easy": "../../data/charts/bin/Morning Dove_RRMorningDove_Easy.bin",
@@ -1933,6 +2035,7 @@
     },
     "RRNecropolis": {
         "title": "Necropolis",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRNecropolis.webp",
         "chart": {
             "easy": "../../data/charts/bin/Necropolis_RRNecropolis_Easy.bin",
@@ -1952,6 +2055,7 @@
     },
     "RRNecroSonatica": {
         "title": "Necro Sonatica",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRNecroSonatica.webp",
         "chart": {
             "easy": "../../data/charts/bin/Necro Sonatica_RRNecroSonatica_Easy.bin",
@@ -1971,6 +2075,7 @@
     },
     "RRNocturning": {
         "title": "Nocturning",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRNocturning.webp",
         "chart": {
             "easy": "../../data/charts/bin/Nocturning_RRNocturning_Easy.bin",
@@ -1990,6 +2095,7 @@
     },
     "RROmandOn": {
         "title": "Om and On",
+        "free_dlc": false,
         "art": "../../data/album_arts/RROmandOn.webp",
         "chart": {
             "easy": "../../data/charts/bin/Om and On_RROmandOn_Easy.bin",
@@ -2009,6 +2115,7 @@
     },
     "RROverthinker": {
         "title": "Overthinker",
+        "free_dlc": false,
         "art": "../../data/album_arts/RROverthinker.webp",
         "chart": {
             "easy": "../../data/charts/bin/Overthinker_RROverthinker_Easy.bin",
@@ -2028,6 +2135,7 @@
     },
     "RRPortamello": {
         "title": "Portamello",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRPortamello.webp",
         "chart": {
             "easy": "../../data/charts/bin/Portamello_RRPortamello_Easy.bin",
@@ -2047,6 +2155,7 @@
     },
     "RRProgenitor": {
         "title": "Progenitor",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRProgenitor.webp",
         "chart": {
             "easy": "../../data/charts/bin/Progenitor_RRProgenitor_Easy.bin",
@@ -2066,6 +2175,7 @@
     },
     "RRRavevenge": {
         "title": "Ravevenge",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRRavevenge.webp",
         "chart": {
             "easy": "../../data/charts/bin/RAVEVENGE (feat. Aram Zero)_RRRavevenge_Easy.bin",
@@ -2085,6 +2195,7 @@
     },
     "RRReaper": {
         "title": "Brave The Harvester",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRReaper.webp",
         "chart": {
             "easy": "../../data/charts/bin/Brave the Harvester_RRReaper_Easy.bin",
@@ -2104,6 +2215,7 @@
     },
     "RRRiftWithin": {
         "title": "Rift Within",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRRiftWithin.webp",
         "chart": {
             "easy": "../../data/charts/bin/Rift Within_RRRiftWithin_Easy.bin",
@@ -2123,6 +2235,7 @@
     },
     "RRSpookhousePop": {
         "title": "Spookhouse Pop",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRSpookhousePop.webp",
         "chart": {
             "easy": "../../data/charts/bin/Spookhouse Pop_RRSpookhousePop_Easy.bin",
@@ -2142,6 +2255,7 @@
     },
     "RRSuzusQuest": {
         "title": "Suzu's Quest",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRSuzusQuest.webp",
         "chart": {
             "easy": "../../data/charts/bin/Suzu's Quest_RRSuzusQuest_Easy.bin",
@@ -2161,6 +2275,7 @@
     },
     "RRThunder": {
         "title": "Under The Thunder",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRThunder.webp",
         "chart": {
             "easy": "../../data/charts/bin/Under the Thunder_RRThunder_Easy.bin",
@@ -2180,6 +2295,7 @@
     },
     "RRTwombtorial": {
         "title": "Twombtorial",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRTwombtorial.webp",
         "chart": {
             "easy": "../../data/charts/bin/Twombtorial_RRTwombtorial_Easy.bin",
@@ -2199,6 +2315,7 @@
     },
     "RRVisualizeYourself": {
         "title": "Visualize Yourself",
+        "free_dlc": false,
         "art": "../../data/album_arts/RRVisualizeYourself.webp",
         "chart": {
             "easy": "../../data/charts/bin/Visualize Yourself_RRVisualizeYourself_Easy.bin",
