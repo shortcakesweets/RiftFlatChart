@@ -4,3 +4,5 @@ album_art_compress/aa_before/
 
 # Backup file when editing intensities
 *.bak
+# Local chart manager recovery files
+.chart-manager-backups/
