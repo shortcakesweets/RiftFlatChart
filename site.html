@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chart Manager · RiftFlatChart</title>
+  <link rel="stylesheet" href="src/css/manager.css">
+  <script defer src="src/js/chart_metadata.js"></script>
+  <script defer src="src/js/chart_store.js"></script>
+  <script defer src="src/js/manager.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="site.html"><img src="data/misc/logo.webp" alt=""><span>RIFT<span class="brand-sub">CHART MANAGER</span></span></a>
+    <span class="local-badge"><span></span> Local workspace</span>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">YOUR CHART ARCHIVE</p><h1>A place for every beat.</h1><p class="muted">Browse your catalog and prepare new charts for the archive.</p></div>
+      <button id="add-chart" class="primary" type="button">+ Add a chart</button>
+    </section>
+    <section class="workspace" aria-label="Repository connection">
+      <div class="folder-icon" aria-hidden="true">▱</div>
+      <div class="workspace-copy"><strong id="workspace-name">Connect your repository</strong><p id="workspace-description">Select the RiftFlatChart folder to read its chart_list.json. Your files stay on your computer.</p></div>
+      <button id="select-folder" type="button">Select folder</button>
+      <button id="refresh" class="quiet" type="button" disabled>Refresh</button>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div class="catalog-heading"><div><h2>Current catalog <span id="catalog-count" class="count">—</span></h2><p class="muted">Newest update first · alphabetical for matching dates</p></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search title, artist, key or DLC" aria-label="Search catalog" disabled></label></div>
+    <div id="catalog" class="catalog"></div>
+    <div id="empty" class="empty"><span class="empty-icon" aria-hidden="true">♫</span><h3>Your catalog starts here</h3><p>Select your repository folder to see the charts already in your archive.</p></div>
+    <footer>RiftFlatChart <span>Local chart management · repository files</span></footer>
+  </main>
+  <dialog id="chart-dialog" aria-labelledby="dialog-title">
+    <form id="chart-form">
+      <div class="dialog-heading"><div><p id="dialog-eyebrow" class="eyebrow">EXPAND YOUR ARCHIVE</p><h2 id="dialog-title">Add a chart</h2></div><button id="close-dialog" class="icon-button" type="button" aria-label="Close chart form">×</button></div>
+      <p id="dialog-description" class="muted">Start with the four difficulty files, then complete the artwork and details.</p>
+      <section class="form-step"><h3><span class="step-number">1</span> Chart binaries <span class="required">Required</span></h3><p class="muted">Select up to four .bin files together. Each file goes into its recorded difficulty automatically.</p><label class="binary-picker">Choose chart files<input id="binary-files" type="file" accept=".bin" multiple><span>Selecting a difficulty again replaces its previous file.</span></label><div id="binary-slots" class="binary-slots"></div><p id="binary-status" class="notice" role="status">0 of 4 files validated. Song names and levels will appear below for review.</p></section>
+      <fieldset id="chart-details" disabled class="form-step"><legend><span class="step-number">2</span> Artwork & details</legend><p id="details-description" class="muted">Available after all four binary files have passed validation.</p><label class="art-upload">Album art<img id="form-art" class="form-art" alt="Current album art" hidden><input id="art-file" type="file" accept="image/png,image/jpeg,image/webp"><span>PNG, JPG or WebP</span></label><div class="field-grid"><label>Update date<input type="date" name="update_date" required></label><label>DLC<input type="text" name="dlc" placeholder="Pack name, or leave empty"></label><label class="checkbox-field"><input type="checkbox" name="free_dlc"><span>Free DLC</span></label></div></fieldset>
+      <div class="dialog-footer"><p id="form-note">Changes are saved directly to your selected repository.</p><button id="cancel-dialog" type="button">Cancel</button><button id="delete-chart" class="danger" type="button" hidden disabled>Delete</button><button id="save-chart" class="primary" type="submit" disabled>Add</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
