@@ -2332,5 +2332,125 @@
             12,
             21
         ]
+    },
+    "DLCOG14": {
+        "title": "Konga Conga Kappa",
+        "artist": "",
+        "art": "../../data/album_arts/DLCOG14_1794224814632-b3b33f38-0284-4838-81bf-bc2a09de8b94.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Konga Conga Kappa-1794224814632-b3b33f38-0284-4838-81bf-bc2a09de8b94_DLCOG14_Easy.bin",
+            "medium": "../../data/charts/bin/Konga Conga Kappa-1794224814632-b3b33f38-0284-4838-81bf-bc2a09de8b94_DLCOG14_Medium.bin",
+            "hard": "../../data/charts/bin/Konga Conga Kappa-1794224814632-b3b33f38-0284-4838-81bf-bc2a09de8b94_DLCOG14_Hard.bin",
+            "impossible": "../../data/charts/bin/Konga Conga Kappa-1794224814632-b3b33f38-0284-4838-81bf-bc2a09de8b94_DLCOG14_Impossible.bin"
+        },
+        "intensity": [
+            3,
+            11,
+            16,
+            24
+        ],
+        "update_date": "2026-10-27",
+        "dlc": "",
+        "free_dlc": false
+    },
+    "DLCJuniper05": {
+        "title": "When I'm with You",
+        "artist": "",
+        "art": "../../data/album_arts/DLCJuniper05_1794224901948-20b68739-3f72-4602-9ff2-6e17feb19280.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/When I'm with You-1794224901948-20b68739-3f72-4602-9ff2-6e17feb19280_DLCJuniper05_Easy.bin",
+            "medium": "../../data/charts/bin/When I'm with You-1794224901948-20b68739-3f72-4602-9ff2-6e17feb19280_DLCJuniper05_Medium.bin",
+            "hard": "../../data/charts/bin/When I'm with You-1794224901948-20b68739-3f72-4602-9ff2-6e17feb19280_DLCJuniper05_Hard.bin",
+            "impossible": "../../data/charts/bin/When I'm with You-1794224901948-20b68739-3f72-4602-9ff2-6e17feb19280_DLCJuniper05_Impossible.bin"
+        },
+        "intensity": [
+            4,
+            9,
+            15,
+            22
+        ],
+        "update_date": "2026-10-28",
+        "dlc": "Mystery Skulls",
+        "free_dlc": false
+    },
+    "DLCJuniper04": {
+        "title": "The Future",
+        "artist": "",
+        "art": "../../data/album_arts/DLCJuniper04_1794224932613-864d89b5-df91-4929-bdcb-90f5f8f95035.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/The Future-1794224932613-864d89b5-df91-4929-bdcb-90f5f8f95035_DLCJuniper04_Easy.bin",
+            "medium": "../../data/charts/bin/The Future-1794224932613-864d89b5-df91-4929-bdcb-90f5f8f95035_DLCJuniper04_Medium.bin",
+            "hard": "../../data/charts/bin/The Future-1794224932613-864d89b5-df91-4929-bdcb-90f5f8f95035_DLCJuniper04_Hard.bin",
+            "impossible": "../../data/charts/bin/The Future-1794224932613-864d89b5-df91-4929-bdcb-90f5f8f95035_DLCJuniper04_Impossible.bin"
+        },
+        "intensity": [
+            4,
+            9,
+            17,
+            24
+        ],
+        "update_date": "2026-10-28",
+        "dlc": "Mystery Skulls",
+        "free_dlc": false
+    },
+    "DLCJuniper02": {
+        "title": "Hellbent (feat. Snowblood)",
+        "artist": "",
+        "art": "../../data/album_arts/DLCJuniper02_1794224985192-794485e8-781f-496e-ba24-8ae71a50e8cb.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Hellbent (feat. Snowblood)-1794224985192-794485e8-781f-496e-ba24-8ae71a50e8cb_DLCJuniper02_Easy.bin",
+            "medium": "../../data/charts/bin/Hellbent (feat. Snowblood)-1794224985192-794485e8-781f-496e-ba24-8ae71a50e8cb_DLCJuniper02_Medium.bin",
+            "hard": "../../data/charts/bin/Hellbent (feat. Snowblood)-1794224985192-794485e8-781f-496e-ba24-8ae71a50e8cb_DLCJuniper02_Hard.bin",
+            "impossible": "../../data/charts/bin/Hellbent (feat. Snowblood)-1794224985192-794485e8-781f-496e-ba24-8ae71a50e8cb_DLCJuniper02_Impossible.bin"
+        },
+        "intensity": [
+            4,
+            10,
+            16,
+            23
+        ],
+        "update_date": "2026-10-28",
+        "dlc": "Mystery Skulls",
+        "free_dlc": false
+    },
+    "DLCJuniper03": {
+        "title": "Ghost",
+        "artist": "",
+        "art": "../../data/album_arts/DLCJuniper03_1794225011707-89eb6643-a421-45e9-9630-1b7bba5d7b1f.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Ghost-1794225011707-89eb6643-a421-45e9-9630-1b7bba5d7b1f_DLCJuniper03_Easy.bin",
+            "medium": "../../data/charts/bin/Ghost-1794225011707-89eb6643-a421-45e9-9630-1b7bba5d7b1f_DLCJuniper03_Medium.bin",
+            "hard": "../../data/charts/bin/Ghost-1794225011707-89eb6643-a421-45e9-9630-1b7bba5d7b1f_DLCJuniper03_Hard.bin",
+            "impossible": "../../data/charts/bin/Ghost-1794225011707-89eb6643-a421-45e9-9630-1b7bba5d7b1f_DLCJuniper03_Impossible.bin"
+        },
+        "intensity": [
+            3,
+            9,
+            16,
+            25
+        ],
+        "update_date": "2026-10-28",
+        "dlc": "Mystery Skulls",
+        "free_dlc": false
+    },
+    "DLCJuniper01": {
+        "title": "Freaking Out",
+        "artist": "",
+        "art": "../../data/album_arts/DLCJuniper01_1794225039586-53d666e8-7398-4e3e-9b1e-fd5870e207aa.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/Freaking Out-1794225039586-53d666e8-7398-4e3e-9b1e-fd5870e207aa_DLCJuniper01_Easy.bin",
+            "medium": "../../data/charts/bin/Freaking Out-1794225039586-53d666e8-7398-4e3e-9b1e-fd5870e207aa_DLCJuniper01_Medium.bin",
+            "hard": "../../data/charts/bin/Freaking Out-1794225039586-53d666e8-7398-4e3e-9b1e-fd5870e207aa_DLCJuniper01_Hard.bin",
+            "impossible": "../../data/charts/bin/Freaking Out-1794225039586-53d666e8-7398-4e3e-9b1e-fd5870e207aa_DLCJuniper01_Impossible.bin"
+        },
+        "intensity": [
+            4,
+            10,
+            18,
+            24
+        ],
+        "update_date": "2026-10-28",
+        "dlc": "Mystery Skulls",
+        "free_dlc": false
     }
 }
