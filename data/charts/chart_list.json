@@ -346,7 +346,7 @@
             "easy": "../../data/charts/bin/The Final Battle_DLCEggplant01_Easy.bin",
             "medium": "../../data/charts/bin/The Final Battle_DLCEggplant01_Medium.bin",
             "hard": "../../data/charts/bin/The Final Battle_DLCEggplant01_Hard.bin",
-            "impossible": "../../data/charts/bin/The Final Battle_DLCEggplant01_Impossible.bin"
+            "impossible": "../../data/charts/bin/The Final Battle-1794274141490-2848cf1d-8022-4715-b3e8-b78272eae074_DLCEggplant01_Impossible.bin"
         },
         "update_date": "2025-08-14",
         "dlc": "Everhood",
@@ -406,7 +406,7 @@
             "easy": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Easy.bin",
             "medium": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Medium.bin",
             "hard": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Hard.bin",
-            "impossible": "../../data/charts/bin/Why Oh You Are LOVE_DLCEggplant04_Impossible.bin"
+            "impossible": "../../data/charts/bin/Why Oh You Are LOVE-1794274115075-735e1cff-7a61-4f2c-a030-2edfd7cb4219_DLCEggplant04_Impossible.bin"
         },
         "update_date": "2025-08-14",
         "dlc": "Everhood",
@@ -1323,7 +1323,7 @@
             "easy": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Easy.bin",
             "medium": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Medium.bin",
             "hard": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Hard.bin",
-            "impossible": "../../data/charts/bin/Dad Battle_DLCStrawberry01_Impossible.bin"
+            "impossible": "../../data/charts/bin/Dad Battle-1794274284215-47f826f2-a5ac-44f4-9be3-bbdc9aee79b0_DLCStrawberry01_Impossible.bin"
         },
         "update_date": "2025-12-11",
         "dlc": "",
@@ -1483,7 +1483,7 @@
             "easy": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Easy.bin",
             "medium": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Medium.bin",
             "hard": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Hard.bin",
-            "impossible": "../../data/charts/bin/Death by Glamour_DLCVanilla03_Impossible.bin"
+            "impossible": "../../data/charts/bin/Death by Glamour-1794274234822-f925de7e-4eb2-4fb7-91cd-5cec69608ace_DLCVanilla03_Impossible.bin"
         },
         "update_date": "2026-04-09",
         "dlc": "Undertale",
@@ -1590,26 +1590,6 @@
         "intensity": [
             5,
             11,
-            17,
-            23
-        ]
-    },
-    "DLCWatermelon03": {
-        "title": "CONNECT-COMMUNE",
-        "free_dlc": false,
-        "art": "../../data/album_arts/DLCWatermelon03.webp",
-        "chart": {
-            "easy": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Easy.bin",
-            "medium": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Medium.bin",
-            "hard": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Hard.bin",
-            "impossible": "../../data/charts/bin/CONNECT-COMMUNE_DLCWatermelon03_Impossible.bin"
-        },
-        "update_date": "2026-09-14",
-        "dlc": "Hatsune Miku 2",
-        "artist": "",
-        "intensity": [
-            6,
-            12,
             17,
             23
         ]
@@ -2281,7 +2261,7 @@
             "easy": "../../data/charts/bin/Under the Thunder_RRThunder_Easy.bin",
             "medium": "../../data/charts/bin/Under the Thunder_RRThunder_Medium.bin",
             "hard": "../../data/charts/bin/Under the Thunder_RRThunder_Hard.bin",
-            "impossible": "../../data/charts/bin/Under the Thunder_RRThunder_Impossible.bin"
+            "impossible": "../../data/charts/bin/UNDER THE THUNDER-1794273500211-e133aba4-77a4-4faf-9ac1-be53d0ab110b_RRThunder_Impossible.bin"
         },
         "update_date": "1970-01-01",
         "dlc": "",
@@ -2451,6 +2431,26 @@
         ],
         "update_date": "2026-10-28",
         "dlc": "Mystery Skulls",
+        "free_dlc": false
+    },
+    "DLCWatermelon03": {
+        "title": "CONNECT:COMMUNE",
+        "artist": "",
+        "art": "../../data/album_arts/DLCWatermelon03_1794273618650-90799fd5-472c-41da-b0d1-525e1c3a09ec.webp",
+        "chart": {
+            "easy": "../../data/charts/bin/CONNECT-COMMUNE-1794273618650-90799fd5-472c-41da-b0d1-525e1c3a09ec_DLCWatermelon03_Easy.bin",
+            "medium": "../../data/charts/bin/CONNECT-COMMUNE-1794273618650-90799fd5-472c-41da-b0d1-525e1c3a09ec_DLCWatermelon03_Medium.bin",
+            "hard": "../../data/charts/bin/CONNECT-COMMUNE-1794273618650-90799fd5-472c-41da-b0d1-525e1c3a09ec_DLCWatermelon03_Hard.bin",
+            "impossible": "../../data/charts/bin/CONNECT-COMMUNE-1794273618650-90799fd5-472c-41da-b0d1-525e1c3a09ec_DLCWatermelon03_Impossible.bin"
+        },
+        "intensity": [
+            6,
+            12,
+            17,
+            23
+        ],
+        "update_date": "2026-09-14",
+        "dlc": "Hatsune Miku 2",
         "free_dlc": false
     }
 }
